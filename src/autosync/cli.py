@@ -80,13 +80,22 @@ def cmd_align(args: argparse.Namespace) -> int:
         load_seconds = time.time() - t0
         if args.device != "cpu":
             print(f"note: only CPU inference is validated; requested {args.device}", file=sys.stderr)
-        options = SegmentOptions(padding=args.padding, fallback=args.fallback)
-        aligned, warnings = align_lines(
-            audio, sample_rate, lines, aligner, options, progress=not args.quiet
+        options = SegmentOptions(
+            padding=args.padding, fallback=args.fallback, refine=args.refine
         )
+        aligned, warnings = align_lines(
+            audio,
+            sample_rate,
+            lines,
+            aligner,
+            options,
+            progress=not args.quiet,
+            language=args.language,
+        )
+        engine = "model" if args.refine == "none" else f"model+{args.refine}"
         result = AlignmentResult(
             language=args.language,
-            engine="model",
+            engine=engine,
             lines=aligned,
             model=ModelInfo(
                 name=aligner.meta.name,
@@ -99,7 +108,11 @@ def cmd_align(args: argparse.Namespace) -> int:
                 frame_seconds=aligner.frame_seconds,
             ),
             warnings=warnings,
-            diagnostics={"source_metadata": meta, "padding_seconds": args.padding},
+            diagnostics={
+                "source_metadata": meta,
+                "padding_seconds": args.padding,
+                "refine": args.refine,
+            },
         )
 
     out = write_json(result, args.output)
@@ -153,6 +166,12 @@ def build_parser() -> argparse.ArgumentParser:
         choices=["none", "heuristic"],
         default="none",
         help="what to do when a line fails to align (default: report failure)",
+    )
+    a.add_argument(
+        "--refine",
+        choices=["none", "energy"],
+        default="none",
+        help="V0.2 post-alignment boundary refinement (default: none = V0.1 behaviour)",
     )
     a.add_argument("--cache-dir", default=str(MODELS_DIR / "hf"), help="model cache directory")
     a.add_argument("-q", "--quiet", action="store_true", help="disable progress bar")

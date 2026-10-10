@@ -44,6 +44,9 @@ uv run autosync align --audio song.wav --lyrics song.lrc --language zh --output 
 
 # 不加载任何模型，仅用启发式基线（结果标记为 heuristic）
 uv run autosync align --audio song.wav --lyrics song.lrc --language en --engine heuristic
+
+# V0.2：能量感知的结束边界细化
+uv run autosync align --audio song.wav --lyrics song.lrc --language en --output result.json --refine energy
 ```
 
 ## 项目结构
@@ -61,5 +64,14 @@ docs/                     调研 / 实验日志 / 技术报告
 
 ## 状态
 
-V0.1 是研究原型。请阅读 `docs/EXPERIMENT_RESULTS.md` 了解**已经真实运行验证**的内容，
+V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射与能量边界细化。
+请阅读 `docs/EXPERIMENT_RESULTS.md` 了解**已经真实运行验证**的内容，
+`docs/SINGING_EVAL.md` 了解歌声数据集与许可，
 以及 `docs/KNOWN_LIMITATIONS.md` 了解**尚未完成 / 存在风险**的部分。
+
+### 新增（V0.2）
+
+- `--refine energy`：能量感知的结束边界细化（改善 end MAE）。
+- CTC Viterbi 现在会**检测并报告**帧数不足、塌缩、非单调等异常，而不是输出垃圾。
+- 日文多字符 token 保留 `uncertain` 标记，并校验原文可重建。
+- 新评测：`benchmarks/singing_eval.py`、`benchmarks/accompaniment_eval.py`（覆盖率/漏匹配/错误率/失败样本）。

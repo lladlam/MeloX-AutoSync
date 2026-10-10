@@ -12,8 +12,10 @@ from dataclasses import dataclass
 import numpy as np
 
 from ..audio.io import crop, duration_seconds
+from ..lyrics.normalize import normalize_cjk, normalize_en, normalize_for
 from ..types import AlignedLine, AlignUnit, LyricLine
 from .heuristic import distribute
+from .refine import refine_units_energy
 
 log = logging.getLogger("autosync.segment")
 
@@ -26,6 +28,9 @@ class SegmentOptions:
     padding: float = 0.30
     fallback: str = "none"  # "none" | "heuristic"
     max_line_seconds: float = MAX_LINE_SECONDS
+    # V0.2: post-alignment boundary refinement ("none" | "energy").
+    refine: str = "none"
+    refine_max_extend: float = 0.6
 
 
 def _window_for_line(
@@ -74,9 +79,42 @@ def _sanitize(unz: list[AlignUnit], window_len: float) -> tuple[list[AlignUnit],
             msg = "clamped overlapping unit boundary"
         if e <= s:
             e = min(window_len, s + 0.01)
-        out.append(AlignUnit(text=u.text, start=s, end=e, source=u.source, score=u.score, raw=u.raw))
+        out.append(
+            AlignUnit(
+                text=u.text,
+                start=s,
+                end=e,
+                source=u.source,
+                score=u.score,
+                raw=u.raw,
+                uncertain=u.uncertain,
+            )
+        )
         last_end = e
     return out, msg
+
+
+def check_reconstruction(language: str, text: str, units: list[AlignUnit]) -> str | None:
+    """Verify that the aligned units reproduce the original lyric text.
+
+    Returns ``None`` when the units reconstruct the normalised line, otherwise a
+    human-readable mismatch description. This makes "the original text can be
+    recovered" a checked property rather than an assumption.
+    """
+    if not units:
+        return None
+    try:
+        expected = normalize_for(language, text)
+    except ValueError:
+        return None
+    joined = " ".join(u.text for u in units) if language == "en" else "".join(u.text for u in units)
+    got = normalize_en(joined) if language == "en" else normalize_cjk(joined)
+    if got != expected:
+        return (
+            f"text reconstruction mismatch: reconstructed {got!r} "
+            f"but expected {expected!r}"
+        )
+    return None
 
 
 def align_lines(
@@ -86,6 +124,7 @@ def align_lines(
     aligner,
     options: SegmentOptions | None = None,
     progress: bool = True,
+    language: str | None = None,
 ) -> tuple[list[AlignedLine], list[str]]:
     """Align every lyric line against ``audio``.
 
@@ -134,6 +173,22 @@ def align_lines(
         if san_msg:
             warnings.append(f"line {line.index}: {san_msg}")
 
+        # V0.2: extend unit ends over voiced frames (opt-in).
+        if units and options.refine == "energy":
+            units = refine_units_energy(
+                units,
+                window,
+                sample_rate,
+                frame_seconds=getattr(aligner, "frame_seconds", 0.02) or 0.02,
+                max_extend=options.refine_max_extend,
+            )
+
+        # Make "original text is recoverable" a verified property.
+        if units and language is not None:
+            rec = check_reconstruction(language, line.text, units)
+            if rec:
+                warnings.append(f"line {line.index}: {rec}")
+
         if not units:
             if options.fallback == "heuristic":
                 disp = [line.text] if line.text.strip() else []
@@ -160,6 +215,7 @@ def align_lines(
                 source=u.source,
                 score=u.score,
                 raw=u.raw,
+                uncertain=u.uncertain,
             )
             for u in units
         ]

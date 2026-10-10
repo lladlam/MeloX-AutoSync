@@ -52,6 +52,12 @@ class AlignUnit:
     # Surface form actually displayed to the user, when ``text`` is a reading /
     # normalised form (e.g. Japanese kana reading of a kanji).
     raw: str | None = None
+    # ``True`` when the acoustic model produced this unit from a token that
+    # covers several original characters (e.g. the Japanese token ``世界``), so
+    # the boundary *inside* the unit cannot be recovered exactly. The outer
+    # boundaries are still model-derived; downstream consumers should treat the
+    # internal split as unknown rather than assuming one char == one syllable.
+    uncertain: bool = False
 
 
 @dataclass

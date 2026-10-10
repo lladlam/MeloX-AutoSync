@@ -30,6 +30,11 @@ htmlcov/
 /experiments/audio/*.mp3
 /experiments/audio/*.m4a
 
+# GTSinger raw audio + per-segment annotations + derived eval sets are NOT
+# redistributable at will (CC BY-NC-SA 4.0; lyrics are third-party copyright).
+# Only the generated *report* JSON under experiments/reports/ is committed.
+/experiments/singing/
+
 # Editors / OS
 .idea/
 .vscode/

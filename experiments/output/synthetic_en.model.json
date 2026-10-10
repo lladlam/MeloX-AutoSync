@@ -9,52 +9,58 @@
       "end": 6.18,
       "units": [
         {
-          "text": "HELLO",
+          "text": "hello",
           "start": 0.54,
           "end": 0.8,
           "source": "model",
           "score": -0.4013942264020443,
-          "raw": "HELLO"
+          "raw": "hello",
+          "uncertain": false
         },
         {
-          "text": "WORLD",
+          "text": "world",
           "start": 1.7,
           "end": 2.0,
           "source": "model",
           "score": -0.8088179141283035,
-          "raw": "WORLD"
+          "raw": "world",
+          "uncertain": false
         },
         {
-          "text": "THIS",
+          "text": "this",
           "start": 2.9,
           "end": 3.08,
           "source": "model",
           "score": -0.6799111068248749,
-          "raw": "THIS"
+          "raw": "this",
+          "uncertain": false
         },
         {
-          "text": "IS",
+          "text": "is",
           "start": 4.0,
           "end": 4.1,
           "source": "model",
           "score": -0.12016105279326439,
-          "raw": "IS"
+          "raw": "is",
+          "uncertain": false
         },
         {
-          "text": "A",
+          "text": "a",
           "start": 5.04,
           "end": 5.0600000000000005,
           "source": "model",
           "score": -2.695314645767212,
-          "raw": "A"
+          "raw": "a",
+          "uncertain": false
         },
         {
-          "text": "TEST",
+          "text": "test",
           "start": 5.98,
           "end": 6.18,
           "source": "model",
           "score": -0.2452375004068017,
-          "raw": "TEST"
+          "raw": "test",
+          "uncertain": false
         }
       ],
       "source": "model",
@@ -67,14 +73,15 @@
     "language": "en",
     "license": "apache-2.0",
     "device": "cpu",
-    "load_seconds": 6.284,
-    "infer_seconds": 0.0,
+    "load_seconds": 4.167,
+    "infer_seconds": 0.991,
     "frame_seconds": 0.02
   },
   "warnings": [],
   "diagnostics": {
     "source_metadata": {},
-    "padding_seconds": 0.3
+    "padding_seconds": 0.3,
+    "refine": "none"
   },
   "schema_version": "0.1",
   "generator": "MeloX-AutoSync"

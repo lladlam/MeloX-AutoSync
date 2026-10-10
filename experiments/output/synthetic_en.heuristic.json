@@ -14,7 +14,8 @@
           "end": 1.5654315476190477,
           "source": "heuristic",
           "score": null,
-          "raw": null
+          "raw": null,
+          "uncertain": false
         },
         {
           "text": "world",
@@ -22,7 +23,8 @@
           "end": 3.1308630952380954,
           "source": "heuristic",
           "score": null,
-          "raw": null
+          "raw": null,
+          "uncertain": false
         },
         {
           "text": "this",
@@ -30,7 +32,8 @@
           "end": 4.383208333333333,
           "source": "heuristic",
           "score": null,
-          "raw": null
+          "raw": null,
+          "uncertain": false
         },
         {
           "text": "is",
@@ -38,7 +41,8 @@
           "end": 5.009380952380952,
           "source": "heuristic",
           "score": null,
-          "raw": null
+          "raw": null,
+          "uncertain": false
         },
         {
           "text": "a",
@@ -46,7 +50,8 @@
           "end": 5.3224672619047615,
           "source": "heuristic",
           "score": null,
-          "raw": null
+          "raw": null,
+          "uncertain": false
         },
         {
           "text": "test",
@@ -54,7 +59,8 @@
           "end": 6.574812499999999,
           "source": "heuristic",
           "score": null,
-          "raw": null
+          "raw": null,
+          "uncertain": false
         }
       ],
       "source": "heuristic",

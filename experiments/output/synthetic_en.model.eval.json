@@ -1,10 +1,11 @@
 {
-  "n_lines": 1,
-  "n_lines_failed": 0,
-  "line_failure_rate": 0.0,
   "n_reference_words": 6,
   "n_predicted_units": 6,
-  "n_matched": 6,
+  "n_matched_words": 6,
+  "coverage": 1.0,
+  "miss_rate": 0.0,
+  "n_extra_units": 0,
+  "extra_rate": 0.0,
   "start_mae": 0.06720000000000004,
   "start_median": 0.06660000000000021,
   "start_p90": 0.09824999999999995,
@@ -13,62 +14,81 @@
   "end_median": 0.38844999999999996,
   "end_p90": 0.41249999999999953,
   "end_max": 0.41649999999999987,
-  "engine": "model",
-  "model": "facebook/wav2vec2-base-960h",
+  "duration_mae": 0.4607999999999999,
+  "uncertain_matched": 5,
   "pairs": [
     {
       "text": "hello",
       "ref_start": 0.5,
       "pred_start": 0.54,
-      "start_err": 0.04,
+      "start_err": 0.040000000000000036,
       "ref_end": 1.2165,
       "pred_end": 0.8,
-      "end_err": 0.4165
+      "end_err": 0.41649999999999987,
+      "uncertain": true
     },
     {
       "text": "world",
       "ref_start": 1.6665,
       "pred_start": 1.7,
-      "start_err": 0.0335,
+      "start_err": 0.03349999999999986,
       "ref_end": 2.3783,
       "pred_end": 2.0,
-      "end_err": 0.3783
+      "end_err": 0.37829999999999986,
+      "uncertain": true
     },
     {
       "text": "this",
       "ref_start": 2.8283,
       "pred_start": 2.9,
-      "start_err": 0.0717,
+      "start_err": 0.07169999999999987,
       "ref_end": 3.4621,
       "pred_end": 3.08,
-      "end_err": 0.3821
+      "end_err": 0.3820999999999999,
+      "uncertain": true
     },
     {
       "text": "is",
       "ref_start": 3.9121,
       "pred_start": 4.0,
-      "start_err": 0.0879,
+      "start_err": 0.08789999999999987,
       "ref_end": 4.4814,
       "pred_end": 4.1,
-      "end_err": 0.3814
+      "end_err": 0.3814000000000002,
+      "uncertain": true
     },
     {
       "text": "a",
       "ref_start": 4.9314,
       "pred_start": 5.04,
-      "start_err": 0.1086,
+      "start_err": 0.10860000000000003,
       "ref_end": 5.4685,
       "pred_end": 5.0600000000000005,
-      "end_err": 0.4085
+      "end_err": 0.4084999999999992,
+      "uncertain": false
     },
     {
       "text": "test",
       "ref_start": 5.9185,
       "pred_start": 5.98,
-      "start_err": 0.0615,
+      "start_err": 0.061500000000000554,
       "ref_end": 6.5748,
       "pred_end": 6.18,
-      "end_err": 0.3948
+      "end_err": 0.39480000000000004,
+      "uncertain": true
     }
-  ]
+  ],
+  "missed": [],
+  "extra": [],
+  "start_err_rate_gt_0p1": 0.16666666666666666,
+  "end_err_rate_gt_0p1": 1.0,
+  "start_err_rate_gt_0p3": 0.0,
+  "end_err_rate_gt_0p3": 1.0,
+  "start_err_rate_gt_0p5": 0.0,
+  "end_err_rate_gt_0p5": 0.0,
+  "n_lines": 1,
+  "n_lines_failed": 0,
+  "line_failure_rate": 0.0,
+  "engine": "model",
+  "model": "facebook/wav2vec2-base-960h"
 }
