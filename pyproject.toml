@@ -32,6 +32,12 @@ shiro = [
     "pyopenjtalk>=0.3",
     "scipy>=1.11",
 ]
+# ONNX export / Android delivery toolchain (android_export/). Not needed for
+# normal inference; request explicitly with `uv sync --extra onnx`.
+onnx = [
+    "onnx>=1.17",
+    "onnxruntime>=1.20",
+]
 dev = [
     "pytest>=8",
     "pytest-cov>=5",
