@@ -47,3 +47,9 @@ htmlcov/
 
 # Local real-song test material (third-party audio/lyrics; NEVER commit)
 /Test/
+
+# Human annotation working files (contain third-party lyrics; NEVER commit)
+/experiments/annotation/
+
+# Full per-song alignment results contain third-party lyrics; NEVER commit
+/experiments/reports/fullsong_*.json

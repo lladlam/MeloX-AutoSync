@@ -120,8 +120,10 @@ def test_skipped_metadata_does_not_truncate_window() -> None:
     lrc = "[00:02.00]song one\n[00:05.00]作词：A\n[00:20.00]song two\n"
     _, aligned, fake = _run(lrc)
     assert aligned[0].source == "model"
-    # the audio window passed to the model runs to ~20s, well past the metadata
-    assert fake.window_lens[0] > 15.0
+    # the window is not cut at the metadata line (5s) ...
+    assert fake.window_lens[0] > 5.0
+    # ... but it is still conservatively capped (V1.0 P1)
+    assert fake.window_lens[0] <= 12.5
 
 
 def test_window_truncated_without_metadata_rule() -> None:

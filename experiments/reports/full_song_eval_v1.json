@@ -1,0 +1,287 @@
+{
+  "tag": "v1",
+  "routing": true,
+  "songs": {
+    "DAMIDAMI": {
+      "production": {
+        "language": "en",
+        "mode": "production",
+        "wall_seconds": 82.89,
+        "rc": 0,
+        "maxrss_mb": 1147.59765625,
+        "stderr_tail": "",
+        "lines": 62,
+        "kinds": {
+          "metadata": 11,
+          "singing": 51
+        },
+        "quality": {
+          "not_assessed": 51
+        },
+        "player_modes": {
+          "line_lrc": 11,
+          "word": 51
+        },
+        "model_lines": 51,
+        "failed_lines": 0,
+        "skipped_lines": 11,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 182.01,
+        "duration": 191.0,
+        "latin_lines": 51,
+        "latin_failed": 0,
+        "repeated_lines": 13,
+        "window_seconds_min": 2.19,
+        "window_seconds_max": 12.3,
+        "line_language": {
+          "?": 11,
+          "en": 51
+        },
+        "routing_reasons": {
+          "Latin text in an English-primary song": 51
+        }
+      }
+    },
+    "SAN値直葬": {
+      "production": {
+        "language": "ja",
+        "mode": "production",
+        "wall_seconds": 54.04,
+        "rc": 0,
+        "maxrss_mb": 1187.0078125,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 3,
+          "singing": 56,
+          "instrumental": 14
+        },
+        "quality": {
+          "reliable": 31,
+          "uncertain": 21,
+          "not_assessed": 4
+        },
+        "player_modes": {
+          "line_lrc": 42,
+          "word": 31
+        },
+        "model_lines": 52,
+        "failed_lines": 4,
+        "skipped_lines": 17,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 132.73,
+        "duration": 145.71,
+        "latin_lines": 14,
+        "latin_failed": 4,
+        "repeated_lines": 7,
+        "window_seconds_min": 0.9,
+        "window_seconds_max": 12.3,
+        "line_language": {
+          "?": 17,
+          "ja": 52,
+          "mixed": 2,
+          "latin_ambiguous": 2
+        },
+        "routing_reasons": {
+          "kana-dominant mixed; ja G2P covers Latin tokens": 10,
+          "Latin-dominant mixed line (cjk ratio 0.29); not reliably separable": 1,
+          "kana present": 40,
+          "Latin-dominant mixed line (cjk ratio 0.30); not reliably separable": 1,
+          "kanji-only; routed by song primary=ja": 2,
+          "Latin text without English evidence (may be romanised or stylised); conservative fallback": 2
+        }
+      }
+    },
+    "不安灵魂收容所": {
+      "production": {
+        "language": "zh",
+        "mode": "production",
+        "wall_seconds": 25.18,
+        "rc": 0,
+        "maxrss_mb": 1427.26953125,
+        "stderr_tail": "",
+        "lines": 58,
+        "kinds": {
+          "metadata": 4,
+          "singing": 54
+        },
+        "quality": {
+          "not_assessed": 54
+        },
+        "player_modes": {
+          "line_lrc": 9,
+          "word": 49
+        },
+        "model_lines": 49,
+        "failed_lines": 5,
+        "skipped_lines": 4,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 166.43,
+        "duration": 170.86,
+        "latin_lines": 25,
+        "latin_failed": 5,
+        "repeated_lines": 27,
+        "window_seconds_min": 2.25,
+        "window_seconds_max": 7.17,
+        "line_language": {
+          "?": 4,
+          "zh": 34,
+          "en": 15,
+          "mixed": 5
+        },
+        "routing_reasons": {
+          "CJK-dominant mixed; Latin token handled by the CJK model": 5,
+          "kanji-only; routed by song primary=zh": 29,
+          "Latin text with English function words": 15,
+          "Latin-dominant mixed line (han ratio 0.23); not reliably separable": 5
+        }
+      }
+    },
+    "提瓦特民谣": {
+      "production": {
+        "language": "zh",
+        "mode": "production",
+        "wall_seconds": 32.09,
+        "rc": 0,
+        "maxrss_mb": 1431.90234375,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 9,
+          "singing": 54,
+          "instrumental": 10
+        },
+        "quality": {
+          "not_assessed": 54
+        },
+        "player_modes": {
+          "line_lrc": 23,
+          "word": 50
+        },
+        "model_lines": 50,
+        "failed_lines": 4,
+        "skipped_lines": 19,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 211.61,
+        "duration": 217.47,
+        "latin_lines": 9,
+        "latin_failed": 4,
+        "repeated_lines": 21,
+        "window_seconds_min": 0.98,
+        "window_seconds_max": 12.3,
+        "line_language": {
+          "?": 19,
+          "zh": 45,
+          "latin_ambiguous": 4,
+          "en": 5
+        },
+        "routing_reasons": {
+          "kanji-only; routed by song primary=zh": 45,
+          "Latin text without English evidence (may be romanised or stylised); conservative fallback": 4,
+          "Latin text with English function words": 5
+        }
+      }
+    },
+    "歌姫失格": {
+      "production": {
+        "language": "ja",
+        "mode": "production",
+        "wall_seconds": 21.97,
+        "rc": 0,
+        "maxrss_mb": 1047.46875,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 2,
+          "singing": 71
+        },
+        "quality": {
+          "reliable": 55,
+          "uncertain": 16
+        },
+        "player_modes": {
+          "line_lrc": 18,
+          "word": 55
+        },
+        "model_lines": 71,
+        "failed_lines": 0,
+        "skipped_lines": 2,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 196.7,
+        "duration": 200.41,
+        "latin_lines": 0,
+        "latin_failed": 0,
+        "repeated_lines": 7,
+        "window_seconds_min": 1.36,
+        "window_seconds_max": 8.05,
+        "line_language": {
+          "?": 2,
+          "ja": 71
+        },
+        "routing_reasons": {
+          "kana present": 70,
+          "kanji-only; routed by song primary=ja": 1
+        }
+      }
+    },
+    "预言 Prophecy": {
+      "production": {
+        "language": "en",
+        "mode": "production",
+        "wall_seconds": 18.15,
+        "rc": 0,
+        "maxrss_mb": 1121.30859375,
+        "stderr_tail": "",
+        "lines": 86,
+        "kinds": {
+          "metadata": 11,
+          "instrumental": 13,
+          "singing": 62
+        },
+        "quality": {
+          "not_assessed": 62
+        },
+        "player_modes": {
+          "line_lrc": 24,
+          "word": 62
+        },
+        "model_lines": 62,
+        "failed_lines": 0,
+        "skipped_lines": 24,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 248.48,
+        "duration": 254.38,
+        "latin_lines": 62,
+        "latin_failed": 0,
+        "repeated_lines": 16,
+        "window_seconds_min": 1.23,
+        "window_seconds_max": 11.15,
+        "line_language": {
+          "?": 24,
+          "en": 62
+        },
+        "routing_reasons": {
+          "Latin text in an English-primary song": 62
+        }
+      }
+    }
+  }
+}

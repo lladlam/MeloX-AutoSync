@@ -1,0 +1,251 @@
+{
+  "tag": "baseline",
+  "routing": false,
+  "songs": {
+    "DAMIDAMI": {
+      "production": {
+        "language": "en",
+        "mode": "production",
+        "wall_seconds": 39.0,
+        "rc": 0,
+        "maxrss_mb": 1241.9765625,
+        "stderr_tail": "",
+        "lines": 62,
+        "kinds": {
+          "metadata": 11,
+          "singing": 51
+        },
+        "quality": {
+          "not_assessed": 51
+        },
+        "player_modes": {
+          "line_lrc": 11,
+          "word": 51
+        },
+        "model_lines": 51,
+        "failed_lines": 0,
+        "skipped_lines": 11,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 182.85,
+        "duration": 191.0,
+        "latin_lines": 51,
+        "latin_failed": 0,
+        "repeated_lines": 13,
+        "window_seconds_min": null,
+        "window_seconds_max": null,
+        "line_language": {
+          "?": 62
+        },
+        "routing_reasons": {}
+      }
+    },
+    "SAN値直葬": {
+      "production": {
+        "language": "ja",
+        "mode": "production",
+        "wall_seconds": 19.22,
+        "rc": 0,
+        "maxrss_mb": 1224.72265625,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 3,
+          "singing": 56,
+          "instrumental": 14
+        },
+        "quality": {
+          "reliable": 34,
+          "uncertain": 22
+        },
+        "player_modes": {
+          "line_lrc": 39,
+          "word": 34
+        },
+        "model_lines": 56,
+        "failed_lines": 0,
+        "skipped_lines": 17,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 132.73,
+        "duration": 145.71,
+        "latin_lines": 14,
+        "latin_failed": 0,
+        "repeated_lines": 7,
+        "window_seconds_min": null,
+        "window_seconds_max": null,
+        "line_language": {
+          "?": 73
+        },
+        "routing_reasons": {}
+      }
+    },
+    "不安灵魂收容所": {
+      "production": {
+        "language": "zh",
+        "mode": "production",
+        "wall_seconds": 21.79,
+        "rc": 0,
+        "maxrss_mb": 1034.96875,
+        "stderr_tail": "",
+        "lines": 58,
+        "kinds": {
+          "metadata": 4,
+          "singing": 54
+        },
+        "quality": {
+          "not_assessed": 54
+        },
+        "player_modes": {
+          "line_lrc": 19,
+          "word": 39
+        },
+        "model_lines": 39,
+        "failed_lines": 15,
+        "skipped_lines": 4,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 162.26,
+        "duration": 170.86,
+        "latin_lines": 25,
+        "latin_failed": 15,
+        "repeated_lines": 27,
+        "window_seconds_min": null,
+        "window_seconds_max": null,
+        "line_language": {
+          "?": 58
+        },
+        "routing_reasons": {}
+      }
+    },
+    "提瓦特民谣": {
+      "production": {
+        "language": "zh",
+        "mode": "production",
+        "wall_seconds": 13.12,
+        "rc": 0,
+        "maxrss_mb": 1052.25,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 9,
+          "singing": 54,
+          "instrumental": 10
+        },
+        "quality": {
+          "not_assessed": 54
+        },
+        "player_modes": {
+          "line_lrc": 28,
+          "word": 45
+        },
+        "model_lines": 45,
+        "failed_lines": 9,
+        "skipped_lines": 19,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 212.27,
+        "duration": 217.47,
+        "latin_lines": 9,
+        "latin_failed": 9,
+        "repeated_lines": 21,
+        "window_seconds_min": null,
+        "window_seconds_max": null,
+        "line_language": {
+          "?": 73
+        },
+        "routing_reasons": {}
+      }
+    },
+    "歌姫失格": {
+      "production": {
+        "language": "ja",
+        "mode": "production",
+        "wall_seconds": 35.66,
+        "rc": 0,
+        "maxrss_mb": 1079.83984375,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 2,
+          "singing": 71
+        },
+        "quality": {
+          "reliable": 55,
+          "uncertain": 16
+        },
+        "player_modes": {
+          "line_lrc": 18,
+          "word": 55
+        },
+        "model_lines": 71,
+        "failed_lines": 0,
+        "skipped_lines": 2,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 196.7,
+        "duration": 200.41,
+        "latin_lines": 0,
+        "latin_failed": 0,
+        "repeated_lines": 7,
+        "window_seconds_min": null,
+        "window_seconds_max": null,
+        "line_language": {
+          "?": 73
+        },
+        "routing_reasons": {}
+      }
+    },
+    "预言 Prophecy": {
+      "production": {
+        "language": "en",
+        "mode": "production",
+        "wall_seconds": 32.87,
+        "rc": 0,
+        "maxrss_mb": 1148.76171875,
+        "stderr_tail": "",
+        "lines": 86,
+        "kinds": {
+          "metadata": 11,
+          "instrumental": 13,
+          "singing": 62
+        },
+        "quality": {
+          "not_assessed": 62
+        },
+        "player_modes": {
+          "line_lrc": 24,
+          "word": 62
+        },
+        "model_lines": 62,
+        "failed_lines": 0,
+        "skipped_lines": 24,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 248.48,
+        "duration": 254.38,
+        "latin_lines": 62,
+        "latin_failed": 0,
+        "repeated_lines": 16,
+        "window_seconds_min": null,
+        "window_seconds_max": null,
+        "line_language": {
+          "?": 86
+        },
+        "routing_reasons": {}
+      }
+    }
+  }
+}

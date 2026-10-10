@@ -1,0 +1,192 @@
+{
+  "tag": "v1b_ja",
+  "routing": true,
+  "songs": {
+    "SAN値直葬": {
+      "production": {
+        "language": "ja",
+        "mode": "production",
+        "wall_seconds": 15.0,
+        "rc": 0,
+        "maxrss_mb": 1169.8984375,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 3,
+          "singing": 56,
+          "instrumental": 14
+        },
+        "quality": {
+          "reliable": 34,
+          "uncertain": 22
+        },
+        "player_modes": {
+          "line_lrc": 39,
+          "word": 34
+        },
+        "model_lines": 56,
+        "failed_lines": 0,
+        "skipped_lines": 17,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 132.73,
+        "duration": 145.71,
+        "latin_lines": 14,
+        "latin_failed": 0,
+        "repeated_lines": 7,
+        "window_seconds_min": 0.9,
+        "window_seconds_max": 12.3,
+        "line_language": {
+          "?": 17,
+          "ja": 56
+        },
+        "routing_reasons": {
+          "kana-dominant mixed; ja G2P covers Latin tokens": 10,
+          "Latin-dominant mixed line (cjk ratio 0.29); not reliably separable; ja G2P reads Latin tokens (approximate)": 1,
+          "kana present": 40,
+          "Latin-dominant mixed line (cjk ratio 0.30); not reliably separable; ja G2P reads Latin tokens (approximate)": 1,
+          "kanji-only; routed by song primary=ja": 2,
+          "Latin text without English evidence (may be romanised or stylised); conservative fallback; ja G2P reads Latin tokens (approximate)": 2
+        }
+      },
+      "experimental": {
+        "language": "ja",
+        "mode": "experimental",
+        "wall_seconds": 13.67,
+        "rc": 0,
+        "maxrss_mb": 1173.19140625,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 3,
+          "singing": 56,
+          "instrumental": 14
+        },
+        "quality": {
+          "reliable": 34,
+          "uncertain": 22
+        },
+        "player_modes": {
+          "line_lrc": 17,
+          "word": 56
+        },
+        "model_lines": 56,
+        "failed_lines": 0,
+        "skipped_lines": 17,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 132.73,
+        "duration": 145.71,
+        "latin_lines": 14,
+        "latin_failed": 0,
+        "repeated_lines": 7,
+        "window_seconds_min": 0.9,
+        "window_seconds_max": 12.3,
+        "line_language": {
+          "?": 17,
+          "ja": 56
+        },
+        "routing_reasons": {
+          "kana-dominant mixed; ja G2P covers Latin tokens": 10,
+          "Latin-dominant mixed line (cjk ratio 0.29); not reliably separable; ja G2P reads Latin tokens (approximate)": 1,
+          "kana present": 40,
+          "Latin-dominant mixed line (cjk ratio 0.30); not reliably separable; ja G2P reads Latin tokens (approximate)": 1,
+          "kanji-only; routed by song primary=ja": 2,
+          "Latin text without English evidence (may be romanised or stylised); conservative fallback; ja G2P reads Latin tokens (approximate)": 2
+        }
+      }
+    },
+    "歌姫失格": {
+      "production": {
+        "language": "ja",
+        "mode": "production",
+        "wall_seconds": 16.45,
+        "rc": 0,
+        "maxrss_mb": 1109.26953125,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 2,
+          "singing": 71
+        },
+        "quality": {
+          "reliable": 55,
+          "uncertain": 16
+        },
+        "player_modes": {
+          "line_lrc": 18,
+          "word": 55
+        },
+        "model_lines": 71,
+        "failed_lines": 0,
+        "skipped_lines": 2,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 196.7,
+        "duration": 200.41,
+        "latin_lines": 0,
+        "latin_failed": 0,
+        "repeated_lines": 7,
+        "window_seconds_min": 1.36,
+        "window_seconds_max": 8.05,
+        "line_language": {
+          "?": 2,
+          "ja": 71
+        },
+        "routing_reasons": {
+          "kana present": 70,
+          "kanji-only; routed by song primary=ja": 1
+        }
+      },
+      "experimental": {
+        "language": "ja",
+        "mode": "experimental",
+        "wall_seconds": 18.78,
+        "rc": 0,
+        "maxrss_mb": 1039.83984375,
+        "stderr_tail": "",
+        "lines": 73,
+        "kinds": {
+          "metadata": 2,
+          "singing": 71
+        },
+        "quality": {
+          "reliable": 55,
+          "uncertain": 16
+        },
+        "player_modes": {
+          "line_lrc": 2,
+          "word": 71
+        },
+        "model_lines": 71,
+        "failed_lines": 0,
+        "skipped_lines": 2,
+        "cross_line_violations": 0,
+        "non_monotonic_units": 0,
+        "overlapping_units": 0,
+        "out_of_range_units": 0,
+        "max_unit_end": 196.7,
+        "duration": 200.41,
+        "latin_lines": 0,
+        "latin_failed": 0,
+        "repeated_lines": 7,
+        "window_seconds_min": 1.36,
+        "window_seconds_max": 8.05,
+        "line_language": {
+          "?": 2,
+          "ja": 71
+        },
+        "routing_reasons": {
+          "kana present": 70,
+          "kanji-only; routed by song primary=ja": 1
+        }
+      }
+    }
+  }
+}

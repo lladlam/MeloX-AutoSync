@@ -16,12 +16,14 @@ from ..lyrics.classify import classify_lines
 from ..lyrics.normalize import normalize_cjk, normalize_en, normalize_for
 from ..types import AlignedLine, AlignUnit, LyricLine
 from .heuristic import distribute
-from .refine import refine_units_energy
+from .refine import _frame_db, refine_units_energy
 
 log = logging.getLogger("autosync.segment")
 
 # Default maximum line duration when the next line is far away (seconds).
 MAX_LINE_SECONDS = 12.0
+# Absolute ceiling for a line window, even when a long note is still voiced.
+MAX_LINE_HARD_SECONDS = 30.0
 
 
 @dataclass
@@ -29,9 +31,44 @@ class SegmentOptions:
     padding: float = 0.30
     fallback: str = "none"  # "none" | "heuristic"
     max_line_seconds: float = MAX_LINE_SECONDS
+    # Absolute ceiling when a long held note extends past max_line_seconds.
+    max_line_hard_seconds: float = MAX_LINE_HARD_SECONDS
     # V0.2: post-alignment boundary refinement ("none" | "energy").
     refine: str = "none"
     refine_max_extend: float = 0.6
+
+
+def _cap_window_end(
+    audio: np.ndarray,
+    sample_rate: int,
+    line_start: float,
+    end: float,
+    cap: float,
+    hard_cap: float,
+) -> float:
+    """Conservatively bound a long line window.
+
+    A window longer than ``cap`` is trimmed to ``line_start + cap``, but if the
+    audio is still **voiced** at that point (a long held note) the window is
+    extended through the contiguous voiced region, up to ``line_start + hard_cap``.
+    Long instrumental gaps / outros are therefore never fed to the model, and a
+    genuine long note is not truncated.
+    """
+    cap_end = line_start + cap
+    if end <= cap_end:
+        return end
+    hard_end = min(end, line_start + hard_cap)
+    db, fs = _frame_db(audio, sample_rate, 0.02)
+    if db.size == 0:
+        return cap_end
+    threshold = max(float(np.percentile(db, 20)) + 8.0, -50.0)
+    voiced = db > threshold
+    j = round(cap_end / fs)
+    if 0 <= j < len(voiced) and voiced[j]:
+        while j < len(voiced) and voiced[j] and (j * fs) < hard_end:
+            j += 1
+        return min(hard_end, max(cap_end, j * fs))
+    return cap_end
 
 
 def _window_for_line(
@@ -183,6 +220,11 @@ def align_lines(
         w_start, w_end = _window_for_line(
             line, next_line, total, options.padding, options.max_line_seconds
         )
+        # Conservative bound: never feed a long interlude/outro to the model, but
+        # do not truncate a genuinely long (still voiced) note either.
+        w_end = _cap_window_end(
+            audio, sample_rate, line.start, w_end, options.max_line_seconds, options.max_line_hard_seconds
+        )
         window = crop(audio, sample_rate, w_start, w_end, pad=0.0)
         win_len = len(window) / sample_rate
 
@@ -207,6 +249,13 @@ def align_lines(
         if san_msg:
             warnings.append(f"line {line.index}: {san_msg}")
 
+        # V1.0: mixed-language routing audit trail (only set by LanguageRouter).
+        route = getattr(aligner, "last_route", None)
+        route = route if isinstance(route, dict) else None
+        routing_failed = bool(route and not route.get("routable", True))
+        if routing_failed and err is None:
+            err = f"language routing: {route.get('route_reason')}"
+
         # V0.2: extend unit ends over voiced frames (opt-in).
         if units and options.refine == "energy":
             units = refine_units_energy(
@@ -217,11 +266,14 @@ def align_lines(
                 max_extend=options.refine_max_extend,
             )
 
-        # Make "original text is recoverable" a verified property.
+        # Make "original text is recoverable" a verified property. A mismatch
+        # must NOT reach the player word timeline (forced fallback below).
+        rec_failed = False
         if units and language is not None:
             rec = check_reconstruction(language, line.text, units)
             if rec:
                 warnings.append(f"line {line.index}: {rec}")
+                rec_failed = True
 
         if not units:
             if options.fallback == "heuristic":
@@ -230,7 +282,9 @@ def align_lines(
                     end_ref = next_line.start if next_line and next_line.start > line.start else (
                         min(total, line.start + options.max_line_seconds)
                     )
-                    units = distribute(0.0, max(0.05, end_ref - line.start), disp)
+                    end_ref = min(end_ref, w_start + win_len)
+                    # window-relative range -> absolute via w_start in the caller
+                    units = distribute(line.start - w_start, max(0.05, end_ref - w_start), disp)
                     src = "heuristic"
                 else:
                     src = "failed"
@@ -277,6 +331,11 @@ def align_lines(
                 lrc_end=line.end,
                 kind=cls.kind.value,
                 skip_reason=None,
+                window_seconds=round(win_len, 3),
+                force_fallback=rec_failed or routing_failed,
+                line_language=(route or {}).get("line_language"),
+                route_model=(route or {}).get("route_model"),
+                route_reason=(route or {}).get("route_reason"),
             )
         )
 

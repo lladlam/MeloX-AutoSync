@@ -138,3 +138,15 @@ V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射
 - 修复交叉验证**特征选择泄漏**：更正后 LOSO F1 0.58 / LOSO-song 0.59（V0.7 偏乐观作废）。
 - 新增 `docs/ENGINE_INTEGRATION_AUDIT.md`、`docs/LRC_FALLBACK_CONTRACT.md`、`docs/CLI_END_TO_END.md`；
   `tests/test_cli_integration.py`、`tests/test_fallback_timestamps.py`。
+
+### 新增（V1.0）— 六首真实歌曲验收与混合语言支持
+
+- **六首真实歌曲全部完成真实 CLI 推理**（本地授权素材，未进仓库）：时间轴 0 跨行/0 越界/0 非单调，
+  原文与原始 LRC 时间 6/6 保留；逐字覆盖 production **301/348 行（86.5%）**。
+- **窗口保守上限**（12s，长音可延伸到 30s 硬上限）与**启发式绝对时间偏移**修复；
+  文本重建失败**强制回退**，不再进入播放器逐字时间轴。
+- **逐行混合语言路由**（`--route-lines`）：zh 歌英文段落改由英文模型对齐，失败 15→5、9→4；
+  拉丁字母不无条件判英文；模型惰性加载并复用；每行记录语言/模型/原因。
+- 新增 `benchmarks/full_song_eval.py`、`tools/make_annotation_template.py`（人工标注模板 + 评分器）。
+- 文档：`docs/FULL_SONG_EVALUATION.md`、`docs/MIXED_LANGUAGE_ROUTING.md`、`docs/V1_RELEASE_READINESS.md`。
+- **真实歌曲精度仍需人工标注**（模板已生成 300 行）；本轮不声称任何真实歌曲精度数字。

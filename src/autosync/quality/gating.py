@@ -99,7 +99,9 @@ def player_timeline(result: AlignmentResult) -> list[dict[str, Any]]:
     for i, line in enumerate(lines):
         reliable = line.quality == QualityState.RELIABLE.value
         is_model = line.source in ("model", "heuristic") and bool(line.units)
-        if line.quality == QualityState.FAILED.value:
+        if line.force_fallback:
+            word_mode = False  # e.g. text reconstruction mismatch
+        elif line.quality == QualityState.FAILED.value:
             word_mode = False
         elif line.quality == QualityState.UNCERTAIN.value:
             # diagnostic timings only in experimental mode

@@ -82,6 +82,15 @@ class AlignedLine:
     kind: str | None = None
     # Why a non-singing line was not aligned (empty for singing lines).
     skip_reason: str | None = None
+    # V1.0: seconds of audio actually sent to the model for this line.
+    window_seconds: float | None = None
+    # V1.0: set when the result must never reach the player word timeline
+    # (e.g. the reconstructed text does not match the lyric line).
+    force_fallback: bool = False
+    # V1.0 mixed-language routing audit trail.
+    line_language: str | None = None
+    route_model: str | None = None
+    route_reason: str | None = None
 
 
 @dataclass

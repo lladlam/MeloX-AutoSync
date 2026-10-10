@@ -114,12 +114,17 @@ def cmd_align(args: argparse.Namespace) -> int:
         )
     else:
         aligner = get_aligner(args.language, backend=args.backend, cache_dir=Path(args.cache_dir))
+        if args.route_lines:
+            from .models.router import LanguageRouter
+
+            aligner = LanguageRouter(args.language, cache_dir=Path(args.cache_dir))
         t0 = time.time()
         aligner.load()
         load_seconds = time.time() - t0
         print(
             f"backend: {aligner.meta.name}  status={aligner.meta.status}  "
-            f"license={aligner.meta.license}",
+            f"license={aligner.meta.license}"
+            + ("  (per-line language routing enabled)" if args.route_lines else ""),
             file=sys.stderr,
         )
         if args.device != "cpu":
@@ -158,6 +163,10 @@ def cmd_align(args: argparse.Namespace) -> int:
                 "padding_seconds": args.padding,
                 "refine": args.refine,
                 "backend": args.backend or DEFAULT_BACKENDS.get(args.language),
+                "route_lines": bool(args.route_lines),
+                "routed_models": (
+                    aligner.model_names() if hasattr(aligner, "model_names") else {}
+                ),
             },
         )
 
@@ -227,6 +236,11 @@ def build_parser() -> argparse.ArgumentParser:
         default="production",
         help="production falls back to line LRC unless RELIABLE; experimental also "
         "emits diagnostic word timings for UNCERTAIN (never FAILED)",
+    )
+    a.add_argument(
+        "--route-lines",
+        action="store_true",
+        help="route each line to the appropriate language model (mixed-language songs)",
     )
     a.add_argument("--device", default="cpu", help="cpu (only cpu is validated)")
     a.add_argument(
