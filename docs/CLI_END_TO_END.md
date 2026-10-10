@@ -73,6 +73,27 @@ uv run --extra dev pytest -q tests/test_cli_integration.py tests/test_fallback_t
 
 ## 6. 仍未完成
 
-- **真实整曲**（多行 + 伴奏 + 长时轴）CLI 验证：缺授权素材，未完成；已有严格合成多行测试
-  （`tests/test_song_chain.py`）。
+- **真实整曲**（多行 + 伴奏 + 长时轴）CLI 验证：**已在 V0.9 用用户自备的本地授权素材完成**（见 §7）。
 - ja HuBERT 为 experimental：生产模式应视为**实验候选**，逐字时间需显式实验模式或更高置信。
+
+## 7. 真实整曲验证（V0.9，本地授权素材，未提交）
+
+素材：6 首商业歌曲（用户自备，`Test/` 已 gitignore，**不进入仓库**）。抽取 2 首做整曲 CLI 验证。
+
+| 歌曲 | 语言 | 后端 | 行数 | 非演唱行 | 质量 | 耗时 | 结果 |
+|---|---|---|---|---|---|---|---|
+| 歌姫失格 | ja | prj-beatrice/…hubert…-v4（默认） | 73 | metadata 2 | reliable 55 / uncertain 16 | **24.3s** | ✅ |
+| 提瓦特民谣 | zh | funasr/fa-zh（默认） | 73 | metadata 9 + instrumental 10 | not_assessed 54（zh 不门控） | 23.5s | ⚠️ 9 行失败 |
+
+整曲合法性校验（两首均通过）：
+
+- 原始 73 行**全部保留**，`lrc_start` 与 LRC 完全一致（逐行比对）；
+- 非演唱行 `units` 为空（无虚假逐字高亮）；
+- **0** 个非法单元边界（单调、`end≥start`），单元时间全部落在音频时长内；
+- **0** 个跨行交叉（上一演唱行单元 end ≤ 下一演唱行 `lrc_start` + padding）；
+- `player_timeline` 模式：ja 55 `word` / 18 `line_lrc`；zh 45 `word` / 28 `line_lrc`。
+
+**新发现（诚实记录）**：中文歌曲中含拉丁字母的行（如 `(Bora sana, Bora sana)`）在 zh 适配器下
+`normalize_cjk` 会清空 → 9 行 `failed`（`no aligned units produced`）。
+失败行**保留原始文字与时间**并按 `line_lrc` 回退，未伪造时间；这是 zh 适配器的已知限制
+（拉丁文本不在其中文词表内），已记入 `KNOWN_LIMITATIONS.md`。

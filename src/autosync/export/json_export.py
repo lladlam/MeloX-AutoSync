@@ -11,10 +11,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from ..quality.gating import player_timeline, summarize
+from ..quality.gating import player_timeline, summarize, summarize_kinds
 from ..types import AlignmentResult
 
-SCHEMA_VERSION = "0.2"
+SCHEMA_VERSION = "0.3"
 
 
 def result_to_dict(result: AlignmentResult) -> dict:
@@ -23,6 +23,8 @@ def result_to_dict(result: AlignmentResult) -> dict:
     data["generator"] = "MeloX-AutoSync"
     # V0.7: quality states and the conservative player timeline (LRC fallback)
     data["quality_summary"] = summarize(result.lines)
+    # V0.9: non-singing line classification counts
+    data["line_kind_summary"] = summarize_kinds(result.lines)
     data["player_timeline"] = player_timeline(result)
     return data
 

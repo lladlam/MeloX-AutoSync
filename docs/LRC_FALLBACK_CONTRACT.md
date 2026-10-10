@@ -18,13 +18,24 @@
 | `display_end` | **派生**的显示截止提示（下一行的 `lrc_start`） | 末行或下一行无原始时间为 `null` |
 | `display_end_source` | 派生来源标记（`derived_from_next_lrc_start`） | 与 `display_end` 同为 null |
 | `mode` | `word`（逐字）或 `line_lrc`（整行） | 从不 |
-| `source` | `model` / `heuristic` / `failed` | 从不 |
+| `source` | `model` / `heuristic` / `failed` / `skipped` | 从不 |
+| `kind` | 行类型：`singing` / `metadata` / `instrumental` / `unknown` | 从不 |
+| `skip_reason` | 非演唱行的跳过原因（演唱行为 `null`） | 演唱行 |
 | `quality` | `reliable` / `uncertain` / `failed` / `not_assessed` | 从不 |
 | `reasons` | 质量决策原因 | 空列表 |
 | `units` | 逐字单元（仅 `mode=word`） | `mode=line_lrc` 时不出现 |
 
 **关键**：`lrc_start`/`lrc_end` 与 `model_start`/`model_end` **互相独立**，绝不混用。
 `display_end` 是派生值，**不是**原始 LRC 的结束时间。
+
+## 1b. 非演唱行（V0.9）
+
+`kind != "singing"` 且 `source == "skipped"` 的行：
+
+- **不参与声学推理**（不会产生 `units`），因此**不会生成虚假的逐字高亮**；
+- **保留原始文本与原始时间**（`text`/`lrc_start`/`lrc_end`），播放器可按原始时间展示；
+- `skip_reason` 说明原因（如 `credit line (… by …)`、`non-lyric cue '間奏'`）；
+- **不截断相邻正常歌词的音频窗口**：某行的对齐窗口延伸到**下一个演唱行**的开始时间。
 
 ## 2. 质量状态 → 播放器模式
 
@@ -35,6 +46,7 @@
 | `failed` | **`line_lrc`**（回退） | **`line_lrc`**（永不输出逐字） |
 | `not_assessed` + 启用门控 | **`line_lrc`**（安全回退） | 同左 |
 | `not_assessed` + 未启用门控（en/zh） | `word`（保持） | `word` |
+| `kind != "singing"`（metadata/instrumental/unknown） | **`line_lrc`**（无逐字） | **`line_lrc`**（无逐字） |
 
 - 日语**启用门控**；英文/中文**不启用**（各自策略独立）。
 - 当门控启用且模型行**未评估**（质量分析缺失/异常）→ 视为 `uncertain`，安全回退。
@@ -49,13 +61,14 @@
 ## 4. 顶层字段
 
 ```
-schema_version : "0.2"
+schema_version : "0.3"
 generator      : "MeloX-AutoSync"
 language, engine
 model          : {name, version, language, license, status, device, load_seconds, ...}
 quality_summary: {reliable, uncertain, failed, not_assessed}
+line_kind_summary: {singing, metadata, instrumental, unknown, skipped}
 diagnostics    : {quality_gate: {enabled, policy, mode}, backend, padding_seconds, ...}
-lines[]        : 诊断用完整行记录（含 lrc_start/lrc_end/units/quality/...）
+lines[]        : 诊断用完整行记录（含 lrc_start/lrc_end/units/quality/kind/skip_reason）
 player_timeline[] : 播放器时间轴（见 §1）
 ```
 

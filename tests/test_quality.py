@@ -117,4 +117,4 @@ def test_json_export_has_quality_and_timeline() -> None:
     data = result_to_dict(_result())
     assert "quality_summary" in data and "player_timeline" in data
     assert data["quality_summary"]["reliable"] == 1
-    assert data["schema_version"] == "0.2"
+    assert data["schema_version"] == "0.3"

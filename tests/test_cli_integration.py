@@ -58,7 +58,7 @@ def test_cli_model_control_flow(monkeypatch, media) -> None:
     data = json.loads(out.read_text(encoding="utf-8"))
     assert data["model"]["name"] == "fake/model"
     assert data["model"]["status"] == "experimental"
-    assert data["schema_version"] == "0.2"
+    assert data["schema_version"] == "0.3"
     assert data["quality_summary"]["reliable"] == 2
     assert data["player_timeline"][0]["mode"] == "word"
     # original lyrics preserved end-to-end

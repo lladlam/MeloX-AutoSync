@@ -42,10 +42,23 @@ def summarize(lines: list[AlignedLine]) -> dict[str, int]:
     counts = {s.value: 0 for s in QualityState}
     counts["not_assessed"] = 0
     for line in lines:
+        if line.source == "skipped":
+            continue  # non-singing lines have no quality decision
         if line.quality in counts:
             counts[line.quality] += 1
         else:
             counts["not_assessed"] += 1
+    return counts
+
+
+def summarize_kinds(lines: list[AlignedLine]) -> dict[str, int]:
+    """Count lines by classification kind (V0.9)."""
+    counts = {"singing": 0, "metadata": 0, "instrumental": 0, "unknown": 0, "skipped": 0}
+    for line in lines:
+        if line.source == "skipped":
+            counts["skipped"] += 1
+        key = line.kind or "singing"
+        counts[key] = counts.get(key, 0) + 1
     return counts
 
 
@@ -116,6 +129,8 @@ def player_timeline(result: AlignmentResult) -> list[dict[str, Any]]:
             "mode": "word" if word_mode else "line_lrc",
             "source": line.source,
             "quality": line.quality or "not_assessed",
+            "kind": line.kind or "singing",
+            "skip_reason": line.skip_reason,
             "reasons": line.quality_reasons,
         }
         if word_mode:

@@ -44,3 +44,6 @@ htmlcov/
 # Derived diagnostic arrays (never commit)
 *.npz
 *.npy
+
+# Local real-song test material (third-party audio/lyrics; NEVER commit)
+/Test/

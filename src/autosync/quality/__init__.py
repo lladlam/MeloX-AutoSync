@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from .decision import QualityDecision, QualityPolicy, QualityState, decide
 from .features import QualityFeatures, extract_features
-from .gating import DEFAULT_POLICIES, gate_result, player_timeline, summarize
+from .gating import DEFAULT_POLICIES, gate_result, player_timeline, summarize, summarize_kinds
 
 __all__ = [
     "DEFAULT_POLICIES",
@@ -17,4 +17,5 @@ __all__ = [
     "gate_result",
     "player_timeline",
     "summarize",
+    "summarize_kinds",
 ]

@@ -77,3 +77,13 @@
 - 质量门控**已确认不可靠**（`docs/SELECTIVE_ALIGNMENT_REPORT.md`）；本轮仅用于保守回退。
 - 真实整曲（多行 + 伴奏 + 长时轴）测试仍未完成（缺授权整曲素材）；已有严格合成多行测试。
 - ja HuBERT 仍是 experimental：生产模式默认安全回退，逐字时间需显式实验模式或更高置信。
+
+---
+
+# V0.9 追加：LRC 非演唱行识别
+
+- 新增 `lyrics/classify.py`：**声学推理前**分类 `SINGING/METADATA/INSTRUMENTAL/UNKNOWN`。
+- `segment.align_lines` 与启发式路径均跳过非演唱行；**窗口延伸到下一个演唱行**，不被署名行截断。
+- `AlignedLine` 新增 `kind`/`skip_reason`；导出新增 `line_kind_summary`（schema `0.3`）。
+- 播放器：非演唱行 `mode="line_lrc"`，按原始时间展示，无虚假逐字高亮；原始文本/时间不删除。
+- 回归：`tests/test_line_classify.py`（12 项）；真实 CLI：英文署名行被跳过，歌词 MAE 0.0672 未变。

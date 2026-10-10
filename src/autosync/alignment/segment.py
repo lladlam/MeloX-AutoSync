@@ -12,6 +12,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from ..audio.io import crop, duration_seconds
+from ..lyrics.classify import classify_lines
 from ..lyrics.normalize import normalize_cjk, normalize_en, normalize_for
 from ..types import AlignedLine, AlignUnit, LyricLine
 from .heuristic import distribute
@@ -137,6 +138,16 @@ def align_lines(
     results: list[AlignedLine] = []
     infer_seconds = 0.0
 
+    # V0.9: classify lines BEFORE any acoustic inference. Non-singing lines are
+    # never aligned, and they must not truncate a neighbour's audio window.
+    classifications = classify_lines(lines)
+    next_singing: list[LyricLine | None] = [None] * len(lines)
+    nxt: LyricLine | None = None
+    for i in range(len(lines) - 1, -1, -1):
+        next_singing[i] = nxt
+        if classifications[i].kind.alignable:
+            nxt = lines[i]
+
     iterator = lines
     if progress:
         try:
@@ -147,7 +158,28 @@ def align_lines(
             iterator = lines
 
     for i, line in enumerate(iterator):
-        next_line = lines[i + 1] if i + 1 < len(lines) else None
+        cls = classifications[i]
+        if not cls.kind.alignable:
+            results.append(
+                AlignedLine(
+                    index=line.index,
+                    text=line.text,
+                    start=line.start,
+                    end=line.end if line.end is not None else line.start,
+                    units=[],
+                    source="skipped",
+                    error=None,
+                    quality=None,
+                    quality_reasons=[],
+                    lrc_start=line.start,
+                    lrc_end=line.end,
+                    kind=cls.kind.value,
+                    skip_reason=cls.reason,
+                )
+            )
+            continue
+
+        next_line = next_singing[i]
         w_start, w_end = _window_for_line(
             line, next_line, total, options.padding, options.max_line_seconds
         )
@@ -243,6 +275,8 @@ def align_lines(
                 quality_reasons=q_reasons,
                 lrc_start=line.start,
                 lrc_end=line.end,
+                kind=cls.kind.value,
+                skip_reason=None,
             )
         )
 

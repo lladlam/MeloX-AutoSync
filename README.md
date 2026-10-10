@@ -120,6 +120,14 @@ V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射
   仅作保守回退，**V0.5 时间轴保持默认**；详见 `docs/ALIGNMENT_CONFIDENCE.md`、
   `docs/SELECTIVE_ALIGNMENT_REPORT.md`。
 
+### 新增（V0.9）— LRC 非演唱行识别
+
+- 新增 `lyrics/classify.py`：**声学推理前**把每行分为 `SINGING / METADATA / INSTRUMENTAL / UNKNOWN`。
+- 制作者署名（中/日/英）与间奏/前奏/尾奏等提示**不参与音素对齐**，JSON 标记 `kind` 与 `skip_reason`。
+- **不删除**原始行/时间/文本；跳过的行**不截断**相邻歌词的音频窗口（窗口延伸到下一个演唱行）。
+- 播放器：`kind != singing` 的行按**原始时间**整行展示，**不生成虚假逐字高亮**。
+- JSON schema → `0.3`（新增 `line_kind_summary`）；`tests/test_line_classify.py`。
+
 ### 新增（V0.8）— 引擎正确性、回退契约与 CLI 整合
 
 - 显式**后端注册表**：ja 默认改为 **HuBERT Phoneme CTC**（experimental），ReazonSpeech 保留为可选基线，

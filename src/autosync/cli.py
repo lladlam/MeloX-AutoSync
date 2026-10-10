@@ -34,11 +34,41 @@ def _setup_logging(verbose: bool) -> None:
 
 
 def _heuristic_lines(audio, sample_rate: int, lines, language: str):
+    from .lyrics.classify import classify_lines
+
     total = duration_seconds(audio, sample_rate)
+    classifications = classify_lines(lines)
+    next_singing = [None] * len(lines)
+    nxt = None
+    for i in range(len(lines) - 1, -1, -1):
+        next_singing[i] = nxt
+        if classifications[i].kind.alignable:
+            nxt = lines[i]
+
     out: list[AlignedLine] = []
     for i, line in enumerate(lines):
-        nxt = lines[i + 1] if i + 1 < len(lines) else None
-        end_ref = nxt.start if nxt and nxt.start > line.start else min(total, line.start + 12.0)
+        cls = classifications[i]
+        if not cls.kind.alignable:
+            out.append(
+                AlignedLine(
+                    index=line.index,
+                    text=line.text,
+                    start=line.start,
+                    end=line.end if line.end is not None else line.start,
+                    units=[],
+                    source="skipped",
+                    error=None,
+                    lrc_start=line.start,
+                    lrc_end=line.end,
+                    kind=cls.kind.value,
+                    skip_reason=cls.reason,
+                )
+            )
+            continue
+        nxt_line = next_singing[i]
+        end_ref = (
+            nxt_line.start if nxt_line and nxt_line.start > line.start else min(total, line.start + 12.0)
+        )
         units = display_units(language, line.text)
         dist = distribute(line.start, end_ref, units) if units else []
         out.append(
@@ -52,6 +82,7 @@ def _heuristic_lines(audio, sample_rate: int, lines, language: str):
                 error=None if dist else "no display units",
                 lrc_start=line.start,
                 lrc_end=line.end,
+                kind=cls.kind.value,
             )
         )
     return out
@@ -138,8 +169,13 @@ def cmd_align(args: argparse.Namespace) -> int:
     n_model = sum(1 for ln in result.lines if ln.source == "model")
     n_failed = sum(1 for ln in result.lines if ln.source == "failed")
     qs = summarize(result.lines)
+    from .quality.gating import summarize_kinds
+
+    ks = summarize_kinds(result.lines)
     print(
         f"wrote {out}\n  lines: {len(result.lines)}  model-aligned: {n_model}  failed: {n_failed}\n"
+        f"  kinds: singing={ks['singing']} metadata={ks['metadata']} "
+        f"instrumental={ks['instrumental']} unknown={ks['unknown']} skipped={ks['skipped']}\n"
         f"  quality: reliable={qs['reliable']} uncertain={qs['uncertain']} "
         f"failed={qs['failed']} not_assessed={qs['not_assessed']}",
         file=sys.stderr,

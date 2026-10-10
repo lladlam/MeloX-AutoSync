@@ -77,6 +77,11 @@ class AlignedLine:
     # explicit end time; it must never be fabricated.
     lrc_start: float | None = None
     lrc_end: float | None = None
+    # V0.9: non-singing line classification ("singing" | "metadata" |
+    # "instrumental" | "unknown" | None for older results).
+    kind: str | None = None
+    # Why a non-singing line was not aligned (empty for singing lines).
+    skip_reason: str | None = None
 
 
 @dataclass
@@ -104,6 +109,8 @@ class AlignmentResult:
     diagnostics: dict[str, Any] = field(default_factory=dict)
     # V0.7: counts of quality states across lines, e.g. {"reliable": 3, ...}
     quality_summary: dict[str, Any] = field(default_factory=dict)
+    # V0.9: counts by line kind, e.g. {"singing": 8, "metadata": 3, ...}
+    line_kind_summary: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         data = asdict(self)
