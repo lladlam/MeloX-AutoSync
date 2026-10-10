@@ -54,15 +54,17 @@ def refine_units_energy(
     rel_db: float = 8.0,
     abs_floor_db: float = -50.0,
     max_gap_frames: int = 2,
-    snap_starts: bool = False,
+    start_mode: str = "none",
     max_start_shift: float = 0.6,
 ) -> list[AlignUnit]:
     """Return a copy of ``units`` with energy-refined boundaries (seconds).
 
-    ``snap_starts`` defaults to ``False``: on the GTSinger evaluation start
-    snapping *increased* start error for both English and Chinese (see
-    docs/EXPERIMENT_RESULTS.md), so only end-extension is enabled by default.
-    The capability is kept for reproducible experiments.
+    ``start_mode``:
+      * ``"none"``     – leave starts untouched (default; end-extension only).
+      * ``"forward"``  – move a start out of silence to the next voiced frame
+        (tested and **rejected** in V0.2: it increased start error).
+      * ``"backward"`` – snap a start back to the rising edge of its voiced run
+        (motivated by the measured late-start bias on singing).
     """
     if not units:
         return units
@@ -76,22 +78,31 @@ def refine_units_energy(
 
     starts = [u.start for u in units]
 
-    if snap_starts:
+    if start_mode in ("forward", "backward"):
         max_steps = max(1, round(max_start_shift / fs))
         for i, unit in enumerate(units):
-            f0 = round(unit.start / fs)
-            f0 = max(0, min(f0, len(voiced) - 1))
-            if not voiced[f0]:
-                j, steps = f0, 0
-                while j < len(voiced) and steps < max_steps and not voiced[j]:
-                    j += 1
-                    steps += 1
-                if j < len(voiced) and voiced[j]:
-                    candidate = j * fs
-                    upper = max(starts[i], unit.end - _MIN_DURATION)
-                    starts[i] = min(max(candidate, starts[i]), upper)
+            f0 = max(0, min(round(unit.start / fs), len(voiced) - 1))
+            if start_mode == "forward":
+                if not voiced[f0]:
+                    j, steps = f0, 0
+                    while j < len(voiced) and steps < max_steps and not voiced[j]:
+                        j += 1
+                        steps += 1
+                    if j < len(voiced) and voiced[j]:
+                        candidate = j * fs
+                        upper = max(starts[i], unit.end - _MIN_DURATION)
+                        starts[i] = min(max(candidate, starts[i]), upper)
+            else:  # backward
+                if voiced[f0]:
+                    j, steps = f0, 0
+                    while j > 0 and voiced[j - 1] and steps < max_steps:
+                        j -= 1
+                        steps += 1
+                    starts[i] = max(0.0, j * fs)
             if i and starts[i] < starts[i - 1]:
                 starts[i] = starts[i - 1]
+            if starts[i] > unit.end - _MIN_DURATION:
+                starts[i] = unit.start
 
     max_frames = max(1, round(max_extend / fs))
     out: list[AlignUnit] = []

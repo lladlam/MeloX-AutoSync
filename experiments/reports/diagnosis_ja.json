@@ -1,0 +1,1510 @@
+{
+  "language": "ja",
+  "model": "reazon-research/japanese-wav2vec2-base-rs35kh",
+  "n_segments": 30,
+  "collapse": {
+    "lrc": 14,
+    "oracle": 15,
+    "energy_trim": 13
+  },
+  "segments": [
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/first love/Control_Group/0000",
+      "singer": "JA-Soprano-1",
+      "song": "first love",
+      "technique": "Control",
+      "lrc": {
+        "frames": 528,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 1,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 73% of the audio"
+        ],
+        "max_span_fraction": 0.727,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.57,
+        "transcript": "さあいこのキスはだばこのフェイバーかして",
+        "transcript_cer": 1.167
+      },
+      "oracle": {
+        "frames": 489,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.389,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.56,
+        "transcript": "このキスはだばこのフェイバーかし",
+        "transcript_cer": 0.917
+      },
+      "energy_trim": {
+        "frames": 481,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.362,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.64,
+        "transcript": "いいこのキスはだばこのフェイバーかして",
+        "transcript_cer": 1.083
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 73% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/first love/Control_Group/0001",
+      "singer": "JA-Soprano-1",
+      "song": "first love",
+      "technique": "Control",
+      "lrc": {
+        "frames": 846,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 63% of the audio"
+        ],
+        "max_span_fraction": 0.632,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.38,
+        "transcript": "みがくてせないかおりあしたの今まごろには",
+        "transcript_cer": 0.667
+      },
+      "oracle": {
+        "frames": 816,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 62% of the audio"
+        ],
+        "max_span_fraction": 0.619,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.24,
+        "transcript": "みがくてせつないかおりあしたのいまごろには",
+        "transcript_cer": 0.667
+      },
+      "energy_trim": {
+        "frames": 846,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 63% of the audio"
+        ],
+        "max_span_fraction": 0.632,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.38,
+        "transcript": "みがくてせないかおりあしたの今まごろには",
+        "transcript_cer": 0.667
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 63% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/first love/Control_Group/0002",
+      "singer": "JA-Soprano-1",
+      "song": "first love",
+      "technique": "Control",
+      "lrc": {
+        "frames": 734,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.417,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.34,
+        "transcript": "はとにいるんだってれはまってるんだべ",
+        "transcript_cer": 0.778
+      },
+      "oracle": {
+        "frames": 672,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.454,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.87,
+        "transcript": "はとにいるんだってれるはまってるんだべ",
+        "transcript_cer": 0.833
+      },
+      "energy_trim": {
+        "frames": 732,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 6,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 67% of the audio"
+        ],
+        "max_span_fraction": 0.669,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.45,
+        "transcript": "はとにいるんだってれはまってるんだべ",
+        "transcript_cer": 0.778
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.9659444444444445,
+        "end_mae": 1.0559444444444446,
+        "signed_start_mean": 0.27694444444444444,
+        "signed_end_mean": 0.38827777777777783
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/first love/Glissando_Group/0000",
+      "singer": "JA-Soprano-1",
+      "song": "first love",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 529,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.416,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.27,
+        "transcript": "さ後のキスはたばこのフェヘバーがし",
+        "transcript_cer": 0.75
+      },
+      "oracle": {
+        "frames": 496,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.345,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.4,
+        "transcript": "のキースはたばこのフェヘバーがし",
+        "transcript_cer": 0.917
+      },
+      "energy_trim": {
+        "frames": 482,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.359,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.76,
+        "transcript": "のキースはたばこのフェヘバーがし",
+        "transcript_cer": 0.917
+      },
+      "word_level_lrc": {
+        "coverage": 0.9230769230769231,
+        "start_mae": 0.8850000000000001,
+        "end_mae": 0.8914166666666667,
+        "signed_start_mean": -0.23949999999999974,
+        "signed_end_mean": -0.0995833333333332
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/first love/Glissando_Group/0001",
+      "singer": "JA-Soprano-1",
+      "song": "first love",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 844,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 63% of the audio"
+        ],
+        "max_span_fraction": 0.632,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.23,
+        "transcript": "身がくで切ない香り明日のはこには",
+        "transcript_cer": 0.444
+      },
+      "oracle": {
+        "frames": 811,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 62% of the audio"
+        ],
+        "max_span_fraction": 0.617,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.36,
+        "transcript": "身がくでせない香り明日のはこには",
+        "transcript_cer": 0.389
+      },
+      "energy_trim": {
+        "frames": 844,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 63% of the audio"
+        ],
+        "max_span_fraction": 0.632,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.23,
+        "transcript": "身がくで切ない香り明日のはこには",
+        "transcript_cer": 0.444
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 63% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/first love/Glissando_Group/0002",
+      "singer": "JA-Soprano-1",
+      "song": "first love",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 733,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.352,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.7,
+        "transcript": "はどこにいるんだろうでれるをも出るんだろう",
+        "transcript_cer": 0.722
+      },
+      "oracle": {
+        "frames": 679,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.343,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.52,
+        "transcript": "たはどこにいるんだろうでれるをも出んだろう",
+        "transcript_cer": 0.611
+      },
+      "energy_trim": {
+        "frames": 714,
+        "n_tokens": 11,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.361,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.12,
+        "transcript": "はどこにいるんだろうでれるをも出るんだろう",
+        "transcript_cer": 0.722
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.5957222222222222,
+        "end_mae": 0.7056111111111111,
+        "signed_start_mean": -0.09138888888888887,
+        "signed_end_mean": 0.019611111111111048
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/heartful song/Control_Group/0000",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Control",
+      "lrc": {
+        "frames": 787,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.205,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.6,
+        "transcript": "だれもいないしてテゆめのじかはもまくがおれてゆくき",
+        "transcript_cer": 0.722
+      },
+      "oracle": {
+        "frames": 598,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.358,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.02,
+        "transcript": "夢の時間はもま句がおれててゆく",
+        "transcript_cer": 0.722
+      },
+      "energy_trim": {
+        "frames": 691,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.194,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.39,
+        "transcript": "夢のじかはもまくがおれてゆく",
+        "transcript_cer": 0.667
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.5639444444444444,
+        "end_mae": 0.4848888888888887,
+        "signed_start_mean": -0.18794444444444444,
+        "signed_end_mean": 0.040777777777777774
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/heartful song/Control_Group/0001",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Control",
+      "lrc": {
+        "frames": 667,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 58% of the audio"
+        ],
+        "max_span_fraction": 0.579,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.34,
+        "transcript": "とあすはに度ないいときづこの",
+        "transcript_cer": 0.632
+      },
+      "oracle": {
+        "frames": 630,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 55% of the audio"
+        ],
+        "max_span_fraction": 0.552,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.68,
+        "transcript": "とあすはに度ないいときづこ",
+        "transcript_cer": 0.684
+      },
+      "energy_trim": {
+        "frames": 667,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 58% of the audio"
+        ],
+        "max_span_fraction": 0.579,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.34,
+        "transcript": "とあすはに度ないいときづこの",
+        "transcript_cer": 0.632
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 58% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/heartful song/Control_Group/0002",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Control",
+      "lrc": {
+        "frames": 907,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 81% of the audio"
+        ],
+        "max_span_fraction": 0.813,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.55,
+        "transcript": "心はいつもせなくつくしけれど涙ふいてとびらたこ",
+        "transcript_cer": 0.64
+      },
+      "oracle": {
+        "frames": 876,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 81% of the audio"
+        ],
+        "max_span_fraction": 0.806,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.34,
+        "transcript": "心はいつもせなくつくしけれど涙ふいてとびらたこ",
+        "transcript_cer": 0.64
+      },
+      "energy_trim": {
+        "frames": 907,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 81% of the audio"
+        ],
+        "max_span_fraction": 0.813,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.55,
+        "transcript": "心はいつもせなくつくしけれど涙ふいてとびらたこ",
+        "transcript_cer": 0.64
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 81% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/heartful song/Glissando_Group/0000",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 791,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 71% of the audio"
+        ],
+        "max_span_fraction": 0.709,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.45,
+        "transcript": "誰もいないして夢の時間がはもまあがおりていく",
+        "transcript_cer": 0.611
+      },
+      "oracle": {
+        "frames": 605,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 50% of the audio"
+        ],
+        "max_span_fraction": 0.504,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.2,
+        "transcript": "夢の時間がはもまあ句が下りてゆいく",
+        "transcript_cer": 0.722
+      },
+      "energy_trim": {
+        "frames": 681,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.486,
+        "blank_fraction": 0.0,
+        "mean_token_score": -12.97,
+        "transcript": "夢の時間はもま句がおりていく",
+        "transcript_cer": 0.667
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 71% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/heartful song/Glissando_Group/0001",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 671,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 57% of the audio"
+        ],
+        "max_span_fraction": 0.568,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.21,
+        "transcript": "とはに度どこないい度きずこの",
+        "transcript_cer": 0.737
+      },
+      "oracle": {
+        "frames": 643,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 54% of the audio"
+        ],
+        "max_span_fraction": 0.54,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.4,
+        "transcript": "となはに度とないい度きずこの",
+        "transcript_cer": 0.684
+      },
+      "energy_trim": {
+        "frames": 669,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 56% of the audio"
+        ],
+        "max_span_fraction": 0.561,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.27,
+        "transcript": "とはに度とないい度きずこの",
+        "transcript_cer": 0.684
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 57% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Glissando/heartful song/Glissando_Group/0002",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 909,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 81% of the audio"
+        ],
+        "max_span_fraction": 0.811,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.42,
+        "transcript": "都心はいつもせなく美しいけれど涙が拭いてびがたこ",
+        "transcript_cer": 0.48
+      },
+      "oracle": {
+        "frames": 883,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 81% of the audio"
+        ],
+        "max_span_fraction": 0.805,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.84,
+        "transcript": "都心はいつもせなく美しいけれど涙が拭いてびがたこ",
+        "transcript_cer": 0.48
+      },
+      "energy_trim": {
+        "frames": 909,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 81% of the audio"
+        ],
+        "max_span_fraction": 0.811,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.42,
+        "transcript": "都心はいつもせなく美しいけれど涙が拭いてびがたこ",
+        "transcript_cer": 0.48
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 81% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/heartful song/Control_Group/0000",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Control",
+      "lrc": {
+        "frames": 802,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.491,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.06,
+        "transcript": "誰もいないして夢の時間はもま句雲が降りていく",
+        "transcript_cer": 0.556
+      },
+      "oracle": {
+        "frames": 599,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 54% of the audio"
+        ],
+        "max_span_fraction": 0.541,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.22,
+        "transcript": "夢の時間はも句雲が降りていく",
+        "transcript_cer": 0.611
+      },
+      "energy_trim": {
+        "frames": 802,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.491,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.06,
+        "transcript": "誰もいないして夢の時間はもま句雲が降りていく",
+        "transcript_cer": 0.556
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 2.2703333333333333,
+        "end_mae": 2.146055555555555,
+        "signed_start_mean": -1.6394444444444445,
+        "signed_end_mean": -1.381277777777778
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/heartful song/Control_Group/0001",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Control",
+      "lrc": {
+        "frames": 668,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.244,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.37,
+        "transcript": "と明日すはに度どこないい度きづくの",
+        "transcript_cer": 0.579
+      },
+      "oracle": {
+        "frames": 626,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.195,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.2,
+        "transcript": "と明日すは二度どこないい度きづくの",
+        "transcript_cer": 0.526
+      },
+      "energy_trim": {
+        "frames": 666,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.245,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.35,
+        "transcript": "と明日すは二度どこないい度きづくの",
+        "transcript_cer": 0.526
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.49410526315789466,
+        "end_mae": 0.5460526315789473,
+        "signed_start_mean": -0.4204210526315788,
+        "signed_end_mean": -0.24373684210526317
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/heartful song/Control_Group/0002",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Control",
+      "lrc": {
+        "frames": 863,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 67% of the audio"
+        ],
+        "max_span_fraction": 0.67,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.37,
+        "transcript": "シーはいつおせなく美しいけれど波ふいて飛び立ただこ",
+        "transcript_cer": 0.6
+      },
+      "oracle": {
+        "frames": 778,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 63% of the audio"
+        ],
+        "max_span_fraction": 0.634,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.41,
+        "transcript": "シーはいつおせつなく美しいけれ涙ふいてとびがただこ",
+        "transcript_cer": 0.6
+      },
+      "energy_trim": {
+        "frames": 863,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 67% of the audio"
+        ],
+        "max_span_fraction": 0.67,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.37,
+        "transcript": "シーはいつおせなく美しいけれど波ふいて飛び立ただこ",
+        "transcript_cer": 0.6
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 67% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/heartful song/Vibrato_Group/0000",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 799,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.487,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.85,
+        "transcript": "誰もいないしてテき夢のほうじがはもうまあ雲がりてゆいく",
+        "transcript_cer": 0.778
+      },
+      "oracle": {
+        "frames": 587,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 54% of the audio"
+        ],
+        "max_span_fraction": 0.537,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.04,
+        "transcript": "夢のほうじがはもまあ雲が下りてゆいく",
+        "transcript_cer": 0.722
+      },
+      "energy_trim": {
+        "frames": 774,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.207,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.52,
+        "transcript": "誰もいないしてテき夢のほうじがはもうまあ雲がりていく",
+        "transcript_cer": 0.778
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 2.510666666666667,
+        "end_mae": 2.5107222222222223,
+        "signed_start_mean": -2.0113333333333334,
+        "signed_end_mean": -1.6909444444444444
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/heartful song/Vibrato_Group/0001",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 673,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.253,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.38,
+        "transcript": "どんなあすはにどとないいときずこの",
+        "transcript_cer": 0.737
+      },
+      "oracle": {
+        "frames": 631,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.203,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.41,
+        "transcript": "どんなあすはにどとないいときずこの",
+        "transcript_cer": 0.737
+      },
+      "energy_trim": {
+        "frames": 671,
+        "n_tokens": 15,
+        "n_multi_char_tokens": 4,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.253,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.42,
+        "transcript": "どんなあすはにどとないいときずこの",
+        "transcript_cer": 0.737
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.4463157894736842,
+        "end_mae": 0.5015263157894737,
+        "signed_start_mean": -0.34231578947368424,
+        "signed_end_mean": -0.12236842105263158
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/heartful song/Vibrato_Group/0002",
+      "singer": "JA-Soprano-1",
+      "song": "heartful song",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 919,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 75% of the audio"
+        ],
+        "max_span_fraction": 0.748,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.4,
+        "transcript": "はいつお切なく美しいけれど波いた拭いて扉ただこ",
+        "transcript_cer": 0.52
+      },
+      "oracle": {
+        "frames": 799,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 79% of the audio"
+        ],
+        "max_span_fraction": 0.788,
+        "blank_fraction": 0.0,
+        "mean_token_score": -16.23,
+        "transcript": "はいつおせなく美しいけれど波いた拭いて扉ただこ",
+        "transcript_cer": 0.56
+      },
+      "energy_trim": {
+        "frames": 919,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 5,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 75% of the audio"
+        ],
+        "max_span_fraction": 0.748,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.4,
+        "transcript": "はいつお切なく美しいけれど波いた拭いて扉ただこ",
+        "transcript_cer": 0.52
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 75% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/时雨/Control_Group/0000",
+      "singer": "JA-Soprano-1",
+      "song": "时雨",
+      "technique": "Control",
+      "lrc": {
+        "frames": 517,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 78% of the audio"
+        ],
+        "max_span_fraction": 0.779,
+        "blank_fraction": 0.0,
+        "mean_token_score": -9.93,
+        "transcript": "水の馬にしでが思いいでつり行く時が",
+        "transcript_cer": 0.812
+      },
+      "oracle": {
+        "frames": 430,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 83% of the audio"
+        ],
+        "max_span_fraction": 0.83,
+        "blank_fraction": 0.0,
+        "mean_token_score": -10.93,
+        "transcript": "馬にし手が思いいでつり行く時が",
+        "transcript_cer": 0.875
+      },
+      "energy_trim": {
+        "frames": 474,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 76% of the audio"
+        ],
+        "max_span_fraction": 0.759,
+        "blank_fraction": 0.0,
+        "mean_token_score": -10.82,
+        "transcript": "伊豆の馬にし手が思いいでつり行く時が",
+        "transcript_cer": 0.812
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 78% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/时雨/Control_Group/0001",
+      "singer": "JA-Soprano-1",
+      "song": "时雨",
+      "technique": "Control",
+      "lrc": {
+        "frames": 460,
+        "n_tokens": 16,
+        "n_multi_char_tokens": 3,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.396,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.51,
+        "transcript": "がわる振りだしだこのあめに無情にも",
+        "transcript_cer": 0.526
+      },
+      "oracle": {
+        "frames": 434,
+        "n_tokens": 16,
+        "n_multi_char_tokens": 3,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.362,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.7,
+        "transcript": "がわる振りだしだこのあめに無情にも",
+        "transcript_cer": 0.526
+      },
+      "energy_trim": {
+        "frames": 459,
+        "n_tokens": 16,
+        "n_multi_char_tokens": 3,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.397,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.27,
+        "transcript": "がわる振りだしだこのあめに無情にも",
+        "transcript_cer": 0.526
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.533157894736842,
+        "end_mae": 0.5368421052631579,
+        "signed_start_mean": 0.11000000000000014,
+        "signed_end_mean": 0.18105263157894758
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/时雨/Control_Group/0002",
+      "singer": "JA-Soprano-1",
+      "song": "时雨",
+      "technique": "Control",
+      "lrc": {
+        "frames": 671,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.337,
+        "blank_fraction": 0.001,
+        "mean_token_score": -14.88,
+        "transcript": "が広がてくわがままだだけのそんでいた",
+        "transcript_cer": 0.64
+      },
+      "oracle": {
+        "frames": 616,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.334,
+        "blank_fraction": 0.002,
+        "mean_token_score": -14.3,
+        "transcript": "がひがてくわがままだだけのそんでいた",
+        "transcript_cer": 0.68
+      },
+      "energy_trim": {
+        "frames": 671,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.337,
+        "blank_fraction": 0.001,
+        "mean_token_score": -14.88,
+        "transcript": "が広がてくわがままだだけのそんでいた",
+        "transcript_cer": 0.64
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.8805200000000001,
+        "end_mae": 0.99732,
+        "signed_start_mean": 0.6655600000000002,
+        "signed_end_mean": 0.7807600000000002
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/时雨/Vibrato_Group/0000",
+      "singer": "JA-Soprano-1",
+      "song": "时雨",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 394,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 78% of the audio"
+        ],
+        "max_span_fraction": 0.779,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.49,
+        "transcript": "勢のまに亡くし入れた思いで移り",
+        "transcript_cer": 0.438
+      },
+      "oracle": {
+        "frames": 347,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 74% of the audio"
+        ],
+        "max_span_fraction": 0.744,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.61,
+        "transcript": "にくした思いで移り",
+        "transcript_cer": 0.5
+      },
+      "energy_trim": {
+        "frames": 347,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 2,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 74% of the audio"
+        ],
+        "max_span_fraction": 0.744,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.75,
+        "transcript": "に亡くし入れた思いで移り",
+        "transcript_cer": 0.562
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 78% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/时雨/Vibrato_Group/0001",
+      "singer": "JA-Soprano-1",
+      "song": "时雨",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 566,
+        "n_tokens": 16,
+        "n_multi_char_tokens": 3,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.318,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.8,
+        "transcript": "時が涙がわる売り出しこの輪めに部情にも",
+        "transcript_cer": 0.421
+      },
+      "oracle": {
+        "frames": 547,
+        "n_tokens": 16,
+        "n_multi_char_tokens": 3,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.294,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.99,
+        "transcript": "時涙みがわる売り出しこの輪めに部情にも",
+        "transcript_cer": 0.474
+      },
+      "energy_trim": {
+        "frames": 559,
+        "n_tokens": 16,
+        "n_multi_char_tokens": 3,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.322,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.73,
+        "transcript": "時涙がわる売り出しこの輪めに部情にも",
+        "transcript_cer": 0.474
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.48526315789473706,
+        "end_mae": 0.5579473684210527,
+        "signed_start_mean": 0.378,
+        "signed_end_mean": 0.463421052631579
+      }
+    },
+    {
+      "id": "Japanese/JA-Soprano-1/Vibrato/时雨/Vibrato_Group/0002",
+      "singer": "JA-Soprano-1",
+      "song": "时雨",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 669,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.336,
+        "blank_fraction": 0.001,
+        "mean_token_score": -15.12,
+        "transcript": "そがてくるわがまのだけのそんでいた",
+        "transcript_cer": 0.72
+      },
+      "oracle": {
+        "frames": 630,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.325,
+        "blank_fraction": 0.002,
+        "mean_token_score": -14.36,
+        "transcript": "そが日がてくるわがまのだけのそんでいた",
+        "transcript_cer": 0.68
+      },
+      "energy_trim": {
+        "frames": 668,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 6,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.337,
+        "blank_fraction": 0.001,
+        "mean_token_score": -15.03,
+        "transcript": "そがてくるわがまのだけのそんでいた",
+        "transcript_cer": 0.72
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.7647999999999999,
+        "end_mae": 0.84088,
+        "signed_start_mean": 0.39120000000000005,
+        "signed_end_mean": 0.46568000000000004
+      }
+    },
+    {
+      "id": "Japanese/JA-Tenor-1/Vibrato/さんぽ/Control_Group/0000",
+      "singer": "JA-Tenor-1",
+      "song": "さんぽ",
+      "technique": "Control",
+      "lrc": {
+        "frames": 584,
+        "n_tokens": 13,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 98% of the audio"
+        ],
+        "max_span_fraction": 0.979,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.07,
+        "transcript": "は元気愚くの大先",
+        "transcript_cer": 0.625
+      },
+      "oracle": {
+        "frames": 579,
+        "n_tokens": 13,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 98% of the audio"
+        ],
+        "max_span_fraction": 0.979,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.21,
+        "transcript": "は元気愚くの大先",
+        "transcript_cer": 0.625
+      },
+      "energy_trim": {
+        "frames": 529,
+        "n_tokens": 13,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 89% of the audio"
+        ],
+        "max_span_fraction": 0.892,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.62,
+        "transcript": "は元気お愚くの大先",
+        "transcript_cer": 0.688
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 98% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Tenor-1/Vibrato/さんぽ/Control_Group/0001",
+      "singer": "JA-Tenor-1",
+      "song": "さんぽ",
+      "technique": "Control",
+      "lrc": {
+        "frames": 721,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.38,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.04,
+        "transcript": "さくちとなるくさパら一本ばして",
+        "transcript_cer": 1.0
+      },
+      "oracle": {
+        "frames": 622,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.432,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.49,
+        "transcript": "さ道となるさパ",
+        "transcript_cer": 0.933
+      },
+      "energy_trim": {
+        "frames": 74,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.432,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.42,
+        "transcript": "ばし",
+        "transcript_cer": 1.0
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 4.261333333333332,
+        "end_mae": 4.456666666666665,
+        "signed_start_mean": 4.261333333333332,
+        "signed_end_mean": 4.456666666666665
+      }
+    },
+    {
+      "id": "Japanese/JA-Tenor-1/Vibrato/さんぽ/Control_Group/0002",
+      "singer": "JA-Tenor-1",
+      "song": "さんぽ",
+      "technique": "Control",
+      "lrc": {
+        "frames": 761,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.418,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.46,
+        "transcript": "つくぶちゃんれ道雲の咲くてくみし",
+        "transcript_cer": 0.818
+      },
+      "oracle": {
+        "frames": 761,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.418,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.46,
+        "transcript": "つくぶちゃんれ道雲の咲くてくみし",
+        "transcript_cer": 0.818
+      },
+      "energy_trim": {
+        "frames": 761,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.418,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.46,
+        "transcript": "つくぶちゃんれ道雲の咲くてくみし",
+        "transcript_cer": 0.818
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 1.5839090909090912,
+        "end_mae": 1.6949090909090911,
+        "signed_start_mean": 1.0163636363636366,
+        "signed_end_mean": 1.125181818181818
+      }
+    },
+    {
+      "id": "Japanese/JA-Tenor-1/Vibrato/さんぽ/Vibrato_Group/0000",
+      "singer": "JA-Tenor-1",
+      "song": "さんぽ",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 718,
+        "n_tokens": 13,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 98% of the audio"
+        ],
+        "max_span_fraction": 0.983,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.76,
+        "transcript": "の私は嫌疑おくの大好き殿",
+        "transcript_cer": 0.625
+      },
+      "oracle": {
+        "frames": 683,
+        "n_tokens": 13,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 98% of the audio"
+        ],
+        "max_span_fraction": 0.982,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.92,
+        "transcript": "の子私は嫌ぐおくの大好き",
+        "transcript_cer": 0.562
+      },
+      "energy_trim": {
+        "frames": 224,
+        "n_tokens": 13,
+        "n_multi_char_tokens": 3,
+        "feasible": false,
+        "reasons": [
+          "collapsed: one token spans 63% of the audio"
+        ],
+        "max_span_fraction": 0.629,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.11,
+        "transcript": "どう",
+        "transcript_cer": 0.938
+      },
+      "word_level_lrc": {
+        "error": "InfeasibleAlignmentError: alignment infeasible: collapsed: one token spans 98% of the audio"
+      }
+    },
+    {
+      "id": "Japanese/JA-Tenor-1/Vibrato/さんぽ/Vibrato_Group/0001",
+      "singer": "JA-Tenor-1",
+      "song": "さんぽ",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 543,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.495,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.75,
+        "transcript": "佐くま町ドぬるくさ",
+        "transcript_cer": 1.0
+      },
+      "oracle": {
+        "frames": 543,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.495,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.75,
+        "transcript": "佐くま町ドぬるくさ",
+        "transcript_cer": 1.0
+      },
+      "energy_trim": {
+        "frames": 541,
+        "n_tokens": 14,
+        "n_multi_char_tokens": 1,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.492,
+        "blank_fraction": 0.0,
+        "mean_token_score": -13.73,
+        "transcript": "佐くま町ドぬるくさ",
+        "transcript_cer": 1.0
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.5697333333333332,
+        "end_mae": 0.5825333333333333,
+        "signed_start_mean": -0.28266666666666646,
+        "signed_end_mean": -0.14213333333333322
+      }
+    },
+    {
+      "id": "Japanese/JA-Tenor-1/Vibrato/さんぽ/Vibrato_Group/0002",
+      "singer": "JA-Tenor-1",
+      "song": "さんぽ",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 1158,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.469,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.94,
+        "transcript": "一歩橋み九もこ町目みしす久みし",
+        "transcript_cer": 0.864
+      },
+      "oracle": {
+        "frames": 1158,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.469,
+        "blank_fraction": 0.0,
+        "mean_token_score": -15.94,
+        "transcript": "一歩橋み九もこ町目みしす久みし",
+        "transcript_cer": 0.864
+      },
+      "energy_trim": {
+        "frames": 972,
+        "n_tokens": 20,
+        "n_multi_char_tokens": 2,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.369,
+        "blank_fraction": 0.0,
+        "mean_token_score": -14.57,
+        "transcript": "九も校町目しのすくみし",
+        "transcript_cer": 0.909
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 2.5596363636363635,
+        "end_mae": 2.522727272727273,
+        "signed_start_mean": 1.3271818181818178,
+        "signed_end_mean": 1.364090909090909
+      }
+    }
+  ]
+}

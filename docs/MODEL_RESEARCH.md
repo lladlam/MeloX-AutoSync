@@ -90,6 +90,20 @@
 （见 `docs/NEXT_STEPS.md`）。数据集授权与标注质量调研见 `docs/SINGING_EVAL.md`
 （GTSinger CC BY-NC-SA 4.0；OpenCpop CC BY-NC-ND；PJS CC BY-SA 4.0；MIR-1K 链接失效）。
 
+### V0.3 更新（增大模型无益）
+
+在 96 段 GTSinger 的 `lrc_only` 盲评下：
+
+| 模型 | 参数/体积 | 结果 |
+|---|---|---|
+| en `facebook/wav2vec2-base-960h` | 94M / 378 MB | sMAE **0.138**、eMAE 0.114（可用） |
+| en `facebook/wav2vec2-large-960h` | 315M / 1.2 GB | sMAE 0.156、eMAE 0.130（**更差**） |
+| ja `reazon-...-base-rs35kh` | 97M / 387 MB | 覆盖 0.528、失败 46.7%（**不可用**） |
+| ja `reazon-...-large-rs35kh` | ~317M / 1.2 GB | 覆盖 0.353、失败 **63.3%**（更差） |
+
+**结论：加大模型规模不能解决歌声域失配**，尤其日文。英文 base 已足够且更省资源；
+中文 `fa-zh` 仍是三者中最值得移植的。
+
 ## 5. 允许的替代模型（调研，未运行）
 
 | 语言 | 候选 | 说明 |

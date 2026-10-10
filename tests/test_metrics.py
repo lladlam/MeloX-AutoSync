@@ -34,10 +34,18 @@ def test_extra_units_reported() -> None:
 
 
 def test_multi_char_token_is_split_as_uncertain() -> None:
-    atoms = metrics.char_timeline([{"text": "世界", "start": 0.0, "end": 2.0, "uncertain": False}])
+    atoms = metrics.char_timeline([{"text": "世界", "start": 0.0, "end": 2.0, "uncertain": True}])
     assert len(atoms) == 2
     assert all(a["uncertain"] for a in atoms)
     assert atoms[0]["start"] == 0.0 and atoms[1]["end"] == 2.0
+
+
+def test_word_unit_split_is_not_uncertain() -> None:
+    # A multi-character *word* unit (English) is split for matching but its
+    # boundary is not uncertain.
+    atoms = metrics.char_timeline([{"text": "hello", "start": 0.0, "end": 1.0, "uncertain": False}])
+    assert len(atoms) == 5
+    assert not any(a["uncertain"] for a in atoms)
 
 
 def test_error_rates_present() -> None:

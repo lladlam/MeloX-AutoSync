@@ -25,10 +25,14 @@ from .wav2vec2_ctc import Wav2Vec2CTCAligner
 
 class JapaneseAligner(BaseAligner):
     def __new__(cls, cache_dir: Path | None = None) -> BaseAligner:  # type: ignore[misc]
+        import os
+
         from .registry import JA_LICENSE, JA_REPO
 
+        # Research-only override for alternative Japanese acoustic models.
+        repo = os.environ.get("AUTOSYNC_JA_REPO", JA_REPO)
         return Wav2Vec2CTCAligner(
-            JA_REPO,
+            repo,
             language="ja",
             license=JA_LICENSE,
             unit_mode="char",

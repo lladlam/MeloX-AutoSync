@@ -29,16 +29,26 @@ evaluation. It also documents why some datasets were **not** used.
 
 ## 2. What we actually used
 
-Curated **42 GTSinger segments** (a-cappella, so the reference is exact):
+Curated **96 GTSinger segments** (a-cappella, so the reference is exact), after
+V0.3 widening to two singers and three techniques per language:
 
-| Language | Singer | Techniques | Segments |
+| Language | Singers | Techniques | Segments / units |
 |---|---|---|---|
-| English | EN-Alto-1 | Vibrato, Control | 6 |
-| Japanese | JA-Soprano-1 | Vibrato, Glissando, Control | 18 |
-| Chinese | ZH-Alto-1 | Vibrato, Glissando, Control | 18 |
+| English | EN-Alto-1, EN-Tenor-1 | Vibrato, Breathy, Glissando | 30 / 380 words |
+| Japanese | JA-Soprano-1, JA-Tenor-1 | Vibrato, Glissando, Control | 30 / 570 chars |
+| Chinese | ZH-Alto-1, ZH-Tenor-1 | Vibrato, Breathy, Glissando | 36 / 482 chars |
 
 Reference granularity: **word-level** for English (`edelweiss`), **character-level**
 for Chinese and Japanese (GTSinger annotates CJK per character).
+
+Evaluation modes (V0.3):
+
+* **`lrc_only`** — the blind, realistic mode (audio + lyric text + LRC line
+  start only). Ground truth is used *only* by the scorer.
+* **`oracle`** — line window from annotated boundaries; research only.
+
+Splits are reported per **singer**, per **song** and per **technique** to
+prevent future training/evaluation leakage.
 
 Singing phenomena covered:
 
@@ -56,13 +66,25 @@ these segments contain.
 # 1. Download the curated subset (accepts GTSinger licence by doing so).
 uv run python tools/fetch_gtsinger.py --out experiments/singing/gtsinger --max-per-group 3
 
-# 2. Run the singing benchmark per language.
-uv run python benchmarks/singing_eval.py --languages en --out experiments/reports/singing_en.json
-uv run python benchmarks/singing_eval.py --languages ja --out experiments/reports/singing_ja.json
-uv run --extra funasr python benchmarks/singing_eval.py --languages zh --out experiments/reports/singing_zh.json
+# 2. Run the singing benchmark (lrc_only blind + oracle research modes).
+ENG=heuristic,model,model+energy,model+onset,model+reseg
+uv run python benchmarks/singing_eval.py --languages en --engines $ENG --modes lrc_only,oracle --out experiments/reports/singing_en.json
+uv run python benchmarks/singing_eval.py --languages ja --engines $ENG --modes lrc_only,oracle --out experiments/reports/singing_ja.json
+uv run --extra funasr python benchmarks/singing_eval.py --languages zh --engines $ENG --modes lrc_only,oracle --out experiments/reports/singing_zh.json
 
-# 3. Accompaniment robustness (controlled synthetic bed).
+# 3. Per-segment acoustic diagnosis (en/ja).
+uv run python benchmarks/diagnosis.py --language ja --out experiments/reports/diagnosis_ja.json
+uv run python benchmarks/diagnosis.py --language en --out experiments/reports/diagnosis_en.json
+
+# 4. Accompaniment robustness (controlled synthetic bed, per-engine).
 uv run --extra funasr python benchmarks/accompaniment_eval.py --language zh --out experiments/reports/accompaniment_zh.json
+uv run python benchmarks/accompaniment_eval.py --language en --out experiments/reports/accompaniment_en.json
+
+# 5. Alternative acoustic models (research overrides, not shipped defaults).
+AUTOSYNC_JA_REPO=reazon-research/japanese-wav2vec2-large-rs35kh \
+  uv run python benchmarks/singing_eval.py --languages ja --engines model,model+energy --out experiments/reports/singing_ja_large.json
+AUTOSYNC_EN_REPO=facebook/wav2vec2-large-960h \
+  uv run python benchmarks/singing_eval.py --languages en --engines model,model+energy --out experiments/reports/singing_en_large.json
 ```
 
 The downloaded audio/annotations live under `experiments/singing/` which is

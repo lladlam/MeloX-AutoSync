@@ -43,9 +43,9 @@ def test_refine_preserves_order_and_starts() -> None:
     assert out[1].end <= out[0].start + 2.0
 
 
-def test_start_snapping_optional_and_off_by_default() -> None:
-    # A unit starting inside leading silence is moved to the voiced onset when
-    # explicitly enabled; disabled by default (see docs/EXPERIMENT_RESULTS.md).
+def test_start_mode_forward_is_off_by_default() -> None:
+    # A unit starting inside leading silence is moved to the voiced onset only
+    # when explicitly requested; the default leaves it untouched.
     audio = np.zeros(int(2.0 * SR), dtype=np.float32)
     seg = slice(int(0.5 * SR), int(1.5 * SR))
     t = np.arange(int(2.0 * SR)) / SR
@@ -53,5 +53,15 @@ def test_start_snapping_optional_and_off_by_default() -> None:
     units = [AlignUnit(text="a", start=0.1, end=0.9)]
     default = refine_units_energy(units, audio.astype(np.float32), SR)
     assert abs(default[0].start - 0.1) < 1e-6
-    snapped = refine_units_energy(units, audio.astype(np.float32), SR, snap_starts=True)
-    assert snapped[0].start > 0.1
+    forward = refine_units_energy(units, audio.astype(np.float32), SR, start_mode="forward")
+    assert forward[0].start > 0.1
+
+
+def test_start_mode_backward_snaps_to_rising_edge() -> None:
+    audio = np.zeros(int(2.0 * SR), dtype=np.float32)
+    seg = slice(int(0.5 * SR), int(1.5 * SR))
+    t = np.arange(int(2.0 * SR)) / SR
+    audio[seg] = 0.3 * np.sin(2 * np.pi * 220 * t[seg])
+    units = [AlignUnit(text="a", start=0.9, end=1.4)]
+    out = refine_units_energy(units, audio.astype(np.float32), SR, start_mode="backward")
+    assert abs(out[0].start - 0.5) < 0.06

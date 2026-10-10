@@ -7,6 +7,7 @@ downloading all models" requirement.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from .base import BaseAligner
@@ -31,8 +32,11 @@ def get_aligner(
     device: str = "cpu",
 ) -> BaseAligner:
     if language == "en":
+        # ``AUTOSYNC_EN_REPO`` is a research-only override for experiments with
+        # alternative acoustic models. It is NOT a shipped default.
+        repo = os.environ.get("AUTOSYNC_EN_REPO", EN_REPO)
         return Wav2Vec2CTCAligner(
-            EN_REPO,
+            repo,
             language="en",
             license=EN_LICENSE,
             unit_mode="word",

@@ -27,18 +27,26 @@ BASE = "https://huggingface.co/datasets/GTSinger/GTSinger/resolve/main"
 
 # (language, singer, technique_dir, song)
 DEFAULT_SPECS: list[tuple[str, str, str, str]] = [
-    # English (alto)
+    # English — two singers, three techniques
     ("English", "EN-Alto-1", "Vibrato", "edelweiss"),
-    ("English", "EN-Alto-1", "Glissando", "edelweiss"),
-    ("English", "EN-Alto-1", "Breathy", "edelweiss"),
-    # Japanese (soprano)
+    ("English", "EN-Alto-1", "Breathy", "let it go"),
+    ("English", "EN-Alto-1", "Glissando", "my love"),
+    ("English", "EN-Tenor-1", "Vibrato", "Shallow"),
+    ("English", "EN-Tenor-1", "Vibrato", "Rolling in the Deep"),
+    # Japanese — two singers, three techniques
     ("Japanese", "JA-Soprano-1", "Vibrato", "heartful song"),
     ("Japanese", "JA-Soprano-1", "Vibrato", "时雨"),
     ("Japanese", "JA-Soprano-1", "Glissando", "heartful song"),
-    # Chinese (alto)
+    ("Japanese", "JA-Soprano-1", "Glissando", "first love"),
+    ("Japanese", "JA-Tenor-1", "Vibrato", "さんぽ"),
+    ("Japanese", "JA-Tenor-1", "Vibrato", "銀の龍の背に乗って"),
+    # Chinese — two singers, three techniques
     ("Chinese", "ZH-Alto-1", "Vibrato", "大鱼"),
     ("Chinese", "ZH-Alto-1", "Vibrato", "南山南"),
     ("Chinese", "ZH-Alto-1", "Glissando", "十年"),
+    ("Chinese", "ZH-Alto-1", "Breathy", "成都"),
+    ("Chinese", "ZH-Tenor-1", "Vibrato", "单身情歌"),
+    ("Chinese", "ZH-Tenor-1", "Vibrato", "最长的电影"),
 ]
 
 

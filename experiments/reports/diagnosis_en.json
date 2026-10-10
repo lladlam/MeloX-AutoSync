@@ -1,0 +1,1482 @@
+{
+  "language": "en",
+  "model": "facebook/wav2vec2-base-960h",
+  "n_segments": 30,
+  "collapse": {
+    "lrc": 0,
+    "oracle": 0,
+    "energy_trim": 0
+  },
+  "segments": [
+    {
+      "id": "English/EN-Alto-1/Breathy/let it go/Breathy_Group/0000",
+      "singer": "EN-Alto-1",
+      "song": "let it go",
+      "technique": "Breathy",
+      "lrc": {
+        "frames": 457,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.007,
+        "blank_fraction": 0.816,
+        "mean_token_score": -0.7,
+        "transcript": "THE SNOW GLOWS WIDE ON MOUNTAIN NIGH NOT A FO PRING TO BE SEN",
+        "transcript_cer": 0.134
+      },
+      "oracle": {
+        "frames": 316,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.741,
+        "mean_token_score": -0.79,
+        "transcript": "THE SNOW GLOWS WHIDE ON MOUN TONIGHT NOT A FO PRING TO BE SEN",
+        "transcript_cer": 0.134
+      },
+      "energy_trim": {
+        "frames": 457,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.007,
+        "blank_fraction": 0.816,
+        "mean_token_score": -0.7,
+        "transcript": "THE SNOW GLOWS WIDE ON MOUNTAIN NIGH NOT A FO PRING TO BE SEN",
+        "transcript_cer": 0.134
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.09115384615384634,
+        "end_mae": 0.1079999999999998,
+        "signed_start_mean": 0.09115384615384634,
+        "signed_end_mean": -0.07276923076923053
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Breathy/let it go/Breathy_Group/0001",
+      "singer": "EN-Alto-1",
+      "song": "let it go",
+      "technique": "Breathy",
+      "lrc": {
+        "frames": 768,
+        "n_tokens": 101,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.005,
+        "blank_fraction": 0.835,
+        "mean_token_score": -0.36,
+        "transcript": "KINGDOM OF I SOLATION AND TEY LURKS LIKE I'M THE QUEN THE WING DAYS HOWLING LIKE IS WHARLING STORMING SIT",
+        "transcript_cer": 0.218
+      },
+      "oracle": {
+        "frames": 697,
+        "n_tokens": 101,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.819,
+        "mean_token_score": -0.52,
+        "transcript": "KINGDOM OF I SOLATION AND TEY LURKS LIKE I'M THE QUEN THE WING DAYS HOWLING LIKE IS WHARLING STORMING SAY",
+        "transcript_cer": 0.228
+      },
+      "energy_trim": {
+        "frames": 768,
+        "n_tokens": 101,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.005,
+        "blank_fraction": 0.835,
+        "mean_token_score": -0.36,
+        "transcript": "KINGDOM OF I SOLATION AND TEY LURKS LIKE I'M THE QUEN THE WING DAYS HOWLING LIKE IS WHARLING STORMING SIT",
+        "transcript_cer": 0.218
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.07789473684210545,
+        "end_mae": 0.10078947368421036,
+        "signed_start_mean": 0.07757894736842123,
+        "signed_end_mean": -0.09678947368421038
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Breathy/let it go/Breathy_Group/0002",
+      "singer": "EN-Alto-1",
+      "song": "let it go",
+      "technique": "Breathy",
+      "lrc": {
+        "frames": 465,
+        "n_tokens": 58,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.843,
+        "mean_token_score": -0.94,
+        "transcript": "COULDIN GAVE ER AND HEAVEN NOWS I TRY DON' THAT DAM IN",
+        "transcript_cer": 0.379
+      },
+      "oracle": {
+        "frames": 450,
+        "n_tokens": 58,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.838,
+        "mean_token_score": -0.99,
+        "transcript": "CUDIN CAVE ER AND HEAVEN KNOWS I TRY DON THAT DAM MEN",
+        "transcript_cer": 0.431
+      },
+      "energy_trim": {
+        "frames": 462,
+        "n_tokens": 58,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.844,
+        "mean_token_score": -1.04,
+        "transcript": "CUDIN CAER AND HEAVEN NOWS I TRY DON THAT DAM IN",
+        "transcript_cer": 0.414
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.12066666666666669,
+        "end_mae": 0.09091666666666669,
+        "signed_start_mean": 0.12016666666666671,
+        "signed_end_mean": -0.09091666666666669
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Breathy/let it go/Control_Group/0000",
+      "singer": "EN-Alto-1",
+      "song": "let it go",
+      "technique": "Control",
+      "lrc": {
+        "frames": 422,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.791,
+        "mean_token_score": -0.98,
+        "transcript": "THE SNOW GLOLS WIDE AL MOUNTAIN NIGH NOT A FOT PRAING TO BE SE",
+        "transcript_cer": 0.209
+      },
+      "oracle": {
+        "frames": 319,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.749,
+        "mean_token_score": -0.96,
+        "transcript": "THE SNOW GLOWS WIDE AL MOUNTAIN NIGH NOT A FOT PRANG TO BE SE",
+        "transcript_cer": 0.194
+      },
+      "energy_trim": {
+        "frames": 371,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.011,
+        "blank_fraction": 0.765,
+        "mean_token_score": -0.97,
+        "transcript": "THE SNOW GLULS WIDE AL MOUNTAIN NIGH NOT A FOT PRAYING TO BE SE",
+        "transcript_cer": 0.239
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.07161538461538479,
+        "end_mae": 0.08461538461538451,
+        "signed_start_mean": 0.07161538461538479,
+        "signed_end_mean": -0.08307692307692296
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Breathy/let it go/Control_Group/0001",
+      "singer": "EN-Alto-1",
+      "song": "let it go",
+      "technique": "Control",
+      "lrc": {
+        "frames": 680,
+        "n_tokens": 101,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.779,
+        "mean_token_score": -0.45,
+        "transcript": "A KING OF A LI SOLATION AN IT LOKS LIKE I'M THE QUEN THE WIND IS HOWLING LIKE THIS SWHIRLING STORMING SIG",
+        "transcript_cer": 0.198
+      },
+      "oracle": {
+        "frames": 648,
+        "n_tokens": 101,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.769,
+        "mean_token_score": -0.51,
+        "transcript": "A KING OF A LI SOLATION AN I LOKS LIKE I'M THE QUEN THE WIND IS HOWLING LIKE THIS SWHIRLING STORMING SIG",
+        "transcript_cer": 0.208
+      },
+      "energy_trim": {
+        "frames": 680,
+        "n_tokens": 101,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.779,
+        "mean_token_score": -0.45,
+        "transcript": "A KING OF A LI SOLATION AN IT LOKS LIKE I'M THE QUEN THE WIND IS HOWLING LIKE THIS SWHIRLING STORMING SIG",
+        "transcript_cer": 0.198
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.0901578947368422,
+        "end_mae": 0.09926315789473683,
+        "signed_start_mean": 0.0901578947368422,
+        "signed_end_mean": -0.09842105263157894
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Breathy/let it go/Control_Group/0002",
+      "singer": "EN-Alto-1",
+      "song": "let it go",
+      "technique": "Control",
+      "lrc": {
+        "frames": 465,
+        "n_tokens": 58,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.015,
+        "blank_fraction": 0.828,
+        "mean_token_score": -1.32,
+        "transcript": "CURN CAP IT AND HEAVEN NOSE I TRY DON'T LET THAM MEN",
+        "transcript_cer": 0.328
+      },
+      "oracle": {
+        "frames": 453,
+        "n_tokens": 58,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.015,
+        "blank_fraction": 0.823,
+        "mean_token_score": -1.35,
+        "transcript": "CUN CAPIT AND HEAVEN NOS I TRY DON'T LET THAT MAN",
+        "transcript_cer": 0.345
+      },
+      "energy_trim": {
+        "frames": 464,
+        "n_tokens": 58,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.015,
+        "blank_fraction": 0.832,
+        "mean_token_score": -1.26,
+        "transcript": "CURN CAP IT AND HEAVEN NOSE I TRY DON'T LET THAM MEN",
+        "transcript_cer": 0.328
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.14174999999999982,
+        "end_mae": 0.09950000000000013,
+        "signed_start_mean": 0.1415833333333331,
+        "signed_end_mean": -0.09950000000000013
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Glissando/my love/Control_Group/0000",
+      "singer": "EN-Alto-1",
+      "song": "my love",
+      "technique": "Control",
+      "lrc": {
+        "frames": 463,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.79,
+        "mean_token_score": -1.2,
+        "transcript": "AN EMPTY TRE AN EMPTY HOUSE A HAL INSIDE MY HEART AL ALONE",
+        "transcript_cer": 0.149
+      },
+      "oracle": {
+        "frames": 400,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.007,
+        "blank_fraction": 0.758,
+        "mean_token_score": -1.04,
+        "transcript": "AN EMPTY TRE AN EMPTY HOUSE A HAL INSIDE MY HEART AL ALONE",
+        "transcript_cer": 0.149
+      },
+      "energy_trim": {
+        "frames": 417,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.007,
+        "blank_fraction": 0.782,
+        "mean_token_score": -1.17,
+        "transcript": "AN EMPTY TRE AN EMPTY HOUSE A HAUL INSIDE MY HEART AL ALONE",
+        "transcript_cer": 0.164
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.15735714285714295,
+        "end_mae": 0.096142857142857,
+        "signed_start_mean": 0.0157857142857143,
+        "signed_end_mean": -0.08357142857142855
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Glissando/my love/Control_Group/0001",
+      "singer": "EN-Alto-1",
+      "song": "my love",
+      "technique": "Control",
+      "lrc": {
+        "frames": 566,
+        "n_tokens": 79,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.77,
+        "mean_token_score": -2.05,
+        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WHERE THEY ARE",
+        "transcript_cer": 0.165
+      },
+      "oracle": {
+        "frames": 529,
+        "n_tokens": 79,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.756,
+        "mean_token_score": -1.74,
+        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WHERE THEY ARE",
+        "transcript_cer": 0.165
+      },
+      "energy_trim": {
+        "frames": 566,
+        "n_tokens": 79,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.77,
+        "mean_token_score": -2.05,
+        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WHERE THEY ARE",
+        "transcript_cer": 0.165
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.10162500000000015,
+        "end_mae": 0.14062499999999978,
+        "signed_start_mean": 0.08387500000000021,
+        "signed_end_mean": -0.13312499999999977
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Glissando/my love/Control_Group/0002",
+      "singer": "EN-Alto-1",
+      "song": "my love",
+      "technique": "Control",
+      "lrc": {
+        "frames": 491,
+        "n_tokens": 65,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.014,
+        "blank_fraction": 0.794,
+        "mean_token_score": -0.73,
+        "transcript": "THE DAYS WE HAV THE SONS WE SEND TOGETHER OH YA AND O MY LA",
+        "transcript_cer": 0.154
+      },
+      "oracle": {
+        "frames": 465,
+        "n_tokens": 65,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.011,
+        "blank_fraction": 0.8,
+        "mean_token_score": -0.68,
+        "transcript": "THE DAYS WE HAV THE SONGS WE SEND TOGETHER OH YA AND O MY LA",
+        "transcript_cer": 0.138
+      },
+      "energy_trim": {
+        "frames": 489,
+        "n_tokens": 65,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.014,
+        "blank_fraction": 0.793,
+        "mean_token_score": -0.71,
+        "transcript": "THE DAYS WE HAV THE SONS WE SEND TOGETHER OH YA AND O MY LA",
+        "transcript_cer": 0.154
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.10146666666666665,
+        "end_mae": 0.11126666666666675,
+        "signed_start_mean": 0.10146666666666665,
+        "signed_end_mean": -0.10726666666666675
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Glissando/my love/Glissando_Group/0000",
+      "singer": "EN-Alto-1",
+      "song": "my love",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 426,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.007,
+        "blank_fraction": 0.81,
+        "mean_token_score": -1.42,
+        "transcript": "ANAMPTYSTRE ANAMPTY HOUSE OF HORDING SIDE MY HEART HOD AT AL",
+        "transcript_cer": 0.328
+      },
+      "oracle": {
+        "frames": 398,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.008,
+        "blank_fraction": 0.791,
+        "mean_token_score": -1.31,
+        "transcript": "ANAMPTY STRE ANAMPTY HOUSE OF HORDING SIDE MY HEART HORD AT ALE",
+        "transcript_cer": 0.313
+      },
+      "energy_trim": {
+        "frames": 397,
+        "n_tokens": 67,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.008,
+        "blank_fraction": 0.791,
+        "mean_token_score": -1.29,
+        "transcript": "ANAMPTYSTRE ANAMPTY HOUSE OF HORDING SIDE MY HEART HOD AT ALE",
+        "transcript_cer": 0.313
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.1638571428571429,
+        "end_mae": 0.11078571428571415,
+        "signed_start_mean": 0.1638571428571429,
+        "signed_end_mean": -0.02478571428571411
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Glissando/my love/Glissando_Group/0001",
+      "singer": "EN-Alto-1",
+      "song": "my love",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 582,
+        "n_tokens": 79,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.01,
+        "blank_fraction": 0.796,
+        "mean_token_score": -1.76,
+        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WER THEY O",
+        "transcript_cer": 0.228
+      },
+      "oracle": {
+        "frames": 550,
+        "n_tokens": 79,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.791,
+        "mean_token_score": -1.78,
+        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WER DEY O",
+        "transcript_cer": 0.253
+      },
+      "energy_trim": {
+        "frames": 565,
+        "n_tokens": 79,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.011,
+        "blank_fraction": 0.793,
+        "mean_token_score": -1.73,
+        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WER THEY O",
+        "transcript_cer": 0.228
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.11462500000000012,
+        "end_mae": 0.13193749999999987,
+        "signed_start_mean": 0.11462500000000012,
+        "signed_end_mean": -0.09668750000000002
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Glissando/my love/Glissando_Group/0002",
+      "singer": "EN-Alto-1",
+      "song": "my love",
+      "technique": "Glissando",
+      "lrc": {
+        "frames": 493,
+        "n_tokens": 65,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.012,
+        "blank_fraction": 0.791,
+        "mean_token_score": -0.38,
+        "transcript": "THE DAYS WE HARE THE SONGS WE SEND TOGETHER OH YEA AND O MY LOVE",
+        "transcript_cer": 0.092
+      },
+      "oracle": {
+        "frames": 467,
+        "n_tokens": 65,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.013,
+        "blank_fraction": 0.782,
+        "mean_token_score": -0.4,
+        "transcript": "THE DAYS WE HAR THE SONGS WE SEND TOGETHER OH YEA AND HO MY LOVE",
+        "transcript_cer": 0.092
+      },
+      "energy_trim": {
+        "frames": 491,
+        "n_tokens": 65,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.012,
+        "blank_fraction": 0.788,
+        "mean_token_score": -0.39,
+        "transcript": "THE DAYS WE HARE THE SONGS WE SEND TOGETHER OH YEA AND O MY LOVE",
+        "transcript_cer": 0.092
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.11773333333333338,
+        "end_mae": 0.10166666666666663,
+        "signed_start_mean": 0.11506666666666669,
+        "signed_end_mean": -0.09899999999999996
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Vibrato/edelweiss/Control_Group/0000",
+      "singer": "EN-Alto-1",
+      "song": "edelweiss",
+      "technique": "Control",
+      "lrc": {
+        "frames": 338,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.932,
+        "mean_token_score": -2.67,
+        "transcript": "THOU WISE AT O WISE",
+        "transcript_cer": 0.737
+      },
+      "oracle": {
+        "frames": 270,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.011,
+        "blank_fraction": 0.919,
+        "mean_token_score": -2.93,
+        "transcript": "THE WISE HATE WISE",
+        "transcript_cer": 0.579
+      },
+      "energy_trim": {
+        "frames": 305,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.01,
+        "blank_fraction": 0.928,
+        "mean_token_score": -2.82,
+        "transcript": "TO WISE ATO WISE",
+        "transcript_cer": 0.632
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.39900000000000013,
+        "end_mae": 0.24050000000000016,
+        "signed_start_mean": 0.3890000000000001,
+        "signed_end_mean": -0.24050000000000016
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Vibrato/edelweiss/Control_Group/0001",
+      "singer": "EN-Alto-1",
+      "song": "edelweiss",
+      "technique": "Control",
+      "lrc": {
+        "frames": 341,
+        "n_tokens": 26,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.032,
+        "blank_fraction": 0.874,
+        "mean_token_score": -1.71,
+        "transcript": "EVERY MORENAME YOU GRT ME",
+        "transcript_cer": 0.231
+      },
+      "oracle": {
+        "frames": 318,
+        "n_tokens": 26,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.013,
+        "blank_fraction": 0.893,
+        "mean_token_score": -1.1,
+        "transcript": "EVERY MORE NAME YE GRE M",
+        "transcript_cer": 0.385
+      },
+      "energy_trim": {
+        "frames": 341,
+        "n_tokens": 26,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.032,
+        "blank_fraction": 0.874,
+        "mean_token_score": -1.71,
+        "transcript": "EVERY MORENAME YOU GRT ME",
+        "transcript_cer": 0.231
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.4411999999999999,
+        "end_mae": 0.14719999999999986,
+        "signed_start_mean": 0.4411999999999999,
+        "signed_end_mean": -0.14719999999999986
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Vibrato/edelweiss/Control_Group/0002",
+      "singer": "EN-Alto-1",
+      "song": "edelweiss",
+      "technique": "Control",
+      "lrc": {
+        "frames": 372,
+        "n_tokens": 32,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.011,
+        "blank_fraction": 0.868,
+        "mean_token_score": -0.21,
+        "transcript": "SMAL AND WHIHT CLEN AND BRIGHT",
+        "transcript_cer": 0.125
+      },
+      "oracle": {
+        "frames": 347,
+        "n_tokens": 32,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.867,
+        "mean_token_score": -0.62,
+        "transcript": "SMAL AND WHITE PLEN EM BRIHE",
+        "transcript_cer": 0.25
+      },
+      "energy_trim": {
+        "frames": 362,
+        "n_tokens": 32,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.017,
+        "blank_fraction": 0.859,
+        "mean_token_score": -0.59,
+        "transcript": "MA AND WHIT CLEN AM BRIGHT",
+        "transcript_cer": 0.219
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.16650000000000015,
+        "end_mae": 0.09200000000000004,
+        "signed_start_mean": 0.1661666666666667,
+        "signed_end_mean": -0.09200000000000004
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Vibrato/edelweiss/Vibrato_Group/0000",
+      "singer": "EN-Alto-1",
+      "song": "edelweiss",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 437,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.005,
+        "blank_fraction": 0.954,
+        "mean_token_score": -2.62,
+        "transcript": "ADO WIES ATO WIES",
+        "transcript_cer": 0.579
+      },
+      "oracle": {
+        "frames": 330,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.939,
+        "mean_token_score": -2.45,
+        "transcript": "ADO WIES ATO WIES",
+        "transcript_cer": 0.579
+      },
+      "energy_trim": {
+        "frames": 353,
+        "n_tokens": 19,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.941,
+        "mean_token_score": -2.38,
+        "transcript": "ADOWIES ATO WIES",
+        "transcript_cer": 0.579
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.924,
+        "end_mae": 0.12650000000000006,
+        "signed_start_mean": 0.924,
+        "signed_end_mean": -0.12650000000000006
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Vibrato/edelweiss/Vibrato_Group/0001",
+      "singer": "EN-Alto-1",
+      "song": "edelweiss",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 349,
+        "n_tokens": 26,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.034,
+        "blank_fraction": 0.831,
+        "mean_token_score": -1.54,
+        "transcript": "EVERY MORNING YOU CRE M",
+        "transcript_cer": 0.154
+      },
+      "oracle": {
+        "frames": 328,
+        "n_tokens": 26,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.012,
+        "blank_fraction": 0.89,
+        "mean_token_score": -0.95,
+        "transcript": "AFRY MARNING OU CRE ME",
+        "transcript_cer": 0.308
+      },
+      "energy_trim": {
+        "frames": 199,
+        "n_tokens": 26,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.025,
+        "blank_fraction": 0.844,
+        "mean_token_score": -5.9,
+        "transcript": "GRE M",
+        "transcript_cer": 0.808
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.4872000000000002,
+        "end_mae": 0.12080000000000002,
+        "signed_start_mean": 0.4872000000000002,
+        "signed_end_mean": -0.12080000000000002
+      }
+    },
+    {
+      "id": "English/EN-Alto-1/Vibrato/edelweiss/Vibrato_Group/0002",
+      "singer": "EN-Alto-1",
+      "song": "edelweiss",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 374,
+        "n_tokens": 32,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.013,
+        "blank_fraction": 0.845,
+        "mean_token_score": -0.36,
+        "transcript": "SM AND WHIGHT CLEAN AND BRIGHT",
+        "transcript_cer": 0.188
+      },
+      "oracle": {
+        "frames": 347,
+        "n_tokens": 32,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.012,
+        "blank_fraction": 0.87,
+        "mean_token_score": -0.64,
+        "transcript": "SM AND WHIHE CLEAN AND BRIGE",
+        "transcript_cer": 0.188
+      },
+      "energy_trim": {
+        "frames": 345,
+        "n_tokens": 32,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.012,
+        "blank_fraction": 0.861,
+        "mean_token_score": -1.15,
+        "transcript": "AND WHIGHT CLEAN AND BRIGHT",
+        "transcript_cer": 0.281
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.1590000000000003,
+        "end_mae": 0.0909999999999997,
+        "signed_start_mean": 0.1590000000000003,
+        "signed_end_mean": -0.0909999999999997
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Rolling in the Deep/Control_Group/0000",
+      "singer": "EN-Tenor-1",
+      "song": "Rolling in the Deep",
+      "technique": "Control",
+      "lrc": {
+        "frames": 573,
+        "n_tokens": 87,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.005,
+        "blank_fraction": 0.805,
+        "mean_token_score": -1.28,
+        "transcript": "NOR SA FIRS TAIN MY HEART RACHIN NO FAVOR PITCHON BRING ME OUT TA DARK",
+        "transcript_cer": 0.322
+      },
+      "oracle": {
+        "frames": 521,
+        "n_tokens": 87,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.008,
+        "blank_fraction": 0.781,
+        "mean_token_score": -1.44,
+        "transcript": "NOR SA FIRS TA AN MY HEART RACHIN O FAVOUR PITCEON BRIN ME OUT A DARK",
+        "transcript_cer": 0.356
+      },
+      "energy_trim": {
+        "frames": 553,
+        "n_tokens": 87,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.005,
+        "blank_fraction": 0.796,
+        "mean_token_score": -1.32,
+        "transcript": "NOR SA FIRS TA AN MY HEART RACHIN NO FAVOUR PITCHEON BRING ME OUT A DARK",
+        "transcript_cer": 0.345
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.11235294117647081,
+        "end_mae": 0.10664705882352922,
+        "signed_start_mean": 0.11235294117647081,
+        "signed_end_mean": -0.09499999999999979
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Rolling in the Deep/Control_Group/0001",
+      "singer": "EN-Tenor-1",
+      "song": "Rolling in the Deep",
+      "technique": "Control",
+      "lrc": {
+        "frames": 551,
+        "n_tokens": 88,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.011,
+        "blank_fraction": 0.808,
+        "mean_token_score": -2.42,
+        "transcript": "FI NOE I KAN SA O CHRIS O CLEAR GO HOW SEL ME ONALEO SHE BEAR",
+        "transcript_cer": 0.511
+      },
+      "oracle": {
+        "frames": 533,
+        "n_tokens": 88,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.797,
+        "mean_token_score": -2.13,
+        "transcript": "FI NOE I KIN SA O CHRIST O CLEAR GO HOW SEL ME ONA ALEO SHE BEAR",
+        "transcript_cer": 0.5
+      },
+      "energy_trim": {
+        "frames": 543,
+        "n_tokens": 88,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.011,
+        "blank_fraction": 0.803,
+        "mean_token_score": -2.51,
+        "transcript": "BY NOE I CAN SA O CHRIS O CLEAR GO HOW SEL ME ONALEO SHE BEAR",
+        "transcript_cer": 0.523
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.1608947368421055,
+        "end_mae": 0.10321052631578921,
+        "signed_start_mean": 0.15952631578947396,
+        "signed_end_mean": -0.05963157894736809
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Rolling in the Deep/Control_Group/0002",
+      "singer": "EN-Tenor-1",
+      "song": "Rolling in the Deep",
+      "technique": "Control",
+      "lrc": {
+        "frames": 546,
+        "n_tokens": 80,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.027,
+        "blank_fraction": 0.791,
+        "mean_token_score": -1.18,
+        "transcript": "SAY HOWI LEAVES EVER I PA SO YEW DON NON DERIS DEM MADE THING THAT I WOUL DO",
+        "transcript_cer": 0.388
+      },
+      "oracle": {
+        "frames": 519,
+        "n_tokens": 80,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.029,
+        "blank_fraction": 0.786,
+        "mean_token_score": -1.15,
+        "transcript": "SAY HOI LEAVES EVERY PE SOFEW DON NON DERIS DEM MADE THING THAT I WOUL DO",
+        "transcript_cer": 0.388
+      },
+      "energy_trim": {
+        "frames": 537,
+        "n_tokens": 80,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.03,
+        "blank_fraction": 0.786,
+        "mean_token_score": -1.34,
+        "transcript": "THEY HOI LEAFES EVER I PE SOFEW DON NON ERIS DEM MAD E THING THAT I WOUL DO",
+        "transcript_cer": 0.425
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.16537500000000016,
+        "end_mae": 0.11812499999999994,
+        "signed_start_mean": 0.15900000000000014,
+        "signed_end_mean": -0.1092499999999998
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Rolling in the Deep/Vibrato_Group/0000",
+      "singer": "EN-Tenor-1",
+      "song": "Rolling in the Deep",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 599,
+        "n_tokens": 87,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.01,
+        "blank_fraction": 0.806,
+        "mean_token_score": -1.5,
+        "transcript": "THER SA FI AR STARIN MY HEART RACHIN O FAVOR PIGEON BRING ME OUT O THE ART",
+        "transcript_cer": 0.333
+      },
+      "oracle": {
+        "frames": 559,
+        "n_tokens": 87,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.796,
+        "mean_token_score": -1.5,
+        "transcript": "THER SAPAR STARTIN MY HEART RACHIN O FAVOR PIGEON BRING ME OUT O THE RT",
+        "transcript_cer": 0.345
+      },
+      "energy_trim": {
+        "frames": 589,
+        "n_tokens": 87,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.01,
+        "blank_fraction": 0.81,
+        "mean_token_score": -1.55,
+        "transcript": "THER SA FIART STARIN MY HEART RACHIN O FAVOR PIGEON BRING ME OUT O THE ART",
+        "transcript_cer": 0.322
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.14023529411764735,
+        "end_mae": 0.10347058823529394,
+        "signed_start_mean": 0.14023529411764735,
+        "signed_end_mean": -0.05829411764705861
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Rolling in the Deep/Vibrato_Group/0001",
+      "singer": "EN-Tenor-1",
+      "song": "Rolling in the Deep",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 554,
+        "n_tokens": 88,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.014,
+        "blank_fraction": 0.807,
+        "mean_token_score": -1.81,
+        "transcript": "FINE OLY I CAN SE O CRISTO CLEAR CO HOS TEL ME ONO THE ALE OSHIPE",
+        "transcript_cer": 0.455
+      },
+      "oracle": {
+        "frames": 536,
+        "n_tokens": 88,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.013,
+        "blank_fraction": 0.797,
+        "mean_token_score": -1.64,
+        "transcript": "FINE OLY I CAN SE O CRISTO CLEAR CO HERS TEL ME OUN O THE ALE OSHEPE",
+        "transcript_cer": 0.443
+      },
+      "energy_trim": {
+        "frames": 546,
+        "n_tokens": 88,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.013,
+        "blank_fraction": 0.806,
+        "mean_token_score": -1.88,
+        "transcript": "IN OLY I CAN SE O CRISTO CLEAR CO HOS TEL ME ONA THE ALE OSHIPE",
+        "transcript_cer": 0.455
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.14189473684210532,
+        "end_mae": 0.08726315789473667,
+        "signed_start_mean": 0.14189473684210532,
+        "signed_end_mean": -0.07884210526315771
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Rolling in the Deep/Vibrato_Group/0002",
+      "singer": "EN-Tenor-1",
+      "song": "Rolling in the Deep",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 560,
+        "n_tokens": 80,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.016,
+        "blank_fraction": 0.811,
+        "mean_token_score": -1.21,
+        "transcript": "SAY HOIT EVERY PACE OF YOU DON NOWN THEREST ON MA ATHING THAT I WOULD DO",
+        "transcript_cer": 0.4
+      },
+      "oracle": {
+        "frames": 531,
+        "n_tokens": 80,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.015,
+        "blank_fraction": 0.812,
+        "mean_token_score": -1.08,
+        "transcript": "SAY HOI EVERA PACE OF YOU DON NOWN DEREST ON MA ATHING THAT I WOULD DO",
+        "transcript_cer": 0.388
+      },
+      "energy_trim": {
+        "frames": 550,
+        "n_tokens": 80,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.015,
+        "blank_fraction": 0.818,
+        "mean_token_score": -1.21,
+        "transcript": "THEY HOAIT EVERA PACE OF YOU DON NON DE REST ON MA ATHING THAT I WOULD DO",
+        "transcript_cer": 0.412
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.14881250000000004,
+        "end_mae": 0.14506249999999996,
+        "signed_start_mean": 0.14718750000000005,
+        "signed_end_mean": -0.14506249999999996
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Shallow/Control_Group/0000",
+      "singer": "EN-Tenor-1",
+      "song": "Shallow",
+      "technique": "Control",
+      "lrc": {
+        "frames": 416,
+        "n_tokens": 57,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.017,
+        "blank_fraction": 0.82,
+        "mean_token_score": -1.0,
+        "transcript": "TEL ME SOME THING AR YOU HAPY IN THIS MADON WOUT",
+        "transcript_cer": 0.263
+      },
+      "oracle": {
+        "frames": 411,
+        "n_tokens": 57,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.012,
+        "blank_fraction": 0.83,
+        "mean_token_score": -0.91,
+        "transcript": "TEL ME SOME THING OR YOU HAPY IN THIS MADON W",
+        "transcript_cer": 0.298
+      },
+      "energy_trim": {
+        "frames": 416,
+        "n_tokens": 57,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.017,
+        "blank_fraction": 0.82,
+        "mean_token_score": -1.0,
+        "transcript": "TEL ME SOME THING AR YOU HAPY IN THIS MADON WOUT",
+        "transcript_cer": 0.263
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.07563636363636375,
+        "end_mae": 0.13209090909090895,
+        "signed_start_mean": 0.07563636363636375,
+        "signed_end_mean": -0.13209090909090895
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Shallow/Control_Group/0001",
+      "singer": "EN-Tenor-1",
+      "song": "Shallow",
+      "technique": "Control",
+      "lrc": {
+        "frames": 650,
+        "n_tokens": 76,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.005,
+        "blank_fraction": 0.868,
+        "mean_token_score": -1.46,
+        "transcript": "O DO L MOR ETHER SON THE ER SEL SEACHING FR UN FOLING",
+        "transcript_cer": 0.461
+      },
+      "oracle": {
+        "frames": 644,
+        "n_tokens": 76,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.86,
+        "mean_token_score": -1.52,
+        "transcript": "O DO LA MOR HE THER SON THE ER SE SUCHING FOR UN FOLANG",
+        "transcript_cer": 0.461
+      },
+      "energy_trim": {
+        "frames": 650,
+        "n_tokens": 76,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.005,
+        "blank_fraction": 0.868,
+        "mean_token_score": -1.46,
+        "transcript": "O DO L MOR ETHER SON THE ER SEL SEACHING FR UN FOLING",
+        "transcript_cer": 0.461
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.14757142857142852,
+        "end_mae": 0.12885714285714273,
+        "signed_start_mean": 0.14314285714285716,
+        "signed_end_mean": -0.12471428571428558
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Shallow/Control_Group/0002",
+      "singer": "EN-Tenor-1",
+      "song": "Shallow",
+      "technique": "Control",
+      "lrc": {
+        "frames": 470,
+        "n_tokens": 54,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.86,
+        "mean_token_score": -1.31,
+        "transcript": "IN NOT A GOD TIMES I FAR MYSELF FU LON IN FO CHANGE",
+        "transcript_cer": 0.296
+      },
+      "oracle": {
+        "frames": 452,
+        "n_tokens": 54,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.007,
+        "blank_fraction": 0.85,
+        "mean_token_score": -1.37,
+        "transcript": "IN NOT A GOD TIMES I FARM MYSELF FO LO NING FO THING",
+        "transcript_cer": 0.352
+      },
+      "energy_trim": {
+        "frames": 418,
+        "n_tokens": 54,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.007,
+        "blank_fraction": 0.852,
+        "mean_token_score": -2.9,
+        "transcript": "GOD TIME SI FAR MYSELF FU LON NIN FO CINGE",
+        "transcript_cer": 0.481
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.10390909090909091,
+        "end_mae": 0.1517272727272726,
+        "signed_start_mean": 0.10390909090909091,
+        "signed_end_mean": -0.13718181818181804
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Shallow/Vibrato_Group/0000",
+      "singer": "EN-Tenor-1",
+      "song": "Shallow",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 463,
+        "n_tokens": 57,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.019,
+        "blank_fraction": 0.838,
+        "mean_token_score": -1.31,
+        "transcript": "TEL ME SOME THINGO AR YOU HAVE BEN THI MALDUMWOD",
+        "transcript_cer": 0.386
+      },
+      "oracle": {
+        "frames": 454,
+        "n_tokens": 57,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.018,
+        "blank_fraction": 0.841,
+        "mean_token_score": -1.46,
+        "transcript": "TEL ME SOME THING AR YOU HAVE BEN THI MALDUMWO",
+        "transcript_cer": 0.404
+      },
+      "energy_trim": {
+        "frames": 402,
+        "n_tokens": 57,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.012,
+        "blank_fraction": 0.836,
+        "mean_token_score": -3.13,
+        "transcript": "INGO AR YOU HAV BEN THIS MADUMWD",
+        "transcript_cer": 0.579
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.09772727272727279,
+        "end_mae": 0.15054545454545448,
+        "signed_start_mean": 0.08300000000000009,
+        "signed_end_mean": -0.15054545454545448
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Shallow/Vibrato_Group/0001",
+      "singer": "EN-Tenor-1",
+      "song": "Shallow",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 807,
+        "n_tokens": 76,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.89,
+        "mean_token_score": -2.62,
+        "transcript": "O DOELY M HE DIS ONTY A SEL SUACHING F UM PHO LANE",
+        "transcript_cer": 0.605
+      },
+      "oracle": {
+        "frames": 807,
+        "n_tokens": 76,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.89,
+        "mean_token_score": -2.62,
+        "transcript": "O DOELY M HE DIS ONTY A SEL SUACHING F UM PHO LANE",
+        "transcript_cer": 0.605
+      },
+      "energy_trim": {
+        "frames": 788,
+        "n_tokens": 76,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.006,
+        "blank_fraction": 0.89,
+        "mean_token_score": -2.72,
+        "transcript": "OYLY M HE IS ONTY A SEAL SEACHING FR UM PO LANE",
+        "transcript_cer": 0.592
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.15571428571428575,
+        "end_mae": 0.12357142857142853,
+        "signed_start_mean": 0.15271428571428577,
+        "signed_end_mean": -0.11685714285714285
+      }
+    },
+    {
+      "id": "English/EN-Tenor-1/Vibrato/Shallow/Vibrato_Group/0002",
+      "singer": "EN-Tenor-1",
+      "song": "Shallow",
+      "technique": "Vibrato",
+      "lrc": {
+        "frames": 530,
+        "n_tokens": 54,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.872,
+        "mean_token_score": -1.36,
+        "transcript": "NOT A GOD TIMES I FA MYSELFA LONGNE FO CANGE",
+        "transcript_cer": 0.315
+      },
+      "oracle": {
+        "frames": 530,
+        "n_tokens": 54,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.009,
+        "blank_fraction": 0.872,
+        "mean_token_score": -1.36,
+        "transcript": "NOT A GOD TIMES I FA MYSELFA LONGNE FO CANGE",
+        "transcript_cer": 0.315
+      },
+      "energy_trim": {
+        "frames": 506,
+        "n_tokens": 54,
+        "n_multi_char_tokens": 0,
+        "feasible": true,
+        "reasons": [],
+        "max_span_fraction": 0.01,
+        "blank_fraction": 0.862,
+        "mean_token_score": -1.61,
+        "transcript": "OT O GOD TIME A FA MYSELFA LONAN FO CANGE",
+        "transcript_cer": 0.389
+      },
+      "word_level_lrc": {
+        "coverage": 1.0,
+        "start_mae": 0.10718181818181817,
+        "end_mae": 0.13318181818181832,
+        "signed_start_mean": 0.10718181818181817,
+        "signed_end_mean": -0.10136363636363649
+      }
+    }
+  ]
+}

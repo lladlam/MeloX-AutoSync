@@ -75,3 +75,12 @@ V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射
 - CTC Viterbi 现在会**检测并报告**帧数不足、塌缩、非单调等异常，而不是输出垃圾。
 - 日文多字符 token 保留 `uncertain` 标记，并校验原文可重建。
 - 新评测：`benchmarks/singing_eval.py`、`benchmarks/accompaniment_eval.py`（覆盖率/漏匹配/错误率/失败样本）。
+
+### 新增（V0.3）— 修正评测 + 歌声模型研究
+
+- **评测泄漏修复**：`singing_eval.py` 新增 **`lrc_only` 盲评**模式（只用音频+歌词+LRC 行起始），
+  `oracle` 模式仅作研究，二者分开报告；报告含按歌手/歌曲/技巧拆分与盲评-oracle 差距。
+- 修复 `accompaniment_eval.py` 的引擎混合汇总缺陷。
+- 逐段诊断工具 `benchmarks/diagnosis.py`（CTC CER、blank/塌缩分布、窗口对比、有符号起始偏差）。
+- 研究结论：**日语语音模型在歌声上不可用**（加大模型反而更差）；**英文 base 已够用、large 无益**；
+  能量起始回吸与能量分段重对齐**均被否决**。详见 `docs/EXPERIMENT_RESULTS.md` 与 `docs/ACCEPTANCE.md`。

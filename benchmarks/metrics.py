@@ -60,7 +60,11 @@ def char_timeline(pred_units: list[dict]) -> list[dict]:
                     "start": float(unit["start"]) + span * ci / k,
                     "end": float(unit["start"]) + span * (ci + 1) / k,
                     "unit": ui,
-                    "uncertain": bool(unit.get("uncertain", False)) or k > 1,
+                    # Only the aligner can declare a boundary uncertain (a
+                    # multi-character acoustic token). Splitting an English
+                    # *word* unit into chars for matching does not make the word
+                    # boundary uncertain.
+                    "uncertain": bool(unit.get("uncertain", False)),
                 }
             )
     return atoms
@@ -155,6 +159,7 @@ def score(pred_units: list[dict], ref_words: list[dict]) -> dict[str, Any]:
         "end_max": (max(end_err) if end_err else float("nan")),
         "duration_mae": _mean(duration_err),
         "uncertain_matched": sum(1 for p in pairs if p["uncertain"]),
+        "uncertain_ratio": (sum(1 for p in pairs if p["uncertain"]) / n_matched) if n_matched else 0.0,
         "pairs": pairs,
         "missed": missed,
         "extra": extra,
@@ -206,6 +211,7 @@ def merge_reports(reports: list[dict], keys: list[str] | None = None) -> dict[st
     n_matched = out["n_matched_words"]
     out["coverage"] = (n_matched / n_ref) if n_ref else float("nan")
     out["miss_rate"] = ((n_ref - n_matched) / n_ref) if n_ref else float("nan")
+    out["uncertain_ratio"] = (out["uncertain_matched"] / n_matched) if n_matched else 0.0
     out["start_mae"] = _mean(all_start)
     out["start_median"] = _pct(all_start, 50)
     out["start_p90"] = _pct(all_start, 90)
