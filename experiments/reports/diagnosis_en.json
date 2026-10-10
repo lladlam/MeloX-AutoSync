@@ -22,7 +22,7 @@
         "max_span_fraction": 0.007,
         "blank_fraction": 0.816,
         "mean_token_score": -0.7,
-        "transcript": "THE SNOW GLOWS WIDE ON MOUNTAIN NIGH NOT A FO PRING TO BE SEN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.134
       },
       "oracle": {
@@ -34,7 +34,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.741,
         "mean_token_score": -0.79,
-        "transcript": "THE SNOW GLOWS WHIDE ON MOUN TONIGHT NOT A FO PRING TO BE SEN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.134
       },
       "energy_trim": {
@@ -46,7 +46,7 @@
         "max_span_fraction": 0.007,
         "blank_fraction": 0.816,
         "mean_token_score": -0.7,
-        "transcript": "THE SNOW GLOWS WIDE ON MOUNTAIN NIGH NOT A FO PRING TO BE SEN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.134
       },
       "word_level_lrc": {
@@ -71,7 +71,7 @@
         "max_span_fraction": 0.005,
         "blank_fraction": 0.835,
         "mean_token_score": -0.36,
-        "transcript": "KINGDOM OF I SOLATION AND TEY LURKS LIKE I'M THE QUEN THE WING DAYS HOWLING LIKE IS WHARLING STORMING SIT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.218
       },
       "oracle": {
@@ -83,7 +83,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.819,
         "mean_token_score": -0.52,
-        "transcript": "KINGDOM OF I SOLATION AND TEY LURKS LIKE I'M THE QUEN THE WING DAYS HOWLING LIKE IS WHARLING STORMING SAY",
+        "transcript": "<redacted>",
         "transcript_cer": 0.228
       },
       "energy_trim": {
@@ -95,7 +95,7 @@
         "max_span_fraction": 0.005,
         "blank_fraction": 0.835,
         "mean_token_score": -0.36,
-        "transcript": "KINGDOM OF I SOLATION AND TEY LURKS LIKE I'M THE QUEN THE WING DAYS HOWLING LIKE IS WHARLING STORMING SIT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.218
       },
       "word_level_lrc": {
@@ -120,7 +120,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.843,
         "mean_token_score": -0.94,
-        "transcript": "COULDIN GAVE ER AND HEAVEN NOWS I TRY DON' THAT DAM IN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.379
       },
       "oracle": {
@@ -132,7 +132,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.838,
         "mean_token_score": -0.99,
-        "transcript": "CUDIN CAVE ER AND HEAVEN KNOWS I TRY DON THAT DAM MEN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.431
       },
       "energy_trim": {
@@ -144,7 +144,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.844,
         "mean_token_score": -1.04,
-        "transcript": "CUDIN CAER AND HEAVEN NOWS I TRY DON THAT DAM IN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.414
       },
       "word_level_lrc": {
@@ -169,7 +169,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.791,
         "mean_token_score": -0.98,
-        "transcript": "THE SNOW GLOLS WIDE AL MOUNTAIN NIGH NOT A FOT PRAING TO BE SE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.209
       },
       "oracle": {
@@ -181,7 +181,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.749,
         "mean_token_score": -0.96,
-        "transcript": "THE SNOW GLOWS WIDE AL MOUNTAIN NIGH NOT A FOT PRANG TO BE SE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.194
       },
       "energy_trim": {
@@ -193,7 +193,7 @@
         "max_span_fraction": 0.011,
         "blank_fraction": 0.765,
         "mean_token_score": -0.97,
-        "transcript": "THE SNOW GLULS WIDE AL MOUNTAIN NIGH NOT A FOT PRAYING TO BE SE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.239
       },
       "word_level_lrc": {
@@ -218,7 +218,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.779,
         "mean_token_score": -0.45,
-        "transcript": "A KING OF A LI SOLATION AN IT LOKS LIKE I'M THE QUEN THE WIND IS HOWLING LIKE THIS SWHIRLING STORMING SIG",
+        "transcript": "<redacted>",
         "transcript_cer": 0.198
       },
       "oracle": {
@@ -230,7 +230,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.769,
         "mean_token_score": -0.51,
-        "transcript": "A KING OF A LI SOLATION AN I LOKS LIKE I'M THE QUEN THE WIND IS HOWLING LIKE THIS SWHIRLING STORMING SIG",
+        "transcript": "<redacted>",
         "transcript_cer": 0.208
       },
       "energy_trim": {
@@ -242,7 +242,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.779,
         "mean_token_score": -0.45,
-        "transcript": "A KING OF A LI SOLATION AN IT LOKS LIKE I'M THE QUEN THE WIND IS HOWLING LIKE THIS SWHIRLING STORMING SIG",
+        "transcript": "<redacted>",
         "transcript_cer": 0.198
       },
       "word_level_lrc": {
@@ -267,7 +267,7 @@
         "max_span_fraction": 0.015,
         "blank_fraction": 0.828,
         "mean_token_score": -1.32,
-        "transcript": "CURN CAP IT AND HEAVEN NOSE I TRY DON'T LET THAM MEN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.328
       },
       "oracle": {
@@ -279,7 +279,7 @@
         "max_span_fraction": 0.015,
         "blank_fraction": 0.823,
         "mean_token_score": -1.35,
-        "transcript": "CUN CAPIT AND HEAVEN NOS I TRY DON'T LET THAT MAN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.345
       },
       "energy_trim": {
@@ -291,7 +291,7 @@
         "max_span_fraction": 0.015,
         "blank_fraction": 0.832,
         "mean_token_score": -1.26,
-        "transcript": "CURN CAP IT AND HEAVEN NOSE I TRY DON'T LET THAM MEN",
+        "transcript": "<redacted>",
         "transcript_cer": 0.328
       },
       "word_level_lrc": {
@@ -316,7 +316,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.79,
         "mean_token_score": -1.2,
-        "transcript": "AN EMPTY TRE AN EMPTY HOUSE A HAL INSIDE MY HEART AL ALONE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.149
       },
       "oracle": {
@@ -328,7 +328,7 @@
         "max_span_fraction": 0.007,
         "blank_fraction": 0.758,
         "mean_token_score": -1.04,
-        "transcript": "AN EMPTY TRE AN EMPTY HOUSE A HAL INSIDE MY HEART AL ALONE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.149
       },
       "energy_trim": {
@@ -340,7 +340,7 @@
         "max_span_fraction": 0.007,
         "blank_fraction": 0.782,
         "mean_token_score": -1.17,
-        "transcript": "AN EMPTY TRE AN EMPTY HOUSE A HAUL INSIDE MY HEART AL ALONE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.164
       },
       "word_level_lrc": {
@@ -365,7 +365,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.77,
         "mean_token_score": -2.05,
-        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WHERE THEY ARE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.165
       },
       "oracle": {
@@ -377,7 +377,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.756,
         "mean_token_score": -1.74,
-        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WHERE THEY ARE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.165
       },
       "energy_trim": {
@@ -389,7 +389,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.77,
         "mean_token_score": -2.05,
-        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WHERE THEY ARE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.165
       },
       "word_level_lrc": {
@@ -414,7 +414,7 @@
         "max_span_fraction": 0.014,
         "blank_fraction": 0.794,
         "mean_token_score": -0.73,
-        "transcript": "THE DAYS WE HAV THE SONS WE SEND TOGETHER OH YA AND O MY LA",
+        "transcript": "<redacted>",
         "transcript_cer": 0.154
       },
       "oracle": {
@@ -426,7 +426,7 @@
         "max_span_fraction": 0.011,
         "blank_fraction": 0.8,
         "mean_token_score": -0.68,
-        "transcript": "THE DAYS WE HAV THE SONGS WE SEND TOGETHER OH YA AND O MY LA",
+        "transcript": "<redacted>",
         "transcript_cer": 0.138
       },
       "energy_trim": {
@@ -438,7 +438,7 @@
         "max_span_fraction": 0.014,
         "blank_fraction": 0.793,
         "mean_token_score": -0.71,
-        "transcript": "THE DAYS WE HAV THE SONS WE SEND TOGETHER OH YA AND O MY LA",
+        "transcript": "<redacted>",
         "transcript_cer": 0.154
       },
       "word_level_lrc": {
@@ -463,7 +463,7 @@
         "max_span_fraction": 0.007,
         "blank_fraction": 0.81,
         "mean_token_score": -1.42,
-        "transcript": "ANAMPTYSTRE ANAMPTY HOUSE OF HORDING SIDE MY HEART HOD AT AL",
+        "transcript": "<redacted>",
         "transcript_cer": 0.328
       },
       "oracle": {
@@ -475,7 +475,7 @@
         "max_span_fraction": 0.008,
         "blank_fraction": 0.791,
         "mean_token_score": -1.31,
-        "transcript": "ANAMPTY STRE ANAMPTY HOUSE OF HORDING SIDE MY HEART HORD AT ALE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.313
       },
       "energy_trim": {
@@ -487,7 +487,7 @@
         "max_span_fraction": 0.008,
         "blank_fraction": 0.791,
         "mean_token_score": -1.29,
-        "transcript": "ANAMPTYSTRE ANAMPTY HOUSE OF HORDING SIDE MY HEART HOD AT ALE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.313
       },
       "word_level_lrc": {
@@ -512,7 +512,7 @@
         "max_span_fraction": 0.01,
         "blank_fraction": 0.796,
         "mean_token_score": -1.76,
-        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WER THEY O",
+        "transcript": "<redacted>",
         "transcript_cer": 0.228
       },
       "oracle": {
@@ -524,7 +524,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.791,
         "mean_token_score": -1.78,
-        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WER DEY O",
+        "transcript": "<redacted>",
         "transcript_cer": 0.253
       },
       "energy_trim": {
@@ -536,7 +536,7 @@
         "max_span_fraction": 0.011,
         "blank_fraction": 0.793,
         "mean_token_score": -1.73,
-        "transcript": "ROMS ARE GETING SMALER I WONDER WHY I WONDER HOW I WONDER WER THEY O",
+        "transcript": "<redacted>",
         "transcript_cer": 0.228
       },
       "word_level_lrc": {
@@ -561,7 +561,7 @@
         "max_span_fraction": 0.012,
         "blank_fraction": 0.791,
         "mean_token_score": -0.38,
-        "transcript": "THE DAYS WE HARE THE SONGS WE SEND TOGETHER OH YEA AND O MY LOVE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.092
       },
       "oracle": {
@@ -573,7 +573,7 @@
         "max_span_fraction": 0.013,
         "blank_fraction": 0.782,
         "mean_token_score": -0.4,
-        "transcript": "THE DAYS WE HAR THE SONGS WE SEND TOGETHER OH YEA AND HO MY LOVE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.092
       },
       "energy_trim": {
@@ -585,7 +585,7 @@
         "max_span_fraction": 0.012,
         "blank_fraction": 0.788,
         "mean_token_score": -0.39,
-        "transcript": "THE DAYS WE HARE THE SONGS WE SEND TOGETHER OH YEA AND O MY LOVE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.092
       },
       "word_level_lrc": {
@@ -610,7 +610,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.932,
         "mean_token_score": -2.67,
-        "transcript": "THOU WISE AT O WISE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.737
       },
       "oracle": {
@@ -622,7 +622,7 @@
         "max_span_fraction": 0.011,
         "blank_fraction": 0.919,
         "mean_token_score": -2.93,
-        "transcript": "THE WISE HATE WISE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.579
       },
       "energy_trim": {
@@ -634,7 +634,7 @@
         "max_span_fraction": 0.01,
         "blank_fraction": 0.928,
         "mean_token_score": -2.82,
-        "transcript": "TO WISE ATO WISE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.632
       },
       "word_level_lrc": {
@@ -659,7 +659,7 @@
         "max_span_fraction": 0.032,
         "blank_fraction": 0.874,
         "mean_token_score": -1.71,
-        "transcript": "EVERY MORENAME YOU GRT ME",
+        "transcript": "<redacted>",
         "transcript_cer": 0.231
       },
       "oracle": {
@@ -671,7 +671,7 @@
         "max_span_fraction": 0.013,
         "blank_fraction": 0.893,
         "mean_token_score": -1.1,
-        "transcript": "EVERY MORE NAME YE GRE M",
+        "transcript": "<redacted>",
         "transcript_cer": 0.385
       },
       "energy_trim": {
@@ -683,7 +683,7 @@
         "max_span_fraction": 0.032,
         "blank_fraction": 0.874,
         "mean_token_score": -1.71,
-        "transcript": "EVERY MORENAME YOU GRT ME",
+        "transcript": "<redacted>",
         "transcript_cer": 0.231
       },
       "word_level_lrc": {
@@ -708,7 +708,7 @@
         "max_span_fraction": 0.011,
         "blank_fraction": 0.868,
         "mean_token_score": -0.21,
-        "transcript": "SMAL AND WHIHT CLEN AND BRIGHT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.125
       },
       "oracle": {
@@ -720,7 +720,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.867,
         "mean_token_score": -0.62,
-        "transcript": "SMAL AND WHITE PLEN EM BRIHE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.25
       },
       "energy_trim": {
@@ -732,7 +732,7 @@
         "max_span_fraction": 0.017,
         "blank_fraction": 0.859,
         "mean_token_score": -0.59,
-        "transcript": "MA AND WHIT CLEN AM BRIGHT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.219
       },
       "word_level_lrc": {
@@ -757,7 +757,7 @@
         "max_span_fraction": 0.005,
         "blank_fraction": 0.954,
         "mean_token_score": -2.62,
-        "transcript": "ADO WIES ATO WIES",
+        "transcript": "<redacted>",
         "transcript_cer": 0.579
       },
       "oracle": {
@@ -769,7 +769,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.939,
         "mean_token_score": -2.45,
-        "transcript": "ADO WIES ATO WIES",
+        "transcript": "<redacted>",
         "transcript_cer": 0.579
       },
       "energy_trim": {
@@ -781,7 +781,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.941,
         "mean_token_score": -2.38,
-        "transcript": "ADOWIES ATO WIES",
+        "transcript": "<redacted>",
         "transcript_cer": 0.579
       },
       "word_level_lrc": {
@@ -806,7 +806,7 @@
         "max_span_fraction": 0.034,
         "blank_fraction": 0.831,
         "mean_token_score": -1.54,
-        "transcript": "EVERY MORNING YOU CRE M",
+        "transcript": "<redacted>",
         "transcript_cer": 0.154
       },
       "oracle": {
@@ -818,7 +818,7 @@
         "max_span_fraction": 0.012,
         "blank_fraction": 0.89,
         "mean_token_score": -0.95,
-        "transcript": "AFRY MARNING OU CRE ME",
+        "transcript": "<redacted>",
         "transcript_cer": 0.308
       },
       "energy_trim": {
@@ -830,7 +830,7 @@
         "max_span_fraction": 0.025,
         "blank_fraction": 0.844,
         "mean_token_score": -5.9,
-        "transcript": "GRE M",
+        "transcript": "<redacted>",
         "transcript_cer": 0.808
       },
       "word_level_lrc": {
@@ -855,7 +855,7 @@
         "max_span_fraction": 0.013,
         "blank_fraction": 0.845,
         "mean_token_score": -0.36,
-        "transcript": "SM AND WHIGHT CLEAN AND BRIGHT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.188
       },
       "oracle": {
@@ -867,7 +867,7 @@
         "max_span_fraction": 0.012,
         "blank_fraction": 0.87,
         "mean_token_score": -0.64,
-        "transcript": "SM AND WHIHE CLEAN AND BRIGE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.188
       },
       "energy_trim": {
@@ -879,7 +879,7 @@
         "max_span_fraction": 0.012,
         "blank_fraction": 0.861,
         "mean_token_score": -1.15,
-        "transcript": "AND WHIGHT CLEAN AND BRIGHT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.281
       },
       "word_level_lrc": {
@@ -904,7 +904,7 @@
         "max_span_fraction": 0.005,
         "blank_fraction": 0.805,
         "mean_token_score": -1.28,
-        "transcript": "NOR SA FIRS TAIN MY HEART RACHIN NO FAVOR PITCHON BRING ME OUT TA DARK",
+        "transcript": "<redacted>",
         "transcript_cer": 0.322
       },
       "oracle": {
@@ -916,7 +916,7 @@
         "max_span_fraction": 0.008,
         "blank_fraction": 0.781,
         "mean_token_score": -1.44,
-        "transcript": "NOR SA FIRS TA AN MY HEART RACHIN O FAVOUR PITCEON BRIN ME OUT A DARK",
+        "transcript": "<redacted>",
         "transcript_cer": 0.356
       },
       "energy_trim": {
@@ -928,7 +928,7 @@
         "max_span_fraction": 0.005,
         "blank_fraction": 0.796,
         "mean_token_score": -1.32,
-        "transcript": "NOR SA FIRS TA AN MY HEART RACHIN NO FAVOUR PITCHEON BRING ME OUT A DARK",
+        "transcript": "<redacted>",
         "transcript_cer": 0.345
       },
       "word_level_lrc": {
@@ -953,7 +953,7 @@
         "max_span_fraction": 0.011,
         "blank_fraction": 0.808,
         "mean_token_score": -2.42,
-        "transcript": "FI NOE I KAN SA O CHRIS O CLEAR GO HOW SEL ME ONALEO SHE BEAR",
+        "transcript": "<redacted>",
         "transcript_cer": 0.511
       },
       "oracle": {
@@ -965,7 +965,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.797,
         "mean_token_score": -2.13,
-        "transcript": "FI NOE I KIN SA O CHRIST O CLEAR GO HOW SEL ME ONA ALEO SHE BEAR",
+        "transcript": "<redacted>",
         "transcript_cer": 0.5
       },
       "energy_trim": {
@@ -977,7 +977,7 @@
         "max_span_fraction": 0.011,
         "blank_fraction": 0.803,
         "mean_token_score": -2.51,
-        "transcript": "BY NOE I CAN SA O CHRIS O CLEAR GO HOW SEL ME ONALEO SHE BEAR",
+        "transcript": "<redacted>",
         "transcript_cer": 0.523
       },
       "word_level_lrc": {
@@ -1002,7 +1002,7 @@
         "max_span_fraction": 0.027,
         "blank_fraction": 0.791,
         "mean_token_score": -1.18,
-        "transcript": "SAY HOWI LEAVES EVER I PA SO YEW DON NON DERIS DEM MADE THING THAT I WOUL DO",
+        "transcript": "<redacted>",
         "transcript_cer": 0.388
       },
       "oracle": {
@@ -1014,7 +1014,7 @@
         "max_span_fraction": 0.029,
         "blank_fraction": 0.786,
         "mean_token_score": -1.15,
-        "transcript": "SAY HOI LEAVES EVERY PE SOFEW DON NON DERIS DEM MADE THING THAT I WOUL DO",
+        "transcript": "<redacted>",
         "transcript_cer": 0.388
       },
       "energy_trim": {
@@ -1026,7 +1026,7 @@
         "max_span_fraction": 0.03,
         "blank_fraction": 0.786,
         "mean_token_score": -1.34,
-        "transcript": "THEY HOI LEAFES EVER I PE SOFEW DON NON ERIS DEM MAD E THING THAT I WOUL DO",
+        "transcript": "<redacted>",
         "transcript_cer": 0.425
       },
       "word_level_lrc": {
@@ -1051,7 +1051,7 @@
         "max_span_fraction": 0.01,
         "blank_fraction": 0.806,
         "mean_token_score": -1.5,
-        "transcript": "THER SA FI AR STARIN MY HEART RACHIN O FAVOR PIGEON BRING ME OUT O THE ART",
+        "transcript": "<redacted>",
         "transcript_cer": 0.333
       },
       "oracle": {
@@ -1063,7 +1063,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.796,
         "mean_token_score": -1.5,
-        "transcript": "THER SAPAR STARTIN MY HEART RACHIN O FAVOR PIGEON BRING ME OUT O THE RT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.345
       },
       "energy_trim": {
@@ -1075,7 +1075,7 @@
         "max_span_fraction": 0.01,
         "blank_fraction": 0.81,
         "mean_token_score": -1.55,
-        "transcript": "THER SA FIART STARIN MY HEART RACHIN O FAVOR PIGEON BRING ME OUT O THE ART",
+        "transcript": "<redacted>",
         "transcript_cer": 0.322
       },
       "word_level_lrc": {
@@ -1100,7 +1100,7 @@
         "max_span_fraction": 0.014,
         "blank_fraction": 0.807,
         "mean_token_score": -1.81,
-        "transcript": "FINE OLY I CAN SE O CRISTO CLEAR CO HOS TEL ME ONO THE ALE OSHIPE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.455
       },
       "oracle": {
@@ -1112,7 +1112,7 @@
         "max_span_fraction": 0.013,
         "blank_fraction": 0.797,
         "mean_token_score": -1.64,
-        "transcript": "FINE OLY I CAN SE O CRISTO CLEAR CO HERS TEL ME OUN O THE ALE OSHEPE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.443
       },
       "energy_trim": {
@@ -1124,7 +1124,7 @@
         "max_span_fraction": 0.013,
         "blank_fraction": 0.806,
         "mean_token_score": -1.88,
-        "transcript": "IN OLY I CAN SE O CRISTO CLEAR CO HOS TEL ME ONA THE ALE OSHIPE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.455
       },
       "word_level_lrc": {
@@ -1149,7 +1149,7 @@
         "max_span_fraction": 0.016,
         "blank_fraction": 0.811,
         "mean_token_score": -1.21,
-        "transcript": "SAY HOIT EVERY PACE OF YOU DON NOWN THEREST ON MA ATHING THAT I WOULD DO",
+        "transcript": "<redacted>",
         "transcript_cer": 0.4
       },
       "oracle": {
@@ -1161,7 +1161,7 @@
         "max_span_fraction": 0.015,
         "blank_fraction": 0.812,
         "mean_token_score": -1.08,
-        "transcript": "SAY HOI EVERA PACE OF YOU DON NOWN DEREST ON MA ATHING THAT I WOULD DO",
+        "transcript": "<redacted>",
         "transcript_cer": 0.388
       },
       "energy_trim": {
@@ -1173,7 +1173,7 @@
         "max_span_fraction": 0.015,
         "blank_fraction": 0.818,
         "mean_token_score": -1.21,
-        "transcript": "THEY HOAIT EVERA PACE OF YOU DON NON DE REST ON MA ATHING THAT I WOULD DO",
+        "transcript": "<redacted>",
         "transcript_cer": 0.412
       },
       "word_level_lrc": {
@@ -1198,7 +1198,7 @@
         "max_span_fraction": 0.017,
         "blank_fraction": 0.82,
         "mean_token_score": -1.0,
-        "transcript": "TEL ME SOME THING AR YOU HAPY IN THIS MADON WOUT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.263
       },
       "oracle": {
@@ -1210,7 +1210,7 @@
         "max_span_fraction": 0.012,
         "blank_fraction": 0.83,
         "mean_token_score": -0.91,
-        "transcript": "TEL ME SOME THING OR YOU HAPY IN THIS MADON W",
+        "transcript": "<redacted>",
         "transcript_cer": 0.298
       },
       "energy_trim": {
@@ -1222,7 +1222,7 @@
         "max_span_fraction": 0.017,
         "blank_fraction": 0.82,
         "mean_token_score": -1.0,
-        "transcript": "TEL ME SOME THING AR YOU HAPY IN THIS MADON WOUT",
+        "transcript": "<redacted>",
         "transcript_cer": 0.263
       },
       "word_level_lrc": {
@@ -1247,7 +1247,7 @@
         "max_span_fraction": 0.005,
         "blank_fraction": 0.868,
         "mean_token_score": -1.46,
-        "transcript": "O DO L MOR ETHER SON THE ER SEL SEACHING FR UN FOLING",
+        "transcript": "<redacted>",
         "transcript_cer": 0.461
       },
       "oracle": {
@@ -1259,7 +1259,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.86,
         "mean_token_score": -1.52,
-        "transcript": "O DO LA MOR HE THER SON THE ER SE SUCHING FOR UN FOLANG",
+        "transcript": "<redacted>",
         "transcript_cer": 0.461
       },
       "energy_trim": {
@@ -1271,7 +1271,7 @@
         "max_span_fraction": 0.005,
         "blank_fraction": 0.868,
         "mean_token_score": -1.46,
-        "transcript": "O DO L MOR ETHER SON THE ER SEL SEACHING FR UN FOLING",
+        "transcript": "<redacted>",
         "transcript_cer": 0.461
       },
       "word_level_lrc": {
@@ -1296,7 +1296,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.86,
         "mean_token_score": -1.31,
-        "transcript": "IN NOT A GOD TIMES I FAR MYSELF FU LON IN FO CHANGE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.296
       },
       "oracle": {
@@ -1308,7 +1308,7 @@
         "max_span_fraction": 0.007,
         "blank_fraction": 0.85,
         "mean_token_score": -1.37,
-        "transcript": "IN NOT A GOD TIMES I FARM MYSELF FO LO NING FO THING",
+        "transcript": "<redacted>",
         "transcript_cer": 0.352
       },
       "energy_trim": {
@@ -1320,7 +1320,7 @@
         "max_span_fraction": 0.007,
         "blank_fraction": 0.852,
         "mean_token_score": -2.9,
-        "transcript": "GOD TIME SI FAR MYSELF FU LON NIN FO CINGE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.481
       },
       "word_level_lrc": {
@@ -1345,7 +1345,7 @@
         "max_span_fraction": 0.019,
         "blank_fraction": 0.838,
         "mean_token_score": -1.31,
-        "transcript": "TEL ME SOME THINGO AR YOU HAVE BEN THI MALDUMWOD",
+        "transcript": "<redacted>",
         "transcript_cer": 0.386
       },
       "oracle": {
@@ -1357,7 +1357,7 @@
         "max_span_fraction": 0.018,
         "blank_fraction": 0.841,
         "mean_token_score": -1.46,
-        "transcript": "TEL ME SOME THING AR YOU HAVE BEN THI MALDUMWO",
+        "transcript": "<redacted>",
         "transcript_cer": 0.404
       },
       "energy_trim": {
@@ -1369,7 +1369,7 @@
         "max_span_fraction": 0.012,
         "blank_fraction": 0.836,
         "mean_token_score": -3.13,
-        "transcript": "INGO AR YOU HAV BEN THIS MADUMWD",
+        "transcript": "<redacted>",
         "transcript_cer": 0.579
       },
       "word_level_lrc": {
@@ -1394,7 +1394,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.89,
         "mean_token_score": -2.62,
-        "transcript": "O DOELY M HE DIS ONTY A SEL SUACHING F UM PHO LANE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.605
       },
       "oracle": {
@@ -1406,7 +1406,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.89,
         "mean_token_score": -2.62,
-        "transcript": "O DOELY M HE DIS ONTY A SEL SUACHING F UM PHO LANE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.605
       },
       "energy_trim": {
@@ -1418,7 +1418,7 @@
         "max_span_fraction": 0.006,
         "blank_fraction": 0.89,
         "mean_token_score": -2.72,
-        "transcript": "OYLY M HE IS ONTY A SEAL SEACHING FR UM PO LANE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.592
       },
       "word_level_lrc": {
@@ -1443,7 +1443,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.872,
         "mean_token_score": -1.36,
-        "transcript": "NOT A GOD TIMES I FA MYSELFA LONGNE FO CANGE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.315
       },
       "oracle": {
@@ -1455,7 +1455,7 @@
         "max_span_fraction": 0.009,
         "blank_fraction": 0.872,
         "mean_token_score": -1.36,
-        "transcript": "NOT A GOD TIMES I FA MYSELFA LONGNE FO CANGE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.315
       },
       "energy_trim": {
@@ -1467,7 +1467,7 @@
         "max_span_fraction": 0.01,
         "blank_fraction": 0.862,
         "mean_token_score": -1.61,
-        "transcript": "OT O GOD TIME A FA MYSELFA LONAN FO CANGE",
+        "transcript": "<redacted>",
         "transcript_cer": 0.389
       },
       "word_level_lrc": {

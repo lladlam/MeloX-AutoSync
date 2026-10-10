@@ -431,7 +431,7 @@
       },
       "pairs": [
         {
-          "text": "最",
+          "text": "<redacted>",
           "ref_start": 0.63,
           "pred_start": 0.9,
           "start_err": 0.27,
@@ -441,7 +441,7 @@
           "uncertain": false
         },
         {
-          "text": "後",
+          "text": "<redacted>",
           "ref_start": 1.93,
           "pred_start": 1.96,
           "start_err": 0.030000000000000027,
@@ -451,7 +451,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 2.809,
           "pred_start": 5.24,
           "start_err": 2.431,
@@ -461,7 +461,7 @@
           "uncertain": false
         },
         {
-          "text": "キ",
+          "text": "<redacted>",
           "ref_start": 4.521,
           "pred_start": 5.58,
           "start_err": 1.0590000000000002,
@@ -471,7 +471,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 5.141,
           "pred_start": 5.88,
           "start_err": 0.7389999999999999,
@@ -481,7 +481,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 5.331,
           "pred_start": 6.2,
           "start_err": 0.8689999999999998,
@@ -491,7 +491,7 @@
           "uncertain": false
         },
         {
-          "text": "タ",
+          "text": "<redacted>",
           "ref_start": 5.841,
           "pred_start": 7.16,
           "start_err": 1.319,
@@ -501,7 +501,7 @@
           "uncertain": false
         },
         {
-          "text": "バ",
+          "text": "<redacted>",
           "ref_start": 6.151,
           "pred_start": 7.5200000000000005,
           "start_err": 1.3690000000000007,
@@ -511,7 +511,7 @@
           "uncertain": false
         },
         {
-          "text": "コ",
+          "text": "<redacted>",
           "ref_start": 7.142,
           "pred_start": 7.86,
           "start_err": 0.718,
@@ -521,7 +521,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 7.492,
           "pred_start": 8.22,
           "start_err": 0.7280000000000006,
@@ -531,7 +531,7 @@
           "uncertain": false
         },
         {
-          "text": "a",
+          "text": "<redacted>",
           "ref_start": 9.382,
           "pred_start": 8.24,
           "start_err": 1.1419999999999995,
@@ -541,7 +541,7 @@
           "uncertain": true
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 9.522,
           "pred_start": 9.540000000000001,
           "start_err": 0.018000000000000682,
@@ -551,7 +551,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 9.752,
           "pred_start": 9.84,
           "start_err": 0.08799999999999919,
@@ -597,7 +597,7 @@
       },
       "pairs": [
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.66,
           "start_err": 0.66,
@@ -607,7 +607,7 @@
           "uncertain": false
         },
         {
-          "text": "ニ",
+          "text": "<redacted>",
           "ref_start": 0.67,
           "pred_start": 0.7000000000000001,
           "start_err": 0.030000000000000027,
@@ -617,7 +617,7 @@
           "uncertain": false
         },
         {
-          "text": "ガ",
+          "text": "<redacted>",
           "ref_start": 1.02,
           "pred_start": 1.02,
           "start_err": 0.0,
@@ -627,7 +627,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 1.94,
           "pred_start": 1.98,
           "start_err": 0.040000000000000036,
@@ -637,7 +637,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 2.96,
           "pred_start": 2.98,
           "start_err": 0.020000000000000018,
@@ -647,7 +647,7 @@
           "uncertain": false
         },
         {
-          "text": "せ",
+          "text": "<redacted>",
           "ref_start": 3.174,
           "pred_start": 3.3000000000000003,
           "start_err": 0.12600000000000033,
@@ -657,7 +657,7 @@
           "uncertain": false
         },
         {
-          "text": "つ",
+          "text": "<redacted>",
           "ref_start": 4.261,
           "pred_start": 3.62,
           "start_err": 0.641,
@@ -667,7 +667,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 4.301,
           "pred_start": 4.32,
           "start_err": 0.019000000000000128,
@@ -677,7 +677,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 4.601,
           "pred_start": 4.66,
           "start_err": 0.05900000000000016,
@@ -687,7 +687,7 @@
           "uncertain": false
         },
         {
-          "text": "香",
+          "text": "<redacted>",
           "ref_start": 4.891,
           "pred_start": 4.96,
           "start_err": 0.06899999999999995,
@@ -697,7 +697,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 5.592,
           "pred_start": 5.98,
           "start_err": 0.3880000000000008,
@@ -707,7 +707,7 @@
           "uncertain": false
         },
         {
-          "text": "明",
+          "text": "<redacted>",
           "ref_start": 11.599,
           "pred_start": 11.68,
           "start_err": 0.08099999999999952,
@@ -717,7 +717,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 12.063,
           "pred_start": 11.92,
           "start_err": 0.14300000000000068,
@@ -727,7 +727,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 12.293,
           "pred_start": 12.66,
           "start_err": 0.3670000000000009,
@@ -737,7 +737,7 @@
           "uncertain": false
         },
         {
-          "text": "今",
+          "text": "<redacted>",
           "ref_start": 13.643,
           "pred_start": 13.700000000000001,
           "start_err": 0.057000000000000384,
@@ -747,7 +747,7 @@
           "uncertain": false
         },
         {
-          "text": "頃",
+          "text": "<redacted>",
           "ref_start": 14.253,
           "pred_start": 13.98,
           "start_err": 0.2729999999999997,
@@ -757,7 +757,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 14.984,
           "pred_start": 14.98,
           "start_err": 0.0039999999999995595,
@@ -767,7 +767,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 15.294,
           "pred_start": 15.32,
           "start_err": 0.0259999999999998,
@@ -813,7 +813,7 @@
       },
       "pairs": [
         {
-          "text": "あ",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.38,
           "start_err": 0.38,
@@ -823,7 +823,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 0.28,
           "pred_start": 0.4,
           "start_err": 0.12,
@@ -833,7 +833,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 0.62,
           "pred_start": 0.68,
           "start_err": 0.06000000000000005,
@@ -843,7 +843,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 0.98,
           "pred_start": 1.04,
           "start_err": 0.06000000000000005,
@@ -853,7 +853,7 @@
           "uncertain": false
         },
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 1.711,
           "pred_start": 1.7,
           "start_err": 0.01100000000000012,
@@ -863,7 +863,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 1.971,
           "pred_start": 2.02,
           "start_err": 0.04899999999999993,
@@ -873,7 +873,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 2.381,
           "pred_start": 2.38,
           "start_err": 0.0009999999999998899,
@@ -883,7 +883,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.051,
           "pred_start": 3.1,
           "start_err": 0.04899999999999993,
@@ -893,7 +893,7 @@
           "uncertain": false
         },
         {
-          "text": "る",
+          "text": "<redacted>",
           "ref_start": 3.371,
           "pred_start": 3.38,
           "start_err": 0.008999999999999897,
@@ -903,7 +903,7 @@
           "uncertain": false
         },
         {
-          "text": "ん",
+          "text": "<redacted>",
           "ref_start": 3.551,
           "pred_start": 3.7600000000000002,
           "start_err": 0.20900000000000007,
@@ -913,7 +913,7 @@
           "uncertain": false
         },
         {
-          "text": "だ",
+          "text": "<redacted>",
           "ref_start": 4.011,
           "pred_start": 4.0200000000000005,
           "start_err": 0.009000000000000341,
@@ -923,7 +923,7 @@
           "uncertain": false
         },
         {
-          "text": "ろ",
+          "text": "<redacted>",
           "ref_start": 4.641,
           "pred_start": 4.66,
           "start_err": 0.019000000000000128,
@@ -933,7 +933,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 5.031,
           "pred_start": 4.74,
           "start_err": 0.2909999999999995,
@@ -943,7 +943,7 @@
           "uncertain": false
         },
         {
-          "text": "誰",
+          "text": "<redacted>",
           "ref_start": 5.391,
           "pred_start": 5.4,
           "start_err": 0.009000000000000341,
@@ -953,7 +953,7 @@
           "uncertain": false
         },
         {
-          "text": "を",
+          "text": "<redacted>",
           "ref_start": 6.441,
           "pred_start": 6.5,
           "start_err": 0.05900000000000016,
@@ -963,7 +963,7 @@
           "uncertain": false
         },
         {
-          "text": "想",
+          "text": "<redacted>",
           "ref_start": 7.091,
           "pred_start": 7.140000000000001,
           "start_err": 0.04900000000000038,
@@ -973,7 +973,7 @@
           "uncertain": false
         },
         {
-          "text": "っ",
+          "text": "<redacted>",
           "ref_start": 7.981,
           "pred_start": 7.86,
           "start_err": 0.12099999999999955,
@@ -983,7 +983,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 8.112,
           "pred_start": 8.1,
           "start_err": 0.012000000000000455,
@@ -1029,7 +1029,7 @@
       },
       "pairs": [
         {
-          "text": "最",
+          "text": "<redacted>",
           "ref_start": 0.66,
           "pred_start": 0.88,
           "start_err": 0.21999999999999997,
@@ -1039,7 +1039,7 @@
           "uncertain": false
         },
         {
-          "text": "後",
+          "text": "<redacted>",
           "ref_start": 1.89,
           "pred_start": 1.94,
           "start_err": 0.050000000000000044,
@@ -1049,7 +1049,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 3.581,
           "pred_start": 5.22,
           "start_err": 1.6389999999999998,
@@ -1059,7 +1059,7 @@
           "uncertain": false
         },
         {
-          "text": "キ",
+          "text": "<redacted>",
           "ref_start": 4.481,
           "pred_start": 5.6000000000000005,
           "start_err": 1.1190000000000007,
@@ -1069,7 +1069,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 5.151,
           "pred_start": 5.88,
           "start_err": 0.7290000000000001,
@@ -1079,7 +1079,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 5.301,
           "pred_start": 6.24,
           "start_err": 0.9390000000000001,
@@ -1089,7 +1089,7 @@
           "uncertain": false
         },
         {
-          "text": "タ",
+          "text": "<redacted>",
           "ref_start": 5.841,
           "pred_start": 7.22,
           "start_err": 1.3789999999999996,
@@ -1099,7 +1099,7 @@
           "uncertain": false
         },
         {
-          "text": "バ",
+          "text": "<redacted>",
           "ref_start": 6.181,
           "pred_start": 7.5200000000000005,
           "start_err": 1.3390000000000004,
@@ -1109,7 +1109,7 @@
           "uncertain": false
         },
         {
-          "text": "コ",
+          "text": "<redacted>",
           "ref_start": 7.202,
           "pred_start": 8.2,
           "start_err": 0.9979999999999993,
@@ -1119,7 +1119,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 7.332,
           "pred_start": 8.38,
           "start_err": 1.048000000000001,
@@ -1129,7 +1129,7 @@
           "uncertain": false
         },
         {
-          "text": "a",
+          "text": "<redacted>",
           "ref_start": 9.432,
           "pred_start": 8.4,
           "start_err": 1.032,
@@ -1139,7 +1139,7 @@
           "uncertain": true
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 9.652,
           "pred_start": 9.56,
           "start_err": 0.09199999999999875,
@@ -1149,7 +1149,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 9.772,
           "pred_start": 9.86,
           "start_err": 0.08799999999999919,
@@ -1195,7 +1195,7 @@
       },
       "pairs": [
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.02,
           "start_err": 0.02,
@@ -1205,7 +1205,7 @@
           "uncertain": false
         },
         {
-          "text": "ニ",
+          "text": "<redacted>",
           "ref_start": 0.65,
           "pred_start": 0.66,
           "start_err": 0.010000000000000009,
@@ -1215,7 +1215,7 @@
           "uncertain": false
         },
         {
-          "text": "ガ",
+          "text": "<redacted>",
           "ref_start": 1.02,
           "pred_start": 1.0,
           "start_err": 0.020000000000000018,
@@ -1225,7 +1225,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 1.9,
           "pred_start": 1.94,
           "start_err": 0.040000000000000036,
@@ -1235,7 +1235,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 2.92,
           "pred_start": 2.92,
           "start_err": 0.0,
@@ -1245,7 +1245,7 @@
           "uncertain": false
         },
         {
-          "text": "せ",
+          "text": "<redacted>",
           "ref_start": 3.261,
           "pred_start": 3.2600000000000002,
           "start_err": 0.0009999999999998899,
@@ -1255,7 +1255,7 @@
           "uncertain": false
         },
         {
-          "text": "つ",
+          "text": "<redacted>",
           "ref_start": 3.511,
           "pred_start": 3.6,
           "start_err": 0.08899999999999997,
@@ -1265,7 +1265,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 4.271,
           "pred_start": 4.3,
           "start_err": 0.028999999999999915,
@@ -1275,7 +1275,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 4.611,
           "pred_start": 4.68,
           "start_err": 0.06899999999999995,
@@ -1285,7 +1285,7 @@
           "uncertain": false
         },
         {
-          "text": "香",
+          "text": "<redacted>",
           "ref_start": 4.881,
           "pred_start": 4.96,
           "start_err": 0.07899999999999974,
@@ -1295,7 +1295,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 5.911,
           "pred_start": 5.96,
           "start_err": 0.04900000000000038,
@@ -1305,7 +1305,7 @@
           "uncertain": false
         },
         {
-          "text": "明",
+          "text": "<redacted>",
           "ref_start": 11.68,
           "pred_start": 11.68,
           "start_err": 0.0,
@@ -1315,7 +1315,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 12.103,
           "pred_start": 11.98,
           "start_err": 0.12299999999999933,
@@ -1325,7 +1325,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 12.283,
           "pred_start": 12.66,
           "start_err": 0.37700000000000067,
@@ -1335,7 +1335,7 @@
           "uncertain": false
         },
         {
-          "text": "今",
+          "text": "<redacted>",
           "ref_start": 13.593,
           "pred_start": 13.64,
           "start_err": 0.0470000000000006,
@@ -1345,7 +1345,7 @@
           "uncertain": false
         },
         {
-          "text": "頃",
+          "text": "<redacted>",
           "ref_start": 14.243,
           "pred_start": 13.98,
           "start_err": 0.2629999999999999,
@@ -1355,7 +1355,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 14.763,
           "pred_start": 14.96,
           "start_err": 0.19700000000000095,
@@ -1365,7 +1365,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 15.304,
           "pred_start": 15.280000000000001,
           "start_err": 0.023999999999999133,
@@ -1411,7 +1411,7 @@
       },
       "pairs": [
         {
-          "text": "あ",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.08,
           "start_err": 0.08,
@@ -1421,7 +1421,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 0.28,
           "pred_start": 0.36,
           "start_err": 0.07999999999999996,
@@ -1431,7 +1431,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 0.62,
           "pred_start": 0.7000000000000001,
           "start_err": 0.08000000000000007,
@@ -1441,7 +1441,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 0.77,
           "pred_start": 1.06,
           "start_err": 0.29000000000000004,
@@ -1451,7 +1451,7 @@
           "uncertain": false
         },
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 1.75,
           "pred_start": 1.74,
           "start_err": 0.010000000000000009,
@@ -1461,7 +1461,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 1.98,
           "pred_start": 2.04,
           "start_err": 0.06000000000000005,
@@ -1471,7 +1471,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 2.37,
           "pred_start": 2.4,
           "start_err": 0.029999999999999805,
@@ -1481,7 +1481,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.01,
           "pred_start": 3.08,
           "start_err": 0.07000000000000028,
@@ -1491,7 +1491,7 @@
           "uncertain": false
         },
         {
-          "text": "る",
+          "text": "<redacted>",
           "ref_start": 3.37,
           "pred_start": 3.36,
           "start_err": 0.010000000000000231,
@@ -1501,7 +1501,7 @@
           "uncertain": false
         },
         {
-          "text": "ん",
+          "text": "<redacted>",
           "ref_start": 3.87,
           "pred_start": 3.74,
           "start_err": 0.1299999999999999,
@@ -1511,7 +1511,7 @@
           "uncertain": false
         },
         {
-          "text": "だ",
+          "text": "<redacted>",
           "ref_start": 3.98,
           "pred_start": 4.04,
           "start_err": 0.06000000000000005,
@@ -1521,7 +1521,7 @@
           "uncertain": false
         },
         {
-          "text": "ろ",
+          "text": "<redacted>",
           "ref_start": 4.84,
           "pred_start": 4.68,
           "start_err": 0.16000000000000014,
@@ -1531,7 +1531,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 5.071,
           "pred_start": 5.0600000000000005,
           "start_err": 0.010999999999999233,
@@ -1541,7 +1541,7 @@
           "uncertain": false
         },
         {
-          "text": "誰",
+          "text": "<redacted>",
           "ref_start": 5.341,
           "pred_start": 5.4,
           "start_err": 0.05900000000000016,
@@ -1551,7 +1551,7 @@
           "uncertain": false
         },
         {
-          "text": "を",
+          "text": "<redacted>",
           "ref_start": 6.431,
           "pred_start": 6.46,
           "start_err": 0.028999999999999915,
@@ -1561,7 +1561,7 @@
           "uncertain": false
         },
         {
-          "text": "想",
+          "text": "<redacted>",
           "ref_start": 7.04,
           "pred_start": 7.16,
           "start_err": 0.1200000000000001,
@@ -1571,7 +1571,7 @@
           "uncertain": false
         },
         {
-          "text": "っ",
+          "text": "<redacted>",
           "ref_start": 9.521,
           "pred_start": 7.86,
           "start_err": 1.6610000000000005,
@@ -1581,7 +1581,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 9.981,
           "pred_start": 8.08,
           "start_err": 1.9009999999999998,
@@ -1627,7 +1627,7 @@
       },
       "pairs": [
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 2.41,
           "pred_start": 2.46,
           "start_err": 0.04999999999999982,
@@ -1637,7 +1637,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.021,
           "pred_start": 3.0,
           "start_err": 0.020999999999999908,
@@ -1647,7 +1647,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 3.251,
           "pred_start": 3.2800000000000002,
           "start_err": 0.02900000000000036,
@@ -1657,7 +1657,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.681,
           "pred_start": 3.72,
           "start_err": 0.039000000000000146,
@@ -1667,7 +1667,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 3.961,
           "pred_start": 4.0200000000000005,
           "start_err": 0.05900000000000061,
@@ -1677,7 +1677,7 @@
           "uncertain": false
         },
         {
-          "text": "テ",
+          "text": "<redacted>",
           "ref_start": 4.101,
           "pred_start": 4.14,
           "start_err": 0.0389999999999997,
@@ -1687,7 +1687,7 @@
           "uncertain": false
         },
         {
-          "text": "ジ",
+          "text": "<redacted>",
           "ref_start": 4.841,
           "pred_start": 4.9,
           "start_err": 0.05900000000000016,
@@ -1697,7 +1697,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 5.341,
           "pred_start": 5.92,
           "start_err": 0.5789999999999997,
@@ -1707,7 +1707,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 7.702,
           "pred_start": 7.68,
           "start_err": 0.02200000000000024,
@@ -1717,7 +1717,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 8.112,
           "pred_start": 8.2,
           "start_err": 0.08799999999999919,
@@ -1727,7 +1727,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 9.242,
           "pred_start": 8.44,
           "start_err": 0.8020000000000014,
@@ -1737,7 +1737,7 @@
           "uncertain": false
         },
         {
-          "text": "幕",
+          "text": "<redacted>",
           "ref_start": 9.292,
           "pred_start": 9.34,
           "start_err": 0.04800000000000004,
@@ -1747,7 +1747,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 11.083,
           "pred_start": 11.06,
           "start_err": 0.022999999999999687,
@@ -1757,7 +1757,7 @@
           "uncertain": false
         },
         {
-          "text": "降",
+          "text": "<redacted>",
           "ref_start": 11.823,
           "pred_start": 11.92,
           "start_err": 0.09699999999999953,
@@ -1767,7 +1767,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 12.473,
           "pred_start": 12.46,
           "start_err": 0.0129999999999999,
@@ -1777,7 +1777,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 12.703,
           "pred_start": 12.74,
           "start_err": 0.03700000000000081,
@@ -1787,7 +1787,7 @@
           "uncertain": false
         },
         {
-          "text": "ゆ",
+          "text": "<redacted>",
           "ref_start": 12.983,
           "pred_start": 13.040000000000001,
           "start_err": 0.057000000000000384,
@@ -1797,7 +1797,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 13.213,
           "pred_start": 13.3,
           "start_err": 0.08700000000000152,
@@ -1843,7 +1843,7 @@
       },
       "pairs": [
         {
-          "text": "昨",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.08,
           "start_err": 0.08,
@@ -1853,7 +1853,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 1.19,
           "pred_start": 1.32,
           "start_err": 0.13000000000000012,
@@ -1863,7 +1863,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 1.26,
           "pred_start": 1.94,
           "start_err": 0.6799999999999999,
@@ -1873,7 +1873,7 @@
           "uncertain": false
         },
         {
-          "text": "同",
+          "text": "<redacted>",
           "ref_start": 1.91,
           "pred_start": 2.0,
           "start_err": 0.09000000000000008,
@@ -1883,7 +1883,7 @@
           "uncertain": false
         },
         {
-          "text": "じ",
+          "text": "<redacted>",
           "ref_start": 3.651,
           "pred_start": 2.96,
           "start_err": 0.6909999999999998,
@@ -1893,7 +1893,7 @@
           "uncertain": false
         },
         {
-          "text": "明",
+          "text": "<redacted>",
           "ref_start": 3.761,
           "pred_start": 3.38,
           "start_err": 0.3810000000000002,
@@ -1903,7 +1903,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 3.821,
           "pred_start": 3.62,
           "start_err": 0.20100000000000007,
@@ -1913,7 +1913,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 3.911,
           "pred_start": 3.96,
           "start_err": 0.04899999999999993,
@@ -1923,7 +1923,7 @@
           "uncertain": false
         },
         {
-          "text": "二",
+          "text": "<redacted>",
           "ref_start": 4.711,
           "pred_start": 4.8,
           "start_err": 0.08899999999999952,
@@ -1933,7 +1933,7 @@
           "uncertain": false
         },
         {
-          "text": "度",
+          "text": "<redacted>",
           "ref_start": 5.051,
           "pred_start": 5.08,
           "start_err": 0.028999999999999915,
@@ -1943,7 +1943,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 5.331,
           "pred_start": 5.36,
           "start_err": 0.028999999999999915,
@@ -1953,7 +1953,7 @@
           "uncertain": false
         },
         {
-          "text": "来",
+          "text": "<redacted>",
           "ref_start": 5.591,
           "pred_start": 5.64,
           "start_err": 0.04899999999999949,
@@ -1963,7 +1963,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 6.262,
           "pred_start": 6.24,
           "start_err": 0.021999999999999353,
@@ -1973,7 +1973,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 6.872,
           "pred_start": 6.94,
           "start_err": 0.0680000000000005,
@@ -1983,7 +1983,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 7.332,
           "pred_start": 7.34,
           "start_err": 0.008000000000000007,
@@ -1993,7 +1993,7 @@
           "uncertain": false
         },
         {
-          "text": "気",
+          "text": "<redacted>",
           "ref_start": 8.282,
           "pred_start": 8.26,
           "start_err": 0.02200000000000024,
@@ -2003,7 +2003,7 @@
           "uncertain": false
         },
         {
-          "text": "づ",
+          "text": "<redacted>",
           "ref_start": 9.072,
           "pred_start": 9.16,
           "start_err": 0.08800000000000097,
@@ -2013,7 +2013,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 10.003,
           "pred_start": 10.0,
           "start_err": 0.0030000000000001137,
@@ -2023,7 +2023,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 10.053,
           "pred_start": 10.84,
           "start_err": 0.786999999999999,
@@ -2069,7 +2069,7 @@
       },
       "pairs": [
         {
-          "text": "ラ",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.02,
           "start_err": 0.02,
@@ -2079,7 +2079,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 0.21,
           "pred_start": 0.3,
           "start_err": 0.09,
@@ -2089,7 +2089,7 @@
           "uncertain": false
         },
         {
-          "text": "ト",
+          "text": "<redacted>",
           "ref_start": 0.48,
           "pred_start": 0.54,
           "start_err": 0.06000000000000005,
@@ -2099,7 +2099,7 @@
           "uncertain": false
         },
         {
-          "text": "シ",
+          "text": "<redacted>",
           "ref_start": 0.73,
           "pred_start": 0.8200000000000001,
           "start_err": 0.09000000000000008,
@@ -2109,7 +2109,7 @@
           "uncertain": false
         },
         {
-          "text": "ン",
+          "text": "<redacted>",
           "ref_start": 1.65,
           "pred_start": 1.7,
           "start_err": 0.050000000000000044,
@@ -2119,7 +2119,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 1.94,
           "pred_start": 1.96,
           "start_err": 0.020000000000000018,
@@ -2129,7 +2129,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 2.21,
           "pred_start": 2.2800000000000002,
           "start_err": 0.07000000000000028,
@@ -2139,7 +2139,7 @@
           "uncertain": false
         },
         {
-          "text": "つ",
+          "text": "<redacted>",
           "ref_start": 2.44,
           "pred_start": 2.54,
           "start_err": 0.10000000000000009,
@@ -2149,7 +2149,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 3.141,
           "pred_start": 3.14,
           "start_err": 0.0009999999999998899,
@@ -2159,7 +2159,7 @@
           "uncertain": false
         },
         {
-          "text": "切",
+          "text": "<redacted>",
           "ref_start": 3.321,
           "pred_start": 3.38,
           "start_err": 0.05899999999999972,
@@ -2169,7 +2169,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 3.881,
           "pred_start": 3.96,
           "start_err": 0.07900000000000018,
@@ -2179,7 +2179,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 4.171,
           "pred_start": 4.22,
           "start_err": 0.04899999999999949,
@@ -2189,7 +2189,7 @@
           "uncertain": false
         },
         {
-          "text": "美",
+          "text": "<redacted>",
           "ref_start": 5.171,
           "pred_start": 4.58,
           "start_err": 0.5910000000000002,
@@ -2199,7 +2199,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 5.321,
           "pred_start": 5.4,
           "start_err": 0.07900000000000063,
@@ -2209,7 +2209,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 6.081,
           "pred_start": 5.62,
           "start_err": 0.4610000000000003,
@@ -2219,7 +2219,7 @@
           "uncertain": false
         },
         {
-          "text": "け",
+          "text": "<redacted>",
           "ref_start": 6.322,
           "pred_start": 6.0600000000000005,
           "start_err": 0.26199999999999957,
@@ -2229,7 +2229,7 @@
           "uncertain": false
         },
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 6.572,
           "pred_start": 6.640000000000001,
           "start_err": 0.0680000000000005,
@@ -2239,7 +2239,7 @@
           "uncertain": false
         },
         {
-          "text": "涙",
+          "text": "<redacted>",
           "ref_start": 7.372,
           "pred_start": 7.4,
           "start_err": 0.02800000000000047,
@@ -2249,7 +2249,7 @@
           "uncertain": false
         },
         {
-          "text": "拭",
+          "text": "<redacted>",
           "ref_start": 8.792,
           "pred_start": 8.86,
           "start_err": 0.06799999999999962,
@@ -2259,7 +2259,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 9.453,
           "pred_start": 9.200000000000001,
           "start_err": 0.25299999999999834,
@@ -2269,7 +2269,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 9.493,
           "pred_start": 9.46,
           "start_err": 0.032999999999999474,
@@ -2279,7 +2279,7 @@
           "uncertain": false
         },
         {
-          "text": "扉",
+          "text": "<redacted>",
           "ref_start": 10.863,
           "pred_start": 10.88,
           "start_err": 0.017000000000001236,
@@ -2289,7 +2289,7 @@
           "uncertain": false
         },
         {
-          "text": "叩",
+          "text": "<redacted>",
           "ref_start": 11.953,
           "pred_start": 12.02,
           "start_err": 0.06700000000000017,
@@ -2299,7 +2299,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 12.834,
           "pred_start": 12.86,
           "start_err": 0.0259999999999998,
@@ -2309,7 +2309,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 17.494,
           "pred_start": 13.18,
           "start_err": 4.314,
@@ -2355,7 +2355,7 @@
       },
       "pairs": [
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 2.73,
           "pred_start": 2.7600000000000002,
           "start_err": 0.03000000000000025,
@@ -2365,7 +2365,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.341,
           "pred_start": 3.3200000000000003,
           "start_err": 0.020999999999999908,
@@ -2375,7 +2375,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 3.561,
           "pred_start": 3.62,
           "start_err": 0.05900000000000016,
@@ -2385,7 +2385,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 4.061,
           "pred_start": 4.1,
           "start_err": 0.0389999999999997,
@@ -2395,7 +2395,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 4.301,
           "pred_start": 4.36,
           "start_err": 0.05900000000000016,
@@ -2405,7 +2405,7 @@
           "uncertain": false
         },
         {
-          "text": "テ",
+          "text": "<redacted>",
           "ref_start": 4.451,
           "pred_start": 4.48,
           "start_err": 0.029000000000000803,
@@ -2415,7 +2415,7 @@
           "uncertain": false
         },
         {
-          "text": "ジ",
+          "text": "<redacted>",
           "ref_start": 4.821,
           "pred_start": 7.0600000000000005,
           "start_err": 2.2390000000000008,
@@ -2425,7 +2425,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 5.701,
           "pred_start": 7.36,
           "start_err": 1.6590000000000007,
@@ -2435,7 +2435,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 7.942,
           "pred_start": 7.92,
           "start_err": 0.02200000000000024,
@@ -2445,7 +2445,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 8.512,
           "pred_start": 8.540000000000001,
           "start_err": 0.02800000000000047,
@@ -2455,7 +2455,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 8.642,
           "pred_start": 8.82,
           "start_err": 0.17800000000000082,
@@ -2465,7 +2465,7 @@
           "uncertain": false
         },
         {
-          "text": "幕",
+          "text": "<redacted>",
           "ref_start": 9.582,
           "pred_start": 9.64,
           "start_err": 0.05799999999999983,
@@ -2475,7 +2475,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 11.423,
           "pred_start": 11.4,
           "start_err": 0.022999999999999687,
@@ -2485,7 +2485,7 @@
           "uncertain": false
         },
         {
-          "text": "降",
+          "text": "<redacted>",
           "ref_start": 12.203,
           "pred_start": 12.24,
           "start_err": 0.03700000000000081,
@@ -2495,7 +2495,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 12.753,
           "pred_start": 12.74,
           "start_err": 0.0129999999999999,
@@ -2505,7 +2505,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 12.963,
           "pred_start": 13.040000000000001,
           "start_err": 0.07700000000000173,
@@ -2515,7 +2515,7 @@
           "uncertain": false
         },
         {
-          "text": "ゆ",
+          "text": "<redacted>",
           "ref_start": 13.283,
           "pred_start": 13.36,
           "start_err": 0.07699999999999996,
@@ -2525,7 +2525,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 13.503,
           "pred_start": 13.58,
           "start_err": 0.07699999999999996,
@@ -2571,7 +2571,7 @@
       },
       "pairs": [
         {
-          "text": "昨",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.04,
           "start_err": 0.04,
@@ -2581,7 +2581,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 0.23,
           "pred_start": 0.36,
           "start_err": 0.12999999999999998,
@@ -2591,7 +2591,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 1.47,
           "pred_start": 1.5,
           "start_err": 0.030000000000000027,
@@ -2601,7 +2601,7 @@
           "uncertain": false
         },
         {
-          "text": "同",
+          "text": "<redacted>",
           "ref_start": 2.06,
           "pred_start": 2.12,
           "start_err": 0.06000000000000005,
@@ -2611,7 +2611,7 @@
           "uncertain": false
         },
         {
-          "text": "じ",
+          "text": "<redacted>",
           "ref_start": 3.08,
           "pred_start": 3.1,
           "start_err": 0.020000000000000018,
@@ -2621,7 +2621,7 @@
           "uncertain": false
         },
         {
-          "text": "明",
+          "text": "<redacted>",
           "ref_start": 3.57,
           "pred_start": 3.56,
           "start_err": 0.009999999999999787,
@@ -2631,7 +2631,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 3.64,
           "pred_start": 3.84,
           "start_err": 0.19999999999999973,
@@ -2641,7 +2641,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 4.05,
           "pred_start": 4.18,
           "start_err": 0.1299999999999999,
@@ -2651,7 +2651,7 @@
           "uncertain": false
         },
         {
-          "text": "二",
+          "text": "<redacted>",
           "ref_start": 4.52,
           "pred_start": 4.94,
           "start_err": 0.4200000000000008,
@@ -2661,7 +2661,7 @@
           "uncertain": false
         },
         {
-          "text": "度",
+          "text": "<redacted>",
           "ref_start": 5.22,
           "pred_start": 5.24,
           "start_err": 0.020000000000000462,
@@ -2671,7 +2671,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 5.5,
           "pred_start": 5.5200000000000005,
           "start_err": 0.020000000000000462,
@@ -2681,7 +2681,7 @@
           "uncertain": false
         },
         {
-          "text": "来",
+          "text": "<redacted>",
           "ref_start": 5.73,
           "pred_start": 5.82,
           "start_err": 0.08999999999999986,
@@ -2691,7 +2691,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 6.441,
           "pred_start": 6.42,
           "start_err": 0.020999999999999908,
@@ -2701,7 +2701,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 7.131,
           "pred_start": 7.18,
           "start_err": 0.04899999999999949,
@@ -2711,7 +2711,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 7.561,
           "pred_start": 7.5600000000000005,
           "start_err": 0.0009999999999994458,
@@ -2721,7 +2721,7 @@
           "uncertain": false
         },
         {
-          "text": "気",
+          "text": "<redacted>",
           "ref_start": 8.371,
           "pred_start": 8.42,
           "start_err": 0.04899999999999949,
@@ -2731,7 +2731,7 @@
           "uncertain": false
         },
         {
-          "text": "づ",
+          "text": "<redacted>",
           "ref_start": 9.231,
           "pred_start": 9.32,
           "start_err": 0.08900000000000041,
@@ -2741,7 +2741,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 10.142,
           "pred_start": 10.14,
           "start_err": 0.0019999999999988916,
@@ -2751,7 +2751,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 10.192,
           "pred_start": 11.0,
           "start_err": 0.8079999999999998,
@@ -2797,7 +2797,7 @@
       },
       "pairs": [
         {
-          "text": "ラ",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.04,
           "start_err": 0.04,
@@ -2807,7 +2807,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 0.19,
           "pred_start": 0.32,
           "start_err": 0.13,
@@ -2817,7 +2817,7 @@
           "uncertain": false
         },
         {
-          "text": "ト",
+          "text": "<redacted>",
           "ref_start": 0.54,
           "pred_start": 0.56,
           "start_err": 0.020000000000000018,
@@ -2827,7 +2827,7 @@
           "uncertain": false
         },
         {
-          "text": "シ",
+          "text": "<redacted>",
           "ref_start": 0.76,
           "pred_start": 0.88,
           "start_err": 0.12,
@@ -2837,7 +2837,7 @@
           "uncertain": false
         },
         {
-          "text": "ン",
+          "text": "<redacted>",
           "ref_start": 1.43,
           "pred_start": 1.5,
           "start_err": 0.07000000000000006,
@@ -2847,7 +2847,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 1.98,
           "pred_start": 2.02,
           "start_err": 0.040000000000000036,
@@ -2857,7 +2857,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 2.26,
           "pred_start": 2.32,
           "start_err": 0.06000000000000005,
@@ -2867,7 +2867,7 @@
           "uncertain": false
         },
         {
-          "text": "つ",
+          "text": "<redacted>",
           "ref_start": 2.48,
           "pred_start": 2.58,
           "start_err": 0.10000000000000009,
@@ -2877,7 +2877,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 3.181,
           "pred_start": 3.18,
           "start_err": 0.0009999999999998899,
@@ -2887,7 +2887,7 @@
           "uncertain": false
         },
         {
-          "text": "切",
+          "text": "<redacted>",
           "ref_start": 3.351,
           "pred_start": 3.42,
           "start_err": 0.06899999999999995,
@@ -2897,7 +2897,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 3.921,
           "pred_start": 4.0,
           "start_err": 0.07900000000000018,
@@ -2907,7 +2907,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 4.191,
           "pred_start": 4.28,
           "start_err": 0.08900000000000041,
@@ -2917,7 +2917,7 @@
           "uncertain": false
         },
         {
-          "text": "美",
+          "text": "<redacted>",
           "ref_start": 5.211,
           "pred_start": 4.62,
           "start_err": 0.5910000000000002,
@@ -2927,7 +2927,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 5.351,
           "pred_start": 5.42,
           "start_err": 0.06899999999999995,
@@ -2937,7 +2937,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 5.631,
           "pred_start": 5.78,
           "start_err": 0.14900000000000002,
@@ -2947,7 +2947,7 @@
           "uncertain": false
         },
         {
-          "text": "け",
+          "text": "<redacted>",
           "ref_start": 6.321,
           "pred_start": 6.0200000000000005,
           "start_err": 0.30099999999999927,
@@ -2957,7 +2957,7 @@
           "uncertain": false
         },
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 6.561,
           "pred_start": 6.640000000000001,
           "start_err": 0.07900000000000063,
@@ -2967,7 +2967,7 @@
           "uncertain": false
         },
         {
-          "text": "涙",
+          "text": "<redacted>",
           "ref_start": 7.481,
           "pred_start": 7.5200000000000005,
           "start_err": 0.03900000000000059,
@@ -2977,7 +2977,7 @@
           "uncertain": false
         },
         {
-          "text": "拭",
+          "text": "<redacted>",
           "ref_start": 7.871,
           "pred_start": 8.98,
           "start_err": 1.109,
@@ -2987,7 +2987,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 9.342,
           "pred_start": 9.34,
           "start_err": 0.002000000000000668,
@@ -2997,7 +2997,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 9.472,
           "pred_start": 9.56,
           "start_err": 0.08800000000000097,
@@ -3007,7 +3007,7 @@
           "uncertain": false
         },
         {
-          "text": "扉",
+          "text": "<redacted>",
           "ref_start": 10.942,
           "pred_start": 10.96,
           "start_err": 0.018000000000000682,
@@ -3017,7 +3017,7 @@
           "uncertain": false
         },
         {
-          "text": "叩",
+          "text": "<redacted>",
           "ref_start": 12.743,
           "pred_start": 12.1,
           "start_err": 0.6430000000000007,
@@ -3027,7 +3027,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 13.033,
           "pred_start": 12.98,
           "start_err": 0.05299999999999905,
@@ -3037,7 +3037,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 17.643,
           "pred_start": 13.32,
           "start_err": 4.323,
@@ -3083,7 +3083,7 @@
       },
       "pairs": [
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 2.84,
           "pred_start": 2.92,
           "start_err": 0.08000000000000007,
@@ -3093,7 +3093,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.542,
           "pred_start": 3.5,
           "start_err": 0.041999999999999815,
@@ -3103,7 +3103,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 3.762,
           "pred_start": 3.8000000000000003,
           "start_err": 0.038000000000000256,
@@ -3113,7 +3113,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 4.312,
           "pred_start": 4.36,
           "start_err": 0.04800000000000004,
@@ -3123,7 +3123,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 4.512,
           "pred_start": 4.68,
           "start_err": 0.16800000000000015,
@@ -3133,7 +3133,7 @@
           "uncertain": false
         },
         {
-          "text": "テ",
+          "text": "<redacted>",
           "ref_start": 4.662,
           "pred_start": 6.140000000000001,
           "start_err": 1.4780000000000006,
@@ -3143,7 +3143,7 @@
           "uncertain": false
         },
         {
-          "text": "ジ",
+          "text": "<redacted>",
           "ref_start": 5.072,
           "pred_start": 7.22,
           "start_err": 2.1479999999999997,
@@ -3153,7 +3153,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 5.872,
           "pred_start": 7.54,
           "start_err": 1.6680000000000001,
@@ -3163,7 +3163,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 8.124,
           "pred_start": 8.1,
           "start_err": 0.02400000000000091,
@@ -3173,7 +3173,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 8.604,
           "pred_start": 8.72,
           "start_err": 0.11600000000000144,
@@ -3183,7 +3183,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 9.714,
           "pred_start": 9.52,
           "start_err": 0.19400000000000084,
@@ -3193,7 +3193,7 @@
           "uncertain": false
         },
         {
-          "text": "幕",
+          "text": "<redacted>",
           "ref_start": 9.754,
           "pred_start": 9.8,
           "start_err": 0.04600000000000115,
@@ -3203,7 +3203,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 11.625,
           "pred_start": 11.6,
           "start_err": 0.025000000000000355,
@@ -3213,7 +3213,7 @@
           "uncertain": false
         },
         {
-          "text": "降",
+          "text": "<redacted>",
           "ref_start": 12.385,
           "pred_start": 12.44,
           "start_err": 0.054999999999999716,
@@ -3223,7 +3223,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 12.955,
           "pred_start": 12.98,
           "start_err": 0.025000000000000355,
@@ -3233,7 +3233,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 13.215,
           "pred_start": 13.26,
           "start_err": 0.04499999999999993,
@@ -3243,7 +3243,7 @@
           "uncertain": false
         },
         {
-          "text": "ゆ",
+          "text": "<redacted>",
           "ref_start": 13.515,
           "pred_start": 13.56,
           "start_err": 0.04499999999999993,
@@ -3253,7 +3253,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 13.715,
           "pred_start": 13.8,
           "start_err": 0.08500000000000085,
@@ -3299,7 +3299,7 @@
       },
       "pairs": [
         {
-          "text": "昨",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.02,
           "start_err": 0.02,
@@ -3309,7 +3309,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 0.08,
           "pred_start": 0.32,
           "start_err": 0.24,
@@ -3319,7 +3319,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 0.29,
           "pred_start": 1.54,
           "start_err": 1.25,
@@ -3329,7 +3329,7 @@
           "uncertain": false
         },
         {
-          "text": "同",
+          "text": "<redacted>",
           "ref_start": 1.52,
           "pred_start": 2.12,
           "start_err": 0.6000000000000001,
@@ -3339,7 +3339,7 @@
           "uncertain": false
         },
         {
-          "text": "じ",
+          "text": "<redacted>",
           "ref_start": 3.09,
           "pred_start": 3.14,
           "start_err": 0.050000000000000266,
@@ -3349,7 +3349,7 @@
           "uncertain": false
         },
         {
-          "text": "明",
+          "text": "<redacted>",
           "ref_start": 3.482,
           "pred_start": 3.5,
           "start_err": 0.017999999999999794,
@@ -3359,7 +3359,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 3.562,
           "pred_start": 3.66,
           "start_err": 0.09800000000000031,
@@ -3369,7 +3369,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 3.922,
           "pred_start": 4.04,
           "start_err": 0.11799999999999988,
@@ -3379,7 +3379,7 @@
           "uncertain": false
         },
         {
-          "text": "二",
+          "text": "<redacted>",
           "ref_start": 4.752,
           "pred_start": 4.84,
           "start_err": 0.08800000000000008,
@@ -3389,7 +3389,7 @@
           "uncertain": false
         },
         {
-          "text": "度",
+          "text": "<redacted>",
           "ref_start": 5.122,
           "pred_start": 5.14,
           "start_err": 0.017999999999999794,
@@ -3399,7 +3399,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 5.392,
           "pred_start": 5.42,
           "start_err": 0.02799999999999958,
@@ -3409,7 +3409,7 @@
           "uncertain": false
         },
         {
-          "text": "来",
+          "text": "<redacted>",
           "ref_start": 5.652,
           "pred_start": 5.72,
           "start_err": 0.06799999999999962,
@@ -3419,7 +3419,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 6.382,
           "pred_start": 6.38,
           "start_err": 0.0019999999999997797,
@@ -3429,7 +3429,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 7.003,
           "pred_start": 7.0200000000000005,
           "start_err": 0.017000000000000348,
@@ -3439,7 +3439,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 7.333,
           "pred_start": 7.36,
           "start_err": 0.027000000000000135,
@@ -3449,7 +3449,7 @@
           "uncertain": false
         },
         {
-          "text": "気",
+          "text": "<redacted>",
           "ref_start": 8.203,
           "pred_start": 8.24,
           "start_err": 0.03700000000000081,
@@ -3459,7 +3459,7 @@
           "uncertain": false
         },
         {
-          "text": "づ",
+          "text": "<redacted>",
           "ref_start": 9.083,
           "pred_start": 9.18,
           "start_err": 0.09699999999999953,
@@ -3469,7 +3469,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 10.845,
           "pred_start": 9.98,
           "start_err": 0.8650000000000002,
@@ -3479,7 +3479,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 10.885,
           "pred_start": 10.86,
           "start_err": 0.025000000000000355,
@@ -3525,7 +3525,7 @@
       },
       "pairs": [
         {
-          "text": "ラ",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.04,
           "start_err": 0.04,
@@ -3535,7 +3535,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 0.22,
           "pred_start": 0.34,
           "start_err": 0.12000000000000002,
@@ -3545,7 +3545,7 @@
           "uncertain": false
         },
         {
-          "text": "ト",
+          "text": "<redacted>",
           "ref_start": 0.612,
           "pred_start": 0.6,
           "start_err": 0.01200000000000001,
@@ -3555,7 +3555,7 @@
           "uncertain": false
         },
         {
-          "text": "シ",
+          "text": "<redacted>",
           "ref_start": 0.782,
           "pred_start": 0.9,
           "start_err": 0.118,
@@ -3565,7 +3565,7 @@
           "uncertain": false
         },
         {
-          "text": "ン",
+          "text": "<redacted>",
           "ref_start": 1.532,
           "pred_start": 1.56,
           "start_err": 0.028000000000000025,
@@ -3575,7 +3575,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 2.002,
           "pred_start": 2.04,
           "start_err": 0.038000000000000256,
@@ -3585,7 +3585,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 2.262,
           "pred_start": 2.36,
           "start_err": 0.09799999999999986,
@@ -3595,7 +3595,7 @@
           "uncertain": false
         },
         {
-          "text": "つ",
+          "text": "<redacted>",
           "ref_start": 2.512,
           "pred_start": 2.62,
           "start_err": 0.1080000000000001,
@@ -3605,7 +3605,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 3.212,
           "pred_start": 2.9,
           "start_err": 0.3120000000000003,
@@ -3615,7 +3615,7 @@
           "uncertain": false
         },
         {
-          "text": "切",
+          "text": "<redacted>",
           "ref_start": 3.382,
           "pred_start": 3.46,
           "start_err": 0.07799999999999985,
@@ -3625,7 +3625,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 4.073,
           "pred_start": 4.04,
           "start_err": 0.03300000000000036,
@@ -3635,7 +3635,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 4.233,
           "pred_start": 4.3,
           "start_err": 0.06700000000000017,
@@ -3645,7 +3645,7 @@
           "uncertain": false
         },
         {
-          "text": "美",
+          "text": "<redacted>",
           "ref_start": 5.263,
           "pred_start": 4.66,
           "start_err": 0.6029999999999998,
@@ -3655,7 +3655,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 5.403,
           "pred_start": 5.48,
           "start_err": 0.07700000000000085,
@@ -3665,7 +3665,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 5.763,
           "pred_start": 5.8,
           "start_err": 0.03699999999999992,
@@ -3675,7 +3675,7 @@
           "uncertain": false
         },
         {
-          "text": "け",
+          "text": "<redacted>",
           "ref_start": 5.963,
           "pred_start": 6.0600000000000005,
           "start_err": 0.09700000000000042,
@@ -3685,7 +3685,7 @@
           "uncertain": false
         },
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 6.593,
           "pred_start": 6.66,
           "start_err": 0.06700000000000017,
@@ -3695,7 +3695,7 @@
           "uncertain": false
         },
         {
-          "text": "涙",
+          "text": "<redacted>",
           "ref_start": 6.823,
           "pred_start": 7.48,
           "start_err": 0.657,
@@ -3705,7 +3705,7 @@
           "uncertain": false
         },
         {
-          "text": "拭",
+          "text": "<redacted>",
           "ref_start": 7.495,
           "pred_start": 8.9,
           "start_err": 1.4050000000000002,
@@ -3715,7 +3715,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 9.175,
           "pred_start": 9.24,
           "start_err": 0.0649999999999995,
@@ -3725,7 +3725,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 9.475,
           "pred_start": 9.5,
           "start_err": 0.025000000000000355,
@@ -3735,7 +3735,7 @@
           "uncertain": false
         },
         {
-          "text": "扉",
+          "text": "<redacted>",
           "ref_start": 10.916,
           "pred_start": 10.9,
           "start_err": 0.016000000000000014,
@@ -3745,7 +3745,7 @@
           "uncertain": false
         },
         {
-          "text": "叩",
+          "text": "<redacted>",
           "ref_start": 11.986,
           "pred_start": 12.040000000000001,
           "start_err": 0.05400000000000027,
@@ -3755,7 +3755,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 12.936,
           "pred_start": 12.88,
           "start_err": 0.05599999999999916,
@@ -3765,7 +3765,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 15.536,
           "pred_start": 13.200000000000001,
           "start_err": 2.3359999999999985,
@@ -3811,7 +3811,7 @@
       },
       "pairs": [
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 2.81,
           "pred_start": 2.86,
           "start_err": 0.04999999999999982,
@@ -3821,7 +3821,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.441,
           "pred_start": 3.42,
           "start_err": 0.020999999999999908,
@@ -3831,7 +3831,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 3.681,
           "pred_start": 3.72,
           "start_err": 0.039000000000000146,
@@ -3841,7 +3841,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 4.161,
           "pred_start": 4.2,
           "start_err": 0.03900000000000059,
@@ -3851,7 +3851,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 4.341,
           "pred_start": 4.38,
           "start_err": 0.0389999999999997,
@@ -3861,7 +3861,7 @@
           "uncertain": false
         },
         {
-          "text": "テ",
+          "text": "<redacted>",
           "ref_start": 7.081,
           "pred_start": 4.5200000000000005,
           "start_err": 2.561,
@@ -3871,7 +3871,7 @@
           "uncertain": false
         },
         {
-          "text": "ジ",
+          "text": "<redacted>",
           "ref_start": 7.131,
           "pred_start": 7.12,
           "start_err": 0.01100000000000012,
@@ -3881,7 +3881,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 7.432,
           "pred_start": 7.42,
           "start_err": 0.012000000000000455,
@@ -3891,7 +3891,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 8.062,
           "pred_start": 8.0,
           "start_err": 0.06199999999999939,
@@ -3901,7 +3901,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 8.622,
           "pred_start": 8.64,
           "start_err": 0.018000000000000682,
@@ -3911,7 +3911,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 9.612,
           "pred_start": 9.44,
           "start_err": 0.1720000000000006,
@@ -3921,7 +3921,7 @@
           "uncertain": false
         },
         {
-          "text": "幕",
+          "text": "<redacted>",
           "ref_start": 10.542,
           "pred_start": 9.72,
           "start_err": 0.8219999999999992,
@@ -3931,7 +3931,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 11.483,
           "pred_start": 11.48,
           "start_err": 0.0030000000000001137,
@@ -3941,7 +3941,7 @@
           "uncertain": false
         },
         {
-          "text": "降",
+          "text": "<redacted>",
           "ref_start": 12.253,
           "pred_start": 12.280000000000001,
           "start_err": 0.027000000000001023,
@@ -3951,7 +3951,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 12.843,
           "pred_start": 12.86,
           "start_err": 0.01699999999999946,
@@ -3961,7 +3961,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 13.083,
           "pred_start": 13.14,
           "start_err": 0.057000000000000384,
@@ -3971,7 +3971,7 @@
           "uncertain": false
         },
         {
-          "text": "ゆ",
+          "text": "<redacted>",
           "ref_start": 13.333,
           "pred_start": 13.44,
           "start_err": 0.10699999999999932,
@@ -3981,7 +3981,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 13.623,
           "pred_start": 13.700000000000001,
           "start_err": 0.07700000000000173,
@@ -4027,7 +4027,7 @@
       },
       "pairs": [
         {
-          "text": "昨",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.02,
           "start_err": 0.02,
@@ -4037,7 +4037,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 0.08,
           "pred_start": 0.3,
           "start_err": 0.21999999999999997,
@@ -4047,7 +4047,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 0.28,
           "pred_start": 1.46,
           "start_err": 1.18,
@@ -4057,7 +4057,7 @@
           "uncertain": false
         },
         {
-          "text": "同",
+          "text": "<redacted>",
           "ref_start": 1.44,
           "pred_start": 2.1,
           "start_err": 0.6600000000000001,
@@ -4067,7 +4067,7 @@
           "uncertain": false
         },
         {
-          "text": "じ",
+          "text": "<redacted>",
           "ref_start": 3.031,
           "pred_start": 3.04,
           "start_err": 0.008999999999999897,
@@ -4077,7 +4077,7 @@
           "uncertain": false
         },
         {
-          "text": "明",
+          "text": "<redacted>",
           "ref_start": 3.581,
           "pred_start": 3.58,
           "start_err": 0.0009999999999998899,
@@ -4087,7 +4087,7 @@
           "uncertain": false
         },
         {
-          "text": "日",
+          "text": "<redacted>",
           "ref_start": 3.641,
           "pred_start": 3.8000000000000003,
           "start_err": 0.15900000000000025,
@@ -4097,7 +4097,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 3.931,
           "pred_start": 4.4,
           "start_err": 0.4690000000000003,
@@ -4107,7 +4107,7 @@
           "uncertain": false
         },
         {
-          "text": "二",
+          "text": "<redacted>",
           "ref_start": 4.791,
           "pred_start": 4.86,
           "start_err": 0.06899999999999995,
@@ -4117,7 +4117,7 @@
           "uncertain": false
         },
         {
-          "text": "度",
+          "text": "<redacted>",
           "ref_start": 5.101,
           "pred_start": 5.14,
           "start_err": 0.0389999999999997,
@@ -4127,7 +4127,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 5.371,
           "pred_start": 5.42,
           "start_err": 0.04899999999999949,
@@ -4137,7 +4137,7 @@
           "uncertain": false
         },
         {
-          "text": "来",
+          "text": "<redacted>",
           "ref_start": 5.671,
           "pred_start": 5.72,
           "start_err": 0.04899999999999949,
@@ -4147,7 +4147,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 6.332,
           "pred_start": 6.3,
           "start_err": 0.03200000000000003,
@@ -4157,7 +4157,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 6.972,
           "pred_start": 7.0200000000000005,
           "start_err": 0.04800000000000004,
@@ -4167,7 +4167,7 @@
           "uncertain": false
         },
         {
-          "text": "と",
+          "text": "<redacted>",
           "ref_start": 7.382,
           "pred_start": 7.4,
           "start_err": 0.018000000000000682,
@@ -4177,7 +4177,7 @@
           "uncertain": false
         },
         {
-          "text": "気",
+          "text": "<redacted>",
           "ref_start": 8.252,
           "pred_start": 8.3,
           "start_err": 0.04800000000000004,
@@ -4187,7 +4187,7 @@
           "uncertain": false
         },
         {
-          "text": "づ",
+          "text": "<redacted>",
           "ref_start": 8.452,
           "pred_start": 9.200000000000001,
           "start_err": 0.7480000000000011,
@@ -4197,7 +4197,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 10.033,
           "pred_start": 10.02,
           "start_err": 0.0129999999999999,
@@ -4207,7 +4207,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 10.083,
           "pred_start": 10.86,
           "start_err": 0.7769999999999992,
@@ -4253,7 +4253,7 @@
       },
       "pairs": [
         {
-          "text": "ラ",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.04,
           "start_err": 0.04,
@@ -4263,7 +4263,7 @@
           "uncertain": false
         },
         {
-          "text": "ス",
+          "text": "<redacted>",
           "ref_start": 0.2,
           "pred_start": 0.3,
           "start_err": 0.09999999999999998,
@@ -4273,7 +4273,7 @@
           "uncertain": false
         },
         {
-          "text": "ト",
+          "text": "<redacted>",
           "ref_start": 0.53,
           "pred_start": 0.56,
           "start_err": 0.030000000000000027,
@@ -4283,7 +4283,7 @@
           "uncertain": false
         },
         {
-          "text": "シ",
+          "text": "<redacted>",
           "ref_start": 0.75,
           "pred_start": 0.88,
           "start_err": 0.13,
@@ -4293,7 +4293,7 @@
           "uncertain": false
         },
         {
-          "text": "ン",
+          "text": "<redacted>",
           "ref_start": 1.5,
           "pred_start": 1.52,
           "start_err": 0.020000000000000018,
@@ -4303,7 +4303,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 1.96,
           "pred_start": 2.02,
           "start_err": 0.06000000000000005,
@@ -4313,7 +4313,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 2.29,
           "pred_start": 2.34,
           "start_err": 0.04999999999999982,
@@ -4323,7 +4323,7 @@
           "uncertain": false
         },
         {
-          "text": "つ",
+          "text": "<redacted>",
           "ref_start": 2.54,
           "pred_start": 2.6,
           "start_err": 0.06000000000000005,
@@ -4333,7 +4333,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 3.221,
           "pred_start": 3.04,
           "start_err": 0.18100000000000005,
@@ -4343,7 +4343,7 @@
           "uncertain": false
         },
         {
-          "text": "切",
+          "text": "<redacted>",
           "ref_start": 3.371,
           "pred_start": 3.44,
           "start_err": 0.06899999999999995,
@@ -4353,7 +4353,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 3.941,
           "pred_start": 4.0200000000000005,
           "start_err": 0.07900000000000063,
@@ -4363,7 +4363,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 4.241,
           "pred_start": 4.3,
           "start_err": 0.05900000000000016,
@@ -4373,7 +4373,7 @@
           "uncertain": false
         },
         {
-          "text": "美",
+          "text": "<redacted>",
           "ref_start": 5.221,
           "pred_start": 4.64,
           "start_err": 0.5810000000000004,
@@ -4383,7 +4383,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 5.351,
           "pred_start": 5.44,
           "start_err": 0.08900000000000041,
@@ -4393,7 +4393,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 5.711,
           "pred_start": 5.76,
           "start_err": 0.04899999999999949,
@@ -4403,7 +4403,7 @@
           "uncertain": false
         },
         {
-          "text": "け",
+          "text": "<redacted>",
           "ref_start": 5.961,
           "pred_start": 6.04,
           "start_err": 0.07899999999999974,
@@ -4413,7 +4413,7 @@
           "uncertain": false
         },
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 6.612,
           "pred_start": 6.62,
           "start_err": 0.008000000000000007,
@@ -4423,7 +4423,7 @@
           "uncertain": false
         },
         {
-          "text": "涙",
+          "text": "<redacted>",
           "ref_start": 7.402,
           "pred_start": 7.44,
           "start_err": 0.038000000000000256,
@@ -4433,7 +4433,7 @@
           "uncertain": false
         },
         {
-          "text": "拭",
+          "text": "<redacted>",
           "ref_start": 8.832,
           "pred_start": 8.92,
           "start_err": 0.08799999999999919,
@@ -4443,7 +4443,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 9.182,
           "pred_start": 9.24,
           "start_err": 0.05799999999999983,
@@ -4453,7 +4453,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 9.382,
           "pred_start": 9.5,
           "start_err": 0.11800000000000033,
@@ -4463,7 +4463,7 @@
           "uncertain": false
         },
         {
-          "text": "扉",
+          "text": "<redacted>",
           "ref_start": 10.803,
           "pred_start": 10.82,
           "start_err": 0.01699999999999946,
@@ -4473,7 +4473,7 @@
           "uncertain": false
         },
         {
-          "text": "叩",
+          "text": "<redacted>",
           "ref_start": 11.883,
           "pred_start": 11.94,
           "start_err": 0.057000000000000384,
@@ -4483,7 +4483,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 12.793,
           "pred_start": 12.82,
           "start_err": 0.027000000000001023,
@@ -4493,7 +4493,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 15.953,
           "pred_start": 13.120000000000001,
           "start_err": 2.8329999999999984,
@@ -4539,7 +4539,7 @@
       },
       "pairs": [
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 1.2,
           "pred_start": 1.18,
           "start_err": 0.020000000000000018,
@@ -4549,7 +4549,7 @@
           "uncertain": false
         },
         {
-          "text": "つ",
+          "text": "<redacted>",
           "ref_start": 1.29,
           "pred_start": 1.34,
           "start_err": 0.050000000000000044,
@@ -4559,7 +4559,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 1.52,
           "pred_start": 1.56,
           "start_err": 0.040000000000000036,
@@ -4569,7 +4569,7 @@
           "uncertain": false
         },
         {
-          "text": "ま",
+          "text": "<redacted>",
           "ref_start": 1.91,
           "pred_start": 1.92,
           "start_err": 0.010000000000000009,
@@ -4579,7 +4579,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 2.11,
           "pred_start": 2.14,
           "start_err": 0.03000000000000025,
@@ -4589,7 +4589,7 @@
           "uncertain": false
         },
         {
-          "text": "失",
+          "text": "<redacted>",
           "ref_start": 2.69,
           "pred_start": 2.7,
           "start_err": 0.010000000000000231,
@@ -4599,7 +4599,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 2.84,
           "pred_start": 2.86,
           "start_err": 0.020000000000000018,
@@ -4609,7 +4609,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 3.06,
           "pred_start": 3.08,
           "start_err": 0.020000000000000018,
@@ -4619,7 +4619,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 3.48,
           "pred_start": 3.5,
           "start_err": 0.020000000000000018,
@@ -4629,7 +4629,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 3.69,
           "pred_start": 3.72,
           "start_err": 0.03000000000000025,
@@ -4639,7 +4639,7 @@
           "uncertain": false
         },
         {
-          "text": "思",
+          "text": "<redacted>",
           "ref_start": 4.29,
           "pred_start": 4.3,
           "start_err": 0.009999999999999787,
@@ -4649,7 +4649,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 5.41,
           "pred_start": 5.46,
           "start_err": 0.04999999999999982,
@@ -4659,7 +4659,7 @@
           "uncertain": false
         },
         {
-          "text": "出",
+          "text": "<redacted>",
           "ref_start": 6.201,
           "pred_start": 6.18,
           "start_err": 0.020999999999999908,
@@ -4669,7 +4669,7 @@
           "uncertain": false
         },
         {
-          "text": "移",
+          "text": "<redacted>",
           "ref_start": 6.781,
           "pred_start": 7.34,
           "start_err": 0.5590000000000002,
@@ -4679,7 +4679,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 7.313,
           "pred_start": 7.72,
           "start_err": 0.40700000000000003,
@@ -4689,7 +4689,7 @@
           "uncertain": false
         },
         {
-          "text": "行",
+          "text": "<redacted>",
           "ref_start": 8.123,
           "pred_start": 8.26,
           "start_err": 0.13700000000000045,
@@ -4735,7 +4735,7 @@
       },
       "pairs": [
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.02,
           "start_err": 0.02,
@@ -4745,7 +4745,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 0.04,
           "pred_start": 0.06,
           "start_err": 0.019999999999999997,
@@ -4755,7 +4755,7 @@
           "uncertain": false
         },
         {
-          "text": "涙",
+          "text": "<redacted>",
           "ref_start": 0.11,
           "pred_start": 0.1,
           "start_err": 0.009999999999999995,
@@ -4765,7 +4765,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 1.55,
           "pred_start": 1.58,
           "start_err": 0.030000000000000027,
@@ -4775,7 +4775,7 @@
           "uncertain": false
         },
         {
-          "text": "変",
+          "text": "<redacted>",
           "ref_start": 1.95,
           "pred_start": 1.96,
           "start_err": 0.010000000000000009,
@@ -4785,7 +4785,7 @@
           "uncertain": false
         },
         {
-          "text": "わ",
+          "text": "<redacted>",
           "ref_start": 2.07,
           "pred_start": 2.34,
           "start_err": 0.27,
@@ -4795,7 +4795,7 @@
           "uncertain": false
         },
         {
-          "text": "る",
+          "text": "<redacted>",
           "ref_start": 2.55,
           "pred_start": 2.56,
           "start_err": 0.010000000000000231,
@@ -4805,7 +4805,7 @@
           "uncertain": false
         },
         {
-          "text": "降",
+          "text": "<redacted>",
           "ref_start": 3.11,
           "pred_start": 3.1,
           "start_err": 0.009999999999999787,
@@ -4815,7 +4815,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 3.21,
           "pred_start": 3.2800000000000002,
           "start_err": 0.07000000000000028,
@@ -4825,7 +4825,7 @@
           "uncertain": false
         },
         {
-          "text": "出",
+          "text": "<redacted>",
           "ref_start": 3.46,
           "pred_start": 3.48,
           "start_err": 0.020000000000000018,
@@ -4835,7 +4835,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 3.55,
           "pred_start": 3.8200000000000003,
           "start_err": 0.27000000000000046,
@@ -4845,7 +4845,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 4.04,
           "pred_start": 4.0600000000000005,
           "start_err": 0.020000000000000462,
@@ -4855,7 +4855,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 4.56,
           "pred_start": 4.58,
           "start_err": 0.020000000000000462,
@@ -4865,7 +4865,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 4.79,
           "pred_start": 4.78,
           "start_err": 0.009999999999999787,
@@ -4875,7 +4875,7 @@
           "uncertain": false
         },
         {
-          "text": "雨",
+          "text": "<redacted>",
           "ref_start": 6.16,
           "pred_start": 5.0600000000000005,
           "start_err": 1.0999999999999996,
@@ -4885,7 +4885,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 6.26,
           "pred_start": 5.6000000000000005,
           "start_err": 0.6599999999999993,
@@ -4895,7 +4895,7 @@
           "uncertain": false
         },
         {
-          "text": "情",
+          "text": "<redacted>",
           "ref_start": 6.5,
           "pred_start": 6.54,
           "start_err": 0.040000000000000036,
@@ -4905,7 +4905,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 7.29,
           "pred_start": 7.34,
           "start_err": 0.04999999999999982,
@@ -4915,7 +4915,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 8.05,
           "pred_start": 8.06,
           "start_err": 0.009999999999999787,
@@ -4961,7 +4961,7 @@
       },
       "pairs": [
         {
-          "text": "乾",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.02,
           "start_err": 0.02,
@@ -4971,7 +4971,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 0.44,
           "pred_start": 0.42,
           "start_err": 0.020000000000000018,
@@ -4981,7 +4981,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 0.75,
           "pred_start": 0.76,
           "start_err": 0.010000000000000009,
@@ -4991,7 +4991,7 @@
           "uncertain": false
         },
         {
-          "text": "空",
+          "text": "<redacted>",
           "ref_start": 0.89,
           "pred_start": 1.0,
           "start_err": 0.10999999999999999,
@@ -5001,7 +5001,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 1.76,
           "pred_start": 1.78,
           "start_err": 0.020000000000000018,
@@ -5011,7 +5011,7 @@
           "uncertain": false
         },
         {
-          "text": "広",
+          "text": "<redacted>",
           "ref_start": 2.17,
           "pred_start": 2.2800000000000002,
           "start_err": 0.11000000000000032,
@@ -5021,7 +5021,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 2.78,
           "pred_start": 3.08,
           "start_err": 0.30000000000000027,
@@ -5031,7 +5031,7 @@
           "uncertain": false
         },
         {
-          "text": "っ",
+          "text": "<redacted>",
           "ref_start": 3.0,
           "pred_start": 3.74,
           "start_err": 0.7400000000000002,
@@ -5041,7 +5041,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 3.174,
           "pred_start": 3.8000000000000003,
           "start_err": 0.6260000000000003,
@@ -5051,7 +5051,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.441,
           "pred_start": 3.98,
           "start_err": 0.5390000000000001,
@@ -5061,7 +5061,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 3.792,
           "pred_start": 4.0600000000000005,
           "start_err": 0.2680000000000007,
@@ -5071,7 +5071,7 @@
           "uncertain": false
         },
         {
-          "text": "ワ",
+          "text": "<redacted>",
           "ref_start": 4.047,
           "pred_start": 6.86,
           "start_err": 2.8130000000000006,
@@ -5081,7 +5081,7 @@
           "uncertain": false
         },
         {
-          "text": "ガ",
+          "text": "<redacted>",
           "ref_start": 6.87,
           "pred_start": 7.0200000000000005,
           "start_err": 0.15000000000000036,
@@ -5091,7 +5091,7 @@
           "uncertain": false
         },
         {
-          "text": "マ",
+          "text": "<redacted>",
           "ref_start": 7.21,
           "pred_start": 7.24,
           "start_err": 0.03000000000000025,
@@ -5101,7 +5101,7 @@
           "uncertain": false
         },
         {
-          "text": "マ",
+          "text": "<redacted>",
           "ref_start": 7.58,
           "pred_start": 7.6000000000000005,
           "start_err": 0.020000000000000462,
@@ -5111,7 +5111,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 7.82,
           "pred_start": 7.84,
           "start_err": 0.019999999999999574,
@@ -5121,7 +5121,7 @@
           "uncertain": false
         },
         {
-          "text": "自",
+          "text": "<redacted>",
           "ref_start": 8.24,
           "pred_start": 8.34,
           "start_err": 0.09999999999999964,
@@ -5131,7 +5131,7 @@
           "uncertain": false
         },
         {
-          "text": "由",
+          "text": "<redacted>",
           "ref_start": 8.43,
           "pred_start": 8.620000000000001,
           "start_err": 0.19000000000000128,
@@ -5141,7 +5141,7 @@
           "uncertain": false
         },
         {
-          "text": "だ",
+          "text": "<redacted>",
           "ref_start": 9.09,
           "pred_start": 9.16,
           "start_err": 0.07000000000000028,
@@ -5151,7 +5151,7 @@
           "uncertain": false
         },
         {
-          "text": "け",
+          "text": "<redacted>",
           "ref_start": 9.47,
           "pred_start": 9.540000000000001,
           "start_err": 0.07000000000000028,
@@ -5161,7 +5161,7 @@
           "uncertain": false
         },
         {
-          "text": "望",
+          "text": "<redacted>",
           "ref_start": 10.11,
           "pred_start": 9.92,
           "start_err": 0.1899999999999995,
@@ -5171,7 +5171,7 @@
           "uncertain": false
         },
         {
-          "text": "ん",
+          "text": "<redacted>",
           "ref_start": 10.76,
           "pred_start": 10.72,
           "start_err": 0.03999999999999915,
@@ -5181,7 +5181,7 @@
           "uncertain": false
         },
         {
-          "text": "で",
+          "text": "<redacted>",
           "ref_start": 11.03,
           "pred_start": 11.040000000000001,
           "start_err": 0.010000000000001563,
@@ -5191,7 +5191,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 11.377,
           "pred_start": 11.46,
           "start_err": 0.08300000000000018,
@@ -5201,7 +5201,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 11.59,
           "pred_start": 11.66,
           "start_err": 0.07000000000000028,
@@ -5247,7 +5247,7 @@
       },
       "pairs": [
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 0.93,
           "pred_start": 0.9400000000000001,
           "start_err": 0.010000000000000009,
@@ -5257,7 +5257,7 @@
           "uncertain": false
         },
         {
-          "text": "つ",
+          "text": "<redacted>",
           "ref_start": 1.04,
           "pred_start": 1.06,
           "start_err": 0.020000000000000018,
@@ -5267,7 +5267,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 1.23,
           "pred_start": 1.28,
           "start_err": 0.050000000000000044,
@@ -5277,7 +5277,7 @@
           "uncertain": false
         },
         {
-          "text": "ま",
+          "text": "<redacted>",
           "ref_start": 1.5,
           "pred_start": 1.68,
           "start_err": 0.17999999999999994,
@@ -5287,7 +5287,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 1.84,
           "pred_start": 1.8800000000000001,
           "start_err": 0.040000000000000036,
@@ -5297,7 +5297,7 @@
           "uncertain": false
         },
         {
-          "text": "失",
+          "text": "<redacted>",
           "ref_start": 2.37,
           "pred_start": 2.4,
           "start_err": 0.029999999999999805,
@@ -5307,7 +5307,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 2.53,
           "pred_start": 2.56,
           "start_err": 0.03000000000000025,
@@ -5317,7 +5317,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 2.67,
           "pred_start": 2.7800000000000002,
           "start_err": 0.11000000000000032,
@@ -5327,7 +5327,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 3.2,
           "pred_start": 3.18,
           "start_err": 0.020000000000000018,
@@ -5337,7 +5337,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 3.36,
           "pred_start": 3.38,
           "start_err": 0.020000000000000018,
@@ -5347,7 +5347,7 @@
           "uncertain": false
         },
         {
-          "text": "思",
+          "text": "<redacted>",
           "ref_start": 3.95,
           "pred_start": 3.96,
           "start_err": 0.009999999999999787,
@@ -5357,7 +5357,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 5.07,
           "pred_start": 5.14,
           "start_err": 0.0699999999999994,
@@ -5367,7 +5367,7 @@
           "uncertain": false
         },
         {
-          "text": "出",
+          "text": "<redacted>",
           "ref_start": 5.8,
           "pred_start": 5.84,
           "start_err": 0.040000000000000036,
@@ -5377,7 +5377,7 @@
           "uncertain": false
         },
         {
-          "text": "移",
+          "text": "<redacted>",
           "ref_start": 7.221,
           "pred_start": 7.0,
           "start_err": 0.22100000000000009,
@@ -5387,7 +5387,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 7.361,
           "pred_start": 7.38,
           "start_err": 0.019000000000000128,
@@ -5397,7 +5397,7 @@
           "uncertain": false
         },
         {
-          "text": "行",
+          "text": "<redacted>",
           "ref_start": 7.751,
           "pred_start": 7.72,
           "start_err": 0.031000000000000583,
@@ -5443,7 +5443,7 @@
       },
       "pairs": [
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.66,
           "start_err": 0.66,
@@ -5453,7 +5453,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 0.1,
           "pred_start": 0.86,
           "start_err": 0.76,
@@ -5463,7 +5463,7 @@
           "uncertain": false
         },
         {
-          "text": "涙",
+          "text": "<redacted>",
           "ref_start": 2.115,
           "pred_start": 2.16,
           "start_err": 0.04499999999999993,
@@ -5473,7 +5473,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 3.671,
           "pred_start": 3.7,
           "start_err": 0.02900000000000036,
@@ -5483,7 +5483,7 @@
           "uncertain": false
         },
         {
-          "text": "変",
+          "text": "<redacted>",
           "ref_start": 4.031,
           "pred_start": 4.08,
           "start_err": 0.04900000000000038,
@@ -5493,7 +5493,7 @@
           "uncertain": false
         },
         {
-          "text": "わ",
+          "text": "<redacted>",
           "ref_start": 4.201,
           "pred_start": 4.48,
           "start_err": 0.2790000000000008,
@@ -5503,7 +5503,7 @@
           "uncertain": false
         },
         {
-          "text": "る",
+          "text": "<redacted>",
           "ref_start": 4.671,
           "pred_start": 4.72,
           "start_err": 0.04899999999999949,
@@ -5513,7 +5513,7 @@
           "uncertain": false
         },
         {
-          "text": "降",
+          "text": "<redacted>",
           "ref_start": 5.261,
           "pred_start": 5.22,
           "start_err": 0.04100000000000037,
@@ -5523,7 +5523,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 5.389,
           "pred_start": 5.4,
           "start_err": 0.01100000000000012,
@@ -5533,7 +5533,7 @@
           "uncertain": false
         },
         {
-          "text": "出",
+          "text": "<redacted>",
           "ref_start": 5.631,
           "pred_start": 5.62,
           "start_err": 0.01100000000000012,
@@ -5543,7 +5543,7 @@
           "uncertain": false
         },
         {
-          "text": "し",
+          "text": "<redacted>",
           "ref_start": 5.881,
           "pred_start": 5.98,
           "start_err": 0.0990000000000002,
@@ -5553,7 +5553,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 6.161,
           "pred_start": 6.2,
           "start_err": 0.03900000000000059,
@@ -5563,7 +5563,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 6.371,
           "pred_start": 6.7,
           "start_err": 0.32899999999999974,
@@ -5573,7 +5573,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 6.701,
           "pred_start": 6.92,
           "start_err": 0.2190000000000003,
@@ -5583,7 +5583,7 @@
           "uncertain": false
         },
         {
-          "text": "雨",
+          "text": "<redacted>",
           "ref_start": 7.421,
           "pred_start": 7.16,
           "start_err": 0.2610000000000001,
@@ -5593,7 +5593,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 7.721,
           "pred_start": 7.74,
           "start_err": 0.019000000000000128,
@@ -5603,7 +5603,7 @@
           "uncertain": false
         },
         {
-          "text": "情",
+          "text": "<redacted>",
           "ref_start": 8.27,
           "pred_start": 8.66,
           "start_err": 0.39000000000000057,
@@ -5613,7 +5613,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 9.411,
           "pred_start": 9.46,
           "start_err": 0.049000000000001265,
@@ -5623,7 +5623,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 10.161,
           "pred_start": 10.22,
           "start_err": 0.05900000000000105,
@@ -5669,7 +5669,7 @@
       },
       "pairs": [
         {
-          "text": "乾",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.06,
           "start_err": 0.06,
@@ -5679,7 +5679,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 0.501,
           "pred_start": 0.5,
           "start_err": 0.0010000000000000009,
@@ -5689,7 +5689,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 0.801,
           "pred_start": 0.8200000000000001,
           "start_err": 0.019000000000000017,
@@ -5699,7 +5699,7 @@
           "uncertain": false
         },
         {
-          "text": "空",
+          "text": "<redacted>",
           "ref_start": 0.901,
           "pred_start": 1.04,
           "start_err": 0.139,
@@ -5709,7 +5709,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 1.081,
           "pred_start": 1.8,
           "start_err": 0.7190000000000001,
@@ -5719,7 +5719,7 @@
           "uncertain": false
         },
         {
-          "text": "広",
+          "text": "<redacted>",
           "ref_start": 2.221,
           "pred_start": 2.34,
           "start_err": 0.11899999999999977,
@@ -5729,7 +5729,7 @@
           "uncertain": false
         },
         {
-          "text": "が",
+          "text": "<redacted>",
           "ref_start": 3.091,
           "pred_start": 3.12,
           "start_err": 0.028999999999999915,
@@ -5739,7 +5739,7 @@
           "uncertain": false
         },
         {
-          "text": "っ",
+          "text": "<redacted>",
           "ref_start": 3.701,
           "pred_start": 3.74,
           "start_err": 0.039000000000000146,
@@ -5749,7 +5749,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 3.84,
           "pred_start": 3.8200000000000003,
           "start_err": 0.019999999999999574,
@@ -5759,7 +5759,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 3.983,
           "pred_start": 4.0600000000000005,
           "start_err": 0.0770000000000004,
@@ -5769,7 +5769,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 4.132,
           "pred_start": 4.08,
           "start_err": 0.0519999999999996,
@@ -5779,7 +5779,7 @@
           "uncertain": false
         },
         {
-          "text": "ワ",
+          "text": "<redacted>",
           "ref_start": 6.942,
           "pred_start": 6.92,
           "start_err": 0.02200000000000024,
@@ -5789,7 +5789,7 @@
           "uncertain": false
         },
         {
-          "text": "ガ",
+          "text": "<redacted>",
           "ref_start": 7.062,
           "pred_start": 7.08,
           "start_err": 0.017999999999999794,
@@ -5799,7 +5799,7 @@
           "uncertain": false
         },
         {
-          "text": "マ",
+          "text": "<redacted>",
           "ref_start": 7.262,
           "pred_start": 7.3,
           "start_err": 0.038000000000000256,
@@ -5809,7 +5809,7 @@
           "uncertain": false
         },
         {
-          "text": "マ",
+          "text": "<redacted>",
           "ref_start": 7.622,
           "pred_start": 7.66,
           "start_err": 0.038000000000000256,
@@ -5819,7 +5819,7 @@
           "uncertain": false
         },
         {
-          "text": "な",
+          "text": "<redacted>",
           "ref_start": 7.832,
           "pred_start": 7.86,
           "start_err": 0.02800000000000047,
@@ -5829,7 +5829,7 @@
           "uncertain": false
         },
         {
-          "text": "自",
+          "text": "<redacted>",
           "ref_start": 8.272,
           "pred_start": 8.38,
           "start_err": 0.10800000000000054,
@@ -5839,7 +5839,7 @@
           "uncertain": false
         },
         {
-          "text": "由",
+          "text": "<redacted>",
           "ref_start": 8.472,
           "pred_start": 8.66,
           "start_err": 0.1880000000000006,
@@ -5849,7 +5849,7 @@
           "uncertain": false
         },
         {
-          "text": "だ",
+          "text": "<redacted>",
           "ref_start": 9.132,
           "pred_start": 9.200000000000001,
           "start_err": 0.06800000000000139,
@@ -5859,7 +5859,7 @@
           "uncertain": false
         },
         {
-          "text": "け",
+          "text": "<redacted>",
           "ref_start": 9.472,
           "pred_start": 9.6,
           "start_err": 0.1280000000000001,
@@ -5869,7 +5869,7 @@
           "uncertain": false
         },
         {
-          "text": "望",
+          "text": "<redacted>",
           "ref_start": 9.942,
           "pred_start": 9.96,
           "start_err": 0.018000000000000682,
@@ -5879,7 +5879,7 @@
           "uncertain": false
         },
         {
-          "text": "ん",
+          "text": "<redacted>",
           "ref_start": 10.862,
           "pred_start": 10.74,
           "start_err": 0.12199999999999989,
@@ -5889,7 +5889,7 @@
           "uncertain": false
         },
         {
-          "text": "で",
+          "text": "<redacted>",
           "ref_start": 11.052,
           "pred_start": 11.06,
           "start_err": 0.008000000000000895,
@@ -5899,7 +5899,7 @@
           "uncertain": false
         },
         {
-          "text": "い",
+          "text": "<redacted>",
           "ref_start": 11.522,
           "pred_start": 11.46,
           "start_err": 0.06199999999999939,
@@ -5909,7 +5909,7 @@
           "uncertain": false
         },
         {
-          "text": "た",
+          "text": "<redacted>",
           "ref_start": 11.582,
           "pred_start": 11.68,
           "start_err": 0.09799999999999898,
@@ -5955,7 +5955,7 @@
       },
       "pairs": [
         {
-          "text": "歩",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.06,
           "start_err": 0.06,
@@ -5965,7 +5965,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 3.181,
           "pred_start": 1.06,
           "start_err": 2.121,
@@ -5975,7 +5975,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 4.211,
           "pred_start": 1.1400000000000001,
           "start_err": 3.071,
@@ -5985,7 +5985,7 @@
           "uncertain": false
         },
         {
-          "text": "歩",
+          "text": "<redacted>",
           "ref_start": 4.391,
           "pred_start": 2.16,
           "start_err": 2.231,
@@ -5995,7 +5995,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 4.961,
           "pred_start": 3.18,
           "start_err": 1.7810000000000001,
@@ -6005,7 +6005,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 5.431,
           "pred_start": 4.2,
           "start_err": 1.2309999999999999,
@@ -6015,7 +6015,7 @@
           "uncertain": false
         },
         {
-          "text": "私",
+          "text": "<redacted>",
           "ref_start": 6.111,
           "pred_start": 4.22,
           "start_err": 1.891,
@@ -6025,7 +6025,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 7.551,
           "pred_start": 5.0,
           "start_err": 2.551,
@@ -6035,7 +6035,7 @@
           "uncertain": false
         },
         {
-          "text": "元",
+          "text": "<redacted>",
           "ref_start": 7.711,
           "pred_start": 5.5,
           "start_err": 2.2110000000000003,
@@ -6045,7 +6045,7 @@
           "uncertain": false
         },
         {
-          "text": "気",
+          "text": "<redacted>",
           "ref_start": 7.962,
           "pred_start": 5.92,
           "start_err": 2.042,
@@ -6055,7 +6055,7 @@
           "uncertain": false
         },
         {
-          "text": "歩",
+          "text": "<redacted>",
           "ref_start": 8.002,
           "pred_start": 7.76,
           "start_err": 0.24200000000000088,
@@ -6065,7 +6065,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 8.182,
           "pred_start": 8.22,
           "start_err": 0.038000000000000256,
@@ -6075,7 +6075,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 8.242,
           "pred_start": 8.58,
           "start_err": 0.3379999999999992,
@@ -6085,7 +6085,7 @@
           "uncertain": false
         },
         {
-          "text": "大",
+          "text": "<redacted>",
           "ref_start": 9.632,
           "pred_start": 9.120000000000001,
           "start_err": 0.5119999999999987,
@@ -6095,7 +6095,7 @@
           "uncertain": false
         },
         {
-          "text": "好",
+          "text": "<redacted>",
           "ref_start": 9.932,
           "pred_start": 9.4,
           "start_err": 0.532,
@@ -6105,7 +6105,7 @@
           "uncertain": false
         },
         {
-          "text": "き",
+          "text": "<redacted>",
           "ref_start": 11.552,
           "pred_start": 9.9,
           "start_err": 1.6519999999999992,
@@ -6151,7 +6151,7 @@
       },
       "pairs": [
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.56,
           "start_err": 0.56,
@@ -6161,7 +6161,7 @@
           "uncertain": false
         },
         {
-          "text": "ん",
+          "text": "<redacted>",
           "ref_start": 0.42,
           "pred_start": 1.0,
           "start_err": 0.5800000000000001,
@@ -6171,7 +6171,7 @@
           "uncertain": false
         },
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 1.62,
           "pred_start": 1.12,
           "start_err": 0.5,
@@ -6181,7 +6181,7 @@
           "uncertain": false
         },
         {
-          "text": "ん",
+          "text": "<redacted>",
           "ref_start": 1.7,
           "pred_start": 1.16,
           "start_err": 0.54,
@@ -6191,7 +6191,7 @@
           "uncertain": false
         },
         {
-          "text": "行",
+          "text": "<redacted>",
           "ref_start": 3.73,
           "pred_start": 1.18,
           "start_err": 2.55,
@@ -6201,7 +6201,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 4.181,
           "pred_start": 1.62,
           "start_err": 2.561,
@@ -6211,7 +6211,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 4.501,
           "pred_start": 1.7,
           "start_err": 2.801,
@@ -6221,7 +6221,7 @@
           "uncertain": false
         },
         {
-          "text": "坂",
+          "text": "<redacted>",
           "ref_start": 4.541,
           "pred_start": 4.18,
           "start_err": 0.36100000000000065,
@@ -6231,7 +6231,7 @@
           "uncertain": false
         },
         {
-          "text": "道",
+          "text": "<redacted>",
           "ref_start": 6.381,
           "pred_start": 4.5,
           "start_err": 1.8810000000000002,
@@ -6241,7 +6241,7 @@
           "uncertain": false
         },
         {
-          "text": "ト",
+          "text": "<redacted>",
           "ref_start": 6.741,
           "pred_start": 6.36,
           "start_err": 0.38099999999999934,
@@ -6251,7 +6251,7 @@
           "uncertain": false
         },
         {
-          "text": "ン",
+          "text": "<redacted>",
           "ref_start": 6.811,
           "pred_start": 6.86,
           "start_err": 0.04900000000000038,
@@ -6261,7 +6261,7 @@
           "uncertain": false
         },
         {
-          "text": "ネ",
+          "text": "<redacted>",
           "ref_start": 6.881,
           "pred_start": 6.88,
           "start_err": 0.001000000000000334,
@@ -6271,7 +6271,7 @@
           "uncertain": false
         },
         {
-          "text": "ル",
+          "text": "<redacted>",
           "ref_start": 7.221,
           "pred_start": 7.22,
           "start_err": 0.001000000000000334,
@@ -6281,7 +6281,7 @@
           "uncertain": false
         },
         {
-          "text": "草",
+          "text": "<redacted>",
           "ref_start": 8.431,
           "pred_start": 9.06,
           "start_err": 0.6290000000000013,
@@ -6291,7 +6291,7 @@
           "uncertain": false
         },
         {
-          "text": "原",
+          "text": "<redacted>",
           "ref_start": 10.111,
           "pred_start": 13.1,
           "start_err": 2.988999999999999,
@@ -6337,7 +6337,7 @@
       },
       "pairs": [
         {
-          "text": "一",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 1.7,
           "start_err": 1.7,
@@ -6347,7 +6347,7 @@
           "uncertain": false
         },
         {
-          "text": "本",
+          "text": "<redacted>",
           "ref_start": 1.57,
           "pred_start": 1.72,
           "start_err": 0.1499999999999999,
@@ -6357,7 +6357,7 @@
           "uncertain": false
         },
         {
-          "text": "橋",
+          "text": "<redacted>",
           "ref_start": 1.87,
           "pred_start": 1.74,
           "start_err": 0.13000000000000012,
@@ -6367,7 +6367,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 1.96,
           "pred_start": 1.94,
           "start_err": 0.020000000000000018,
@@ -6377,7 +6377,7 @@
           "uncertain": false
         },
         {
-          "text": "で",
+          "text": "<redacted>",
           "ref_start": 2.02,
           "pred_start": 1.98,
           "start_err": 0.040000000000000036,
@@ -6387,7 +6387,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 2.081,
           "pred_start": 2.1,
           "start_err": 0.019000000000000128,
@@ -6397,7 +6397,7 @@
           "uncertain": false
         },
         {
-          "text": "ぼ",
+          "text": "<redacted>",
           "ref_start": 2.411,
           "pred_start": 2.44,
           "start_err": 0.028999999999999915,
@@ -6407,7 +6407,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 2.561,
           "pred_start": 2.6,
           "start_err": 0.039000000000000146,
@@ -6417,7 +6417,7 @@
           "uncertain": false
         },
         {
-          "text": "砂",
+          "text": "<redacted>",
           "ref_start": 4.691,
           "pred_start": 3.12,
           "start_err": 1.5709999999999997,
@@ -6427,7 +6427,7 @@
           "uncertain": false
         },
         {
-          "text": "利",
+          "text": "<redacted>",
           "ref_start": 4.891,
           "pred_start": 3.68,
           "start_err": 1.2109999999999999,
@@ -6437,7 +6437,7 @@
           "uncertain": false
         },
         {
-          "text": "道",
+          "text": "<redacted>",
           "ref_start": 6.921,
           "pred_start": 4.22,
           "start_err": 2.7010000000000005,
@@ -6447,7 +6447,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 7.062,
           "pred_start": 7.0600000000000005,
           "start_err": 0.0019999999999997797,
@@ -6457,7 +6457,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 7.132,
           "pred_start": 7.42,
           "start_err": 0.28800000000000026,
@@ -6467,7 +6467,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 7.452,
           "pred_start": 7.62,
           "start_err": 0.16800000000000015,
@@ -6477,7 +6477,7 @@
           "uncertain": false
         },
         {
-          "text": "巣",
+          "text": "<redacted>",
           "ref_start": 7.886,
           "pred_start": 7.94,
           "start_err": 0.05400000000000027,
@@ -6487,7 +6487,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 8.183,
           "pred_start": 8.18,
           "start_err": 0.0030000000000001137,
@@ -6497,7 +6497,7 @@
           "uncertain": false
         },
         {
-          "text": "ぐ",
+          "text": "<redacted>",
           "ref_start": 8.632,
           "pred_start": 8.68,
           "start_err": 0.04800000000000004,
@@ -6507,7 +6507,7 @@
           "uncertain": false
         },
         {
-          "text": "っ",
+          "text": "<redacted>",
           "ref_start": 9.012,
           "pred_start": 9.02,
           "start_err": 0.007999999999999119,
@@ -6517,7 +6517,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 10.664,
           "pred_start": 9.06,
           "start_err": 1.6039999999999992,
@@ -6527,7 +6527,7 @@
           "uncertain": false
         },
         {
-          "text": "下",
+          "text": "<redacted>",
           "ref_start": 10.813,
           "pred_start": 10.620000000000001,
           "start_err": 0.19299999999999962,
@@ -6537,7 +6537,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 11.011,
           "pred_start": 11.16,
           "start_err": 0.1490000000000009,
@@ -6547,7 +6547,7 @@
           "uncertain": false
         },
         {
-          "text": "道",
+          "text": "<redacted>",
           "ref_start": 12.167,
           "pred_start": 12.18,
           "start_err": 0.0129999999999999,
@@ -6593,7 +6593,7 @@
       },
       "pairs": [
         {
-          "text": "歩",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.6,
           "start_err": 0.6,
@@ -6603,7 +6603,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 1.03,
           "pred_start": 1.08,
           "start_err": 0.050000000000000044,
@@ -6613,7 +6613,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 3.211,
           "pred_start": 1.16,
           "start_err": 2.051,
@@ -6623,7 +6623,7 @@
           "uncertain": false
         },
         {
-          "text": "歩",
+          "text": "<redacted>",
           "ref_start": 3.251,
           "pred_start": 2.3000000000000003,
           "start_err": 0.9509999999999996,
@@ -6633,7 +6633,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 3.321,
           "pred_start": 3.36,
           "start_err": 0.0389999999999997,
@@ -6643,7 +6643,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 4.991,
           "pred_start": 3.42,
           "start_err": 1.5709999999999997,
@@ -6653,7 +6653,7 @@
           "uncertain": false
         },
         {
-          "text": "私",
+          "text": "<redacted>",
           "ref_start": 5.131,
           "pred_start": 4.98,
           "start_err": 0.1509999999999998,
@@ -6663,7 +6663,7 @@
           "uncertain": false
         },
         {
-          "text": "は",
+          "text": "<redacted>",
           "ref_start": 5.651,
           "pred_start": 5.76,
           "start_err": 0.10899999999999999,
@@ -6673,7 +6673,7 @@
           "uncertain": false
         },
         {
-          "text": "元",
+          "text": "<redacted>",
           "ref_start": 6.322,
           "pred_start": 6.34,
           "start_err": 0.017999999999999794,
@@ -6683,7 +6683,7 @@
           "uncertain": false
         },
         {
-          "text": "気",
+          "text": "<redacted>",
           "ref_start": 6.882,
           "pred_start": 6.7,
           "start_err": 0.1819999999999995,
@@ -6693,7 +6693,7 @@
           "uncertain": false
         },
         {
-          "text": "歩",
+          "text": "<redacted>",
           "ref_start": 9.684,
           "pred_start": 9.36,
           "start_err": 0.32399999999999984,
@@ -6703,7 +6703,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 9.804,
           "pred_start": 9.84,
           "start_err": 0.03599999999999959,
@@ -6713,7 +6713,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 9.864,
           "pred_start": 10.18,
           "start_err": 0.31599999999999895,
@@ -6723,7 +6723,7 @@
           "uncertain": false
         },
         {
-          "text": "大",
+          "text": "<redacted>",
           "ref_start": 13.544,
           "pred_start": 10.68,
           "start_err": 2.8640000000000008,
@@ -6733,7 +6733,7 @@
           "uncertain": false
         },
         {
-          "text": "好",
+          "text": "<redacted>",
           "ref_start": 13.584,
           "pred_start": 10.96,
           "start_err": 2.6239999999999988,
@@ -6743,7 +6743,7 @@
           "uncertain": false
         },
         {
-          "text": "き",
+          "text": "<redacted>",
           "ref_start": 13.644,
           "pred_start": 11.44,
           "start_err": 2.2040000000000006,
@@ -6789,7 +6789,7 @@
       },
       "pairs": [
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 0.02,
           "start_err": 0.02,
@@ -6799,7 +6799,7 @@
           "uncertain": false
         },
         {
-          "text": "ん",
+          "text": "<redacted>",
           "ref_start": 0.34,
           "pred_start": 0.38,
           "start_err": 0.03999999999999998,
@@ -6809,7 +6809,7 @@
           "uncertain": false
         },
         {
-          "text": "ど",
+          "text": "<redacted>",
           "ref_start": 1.05,
           "pred_start": 0.54,
           "start_err": 0.51,
@@ -6819,7 +6819,7 @@
           "uncertain": false
         },
         {
-          "text": "ん",
+          "text": "<redacted>",
           "ref_start": 4.622,
           "pred_start": 0.58,
           "start_err": 4.042,
@@ -6829,7 +6829,7 @@
           "uncertain": false
         },
         {
-          "text": "行",
+          "text": "<redacted>",
           "ref_start": 4.662,
           "pred_start": 0.6,
           "start_err": 4.062,
@@ -6839,7 +6839,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 6.452,
           "pred_start": 1.06,
           "start_err": 5.3919999999999995,
@@ -6849,7 +6849,7 @@
           "uncertain": false
         },
         {
-          "text": "う",
+          "text": "<redacted>",
           "ref_start": 6.512,
           "pred_start": 1.12,
           "start_err": 5.3919999999999995,
@@ -6859,7 +6859,7 @@
           "uncertain": false
         },
         {
-          "text": "坂",
+          "text": "<redacted>",
           "ref_start": 6.552,
           "pred_start": 4.04,
           "start_err": 2.5119999999999996,
@@ -6869,7 +6869,7 @@
           "uncertain": false
         },
         {
-          "text": "道",
+          "text": "<redacted>",
           "ref_start": 6.692,
           "pred_start": 4.44,
           "start_err": 2.252,
@@ -6879,7 +6879,7 @@
           "uncertain": false
         },
         {
-          "text": "ト",
+          "text": "<redacted>",
           "ref_start": 7.022,
           "pred_start": 6.640000000000001,
           "start_err": 0.3819999999999997,
@@ -6889,7 +6889,7 @@
           "uncertain": false
         },
         {
-          "text": "ン",
+          "text": "<redacted>",
           "ref_start": 7.083,
           "pred_start": 7.04,
           "start_err": 0.04300000000000015,
@@ -6899,7 +6899,7 @@
           "uncertain": false
         },
         {
-          "text": "ネ",
+          "text": "<redacted>",
           "ref_start": 7.183,
           "pred_start": 7.18,
           "start_err": 0.0030000000000001137,
@@ -6909,7 +6909,7 @@
           "uncertain": false
         },
         {
-          "text": "ル",
+          "text": "<redacted>",
           "ref_start": 7.483,
           "pred_start": 7.5,
           "start_err": 0.017000000000000348,
@@ -6919,7 +6919,7 @@
           "uncertain": false
         },
         {
-          "text": "草",
+          "text": "<redacted>",
           "ref_start": 9.113,
           "pred_start": 9.68,
           "start_err": 0.5670000000000002,
@@ -6929,7 +6929,7 @@
           "uncertain": false
         },
         {
-          "text": "原",
+          "text": "<redacted>",
           "ref_start": 10.744,
           "pred_start": 10.74,
           "start_err": 0.0039999999999995595,
@@ -6975,7 +6975,7 @@
       },
       "pairs": [
         {
-          "text": "一",
+          "text": "<redacted>",
           "ref_start": 0.0,
           "pred_start": 2.66,
           "start_err": 2.66,
@@ -6985,7 +6985,7 @@
           "uncertain": false
         },
         {
-          "text": "本",
+          "text": "<redacted>",
           "ref_start": 3.141,
           "pred_start": 3.12,
           "start_err": 0.020999999999999908,
@@ -6995,7 +6995,7 @@
           "uncertain": false
         },
         {
-          "text": "橋",
+          "text": "<redacted>",
           "ref_start": 4.261,
           "pred_start": 3.14,
           "start_err": 1.121,
@@ -7005,7 +7005,7 @@
           "uncertain": false
         },
         {
-          "text": "に",
+          "text": "<redacted>",
           "ref_start": 4.321,
           "pred_start": 4.5,
           "start_err": 0.17900000000000027,
@@ -7015,7 +7015,7 @@
           "uncertain": false
         },
         {
-          "text": "で",
+          "text": "<redacted>",
           "ref_start": 4.501,
           "pred_start": 6.22,
           "start_err": 1.7189999999999994,
@@ -7025,7 +7025,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 5.951,
           "pred_start": 6.44,
           "start_err": 0.48900000000000077,
@@ -7035,7 +7035,7 @@
           "uncertain": false
         },
         {
-          "text": "ぼ",
+          "text": "<redacted>",
           "ref_start": 6.143,
           "pred_start": 6.82,
           "start_err": 0.6770000000000005,
@@ -7045,7 +7045,7 @@
           "uncertain": false
         },
         {
-          "text": "こ",
+          "text": "<redacted>",
           "ref_start": 6.433,
           "pred_start": 6.98,
           "start_err": 0.5470000000000006,
@@ -7055,7 +7055,7 @@
           "uncertain": false
         },
         {
-          "text": "砂",
+          "text": "<redacted>",
           "ref_start": 7.014,
           "pred_start": 7.5200000000000005,
           "start_err": 0.5060000000000002,
@@ -7065,7 +7065,7 @@
           "uncertain": false
         },
         {
-          "text": "利",
+          "text": "<redacted>",
           "ref_start": 8.116,
           "pred_start": 8.1,
           "start_err": 0.016000000000000014,
@@ -7075,7 +7075,7 @@
           "uncertain": false
         },
         {
-          "text": "道",
+          "text": "<redacted>",
           "ref_start": 8.603,
           "pred_start": 9.120000000000001,
           "start_err": 0.5170000000000012,
@@ -7085,7 +7085,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 11.573,
           "pred_start": 11.64,
           "start_err": 0.06700000000000017,
@@ -7095,7 +7095,7 @@
           "uncertain": false
         },
         {
-          "text": "も",
+          "text": "<redacted>",
           "ref_start": 11.944,
           "pred_start": 12.0,
           "start_err": 0.05599999999999916,
@@ -7105,7 +7105,7 @@
           "uncertain": false
         },
         {
-          "text": "の",
+          "text": "<redacted>",
           "ref_start": 12.132,
           "pred_start": 12.18,
           "start_err": 0.04800000000000004,
@@ -7115,7 +7115,7 @@
           "uncertain": false
         },
         {
-          "text": "巣",
+          "text": "<redacted>",
           "ref_start": 12.552,
           "pred_start": 12.52,
           "start_err": 0.03200000000000003,
@@ -7125,7 +7125,7 @@
           "uncertain": false
         },
         {
-          "text": "く",
+          "text": "<redacted>",
           "ref_start": 12.749,
           "pred_start": 12.74,
           "start_err": 0.009000000000000341,
@@ -7135,7 +7135,7 @@
           "uncertain": false
         },
         {
-          "text": "ぐ",
+          "text": "<redacted>",
           "ref_start": 13.221,
           "pred_start": 13.22,
           "start_err": 0.0009999999999994458,
@@ -7145,7 +7145,7 @@
           "uncertain": false
         },
         {
-          "text": "っ",
+          "text": "<redacted>",
           "ref_start": 13.627,
           "pred_start": 13.6,
           "start_err": 0.027000000000001023,
@@ -7155,7 +7155,7 @@
           "uncertain": false
         },
         {
-          "text": "て",
+          "text": "<redacted>",
           "ref_start": 16.887,
           "pred_start": 13.620000000000001,
           "start_err": 3.2669999999999995,
@@ -7165,7 +7165,7 @@
           "uncertain": false
         },
         {
-          "text": "下",
+          "text": "<redacted>",
           "ref_start": 17.235,
           "pred_start": 16.84,
           "start_err": 0.3949999999999996,
@@ -7175,7 +7175,7 @@
           "uncertain": false
         },
         {
-          "text": "り",
+          "text": "<redacted>",
           "ref_start": 17.699,
           "pred_start": 17.38,
           "start_err": 0.3190000000000026,
@@ -7185,7 +7185,7 @@
           "uncertain": false
         },
         {
-          "text": "道",
+          "text": "<redacted>",
           "ref_start": 18.559,
           "pred_start": 18.5,
           "start_err": 0.05900000000000105,

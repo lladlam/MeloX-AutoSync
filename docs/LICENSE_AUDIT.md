@@ -46,3 +46,16 @@
 - 向 pyshiro 作者确认 `.hsmm` 权重授权；否则只用 HuBERT 路线。
 - 记录所有随包资源的版本与许可文本。
 - 复核 GPLv3 与目标应用商店分发条款的兼容性（反 DRM 条款）。
+
+## 4. 公开仓库的内容政策（V1.0）
+
+公开 Git **只包含**：实现代码、测试、文档与**汇总指标**。
+
+- 评测报告（`experiments/reports/*.json`）中的**歌词文本字段**已统一替换为 `<redacted>`
+  （`tools/redact_reports.py`）；数值指标、结构、样本数保持不变。
+- **保留**的数据集标识符：歌曲名/歌手名/技术标签（如 GTSinger 的 `edelweiss`、`JA-Soprano-1`）
+  与 segment id。这些是**数据集元数据**，用于 CC BY-NC-SA 的署名与按歌曲拆分报告，不是歌词摘录。
+- 第三方音频与完整歌词（`Test/`、逐曲完整结果 `fullsong_*.json`、人工标注工作文件）
+  **全部 gitignore**，仅本地保留。
+- 每次发布前应运行：`uv run python tools/redact_reports.py experiments/reports/*.json`，
+  并用关键词抽查确认无歌词残留。

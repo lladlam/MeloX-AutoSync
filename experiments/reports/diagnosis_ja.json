@@ -24,7 +24,7 @@
         "max_span_fraction": 0.727,
         "blank_fraction": 0.0,
         "mean_token_score": -15.57,
-        "transcript": "さあいこのキスはだばこのフェイバーかして",
+        "transcript": "<redacted>",
         "transcript_cer": 1.167
       },
       "oracle": {
@@ -36,7 +36,7 @@
         "max_span_fraction": 0.389,
         "blank_fraction": 0.0,
         "mean_token_score": -14.56,
-        "transcript": "このキスはだばこのフェイバーかし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.917
       },
       "energy_trim": {
@@ -48,7 +48,7 @@
         "max_span_fraction": 0.362,
         "blank_fraction": 0.0,
         "mean_token_score": -14.64,
-        "transcript": "いいこのキスはだばこのフェイバーかして",
+        "transcript": "<redacted>",
         "transcript_cer": 1.083
       },
       "word_level_lrc": {
@@ -71,7 +71,7 @@
         "max_span_fraction": 0.632,
         "blank_fraction": 0.0,
         "mean_token_score": -14.38,
-        "transcript": "みがくてせないかおりあしたの今まごろには",
+        "transcript": "<redacted>",
         "transcript_cer": 0.667
       },
       "oracle": {
@@ -85,7 +85,7 @@
         "max_span_fraction": 0.619,
         "blank_fraction": 0.0,
         "mean_token_score": -15.24,
-        "transcript": "みがくてせつないかおりあしたのいまごろには",
+        "transcript": "<redacted>",
         "transcript_cer": 0.667
       },
       "energy_trim": {
@@ -99,7 +99,7 @@
         "max_span_fraction": 0.632,
         "blank_fraction": 0.0,
         "mean_token_score": -14.38,
-        "transcript": "みがくてせないかおりあしたの今まごろには",
+        "transcript": "<redacted>",
         "transcript_cer": 0.667
       },
       "word_level_lrc": {
@@ -120,7 +120,7 @@
         "max_span_fraction": 0.417,
         "blank_fraction": 0.0,
         "mean_token_score": -15.34,
-        "transcript": "はとにいるんだってれはまってるんだべ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.778
       },
       "oracle": {
@@ -132,7 +132,7 @@
         "max_span_fraction": 0.454,
         "blank_fraction": 0.0,
         "mean_token_score": -14.87,
-        "transcript": "はとにいるんだってれるはまってるんだべ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.833
       },
       "energy_trim": {
@@ -146,7 +146,7 @@
         "max_span_fraction": 0.669,
         "blank_fraction": 0.0,
         "mean_token_score": -15.45,
-        "transcript": "はとにいるんだってれはまってるんだべ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.778
       },
       "word_level_lrc": {
@@ -171,7 +171,7 @@
         "max_span_fraction": 0.416,
         "blank_fraction": 0.0,
         "mean_token_score": -15.27,
-        "transcript": "さ後のキスはたばこのフェヘバーがし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.75
       },
       "oracle": {
@@ -183,7 +183,7 @@
         "max_span_fraction": 0.345,
         "blank_fraction": 0.0,
         "mean_token_score": -14.4,
-        "transcript": "のキースはたばこのフェヘバーがし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.917
       },
       "energy_trim": {
@@ -195,7 +195,7 @@
         "max_span_fraction": 0.359,
         "blank_fraction": 0.0,
         "mean_token_score": -14.76,
-        "transcript": "のキースはたばこのフェヘバーがし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.917
       },
       "word_level_lrc": {
@@ -222,7 +222,7 @@
         "max_span_fraction": 0.632,
         "blank_fraction": 0.0,
         "mean_token_score": -14.23,
-        "transcript": "身がくで切ない香り明日のはこには",
+        "transcript": "<redacted>",
         "transcript_cer": 0.444
       },
       "oracle": {
@@ -236,7 +236,7 @@
         "max_span_fraction": 0.617,
         "blank_fraction": 0.0,
         "mean_token_score": -14.36,
-        "transcript": "身がくでせない香り明日のはこには",
+        "transcript": "<redacted>",
         "transcript_cer": 0.389
       },
       "energy_trim": {
@@ -250,7 +250,7 @@
         "max_span_fraction": 0.632,
         "blank_fraction": 0.0,
         "mean_token_score": -14.23,
-        "transcript": "身がくで切ない香り明日のはこには",
+        "transcript": "<redacted>",
         "transcript_cer": 0.444
       },
       "word_level_lrc": {
@@ -271,7 +271,7 @@
         "max_span_fraction": 0.352,
         "blank_fraction": 0.0,
         "mean_token_score": -15.7,
-        "transcript": "はどこにいるんだろうでれるをも出るんだろう",
+        "transcript": "<redacted>",
         "transcript_cer": 0.722
       },
       "oracle": {
@@ -283,7 +283,7 @@
         "max_span_fraction": 0.343,
         "blank_fraction": 0.0,
         "mean_token_score": -15.52,
-        "transcript": "たはどこにいるんだろうでれるをも出んだろう",
+        "transcript": "<redacted>",
         "transcript_cer": 0.611
       },
       "energy_trim": {
@@ -295,7 +295,7 @@
         "max_span_fraction": 0.361,
         "blank_fraction": 0.0,
         "mean_token_score": -15.12,
-        "transcript": "はどこにいるんだろうでれるをも出るんだろう",
+        "transcript": "<redacted>",
         "transcript_cer": 0.722
       },
       "word_level_lrc": {
@@ -320,7 +320,7 @@
         "max_span_fraction": 0.205,
         "blank_fraction": 0.0,
         "mean_token_score": -14.6,
-        "transcript": "だれもいないしてテゆめのじかはもまくがおれてゆくき",
+        "transcript": "<redacted>",
         "transcript_cer": 0.722
       },
       "oracle": {
@@ -332,7 +332,7 @@
         "max_span_fraction": 0.358,
         "blank_fraction": 0.0,
         "mean_token_score": -14.02,
-        "transcript": "夢の時間はもま句がおれててゆく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.722
       },
       "energy_trim": {
@@ -344,7 +344,7 @@
         "max_span_fraction": 0.194,
         "blank_fraction": 0.0,
         "mean_token_score": -13.39,
-        "transcript": "夢のじかはもまくがおれてゆく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.667
       },
       "word_level_lrc": {
@@ -371,7 +371,7 @@
         "max_span_fraction": 0.579,
         "blank_fraction": 0.0,
         "mean_token_score": -15.34,
-        "transcript": "とあすはに度ないいときづこの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.632
       },
       "oracle": {
@@ -385,7 +385,7 @@
         "max_span_fraction": 0.552,
         "blank_fraction": 0.0,
         "mean_token_score": -15.68,
-        "transcript": "とあすはに度ないいときづこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.684
       },
       "energy_trim": {
@@ -399,7 +399,7 @@
         "max_span_fraction": 0.579,
         "blank_fraction": 0.0,
         "mean_token_score": -15.34,
-        "transcript": "とあすはに度ないいときづこの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.632
       },
       "word_level_lrc": {
@@ -422,7 +422,7 @@
         "max_span_fraction": 0.813,
         "blank_fraction": 0.0,
         "mean_token_score": -16.55,
-        "transcript": "心はいつもせなくつくしけれど涙ふいてとびらたこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.64
       },
       "oracle": {
@@ -436,7 +436,7 @@
         "max_span_fraction": 0.806,
         "blank_fraction": 0.0,
         "mean_token_score": -16.34,
-        "transcript": "心はいつもせなくつくしけれど涙ふいてとびらたこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.64
       },
       "energy_trim": {
@@ -450,7 +450,7 @@
         "max_span_fraction": 0.813,
         "blank_fraction": 0.0,
         "mean_token_score": -16.55,
-        "transcript": "心はいつもせなくつくしけれど涙ふいてとびらたこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.64
       },
       "word_level_lrc": {
@@ -473,7 +473,7 @@
         "max_span_fraction": 0.709,
         "blank_fraction": 0.0,
         "mean_token_score": -15.45,
-        "transcript": "誰もいないして夢の時間がはもまあがおりていく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.611
       },
       "oracle": {
@@ -487,7 +487,7 @@
         "max_span_fraction": 0.504,
         "blank_fraction": 0.0,
         "mean_token_score": -14.2,
-        "transcript": "夢の時間がはもまあ句が下りてゆいく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.722
       },
       "energy_trim": {
@@ -499,7 +499,7 @@
         "max_span_fraction": 0.486,
         "blank_fraction": 0.0,
         "mean_token_score": -12.97,
-        "transcript": "夢の時間はもま句がおりていく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.667
       },
       "word_level_lrc": {
@@ -522,7 +522,7 @@
         "max_span_fraction": 0.568,
         "blank_fraction": 0.0,
         "mean_token_score": -15.21,
-        "transcript": "とはに度どこないい度きずこの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.737
       },
       "oracle": {
@@ -536,7 +536,7 @@
         "max_span_fraction": 0.54,
         "blank_fraction": 0.0,
         "mean_token_score": -15.4,
-        "transcript": "となはに度とないい度きずこの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.684
       },
       "energy_trim": {
@@ -550,7 +550,7 @@
         "max_span_fraction": 0.561,
         "blank_fraction": 0.0,
         "mean_token_score": -15.27,
-        "transcript": "とはに度とないい度きずこの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.684
       },
       "word_level_lrc": {
@@ -573,7 +573,7 @@
         "max_span_fraction": 0.811,
         "blank_fraction": 0.0,
         "mean_token_score": -16.42,
-        "transcript": "都心はいつもせなく美しいけれど涙が拭いてびがたこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.48
       },
       "oracle": {
@@ -587,7 +587,7 @@
         "max_span_fraction": 0.805,
         "blank_fraction": 0.0,
         "mean_token_score": -15.84,
-        "transcript": "都心はいつもせなく美しいけれど涙が拭いてびがたこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.48
       },
       "energy_trim": {
@@ -601,7 +601,7 @@
         "max_span_fraction": 0.811,
         "blank_fraction": 0.0,
         "mean_token_score": -16.42,
-        "transcript": "都心はいつもせなく美しいけれど涙が拭いてびがたこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.48
       },
       "word_level_lrc": {
@@ -622,7 +622,7 @@
         "max_span_fraction": 0.491,
         "blank_fraction": 0.0,
         "mean_token_score": -16.06,
-        "transcript": "誰もいないして夢の時間はもま句雲が降りていく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.556
       },
       "oracle": {
@@ -636,7 +636,7 @@
         "max_span_fraction": 0.541,
         "blank_fraction": 0.0,
         "mean_token_score": -14.22,
-        "transcript": "夢の時間はも句雲が降りていく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.611
       },
       "energy_trim": {
@@ -648,7 +648,7 @@
         "max_span_fraction": 0.491,
         "blank_fraction": 0.0,
         "mean_token_score": -16.06,
-        "transcript": "誰もいないして夢の時間はもま句雲が降りていく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.556
       },
       "word_level_lrc": {
@@ -673,7 +673,7 @@
         "max_span_fraction": 0.244,
         "blank_fraction": 0.0,
         "mean_token_score": -13.37,
-        "transcript": "と明日すはに度どこないい度きづくの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.579
       },
       "oracle": {
@@ -685,7 +685,7 @@
         "max_span_fraction": 0.195,
         "blank_fraction": 0.0,
         "mean_token_score": -13.2,
-        "transcript": "と明日すは二度どこないい度きづくの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.526
       },
       "energy_trim": {
@@ -697,7 +697,7 @@
         "max_span_fraction": 0.245,
         "blank_fraction": 0.0,
         "mean_token_score": -13.35,
-        "transcript": "と明日すは二度どこないい度きづくの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.526
       },
       "word_level_lrc": {
@@ -724,7 +724,7 @@
         "max_span_fraction": 0.67,
         "blank_fraction": 0.0,
         "mean_token_score": -16.37,
-        "transcript": "シーはいつおせなく美しいけれど波ふいて飛び立ただこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.6
       },
       "oracle": {
@@ -738,7 +738,7 @@
         "max_span_fraction": 0.634,
         "blank_fraction": 0.0,
         "mean_token_score": -16.41,
-        "transcript": "シーはいつおせつなく美しいけれ涙ふいてとびがただこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.6
       },
       "energy_trim": {
@@ -752,7 +752,7 @@
         "max_span_fraction": 0.67,
         "blank_fraction": 0.0,
         "mean_token_score": -16.37,
-        "transcript": "シーはいつおせなく美しいけれど波ふいて飛び立ただこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.6
       },
       "word_level_lrc": {
@@ -773,7 +773,7 @@
         "max_span_fraction": 0.487,
         "blank_fraction": 0.0,
         "mean_token_score": -15.85,
-        "transcript": "誰もいないしてテき夢のほうじがはもうまあ雲がりてゆいく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.778
       },
       "oracle": {
@@ -787,7 +787,7 @@
         "max_span_fraction": 0.537,
         "blank_fraction": 0.0,
         "mean_token_score": -14.04,
-        "transcript": "夢のほうじがはもまあ雲が下りてゆいく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.722
       },
       "energy_trim": {
@@ -799,7 +799,7 @@
         "max_span_fraction": 0.207,
         "blank_fraction": 0.0,
         "mean_token_score": -14.52,
-        "transcript": "誰もいないしてテき夢のほうじがはもうまあ雲がりていく",
+        "transcript": "<redacted>",
         "transcript_cer": 0.778
       },
       "word_level_lrc": {
@@ -824,7 +824,7 @@
         "max_span_fraction": 0.253,
         "blank_fraction": 0.0,
         "mean_token_score": -13.38,
-        "transcript": "どんなあすはにどとないいときずこの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.737
       },
       "oracle": {
@@ -836,7 +836,7 @@
         "max_span_fraction": 0.203,
         "blank_fraction": 0.0,
         "mean_token_score": -13.41,
-        "transcript": "どんなあすはにどとないいときずこの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.737
       },
       "energy_trim": {
@@ -848,7 +848,7 @@
         "max_span_fraction": 0.253,
         "blank_fraction": 0.0,
         "mean_token_score": -13.42,
-        "transcript": "どんなあすはにどとないいときずこの",
+        "transcript": "<redacted>",
         "transcript_cer": 0.737
       },
       "word_level_lrc": {
@@ -875,7 +875,7 @@
         "max_span_fraction": 0.748,
         "blank_fraction": 0.0,
         "mean_token_score": -15.4,
-        "transcript": "はいつお切なく美しいけれど波いた拭いて扉ただこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.52
       },
       "oracle": {
@@ -889,7 +889,7 @@
         "max_span_fraction": 0.788,
         "blank_fraction": 0.0,
         "mean_token_score": -16.23,
-        "transcript": "はいつおせなく美しいけれど波いた拭いて扉ただこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.56
       },
       "energy_trim": {
@@ -903,7 +903,7 @@
         "max_span_fraction": 0.748,
         "blank_fraction": 0.0,
         "mean_token_score": -15.4,
-        "transcript": "はいつお切なく美しいけれど波いた拭いて扉ただこ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.52
       },
       "word_level_lrc": {
@@ -926,7 +926,7 @@
         "max_span_fraction": 0.779,
         "blank_fraction": 0.0,
         "mean_token_score": -9.93,
-        "transcript": "水の馬にしでが思いいでつり行く時が",
+        "transcript": "<redacted>",
         "transcript_cer": 0.812
       },
       "oracle": {
@@ -940,7 +940,7 @@
         "max_span_fraction": 0.83,
         "blank_fraction": 0.0,
         "mean_token_score": -10.93,
-        "transcript": "馬にし手が思いいでつり行く時が",
+        "transcript": "<redacted>",
         "transcript_cer": 0.875
       },
       "energy_trim": {
@@ -954,7 +954,7 @@
         "max_span_fraction": 0.759,
         "blank_fraction": 0.0,
         "mean_token_score": -10.82,
-        "transcript": "伊豆の馬にし手が思いいでつり行く時が",
+        "transcript": "<redacted>",
         "transcript_cer": 0.812
       },
       "word_level_lrc": {
@@ -975,7 +975,7 @@
         "max_span_fraction": 0.396,
         "blank_fraction": 0.0,
         "mean_token_score": -13.51,
-        "transcript": "がわる振りだしだこのあめに無情にも",
+        "transcript": "<redacted>",
         "transcript_cer": 0.526
       },
       "oracle": {
@@ -987,7 +987,7 @@
         "max_span_fraction": 0.362,
         "blank_fraction": 0.0,
         "mean_token_score": -13.7,
-        "transcript": "がわる振りだしだこのあめに無情にも",
+        "transcript": "<redacted>",
         "transcript_cer": 0.526
       },
       "energy_trim": {
@@ -999,7 +999,7 @@
         "max_span_fraction": 0.397,
         "blank_fraction": 0.0,
         "mean_token_score": -13.27,
-        "transcript": "がわる振りだしだこのあめに無情にも",
+        "transcript": "<redacted>",
         "transcript_cer": 0.526
       },
       "word_level_lrc": {
@@ -1024,7 +1024,7 @@
         "max_span_fraction": 0.337,
         "blank_fraction": 0.001,
         "mean_token_score": -14.88,
-        "transcript": "が広がてくわがままだだけのそんでいた",
+        "transcript": "<redacted>",
         "transcript_cer": 0.64
       },
       "oracle": {
@@ -1036,7 +1036,7 @@
         "max_span_fraction": 0.334,
         "blank_fraction": 0.002,
         "mean_token_score": -14.3,
-        "transcript": "がひがてくわがままだだけのそんでいた",
+        "transcript": "<redacted>",
         "transcript_cer": 0.68
       },
       "energy_trim": {
@@ -1048,7 +1048,7 @@
         "max_span_fraction": 0.337,
         "blank_fraction": 0.001,
         "mean_token_score": -14.88,
-        "transcript": "が広がてくわがままだだけのそんでいた",
+        "transcript": "<redacted>",
         "transcript_cer": 0.64
       },
       "word_level_lrc": {
@@ -1075,7 +1075,7 @@
         "max_span_fraction": 0.779,
         "blank_fraction": 0.0,
         "mean_token_score": -15.49,
-        "transcript": "勢のまに亡くし入れた思いで移り",
+        "transcript": "<redacted>",
         "transcript_cer": 0.438
       },
       "oracle": {
@@ -1089,7 +1089,7 @@
         "max_span_fraction": 0.744,
         "blank_fraction": 0.0,
         "mean_token_score": -15.61,
-        "transcript": "にくした思いで移り",
+        "transcript": "<redacted>",
         "transcript_cer": 0.5
       },
       "energy_trim": {
@@ -1103,7 +1103,7 @@
         "max_span_fraction": 0.744,
         "blank_fraction": 0.0,
         "mean_token_score": -15.75,
-        "transcript": "に亡くし入れた思いで移り",
+        "transcript": "<redacted>",
         "transcript_cer": 0.562
       },
       "word_level_lrc": {
@@ -1124,7 +1124,7 @@
         "max_span_fraction": 0.318,
         "blank_fraction": 0.0,
         "mean_token_score": -14.8,
-        "transcript": "時が涙がわる売り出しこの輪めに部情にも",
+        "transcript": "<redacted>",
         "transcript_cer": 0.421
       },
       "oracle": {
@@ -1136,7 +1136,7 @@
         "max_span_fraction": 0.294,
         "blank_fraction": 0.0,
         "mean_token_score": -14.99,
-        "transcript": "時涙みがわる売り出しこの輪めに部情にも",
+        "transcript": "<redacted>",
         "transcript_cer": 0.474
       },
       "energy_trim": {
@@ -1148,7 +1148,7 @@
         "max_span_fraction": 0.322,
         "blank_fraction": 0.0,
         "mean_token_score": -14.73,
-        "transcript": "時涙がわる売り出しこの輪めに部情にも",
+        "transcript": "<redacted>",
         "transcript_cer": 0.474
       },
       "word_level_lrc": {
@@ -1173,7 +1173,7 @@
         "max_span_fraction": 0.336,
         "blank_fraction": 0.001,
         "mean_token_score": -15.12,
-        "transcript": "そがてくるわがまのだけのそんでいた",
+        "transcript": "<redacted>",
         "transcript_cer": 0.72
       },
       "oracle": {
@@ -1185,7 +1185,7 @@
         "max_span_fraction": 0.325,
         "blank_fraction": 0.002,
         "mean_token_score": -14.36,
-        "transcript": "そが日がてくるわがまのだけのそんでいた",
+        "transcript": "<redacted>",
         "transcript_cer": 0.68
       },
       "energy_trim": {
@@ -1197,7 +1197,7 @@
         "max_span_fraction": 0.337,
         "blank_fraction": 0.001,
         "mean_token_score": -15.03,
-        "transcript": "そがてくるわがまのだけのそんでいた",
+        "transcript": "<redacted>",
         "transcript_cer": 0.72
       },
       "word_level_lrc": {
@@ -1224,7 +1224,7 @@
         "max_span_fraction": 0.979,
         "blank_fraction": 0.0,
         "mean_token_score": -14.07,
-        "transcript": "は元気愚くの大先",
+        "transcript": "<redacted>",
         "transcript_cer": 0.625
       },
       "oracle": {
@@ -1238,7 +1238,7 @@
         "max_span_fraction": 0.979,
         "blank_fraction": 0.0,
         "mean_token_score": -14.21,
-        "transcript": "は元気愚くの大先",
+        "transcript": "<redacted>",
         "transcript_cer": 0.625
       },
       "energy_trim": {
@@ -1252,7 +1252,7 @@
         "max_span_fraction": 0.892,
         "blank_fraction": 0.0,
         "mean_token_score": -14.62,
-        "transcript": "は元気お愚くの大先",
+        "transcript": "<redacted>",
         "transcript_cer": 0.688
       },
       "word_level_lrc": {
@@ -1273,7 +1273,7 @@
         "max_span_fraction": 0.38,
         "blank_fraction": 0.0,
         "mean_token_score": -15.04,
-        "transcript": "さくちとなるくさパら一本ばして",
+        "transcript": "<redacted>",
         "transcript_cer": 1.0
       },
       "oracle": {
@@ -1285,7 +1285,7 @@
         "max_span_fraction": 0.432,
         "blank_fraction": 0.0,
         "mean_token_score": -15.49,
-        "transcript": "さ道となるさパ",
+        "transcript": "<redacted>",
         "transcript_cer": 0.933
       },
       "energy_trim": {
@@ -1297,7 +1297,7 @@
         "max_span_fraction": 0.432,
         "blank_fraction": 0.0,
         "mean_token_score": -13.42,
-        "transcript": "ばし",
+        "transcript": "<redacted>",
         "transcript_cer": 1.0
       },
       "word_level_lrc": {
@@ -1322,7 +1322,7 @@
         "max_span_fraction": 0.418,
         "blank_fraction": 0.0,
         "mean_token_score": -15.46,
-        "transcript": "つくぶちゃんれ道雲の咲くてくみし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.818
       },
       "oracle": {
@@ -1334,7 +1334,7 @@
         "max_span_fraction": 0.418,
         "blank_fraction": 0.0,
         "mean_token_score": -15.46,
-        "transcript": "つくぶちゃんれ道雲の咲くてくみし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.818
       },
       "energy_trim": {
@@ -1346,7 +1346,7 @@
         "max_span_fraction": 0.418,
         "blank_fraction": 0.0,
         "mean_token_score": -15.46,
-        "transcript": "つくぶちゃんれ道雲の咲くてくみし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.818
       },
       "word_level_lrc": {
@@ -1373,7 +1373,7 @@
         "max_span_fraction": 0.983,
         "blank_fraction": 0.0,
         "mean_token_score": -14.76,
-        "transcript": "の私は嫌疑おくの大好き殿",
+        "transcript": "<redacted>",
         "transcript_cer": 0.625
       },
       "oracle": {
@@ -1387,7 +1387,7 @@
         "max_span_fraction": 0.982,
         "blank_fraction": 0.0,
         "mean_token_score": -14.92,
-        "transcript": "の子私は嫌ぐおくの大好き",
+        "transcript": "<redacted>",
         "transcript_cer": 0.562
       },
       "energy_trim": {
@@ -1401,7 +1401,7 @@
         "max_span_fraction": 0.629,
         "blank_fraction": 0.0,
         "mean_token_score": -15.11,
-        "transcript": "どう",
+        "transcript": "<redacted>",
         "transcript_cer": 0.938
       },
       "word_level_lrc": {
@@ -1422,7 +1422,7 @@
         "max_span_fraction": 0.495,
         "blank_fraction": 0.0,
         "mean_token_score": -13.75,
-        "transcript": "佐くま町ドぬるくさ",
+        "transcript": "<redacted>",
         "transcript_cer": 1.0
       },
       "oracle": {
@@ -1434,7 +1434,7 @@
         "max_span_fraction": 0.495,
         "blank_fraction": 0.0,
         "mean_token_score": -13.75,
-        "transcript": "佐くま町ドぬるくさ",
+        "transcript": "<redacted>",
         "transcript_cer": 1.0
       },
       "energy_trim": {
@@ -1446,7 +1446,7 @@
         "max_span_fraction": 0.492,
         "blank_fraction": 0.0,
         "mean_token_score": -13.73,
-        "transcript": "佐くま町ドぬるくさ",
+        "transcript": "<redacted>",
         "transcript_cer": 1.0
       },
       "word_level_lrc": {
@@ -1471,7 +1471,7 @@
         "max_span_fraction": 0.469,
         "blank_fraction": 0.0,
         "mean_token_score": -15.94,
-        "transcript": "一歩橋み九もこ町目みしす久みし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.864
       },
       "oracle": {
@@ -1483,7 +1483,7 @@
         "max_span_fraction": 0.469,
         "blank_fraction": 0.0,
         "mean_token_score": -15.94,
-        "transcript": "一歩橋み九もこ町目みしす久みし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.864
       },
       "energy_trim": {
@@ -1495,7 +1495,7 @@
         "max_span_fraction": 0.369,
         "blank_fraction": 0.0,
         "mean_token_score": -14.57,
-        "transcript": "九も校町目しのすくみし",
+        "transcript": "<redacted>",
         "transcript_cer": 0.909
       },
       "word_level_lrc": {

@@ -123,11 +123,11 @@
   "dumps": [
     {
       "id": "Japanese/JA-Tenor-1/Vibrato/さんぽ/Control_Group/0000",
-      "text": "歩こう歩こう私は元気歩くの大好き",
+      "text": "<redacted>",
       "chars": [
         {
-          "char": "歩",
-          "kana": "ある",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "a",
             "r",
@@ -141,8 +141,8 @@
           "hubert_end": 0.62
         },
         {
-          "char": "こ",
-          "kana": "こ",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "k",
             "o"
@@ -155,8 +155,8 @@
           "hubert_end": 1.12
         },
         {
-          "char": "う",
-          "kana": "ー",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "O"
           ],
@@ -168,8 +168,8 @@
           "hubert_end": 1.16
         },
         {
-          "char": "歩",
-          "kana": "ある",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "a",
             "r",
@@ -183,8 +183,8 @@
           "hubert_end": 2.72
         },
         {
-          "char": "こ",
-          "kana": "こ",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "k",
             "o"
@@ -197,8 +197,8 @@
           "hubert_end": 3.24
         },
         {
-          "char": "う",
-          "kana": "ー",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "O"
           ],
@@ -210,8 +210,8 @@
           "hubert_end": 4.22
         },
         {
-          "char": "私",
-          "kana": "わたし",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "w",
             "a",
@@ -228,8 +228,8 @@
           "hubert_end": 4.84
         },
         {
-          "char": "は",
-          "kana": "わ",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "w",
             "a"
@@ -242,8 +242,8 @@
           "hubert_end": 5.08
         },
         {
-          "char": "元",
-          "kana": "げ",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "g",
             "e"
@@ -256,8 +256,8 @@
           "hubert_end": 5.5600000000000005
         },
         {
-          "char": "気",
-          "kana": "んき",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "N",
             "k",
@@ -271,8 +271,8 @@
           "hubert_end": 6.12
         },
         {
-          "char": "歩",
-          "kana": "ある",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "a",
             "r",
@@ -286,8 +286,8 @@
           "hubert_end": 8.06
         },
         {
-          "char": "く",
-          "kana": "く",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "k",
             "u"
@@ -300,8 +300,8 @@
           "hubert_end": 8.28
         },
         {
-          "char": "の",
-          "kana": "の",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "n",
             "o"
@@ -314,8 +314,8 @@
           "hubert_end": 8.64
         },
         {
-          "char": "大",
-          "kana": "だ",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "d",
             "a"
@@ -328,8 +328,8 @@
           "hubert_end": 9.16
         },
         {
-          "char": "好",
-          "kana": "いす",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "i",
             "s",
@@ -343,8 +343,8 @@
           "hubert_end": 9.68
         },
         {
-          "char": "き",
-          "kana": "き",
+          "char": "<redacted>",
+          "kana": "<redacted>",
           "phonemes": [
             "k",
             "i"
