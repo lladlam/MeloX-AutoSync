@@ -119,3 +119,14 @@ V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射
 - **结论（否定）**：质量门控判别力不足（最佳 AUC 0.665；接受 50% 行后严重行率仍 0.47）→
   仅作保守回退，**V0.5 时间轴保持默认**；详见 `docs/ALIGNMENT_CONFIDENCE.md`、
   `docs/SELECTIVE_ALIGNMENT_REPORT.md`。
+
+### 新增（V0.8）— 引擎正确性、回退契约与 CLI 整合
+
+- 显式**后端注册表**：ja 默认改为 **HuBERT Phoneme CTC**（experimental），ReazonSpeech 保留为可选基线，
+  pyshiro 仅本地研究；`--backend` / `--mode` / `autosync info`。
+- **原始 LRC 时间与模型时间彻底分离**（`lrc_start`/`lrc_end`/`model_start`/`model_end`/`display_end`）；
+  回退使用原始 LRC 的时间与文字。见 `docs/LRC_FALLBACK_CONTRACT.md`。
+- **未评估 ≠ 可靠**：门控启用时未评估模型行安全回退；`quality_summary` 在决策后统计。
+- 修复交叉验证**特征选择泄漏**：更正后 LOSO F1 0.58 / LOSO-song 0.59（V0.7 偏乐观作废）。
+- 新增 `docs/ENGINE_INTEGRATION_AUDIT.md`、`docs/LRC_FALLBACK_CONTRACT.md`、`docs/CLI_END_TO_END.md`；
+  `tests/test_cli_integration.py`、`tests/test_fallback_timestamps.py`。

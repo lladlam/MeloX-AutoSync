@@ -48,12 +48,11 @@ OMP_NUM_THREADS=4 uv run --extra funasr python benchmarks/accompaniment_eval.py 
 OMP_NUM_THREADS=4 uv run python benchmarks/accompaniment_eval.py \
   --language en --out experiments/reports/accompaniment_en.json
 
-echo "== Alternative models (research overrides, NOT shipped defaults) =="
-AUTOSYNC_JA_REPO=reazon-research/japanese-wav2vec2-large-rs35kh OMP_NUM_THREADS=4 uv run python \
-  benchmarks/singing_eval.py --languages ja --engines model,model+energy \
-  --out experiments/reports/singing_ja_large.json || true
-AUTOSYNC_EN_REPO=facebook/wav2vec2-large-960h OMP_NUM_THREADS=4 uv run python \
-  benchmarks/singing_eval.py --languages en --engines model,model+energy \
-  --out experiments/reports/singing_en_large.json || true
+echo "== Alternative backends (explicit; NOT shipped defaults) =="
+# ja default is now hubert-phoneme-ctc-v4; the reazonspeech baseline is selected
+# explicitly. The V0.3 large models were ad-hoc research overrides and are not
+# part of the V0.8 backend registry.
+OMP_NUM_THREADS=4 uv run python benchmarks/singing_eval.py --languages ja \
+  --engines model --modes lrc_only --out experiments/reports/singing_ja_baseline.json || true
 
 echo "done -> experiments/reports/"

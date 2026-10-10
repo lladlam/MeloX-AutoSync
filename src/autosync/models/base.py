@@ -32,6 +32,9 @@ class ModelMeta:
     language: str
     license: str
     approx_size_mb: int = 0
+    # V0.8: lifecycle status of the backend (stable | experimental | research)
+    status: str = "stable"
+    description: str = ""
 
 
 class BaseAligner(ABC):

@@ -72,6 +72,11 @@ class AlignedLine:
     # V0.7 quality gate: "reliable" | "uncertain" | "failed" | None (not assessed)
     quality: str | None = None
     quality_reasons: list[str] = field(default_factory=list)
+    # V0.8: the ORIGINAL LRC line times, kept separate from the model prediction
+    # (``start``/``end``). ``lrc_end`` stays ``None`` for plain LRC without an
+    # explicit end time; it must never be fabricated.
+    lrc_start: float | None = None
+    lrc_end: float | None = None
 
 
 @dataclass
@@ -85,6 +90,8 @@ class ModelInfo:
     infer_seconds: float | None = None
     # Duration of one acoustic frame in seconds (the alignment time quantum).
     frame_seconds: float | None = None
+    # V0.8: lifecycle status of the backend (stable | experimental | research)
+    status: str = "stable"
 
 
 @dataclass

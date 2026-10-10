@@ -241,6 +241,8 @@ def align_lines(
                 error=err,
                 quality=q_state,
                 quality_reasons=q_reasons,
+                lrc_start=line.start,
+                lrc_end=line.end,
             )
         )
 

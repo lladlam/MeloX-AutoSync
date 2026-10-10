@@ -15,7 +15,13 @@ from .config import CROP_PADDING_SECONDS, DEFAULT_SAMPLE_RATE, MODELS_DIR
 from .export.json_export import write_json
 from .lyrics.lrc import parse_lrc
 from .lyrics.normalize import display_units
-from .models.registry import SUPPORTED_LANGUAGES, get_aligner
+from .models.registry import (
+    DEFAULT_BACKENDS,
+    SUPPORTED_LANGUAGES,
+    get_aligner,
+    list_backends,
+)
+from .quality.gating import DEFAULT_POLICIES, gate_result, summarize
 from .types import AlignedLine, AlignmentResult, ModelInfo
 
 
@@ -44,6 +50,8 @@ def _heuristic_lines(audio, sample_rate: int, lines, language: str):
                 units=dist,
                 source="heuristic" if dist else "failed",
                 error=None if dist else "no display units",
+                lrc_start=line.start,
+                lrc_end=line.end,
             )
         )
     return out
@@ -74,10 +82,15 @@ def cmd_align(args: argparse.Namespace) -> int:
             diagnostics={"source_metadata": meta},
         )
     else:
-        aligner = get_aligner(args.language, cache_dir=Path(args.cache_dir))
+        aligner = get_aligner(args.language, backend=args.backend, cache_dir=Path(args.cache_dir))
         t0 = time.time()
         aligner.load()
         load_seconds = time.time() - t0
+        print(
+            f"backend: {aligner.meta.name}  status={aligner.meta.status}  "
+            f"license={aligner.meta.license}",
+            file=sys.stderr,
+        )
         if args.device != "cpu":
             print(f"note: only CPU inference is validated; requested {args.device}", file=sys.stderr)
         options = SegmentOptions(
@@ -106,20 +119,24 @@ def cmd_align(args: argparse.Namespace) -> int:
                 load_seconds=round(load_seconds, 3),
                 infer_seconds=round(getattr(aligner, "infer_seconds", 0.0) or 0.0, 3),
                 frame_seconds=aligner.frame_seconds,
+                status=aligner.meta.status,
             ),
             warnings=warnings,
             diagnostics={
                 "source_metadata": meta,
                 "padding_seconds": args.padding,
                 "refine": args.refine,
+                "backend": args.backend or DEFAULT_BACKENDS.get(args.language),
             },
         )
+
+    # V0.8: resolve the quality gate (only model engines use a policy) BEFORE export.
+    policy = DEFAULT_POLICIES.get(args.language) if args.engine == "model" else None
+    gate_result(result, policy, mode=args.mode)
 
     out = write_json(result, args.output)
     n_model = sum(1 for ln in result.lines if ln.source == "model")
     n_failed = sum(1 for ln in result.lines if ln.source == "failed")
-    from .quality.gating import summarize
-
     qs = summarize(result.lines)
     print(
         f"wrote {out}\n  lines: {len(result.lines)}  model-aligned: {n_model}  failed: {n_failed}\n"
@@ -131,16 +148,20 @@ def cmd_align(args: argparse.Namespace) -> int:
 
 
 def cmd_info(args: argparse.Namespace) -> int:
-    print("MeloX-AutoSync supported languages:")
-    from .models.registry import EN_LICENSE, EN_REPO, JA_LICENSE, JA_REPO, ZH_LICENSE, ZH_REPO
-
-    rows = [
-        ("en", EN_REPO, "wav2vec2-base-960h, char CTC, word units", EN_LICENSE, "transformers"),
-        ("ja", JA_REPO, "wav2vec2 base, phoneme/char CTC -> kana reading", JA_LICENSE, "transformers"),
-        ("zh", ZH_REPO, "Paraformer timestamp prediction, hanzi timestamps", ZH_LICENSE, "funasr"),
-    ]
-    for lang, repo, desc, lic, backend in rows:
-        print(f"  {lang}: {repo}  [{lic}]  backend={backend}\n      {desc}")
+    print("MeloX-AutoSync backends (per language, loaded on demand):")
+    current = None
+    for spec in list_backends():
+        if spec.language != current:
+            current = spec.language
+            print(f"\n[{current}]  default={DEFAULT_BACKENDS[current]}")
+        default = " (default)" if spec.key == DEFAULT_BACKENDS[current] else ""
+        print(
+            f"  {spec.key}{default}\n"
+            f"      repo={spec.repo}\n"
+            f"      status={spec.status}  license={spec.license}  "
+            f"distributable={'yes' if spec.distributable else 'no'}\n"
+            f"      {spec.description}"
+        )
     print(f"\nmodel cache: {MODELS_DIR}")
     return 0
 
@@ -159,6 +180,18 @@ def build_parser() -> argparse.ArgumentParser:
     a.add_argument("--language", required=True, choices=SUPPORTED_LANGUAGES)
     a.add_argument("--output", required=True, help="output JSON path")
     a.add_argument("--engine", choices=["model", "heuristic"], default="model")
+    a.add_argument(
+        "--backend",
+        default=None,
+        help="model backend key (default: language default). See `autosync info`.",
+    )
+    a.add_argument(
+        "--mode",
+        choices=["production", "experimental"],
+        default="production",
+        help="production falls back to line LRC unless RELIABLE; experimental also "
+        "emits diagnostic word timings for UNCERTAIN (never FAILED)",
+    )
     a.add_argument("--device", default="cpu", help="cpu (only cpu is validated)")
     a.add_argument(
         "--padding",

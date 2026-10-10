@@ -1,7 +1,8 @@
 {
-  "generated": "2026-10-10 23:22:28",
+  "generated": "2026-10-10 23:43:37",
   "platform": "Linux-7.2.6-arch2-1-x86_64-with-glibc2.44",
-  "note": "exploratory: 30 lines / 2 singers; thresholds from grouped CV only",
+  "method": "fold-local feature AND threshold selection (V0.8); descriptive screening is not used for gating",
+  "note": "exploratory: 30 lines / 2 singers; no held-out global threshold",
   "severe_threshold_s": 1.0,
   "n_severe": 20,
   "screening": {
@@ -43,75 +44,75 @@
       "folds": [
         {
           "held_out": "JA-Soprano-1",
-          "feature": "max_intra_char_span_s",
-          "threshold": -0.595,
-          "tp": 10,
-          "fp": 7,
-          "fn": 4,
-          "tn": 3,
+          "feature": "score_margin_per_token",
+          "threshold": 0.9505301715005174,
+          "tp": 3,
+          "fp": 2,
+          "fn": 11,
+          "tn": 8,
           "n_test": 24,
           "n_severe": 14
         },
         {
           "held_out": "JA-Tenor-1",
-          "feature": "max_intra_char_span_s",
-          "threshold": -0.9,
-          "tp": 3,
+          "feature": "blank_dominant_ratio",
+          "threshold": -0.9051266807831297,
+          "tp": 6,
           "fp": 0,
-          "fn": 3,
+          "fn": 0,
           "tn": 0,
           "n_test": 6,
           "n_severe": 6
         }
       ],
       "pooled": {
-        "tp": 13,
-        "fp": 7,
-        "fn": 7,
-        "precision": 0.65,
-        "recall": 0.65,
-        "f1": 0.65
+        "tp": 9,
+        "fp": 2,
+        "fn": 11,
+        "precision": 0.8181818181818182,
+        "recall": 0.45,
+        "f1": 0.5806451612903226
       }
     },
     "leave_one_song_out": {
       "folds": [
         {
           "held_out": "first love",
-          "feature": "score_margin_per_token",
-          "threshold": 3.946254858413401,
-          "tp": 3,
+          "feature": "blank_dominant_ratio",
+          "threshold": -0.9081548217632707,
+          "tp": 2,
           "fp": 3,
-          "fn": 0,
+          "fn": 1,
           "tn": 0,
           "n_test": 6,
           "n_severe": 3
         },
         {
           "held_out": "heartful song",
-          "feature": "free_decode_agreement",
-          "threshold": 0.7723809523809524,
-          "tp": 7,
-          "fp": 3,
-          "fn": 2,
-          "tn": 0,
+          "feature": "score_margin_per_frame",
+          "threshold": 0.11794706397333343,
+          "tp": 2,
+          "fp": 2,
+          "fn": 7,
+          "tn": 1,
           "n_test": 12,
           "n_severe": 9
         },
         {
           "held_out": "さんぽ",
-          "feature": "max_intra_char_span_s",
-          "threshold": -0.9,
-          "tp": 3,
+          "feature": "blank_dominant_ratio",
+          "threshold": -0.9051266807831297,
+          "tp": 6,
           "fp": 0,
-          "fn": 3,
+          "fn": 0,
           "tn": 0,
           "n_test": 6,
           "n_severe": 6
         },
         {
           "held_out": "时雨",
-          "feature": "free_decode_agreement",
-          "threshold": 0.8288402457757297,
+          "feature": "score_margin_per_token",
+          "threshold": 3.946254858413401,
           "tp": 2,
           "fp": 4,
           "fn": 0,
@@ -121,12 +122,12 @@
         }
       ],
       "pooled": {
-        "tp": 15,
-        "fp": 10,
-        "fn": 5,
-        "precision": 0.6,
-        "recall": 0.75,
-        "f1": 0.6666666666666665
+        "tp": 12,
+        "fp": 9,
+        "fn": 8,
+        "precision": 0.5714285714285714,
+        "recall": 0.6,
+        "f1": 0.5853658536585366
       }
     }
   },

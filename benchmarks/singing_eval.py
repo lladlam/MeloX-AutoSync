@@ -273,7 +273,10 @@ def build_payload(segments: list[dict], langs, engines, modes, lrc_onset, pad) -
         needed = {ENGINE_SPEC[e][1] for e in engines if e in ENGINE_SPEC}
         if "ctc" in needed and segs:
             try:
-                ctc = get_aligner(language)
+                # Pin the ja CTC baseline to ReazonSpeech so the "model" engine keeps
+                # its V0.5 meaning (the ja default backend is now HuBERT).
+                ctc_backend = "reazonspeech-wav2vec2-base" if language == "ja" else None
+                ctc = get_aligner(language, backend=ctc_backend)
                 ctc.load()
                 aligners["ctc"] = ctc
                 print(f"[{language}] ctc model loaded: {ctc.meta.name}")

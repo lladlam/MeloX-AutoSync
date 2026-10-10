@@ -107,7 +107,10 @@ def test_player_timeline_fallback_preserves_lyrics() -> None:
     assert tl[1]["mode"] == "line_lrc" and "units" not in tl[1]
     # original lyrics always preserved
     assert tl[1]["text"] == "あしたはあめ"
-    assert tl[1]["line_start"] == 3.0
+    # original LRC start is kept independently of the model prediction
+    assert tl[1]["lrc_start"] == 3.0
+    # a plain LRC line has no explicit end -> null, never fabricated
+    assert tl[1]["lrc_end"] is None
 
 
 def test_json_export_has_quality_and_timeline() -> None:

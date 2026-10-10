@@ -80,11 +80,9 @@ uv run python benchmarks/diagnosis.py --language en --out experiments/reports/di
 uv run --extra funasr python benchmarks/accompaniment_eval.py --language zh --out experiments/reports/accompaniment_zh.json
 uv run python benchmarks/accompaniment_eval.py --language en --out experiments/reports/accompaniment_en.json
 
-# 5. Alternative acoustic models (research overrides, not shipped defaults).
-AUTOSYNC_JA_REPO=reazon-research/japanese-wav2vec2-large-rs35kh \
-  uv run python benchmarks/singing_eval.py --languages ja --engines model,model+energy --out experiments/reports/singing_ja_large.json
-AUTOSYNC_EN_REPO=facebook/wav2vec2-large-960h \
-  uv run python benchmarks/singing_eval.py --languages en --engines model,model+energy --out experiments/reports/singing_en_large.json
+# 5. Alternative backends are selected explicitly via `--backend`
+#    (see `autosync info`). The V0.3 large-model research overrides are not part
+#    of the V0.8 registry.
 ```
 
 The downloaded audio/annotations live under `experiments/singing/` which is

@@ -1,16 +1,25 @@
-"""Player-facing fallback policy for the three quality states (V0.7 §4).
+"""Player-facing fallback policy for the three quality states (V0.7/V0.8).
 
-The gate never overwrites, alters or discards the original lyrics. Given the
-per-line quality states it produces a `player_timeline`:
+The gate never overwrites, alters or discards the original lyrics or the original
+LRC timestamps.  :func:`player_timeline` keeps **four independent times** per
+line:
 
-* ``RELIABLE``  -> emit the word-level units;
-* ``UNCERTAIN`` -> keep the diagnostic timeline but the player should use the
-  original **line-level LRC**;
-* ``FAILED``    -> structured failure; player uses the original line-level LRC.
+* ``lrc_start`` / ``lrc_end`` – the original LRC times (``lrc_end`` is ``null``
+  when the LRC has no explicit end; it is never fabricated);
+* ``model_start`` / ``model_end`` – the model prediction (``null`` when the line
+  did not align);
+* ``display_end`` – a *derived* hint for the player (the next line's original LRC
+  start), explicitly marked via ``display_end_source``.
 
-Line-level fallback is used (not per-word) to avoid visual flicker between
-word and line display within a line. Per-language policies are independent; only
-Japanese uses the calibrated gate by default.
+Modes
+-----
+* ``production`` (default) – word timeline only for ``RELIABLE`` lines; when a
+  language gate is enabled, an unassessed line is treated as ``UNCERTAIN`` and
+  safely falls back. Non-gated languages (en/zh) keep word mode.
+* ``experimental`` – additionally allow the diagnostic word timeline for
+  ``UNCERTAIN`` lines (never for ``FAILED``).
+
+FAILED/UNCERTAIN fall back to the **original LRC times and text** (line level).
 """
 
 from __future__ import annotations
@@ -21,7 +30,7 @@ from ..types import AlignedLine, AlignmentResult
 from .decision import QualityPolicy, QualityState
 
 # Default policy is intentionally conservative and language-scoped. English and
-# Chinese are NOT gated (their calibration is out of scope for V0.7).
+# Chinese are NOT gated (their calibration is out of scope).
 DEFAULT_POLICIES: dict[str, QualityPolicy | None] = {
     "ja": QualityPolicy(name="ja-hubert-conservative-v07", max_intra_char_span_s=1.5, max_char_duration_ratio=10.0),
     "en": None,
@@ -40,37 +49,78 @@ def summarize(lines: list[AlignedLine]) -> dict[str, int]:
     return counts
 
 
+def gate_result(
+    result: AlignmentResult,
+    policy: QualityPolicy | None = None,
+    mode: str = "production",
+) -> AlignmentResult:
+    """Resolve not-assessed lines and record the gate configuration.
+
+    When a policy is active, any **model** line that was not assessed (quality
+    analysis missing or failed) is conservatively marked ``UNCERTAIN`` so it
+    falls back rather than being treated as reliable.
+    """
+    enabled = policy is not None
+    if enabled:
+        for line in result.lines:
+            if line.quality is None and line.source == "model":
+                line.quality = QualityState.UNCERTAIN.value
+                line.quality_reasons = ["not assessed by the quality analyzer; safe fallback"]
+    result.quality_summary = summarize(result.lines)
+    result.diagnostics["quality_gate"] = {
+        "enabled": enabled,
+        "policy": policy.name if policy else None,
+        "mode": mode,
+    }
+    return result
+
+
 def player_timeline(result: AlignmentResult) -> list[dict[str, Any]]:
-    """Build the player timeline, falling back to line LRC for non-reliable lines."""
+    """Build the player timeline with independent LRC / model / derived times."""
+    gate = result.diagnostics.get("quality_gate", {}) if isinstance(result.diagnostics, dict) else {}
+    enabled = bool(gate.get("enabled", False))
+    mode = gate.get("mode", "production")
+
+    lines = result.lines
     out: list[dict[str, Any]] = []
-    for line in result.lines:
-        # ``None`` means "not assessed" (e.g. en/zh are not gated): keep word mode.
-        reliable = line.quality in (None, QualityState.RELIABLE.value)
+    for i, line in enumerate(lines):
+        reliable = line.quality == QualityState.RELIABLE.value
+        is_model = line.source in ("model", "heuristic") and bool(line.units)
+        if line.quality == QualityState.FAILED.value:
+            word_mode = False
+        elif line.quality == QualityState.UNCERTAIN.value:
+            # diagnostic timings only in experimental mode
+            word_mode = is_model and mode == "experimental"
+        elif reliable:
+            word_mode = is_model
+        else:  # not assessed
+            word_mode = is_model and not enabled
+
+        next_lrc = None
+        if i + 1 < len(lines) and lines[i + 1].lrc_start is not None:
+            next_lrc = lines[i + 1].lrc_start
+
         entry: dict[str, Any] = {
             "index": line.index,
-            # original lyrics are always preserved
+            # original text is always preserved
             "text": line.text,
-            "line_start": line.start,
-            "line_end": line.end,
-            "mode": "word" if reliable and line.units else "line_lrc",
+            # --- original LRC times (never fabricated) ---
+            "lrc_start": line.lrc_start if line.lrc_start is not None else line.start,
+            "lrc_end": line.lrc_end,  # null when the LRC has no explicit end
+            # --- model prediction (null when not aligned) ---
+            "model_start": line.start if line.source in ("model", "heuristic") and line.units else None,
+            "model_end": line.end if line.source in ("model", "heuristic") and line.units else None,
+            # --- derived display hint (explicitly not an original LRC end) ---
+            "display_end": next_lrc,
+            "display_end_source": "derived_from_next_lrc_start" if next_lrc is not None else None,
+            "mode": "word" if word_mode else "line_lrc",
+            "source": line.source,
             "quality": line.quality or "not_assessed",
             "reasons": line.quality_reasons,
         }
-        if entry["mode"] == "word":
+        if word_mode:
             entry["units"] = [
                 {"text": u.text, "start": u.start, "end": u.end, "source": u.source} for u in line.units
             ]
         out.append(entry)
     return out
-
-
-def gate_result(result: AlignmentResult, policy: QualityPolicy | None = None) -> AlignmentResult:
-    """Attach the quality summary (and, if given, apply a policy to None-states)."""
-    result.quality_summary = summarize(result.lines)
-    if policy is not None:
-        for line in result.lines:
-            if line.quality is None:
-                # policy-gated but not assessed -> be conservative
-                line.quality = QualityState.UNCERTAIN.value
-                line.quality_reasons = ["not assessed; defaulted to uncertain"]
-    return result

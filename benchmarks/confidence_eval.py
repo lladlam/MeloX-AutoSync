@@ -165,7 +165,8 @@ def main() -> int:
           f"primary threshold={args.severe_threshold}s -> {sum(labels)}")
 
     # ---- feature screening (correlation with max start error) --------------
-    print("\nfeature screening (Spearman vs max start error):")
+    # Descriptive only: this ranking is NOT used for any gating decision.
+    print("\nfeature screening (descriptive; not used for gating):")
     screening = {}
     for name in CANDIDATE_FEATURES:
         vals = [_orient(r["features"], name) for r in records]
@@ -182,15 +183,6 @@ def main() -> int:
         screening[name] = {"spearman": rho, "auc_detect_severe": auc}
         print(f"  {name:26s} spearman={rho:+.3f}  auc={auc:.3f}")
 
-    # primary feature = best AUC among the candidates (selected on all data for
-    # *reporting* only; the CV below re-selects on calibration folds).
-    primary = max(
-        (n for n in screening),
-        key=lambda n: screening[n]["auc_detect_severe"] if np.isfinite(screening[n]["auc_detect_severe"]) else -1,
-        default="score_margin_per_token",
-    )
-    print(f"\nprimary feature: {primary}")
-
     # ---- group-aware calibration ------------------------------------------
     groups = {"leave_one_singer_out": "singer", "leave_one_song_out": "song"}
     cv = {}
@@ -203,13 +195,14 @@ def main() -> int:
             if not test or not train:
                 continue
             tr_labels = [1 if r["start_max"] > args.severe_threshold else 0 for r in train]
+            # Fold-local model selection: choose BOTH feature and threshold on the
+            # training subset only (V0.8 fix; V0.7 selected the feature globally).
             best = None
-            for name in {primary, "score_margin_per_token", "free_decode_agreement"}:
+            for name in CANDIDATE_FEATURES:
                 t = _best_threshold(train, name, tr_labels)
                 if t is None:
                     continue
                 scores = [_orient(r["features"], name) for r in train]
-                # rough F1 on train to choose the feature
                 tp = sum(1 for s, y in zip(scores, tr_labels) if y == 1 and s < t)
                 fp = sum(1 for s, y in zip(scores, tr_labels) if y == 0 and s < t)
                 fn = sum(1 for s, y in zip(scores, tr_labels) if y == 1 and s >= t)
@@ -248,8 +241,10 @@ def main() -> int:
             print(f"  hold-out {f['held_out']:14s} feature={f['feature']:20s} thr={f['threshold']:+.2f} "
                   f"TP={f['tp']} FP={f['fp']} FN={f['fn']} TN={f['tn']} (severe {f['n_severe']}/{f['n_test']})")
 
-    # ---- risk-coverage curve (accept most-reliable fraction by `primary`) --
-    name = primary
+    # ---- risk-coverage curve (pre-registered feature, no peeking) ----------
+    # `max_intra_char_span_s` is chosen a priori as the timing-plausibility
+    # feature; it is NOT selected on the evaluation data.
+    name = "max_intra_char_span_s"
     order = sorted(records, key=lambda r: _orient(r["features"], name), reverse=True)  # most reliable first
     curve = []
     for k in range(len(order) + 1):
@@ -286,7 +281,8 @@ def main() -> int:
     payload = {
         "generated": __import__("time").strftime("%Y-%m-%d %H:%M:%S"),
         "platform": platform.platform(),
-        "note": "exploratory: 30 lines / 2 singers; thresholds from grouped CV only",
+        "method": "fold-local feature AND threshold selection (V0.8); descriptive screening is not used for gating",
+        "note": "exploratory: 30 lines / 2 singers; no held-out global threshold",
         "severe_threshold_s": args.severe_threshold,
         "n_severe": int(sum(labels)),
         "screening": screening,

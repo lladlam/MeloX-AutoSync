@@ -77,3 +77,13 @@
 - 时间轴本身仍是 V0.5（未改）；质量评估只读。
 - 代码审计（V0.7 §8）已修复：`gap_state` 替换 spans 后的陈旧元数据（重算路径得分）、
   `optional_pause` 明确为文档化 no-op、诊断 `.npz` 已从 Git 移除并加入 `.gitignore`。
+
+## 7. V0.8 引擎整合限制
+
+- **日语默认后端改为 HuBERT Phoneme CTC（experimental）**；旧 ReazonSpeech 为可选基线。生产模式默认
+  **安全回退**（非 RELIABLE 或未评估 → 整行 LRC），逐字时间需显式 `--mode experimental`。
+- **质量门控仍不可靠**：修正交叉验证的特征选择泄漏后，LOSO F1 降至 **0.58**、LOSO-song **0.59**
+  （V0.7 的 0.65/0.67 偏乐观，已作废）。真实案例中 `さんぽ` 被**误判为 reliable**（false accept）。
+- 因此门控**仅用于保守回退**，不作为精度保证。
+- **原始 LRC 时间与模型时间已彻底分离**（见 `docs/LRC_FALLBACK_CONTRACT.md`）；回退使用原始 LRC。
+- **真实整曲**（多行 + 伴奏 + 长时轴）验证仍未完成；仅有严格合成多行测试。

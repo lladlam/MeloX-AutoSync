@@ -87,3 +87,50 @@ def test_lrc_timestamp_offset_is_honoured() -> None:
     audio = np.zeros(SR * 20, dtype=np.float32)
     aligned, _ = align_lines(audio, SR, lines, FakeAligner(), SegmentOptions(), progress=False)
     assert abs(aligned[0].start - 10.5) < 0.31
+
+
+def _align_text(lrc: str, seconds: float, fail_on=None):
+    lines, _ = parse_lrc_text(lrc)
+    audio = np.zeros(int(SR * seconds), dtype=np.float32)
+    aligned, _ = align_lines(
+        audio, SR, lines, FakeAligner(fail_on=fail_on), SegmentOptions(padding=0.3), progress=False
+    )
+    return lines, aligned
+
+
+def test_intro_interlude_outro_gaps() -> None:
+    lrc = "[00:10.00]intro line\n[00:40.00]verse line\n[00:70.00]outro line\n"
+    _lines, aligned = _align_text(lrc, 90)
+    starts = [ln.start for ln in aligned]
+    assert starts == sorted(starts)
+    # each line's units stay in its own window, not the neighbour's
+    for i, ln in enumerate(aligned[:-1]):
+        nxt = aligned[i + 1].start
+        assert all(u.end <= nxt + 0.31 for u in ln.units)
+
+
+def test_repeated_lyrics_are_each_aligned() -> None:
+    lrc = "[00:02.00]same words\n[00:07.00]same words\n[00:12.00]same words\n"
+    _, aligned = _align_text(lrc, 20)
+    assert [ln.text for ln in aligned] == ["same words"] * 3
+    assert all(ln.source == "model" for ln in aligned)
+
+
+def test_units_are_monotonic_within_each_line() -> None:
+    lrc = "[00:01.00]aaa\n[00:05.00]bbb\n[00:09.00]ccc\n"
+    _, aligned = _align_text(lrc, 15)
+    for ln in aligned:
+        last = -1e9
+        for u in ln.units:
+            assert u.end >= u.start
+            assert u.start >= last - 1e-6
+            last = u.end
+
+
+def test_empty_lyric_line_is_safe() -> None:
+    lrc = "[00:01.00]good\n[00:04.00]\n[00:07.00]after\n"
+    lines, aligned = _align_text(lrc, 12)
+    # the pipeline must not crash and must keep every parsed line ordered
+    starts = [ln.start for ln in aligned]
+    assert starts == sorted(starts)
+    assert len(aligned) == len(lines)
