@@ -11,15 +11,19 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from ..quality.gating import player_timeline, summarize
 from ..types import AlignmentResult
 
-SCHEMA_VERSION = "0.1"
+SCHEMA_VERSION = "0.2"
 
 
 def result_to_dict(result: AlignmentResult) -> dict:
     data = result.to_dict()
     data["schema_version"] = SCHEMA_VERSION
     data["generator"] = "MeloX-AutoSync"
+    # V0.7: quality states and the conservative player timeline (LRC fallback)
+    data["quality_summary"] = summarize(result.lines)
+    data["player_timeline"] = player_timeline(result)
     return data
 
 

@@ -20,6 +20,7 @@ import numpy as np
 from ..alignment.ctc import InfeasibleAlignmentError, TokenSpan, forced_align
 from ..config import HF_CACHE_DIR
 from ..lyrics.ja_pronunciation import JapanesePronunciationMapper, locate_inner_offset
+from ..quality import QualityPolicy, decide, extract_features
 from ..types import AlignUnit
 from .base import BaseAligner, ModelMeta
 
@@ -105,6 +106,20 @@ def map_spans_to_char_units(
     return units
 
 
+def _char_of_kept(readings, phonemes: list[str], keep: list[int]) -> list[int]:
+    """Character index for each kept phoneme (``-1`` for non-character tokens)."""
+    inner = [p for r in readings for p in r.phonemes]
+    offset = locate_inner_offset(phonemes, inner)
+    char_of = [-1] * len(phonemes)
+    cursor = offset
+    for ci, r in enumerate(readings):
+        for _ in range(len(r.phonemes)):
+            if cursor < len(char_of):
+                char_of[cursor] = ci
+            cursor += 1
+    return [char_of[k] if k < len(char_of) else -1 for k in keep]
+
+
 class PhonemeCTCAligner(BaseAligner):
     def __init__(self, repo_id: str = DEFAULT_REPO, cache_dir: Path | None = None) -> None:
         self.repo_id = repo_id
@@ -127,6 +142,11 @@ class PhonemeCTCAligner(BaseAligner):
         self._mapper = JapanesePronunciationMapper(
             table={}, g2p=pyopenjtalk_kana, convert=pyopenjtalk_phonemes
         )
+        # V0.7: per-line acoustic quality assessment (does not alter the V0.5 path)
+        self.quality_policy = QualityPolicy(
+            name="ja-hubert-conservative-v07", max_intra_char_span_s=1.5, max_char_duration_ratio=10.0
+        )
+        self.last_quality: dict | None = None
 
     def load(self) -> None:
         import torch
@@ -185,4 +205,13 @@ class PhonemeCTCAligner(BaseAligner):
         for pos, span in zip(keep, al.spans):
             if span is not None:
                 spans_by_phoneme[pos] = span
+
+        # V0.7 quality assessment (read-only; the alignment above is unchanged)
+        self.last_quality = None
+        try:
+            char_of = _char_of_kept(readings, phonemes, keep)
+            feats = extract_features(logp, ids, self._blank_id(), al, char_of, self.frame_seconds)
+            self.last_quality = decide(feats, self.quality_policy).to_dict()
+        except Exception:  # noqa: BLE001 - quality must never break alignment
+            self.last_quality = None
         return map_spans_to_char_units(readings, phonemes, spans_by_phoneme, self.frame_seconds)

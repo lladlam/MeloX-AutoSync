@@ -40,3 +40,7 @@ htmlcov/
 .vscode/
 *.swp
 .DS_Store
+
+# Derived diagnostic arrays (never commit)
+*.npz
+*.npy

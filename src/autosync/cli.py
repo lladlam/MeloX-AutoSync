@@ -118,8 +118,13 @@ def cmd_align(args: argparse.Namespace) -> int:
     out = write_json(result, args.output)
     n_model = sum(1 for ln in result.lines if ln.source == "model")
     n_failed = sum(1 for ln in result.lines if ln.source == "failed")
+    from .quality.gating import summarize
+
+    qs = summarize(result.lines)
     print(
-        f"wrote {out}\n  lines: {len(result.lines)}  model-aligned: {n_model}  failed: {n_failed}",
+        f"wrote {out}\n  lines: {len(result.lines)}  model-aligned: {n_model}  failed: {n_failed}\n"
+        f"  quality: reliable={qs['reliable']} uncertain={qs['uncertain']} "
+        f"failed={qs['failed']} not_assessed={qs['not_assessed']}",
         file=sys.stderr,
     )
     return 0

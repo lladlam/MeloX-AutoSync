@@ -162,6 +162,8 @@ def align_lines(
             import time
 
             t0 = time.time()
+            if hasattr(aligner, "last_quality"):
+                aligner.last_quality = None
             try:
                 units = aligner.align_text(window, sample_rate, line.text)
             except Exception as exc:  # noqa: BLE001 - record any model failure honestly
@@ -221,6 +223,13 @@ def align_lines(
         ]
         line_start = abs_units[0].start if abs_units else line.start
         line_end = abs_units[-1].end if abs_units else line_start
+
+        # V0.7: attach the per-line acoustic quality assessment, if the aligner
+        # produced one. This never changes the timings themselves.
+        quality = getattr(aligner, "last_quality", None)
+        q_state = quality.get("state") if isinstance(quality, dict) else None
+        q_reasons = list(quality.get("reasons", [])) if isinstance(quality, dict) else []
+
         results.append(
             AlignedLine(
                 index=line.index,
@@ -230,6 +239,8 @@ def align_lines(
                 units=abs_units,
                 source=src,
                 error=err,
+                quality=q_state,
+                quality_reasons=q_reasons,
             )
         )
 

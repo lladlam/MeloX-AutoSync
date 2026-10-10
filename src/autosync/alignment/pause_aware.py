@@ -32,7 +32,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from .ctc import Alignment, TokenSpan, forced_align
+from .ctc import Alignment, TokenSpan, forced_align, minimum_frames
 
 
 @dataclass
@@ -257,6 +257,49 @@ def optimal_pause_spans(
     return base.spans
 
 
+def _rebuild_alignment(
+    log_probs: np.ndarray,
+    targets: list[int],
+    blank: int,
+    spans: list[TokenSpan | None],
+) -> Alignment:
+    """Fresh :class:`Alignment` for replaced spans, with recomputed metadata.
+
+    Mutating ``base.spans`` in place would leave ``total_log_prob`` / ``feasible``
+    stale (audit V0.7 §8.2). This recomputes the path log-probability (token
+    frames use the token log-prob, all other frames the blank log-prob) and the
+    feasibility from the new spans.
+    """
+    lp = np.asarray(log_probs, dtype=np.float64)
+    T = lp.shape[0]
+    covered = np.zeros(T, dtype=bool)
+    total = 0.0
+    scores: list[float] = []
+    prev = -1
+    feasible = True
+    for tok, span in zip(targets, spans):
+        if span is None:
+            feasible = False
+            continue
+        s, e = span.start_frame, span.end_frame
+        if s <= prev or e < s or e >= T:
+            feasible = False
+        prev = e
+        covered[s : e + 1] = True
+        total += float(np.sum(lp[s : e + 1, tok]))
+        scores.append(float(np.mean(lp[s : e + 1, tok])))
+    total += float(np.sum(lp[~covered, blank]))
+    return Alignment(
+        spans=spans,
+        total_log_prob=total,
+        path=np.zeros(0, dtype=np.int64),
+        feasible=feasible,
+        required_frames=minimum_frames(targets),
+        reasons=[] if feasible else ["spans replaced by a pause-aware mode; check order/length"],
+        mean_score=float(np.mean(scores)) if scores else 0.0,
+    )
+
+
 def resolve_spans(
     log_probs: np.ndarray,
     targets: list[int],
@@ -276,14 +319,11 @@ def resolve_spans(
         return base
     if config.mode == "blank_aware":
         base = forced_align(lp, targets, blank=blank)
-        base.spans = blank_aware_spans(
-            lp, targets, blank, base, config.trim_margin, config.trim_min_frames
-        )
-        return base
+        spans = blank_aware_spans(lp, targets, blank, base, config.trim_margin, config.trim_min_frames)
+        return _rebuild_alignment(lp, targets, blank, spans)
     if config.mode == "gap_penalized":
         return gap_penalized_alignment(lp, targets, blank, config.non_blank_penalty)
     if config.mode == "gap_state":
-        base = forced_align(lp, targets, blank=blank)
         spans = semi_markov_align(
             lp,
             targets,
@@ -296,7 +336,7 @@ def resolve_spans(
             config.sm_gmax_inter,
             config.sm_gap_penalty,
         )
-        if spans is not None:
-            base.spans = spans
-        return base
+        if spans is None:
+            return forced_align(lp, targets, blank=blank)
+        return _rebuild_alignment(lp, targets, blank, spans)
     raise ValueError(f"unknown pause mode: {config.mode!r}")

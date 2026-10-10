@@ -69,6 +69,9 @@ class AlignedLine:
     units: list[AlignUnit] = field(default_factory=list)
     source: AlignmentSource = "model"
     error: str | None = None
+    # V0.7 quality gate: "reliable" | "uncertain" | "failed" | None (not assessed)
+    quality: str | None = None
+    quality_reasons: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -92,6 +95,8 @@ class AlignmentResult:
     model: ModelInfo | None = None
     warnings: list[str] = field(default_factory=list)
     diagnostics: dict[str, Any] = field(default_factory=dict)
+    # V0.7: counts of quality states across lines, e.g. {"reliable": 3, ...}
+    quality_summary: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         data = asdict(self)

@@ -110,3 +110,12 @@ V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射
 - **根因更正**：极端误差来自**部分段落声学后验无信息**（blank≈1），与内部停顿时长无关
   （corr=−0.09）；`pau`/`sil` 后验≈0。
 - 详见 `docs/PAUSE_AWARE_ALIGNMENT.md`。
+
+### 新增（V0.7）— 声学置信度与安全回退
+
+- 新增 `src/autosync/quality/`：`AlignmentQualityAnalyzer` 特征、三状态 `RELIABLE/UNCERTAIN/FAILED`、
+  `player_timeline`（非可靠行**整行回退到原始 LRC**）、JSON/CLI 集成（schema `0.2`）。
+- `benchmarks/confidence_eval.py`：分组交叉验证（leave-one-singer/song-out）与风险—覆盖率曲线。
+- **结论（否定）**：质量门控判别力不足（最佳 AUC 0.665；接受 50% 行后严重行率仍 0.47）→
+  仅作保守回退，**V0.5 时间轴保持默认**；详见 `docs/ALIGNMENT_CONFIDENCE.md`、
+  `docs/SELECTIVE_ALIGNMENT_REPORT.md`。

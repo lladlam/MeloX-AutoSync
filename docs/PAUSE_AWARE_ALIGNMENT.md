@@ -34,7 +34,7 @@
 | 方案 | 机制 | 复杂度 |
 |---|---|---|
 | A `blank_aware` | 保留 V0.5 span，按 `token_logp − blank_logp` 的**最优连续子区间**裁剪（不拆分、不越界） | O(T·N) 后处理 |
-| B `optional_pause` | 允许在相邻音素间插入可选 `pau`/`sil`，仅当声学增益 > 阈值 | O(T·N) |
+| B `optional_pause` | **文档化 no-op**：设计上允许在相邻音素间插入可选 `pau`/`sil`（仅当声学增益 > 阈值），但实测 `pau`/`sil` 后验≈0，故实现**直接返回 V0.5 spans**（`optimal_pause_spans`），用于证明该方案无收益；**并非真正的 DP 插入** | O(T·N) |
 | C `gap_state` | **半马尔可夫（显式 gap 状态）**：每个音素占 `[dmin,dmax]` 帧，音素间 gap 为 `[gmin,gmax]`，**同一汉字内部 gap 上限很小、跨字上限较大**，可设 gap 惩罚 | **O(N·T)**（deque 滑窗最大值），内存 O(N·T) |
 
 方案 C 用**预先固定的时长先验与字符内连续性约束**，不使用任何人工参考位置。
