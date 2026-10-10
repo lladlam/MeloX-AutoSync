@@ -99,7 +99,14 @@ V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射
 
 - 修复 **HuBERT 音素→文字索引偏移**（前导 `pau` 污染首字）：起始 sMAE 0.643→**0.365**，P90 1.399→**1.121**。
 - 修复 **G2P 文字↔假名映射**：改用 MeCab 词级上下文读音（`は→わ`），修正 `私→わたし` 等。
-- pyshiro 按**实际回溯状态序列**聚合音素区间（`pskip` 健壮性；v1/v2 当前无 `pskip`）。
-- 根因分析：**句子内部非歌词区间**（`<AP>`/`<SP>`，29/30 段，非静音）是日语误差主因；
-  见 `docs/JAPANESE_LONG_VOWEL_ANALYSIS.md`。
+- 根因分析：句子内部非歌词区间与低声学后验；见 `docs/JAPANESE_LONG_VOWEL_ANALYSIS.md`。
 - 许可审计（含 MeloX-Android GPLv3 更正）：`docs/LICENSE_AUDIT.md`。
+
+### 新增（V0.6）— 暂停感知对齐（研究结论：无收益，保留 V0.5）
+
+- 新增 `alignment/pause_aware.py`（blank-aware / optional-pause / gap-state 半马尔可夫）与
+  `benchmarks/pause_eval.py`、`benchmarks/pause_diagnosis.py`。
+- **消融结论**：三方案均无稳定收益（gap-state 略差）；**V0.5 仍为默认算法**。
+- **根因更正**：极端误差来自**部分段落声学后验无信息**（blank≈1），与内部停顿时长无关
+  （corr=−0.09）；`pau`/`sil` 后验≈0。
+- 详见 `docs/PAUSE_AWARE_ALIGNMENT.md`。

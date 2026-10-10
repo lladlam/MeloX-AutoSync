@@ -158,21 +158,25 @@ class PhonemeCTCAligner(BaseAligner):
             idx.append(i)
         return ids, idx
 
+    def _log_probs(self, audio: np.ndarray, sample_rate: int) -> np.ndarray:
+        assert self._processor is not None and self._model is not None
+        torch = self._torch
+        inputs = self._processor(audio, sampling_rate=sample_rate, return_tensors="pt")
+        with torch.inference_mode():
+            logits = self._model(inputs.input_values).logits[0]
+        return torch.log_softmax(logits.float(), dim=-1).numpy()
+
     def align_text(self, audio: np.ndarray, sample_rate: int, text: str) -> list[AlignUnit]:
         if self._model is None:
             self.load()
         assert self._processor is not None
-        torch = self._torch
 
         readings, phonemes = self._mapper.map(text)
         ids, keep = self._phoneme_ids(phonemes)
         if not ids:
             raise InfeasibleAlignmentError("no known phonemes for the lyric text")
 
-        inputs = self._processor(audio, sampling_rate=sample_rate, return_tensors="pt")
-        with torch.inference_mode():
-            logits = self._model(inputs.input_values).logits[0]
-            logp = torch.log_softmax(logits.float(), dim=-1).numpy()
+        logp = self._log_probs(audio, sample_rate)
         al = forced_align(logp, ids, blank=self._blank_id())
         if not al.feasible:
             raise InfeasibleAlignmentError("phoneme alignment infeasible: " + "; ".join(al.reasons))

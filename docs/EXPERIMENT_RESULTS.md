@@ -154,3 +154,22 @@
 - TIFA 未完成端到端运行（依赖重；见比较文档 §4/§5），仅为可行性评估。
 - 男高音长音、快速连唱未解决；MAE 未达验收目标。
 
+---
+
+# V0.5 追加：日语正确性修复
+
+- 修复 HuBERT 音素→文字**索引偏移**与 G2P **文字↔假名映射**错误（详见 `docs/JAPANESE_LONG_VOWEL_ANALYSIS.md`）。
+- 修正后 HuBERT（`lrc_only`）：覆盖 1.000、sMAE **0.365**、中位 0.063、P90 1.121、eMAE 0.622。
+- 根因定位：句子内部非歌词区间（`<AP>`/`<SP>`，29/30 段）与**低声学后验**。
+
+# V0.6 追加：暂停感知强制对齐（未获收益）
+
+- 实现并对比三方案：`blank_aware`、`optional_pause`、`gap_state`（半马尔可夫）。
+- 消融（`experiments/reports/pause_eval.json`）：V0.5 sMAE 0.365 / P90 1.121 / >1.0s 11.2%；
+  A 无变化、B 无变化、C 略差（P90 1.222 / >1.0s 11.5%）。**无稳定收益 → 保留 V0.5 为默认。**
+- P0 再验证：corr(误差, 内部停顿)=−0.09（无关）；corr(误差, blank)=+0.47、
+  corr(误差, 歌词后验)=−0.48。最差段歌词后验 0.04–0.09 → **模型无信息**，非“缺少内部 pau”。
+- `pau`/`sil` 后验≈0 → 方案 B 前提不成立；V0.5 token span 平均仅 1.4 帧 → 方案 A 近乎 no-op。
+- 详见 `docs/PAUSE_AWARE_ALIGNMENT.md`；诊断 `experiments/reports/pause_diagnosis.json`。
+
+
