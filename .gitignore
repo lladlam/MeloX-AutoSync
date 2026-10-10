@@ -53,3 +53,5 @@ htmlcov/
 
 # Full per-song alignment results contain third-party lyrics; NEVER commit
 /experiments/reports/fullsong_*.json
+/experiments/amll_reference/
+/experiments/amll_results/
