@@ -1,0 +1,37 @@
+# Model weights (never committed)
+/models/
+*.pt
+*.bin
+*.safetensors
+*.onnx
+*.ckpt
+*.pth
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Bulky audio binaries only; keep .lrc / .ref.json / result JSON as evidence.
+/benchmarks/**/*.wav
+/benchmarks/**/*.mp3
+/benchmarks/**/*.flac
+/benchmarks/**/*.m4a
+/experiments/audio/*.wav
+/experiments/audio/*.flac
+/experiments/audio/*.mp3
+/experiments/audio/*.m4a
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store

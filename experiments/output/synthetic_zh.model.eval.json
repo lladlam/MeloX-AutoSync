@@ -1,0 +1,128 @@
+{
+  "n_lines": 1,
+  "n_lines_failed": 0,
+  "line_failure_rate": 0.0,
+  "n_reference_words": 12,
+  "n_predicted_units": 12,
+  "n_matched": 12,
+  "start_mae": 0.5015999999999999,
+  "start_median": 0.18089999999999984,
+  "start_p90": 1.0896399999999997,
+  "start_max": 1.1497000000000002,
+  "end_mae": 0.44599166666666656,
+  "end_median": 0.296149999999999,
+  "end_p90": 0.7396500000000001,
+  "end_max": 0.7597000000000005,
+  "engine": "model",
+  "model": "funasr/fa-zh",
+  "pairs": [
+    {
+      "text": "巨",
+      "ref_start": 0.5,
+      "pred_start": 1.57,
+      "start_err": 1.07,
+      "ref_end": 1.0807,
+      "pred_end": 1.81,
+      "end_err": 0.7293
+    },
+    {
+      "text": "龟",
+      "ref_start": 1.5307,
+      "pred_start": 2.55,
+      "start_err": 1.0193,
+      "ref_end": 2.0608,
+      "pred_end": 2.79,
+      "end_err": 0.7292
+    },
+    {
+      "text": "是",
+      "ref_start": 2.5108,
+      "pred_start": 3.59,
+      "start_err": 1.0792,
+      "ref_end": 3.0892,
+      "pred_end": 3.83,
+      "end_err": 0.7408
+    },
+    {
+      "text": "科",
+      "ref_start": 3.5392,
+      "pred_start": 4.63,
+      "start_err": 1.0908,
+      "ref_end": 4.1103,
+      "pred_end": 4.87,
+      "end_err": 0.7597
+    },
+    {
+      "text": "隆",
+      "ref_start": 4.5603,
+      "pred_start": 5.71,
+      "start_err": 1.1497,
+      "ref_end": 5.2123,
+      "pred_end": 5.89,
+      "end_err": 0.6777
+    },
+    {
+      "text": "群",
+      "ref_start": 5.6623,
+      "pred_start": 5.89,
+      "start_err": 0.2277,
+      "ref_end": 6.3864,
+      "pred_end": 6.13,
+      "end_err": 0.2564
+    },
+    {
+      "text": "岛",
+      "ref_start": 6.8364,
+      "pred_start": 6.89,
+      "start_err": 0.0536,
+      "ref_end": 7.3998,
+      "pred_end": 7.13,
+      "end_err": 0.2698
+    },
+    {
+      "text": "的",
+      "ref_start": 7.8498,
+      "pred_start": 7.89,
+      "start_err": 0.0402,
+      "ref_end": 8.3012,
+      "pred_end": 8.13,
+      "end_err": 0.1712
+    },
+    {
+      "text": "食",
+      "ref_start": 8.7512,
+      "pred_start": 8.81,
+      "start_err": 0.0588,
+      "ref_end": 9.3659,
+      "pred_end": 9.05,
+      "end_err": 0.3159
+    },
+    {
+      "text": "草",
+      "ref_start": 9.8159,
+      "pred_start": 9.95,
+      "start_err": 0.1341,
+      "ref_end": 10.4578,
+      "pred_end": 10.19,
+      "end_err": 0.2678
+    },
+    {
+      "text": "动",
+      "ref_start": 10.9078,
+      "pred_start": 10.97,
+      "start_err": 0.0622,
+      "ref_end": 11.4864,
+      "pred_end": 11.21,
+      "end_err": 0.2764
+    },
+    {
+      "text": "物",
+      "ref_start": 11.9364,
+      "pred_start": 11.97,
+      "start_err": 0.0336,
+      "ref_end": 12.4627,
+      "pred_end": 12.305,
+      "end_err": 0.1577
+    }
+  ]
+}

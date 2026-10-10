@@ -1,0 +1,185 @@
+{
+  "language": "ja",
+  "engine": "model",
+  "lines": [
+    {
+      "index": 0,
+      "text": "興味をそそられる村を30分ほど散策するのは価値があります。",
+      "start": 0.0,
+      "end": 7.96,
+      "units": [
+        {
+          "text": "興",
+          "start": 0.0,
+          "end": 0.02,
+          "source": "model",
+          "score": -18.681034088134766,
+          "raw": "興"
+        },
+        {
+          "text": "味",
+          "start": 0.02,
+          "end": 0.04,
+          "source": "model",
+          "score": -19.474166870117188,
+          "raw": "味"
+        },
+        {
+          "text": "を",
+          "start": 0.04,
+          "end": 2.32,
+          "source": "model",
+          "score": -17.10964393955574,
+          "raw": "を"
+        },
+        {
+          "text": "そ",
+          "start": 2.32,
+          "end": 2.34,
+          "source": "model",
+          "score": -18.839155197143555,
+          "raw": "そ"
+        },
+        {
+          "text": "そ",
+          "start": 2.36,
+          "end": 2.6,
+          "source": "model",
+          "score": -14.377196435661366,
+          "raw": "そ"
+        },
+        {
+          "text": "られる",
+          "start": 2.6,
+          "end": 2.9,
+          "source": "model",
+          "score": -16.241075723509613,
+          "raw": "られる"
+        },
+        {
+          "text": "村",
+          "start": 2.9,
+          "end": 3.08,
+          "source": "model",
+          "score": -13.830305837922626,
+          "raw": "村"
+        },
+        {
+          "text": "を",
+          "start": 3.08,
+          "end": 3.2,
+          "source": "model",
+          "score": -12.998577612869363,
+          "raw": "を"
+        },
+        {
+          "text": "30",
+          "start": 3.2,
+          "end": 3.42,
+          "source": "model",
+          "score": -16.252590894434515,
+          "raw": "30"
+        },
+        {
+          "text": "分",
+          "start": 3.42,
+          "end": 3.8000000000000003,
+          "source": "model",
+          "score": -17.410406155199254,
+          "raw": "分"
+        },
+        {
+          "text": "ほど",
+          "start": 3.8000000000000003,
+          "end": 4.0,
+          "source": "model",
+          "score": -13.457943091727794,
+          "raw": "ほど"
+        },
+        {
+          "text": "散",
+          "start": 4.0,
+          "end": 4.14,
+          "source": "model",
+          "score": -15.649488030267614,
+          "raw": "散"
+        },
+        {
+          "text": "策",
+          "start": 4.14,
+          "end": 4.3,
+          "source": "model",
+          "score": -17.71353357611224,
+          "raw": "策"
+        },
+        {
+          "text": "する",
+          "start": 4.3,
+          "end": 4.46,
+          "source": "model",
+          "score": -11.564765244125738,
+          "raw": "する"
+        },
+        {
+          "text": "の",
+          "start": 4.46,
+          "end": 4.64,
+          "source": "model",
+          "score": -8.351521314846146,
+          "raw": "の"
+        },
+        {
+          "text": "は",
+          "start": 4.64,
+          "end": 7.9,
+          "source": "model",
+          "score": -16.11790164994316,
+          "raw": "は"
+        },
+        {
+          "text": "価",
+          "start": 7.9,
+          "end": 7.92,
+          "source": "model",
+          "score": -24.236230850219727,
+          "raw": "価"
+        },
+        {
+          "text": "値",
+          "start": 7.92,
+          "end": 7.94,
+          "source": "model",
+          "score": -25.075342178344727,
+          "raw": "値"
+        },
+        {
+          "text": "があります",
+          "start": 7.94,
+          "end": 7.96,
+          "source": "model",
+          "score": -18.267425537109375,
+          "raw": "があります"
+        }
+      ],
+      "source": "model",
+      "error": null
+    }
+  ],
+  "model": {
+    "name": "reazon-research/japanese-wav2vec2-base-rs35kh",
+    "version": "reazon-research/japanese-wav2vec2-base-rs35kh",
+    "language": "ja",
+    "license": "apache-2.0",
+    "device": "cpu",
+    "load_seconds": 7.143,
+    "infer_seconds": 0.0,
+    "frame_seconds": 0.02
+  },
+  "warnings": [],
+  "diagnostics": {
+    "source_metadata": {},
+    "padding_seconds": 0.3
+  },
+  "schema_version": "0.1",
+  "generator": "MeloX-AutoSync"
+}

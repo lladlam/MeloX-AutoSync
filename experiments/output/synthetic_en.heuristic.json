@@ -1,0 +1,73 @@
+{
+  "language": "en",
+  "engine": "heuristic",
+  "lines": [
+    {
+      "index": 0,
+      "text": "hello world this is a test",
+      "start": 0.0,
+      "end": 6.574812499999999,
+      "units": [
+        {
+          "text": "hello",
+          "start": 0.0,
+          "end": 1.5654315476190477,
+          "source": "heuristic",
+          "score": null,
+          "raw": null
+        },
+        {
+          "text": "world",
+          "start": 1.5654315476190477,
+          "end": 3.1308630952380954,
+          "source": "heuristic",
+          "score": null,
+          "raw": null
+        },
+        {
+          "text": "this",
+          "start": 3.1308630952380954,
+          "end": 4.383208333333333,
+          "source": "heuristic",
+          "score": null,
+          "raw": null
+        },
+        {
+          "text": "is",
+          "start": 4.383208333333333,
+          "end": 5.009380952380952,
+          "source": "heuristic",
+          "score": null,
+          "raw": null
+        },
+        {
+          "text": "a",
+          "start": 5.009380952380952,
+          "end": 5.3224672619047615,
+          "source": "heuristic",
+          "score": null,
+          "raw": null
+        },
+        {
+          "text": "test",
+          "start": 5.3224672619047615,
+          "end": 6.574812499999999,
+          "source": "heuristic",
+          "score": null,
+          "raw": null
+        }
+      ],
+      "source": "heuristic",
+      "error": null
+    }
+  ],
+  "model": null,
+  "warnings": [
+    "heuristic engine: timestamps are evenly distributed, NOT acoustic"
+  ],
+  "diagnostics": {
+    "source_metadata": {}
+  },
+  "schema_version": "0.1",
+  "generator": "MeloX-AutoSync"
+}

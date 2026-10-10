@@ -1,0 +1,97 @@
+{
+  "language": "ja",
+  "engine": "model",
+  "lines": [
+    {
+      "index": 0,
+      "text": "こんにちは せかい",
+      "start": 0.0,
+      "end": 1.44,
+      "units": [
+        {
+          "text": "こ",
+          "start": 0.0,
+          "end": 0.02,
+          "source": "model",
+          "score": -13.469615936279297,
+          "raw": "こ"
+        },
+        {
+          "text": "ん",
+          "start": 0.02,
+          "end": 0.04,
+          "source": "model",
+          "score": -13.739519119262695,
+          "raw": "ん"
+        },
+        {
+          "text": "に",
+          "start": 0.04,
+          "end": 0.06,
+          "source": "model",
+          "score": -13.79899787902832,
+          "raw": "に"
+        },
+        {
+          "text": "ち",
+          "start": 0.06,
+          "end": 0.08,
+          "source": "model",
+          "score": -14.371337890625,
+          "raw": "ち"
+        },
+        {
+          "text": "は",
+          "start": 0.08,
+          "end": 0.4,
+          "source": "model",
+          "score": -11.84648483991623,
+          "raw": "は"
+        },
+        {
+          "text": "せ",
+          "start": 0.4,
+          "end": 0.42,
+          "source": "model",
+          "score": -17.16668128967285,
+          "raw": "せ"
+        },
+        {
+          "text": "か",
+          "start": 0.42,
+          "end": 0.44,
+          "source": "model",
+          "score": -15.37304973602295,
+          "raw": "か"
+        },
+        {
+          "text": "い",
+          "start": 0.44,
+          "end": 1.44,
+          "source": "model",
+          "score": -12.520704188346862,
+          "raw": "い"
+        }
+      ],
+      "source": "model",
+      "error": null
+    }
+  ],
+  "model": {
+    "name": "reazon-research/japanese-wav2vec2-base-rs35kh",
+    "version": "reazon-research/japanese-wav2vec2-base-rs35kh",
+    "language": "ja",
+    "license": "apache-2.0",
+    "device": "cpu",
+    "load_seconds": 3.843,
+    "infer_seconds": 0.0,
+    "frame_seconds": 0.02
+  },
+  "warnings": [],
+  "diagnostics": {
+    "source_metadata": {},
+    "padding_seconds": 0.3
+  },
+  "schema_version": "0.1",
+  "generator": "MeloX-AutoSync"
+}

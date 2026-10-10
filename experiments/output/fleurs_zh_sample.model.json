@@ -1,0 +1,313 @@
+{
+  "language": "zh",
+  "engine": "model",
+  "lines": [
+    {
+      "index": 0,
+      "text": "因为远离大陆，哺乳动物无法长途跋涉而来，使得巨龟成为科隆群岛主要的食草动物。",
+      "start": 0.67,
+      "end": 7.015,
+      "units": [
+        {
+          "text": "因",
+          "start": 0.67,
+          "end": 0.83,
+          "source": "model",
+          "score": null,
+          "raw": "因"
+        },
+        {
+          "text": "为",
+          "start": 0.83,
+          "end": 1.01,
+          "source": "model",
+          "score": null,
+          "raw": "为"
+        },
+        {
+          "text": "远",
+          "start": 1.01,
+          "end": 1.19,
+          "source": "model",
+          "score": null,
+          "raw": "远"
+        },
+        {
+          "text": "离",
+          "start": 1.19,
+          "end": 1.31,
+          "source": "model",
+          "score": null,
+          "raw": "离"
+        },
+        {
+          "text": "大",
+          "start": 1.31,
+          "end": 1.49,
+          "source": "model",
+          "score": null,
+          "raw": "大"
+        },
+        {
+          "text": "陆",
+          "start": 1.49,
+          "end": 1.69,
+          "source": "model",
+          "score": null,
+          "raw": "陆"
+        },
+        {
+          "text": "哺",
+          "start": 1.69,
+          "end": 1.85,
+          "source": "model",
+          "score": null,
+          "raw": "哺"
+        },
+        {
+          "text": "乳",
+          "start": 1.85,
+          "end": 1.97,
+          "source": "model",
+          "score": null,
+          "raw": "乳"
+        },
+        {
+          "text": "动",
+          "start": 1.97,
+          "end": 2.11,
+          "source": "model",
+          "score": null,
+          "raw": "动"
+        },
+        {
+          "text": "物",
+          "start": 2.11,
+          "end": 2.25,
+          "source": "model",
+          "score": null,
+          "raw": "物"
+        },
+        {
+          "text": "无",
+          "start": 2.25,
+          "end": 2.39,
+          "source": "model",
+          "score": null,
+          "raw": "无"
+        },
+        {
+          "text": "法",
+          "start": 2.39,
+          "end": 2.55,
+          "source": "model",
+          "score": null,
+          "raw": "法"
+        },
+        {
+          "text": "长",
+          "start": 2.55,
+          "end": 2.71,
+          "source": "model",
+          "score": null,
+          "raw": "长"
+        },
+        {
+          "text": "途",
+          "start": 2.71,
+          "end": 2.85,
+          "source": "model",
+          "score": null,
+          "raw": "途"
+        },
+        {
+          "text": "跋",
+          "start": 2.85,
+          "end": 3.03,
+          "source": "model",
+          "score": null,
+          "raw": "跋"
+        },
+        {
+          "text": "涉",
+          "start": 3.03,
+          "end": 3.15,
+          "source": "model",
+          "score": null,
+          "raw": "涉"
+        },
+        {
+          "text": "而",
+          "start": 3.15,
+          "end": 3.31,
+          "source": "model",
+          "score": null,
+          "raw": "而"
+        },
+        {
+          "text": "来",
+          "start": 3.31,
+          "end": 3.51,
+          "source": "model",
+          "score": null,
+          "raw": "来"
+        },
+        {
+          "text": "使",
+          "start": 3.51,
+          "end": 3.63,
+          "source": "model",
+          "score": null,
+          "raw": "使"
+        },
+        {
+          "text": "得",
+          "start": 3.63,
+          "end": 3.77,
+          "source": "model",
+          "score": null,
+          "raw": "得"
+        },
+        {
+          "text": "巨",
+          "start": 3.77,
+          "end": 3.97,
+          "source": "model",
+          "score": null,
+          "raw": "巨"
+        },
+        {
+          "text": "龟",
+          "start": 3.97,
+          "end": 4.09,
+          "source": "model",
+          "score": null,
+          "raw": "龟"
+        },
+        {
+          "text": "成",
+          "start": 4.09,
+          "end": 4.25,
+          "source": "model",
+          "score": null,
+          "raw": "成"
+        },
+        {
+          "text": "为",
+          "start": 4.25,
+          "end": 4.39,
+          "source": "model",
+          "score": null,
+          "raw": "为"
+        },
+        {
+          "text": "科",
+          "start": 4.39,
+          "end": 4.57,
+          "source": "model",
+          "score": null,
+          "raw": "科"
+        },
+        {
+          "text": "隆",
+          "start": 4.57,
+          "end": 4.75,
+          "source": "model",
+          "score": null,
+          "raw": "隆"
+        },
+        {
+          "text": "群",
+          "start": 4.75,
+          "end": 4.93,
+          "source": "model",
+          "score": null,
+          "raw": "群"
+        },
+        {
+          "text": "岛",
+          "start": 4.93,
+          "end": 5.17,
+          "source": "model",
+          "score": null,
+          "raw": "岛"
+        },
+        {
+          "text": "主",
+          "start": 5.51,
+          "end": 5.69,
+          "source": "model",
+          "score": null,
+          "raw": "主"
+        },
+        {
+          "text": "要",
+          "start": 5.69,
+          "end": 5.87,
+          "source": "model",
+          "score": null,
+          "raw": "要"
+        },
+        {
+          "text": "的",
+          "start": 5.87,
+          "end": 5.99,
+          "source": "model",
+          "score": null,
+          "raw": "的"
+        },
+        {
+          "text": "食",
+          "start": 5.99,
+          "end": 6.17,
+          "source": "model",
+          "score": null,
+          "raw": "食"
+        },
+        {
+          "text": "草",
+          "start": 6.17,
+          "end": 6.35,
+          "source": "model",
+          "score": null,
+          "raw": "草"
+        },
+        {
+          "text": "动",
+          "start": 6.35,
+          "end": 6.49,
+          "source": "model",
+          "score": null,
+          "raw": "动"
+        },
+        {
+          "text": "物",
+          "start": 6.49,
+          "end": 7.015,
+          "source": "model",
+          "score": null,
+          "raw": "物"
+        }
+      ],
+      "source": "model",
+      "error": null
+    }
+  ],
+  "model": {
+    "name": "funasr/fa-zh",
+    "version": "fa-zh (MonotonicAligner, speech_timestamp_prediction-v1-16k-offline)",
+    "language": "zh",
+    "license": "model-license (FunASR)",
+    "device": "cpu",
+    "load_seconds": 5.987,
+    "infer_seconds": 0.0,
+    "frame_seconds": 0.01
+  },
+  "warnings": [],
+  "diagnostics": {
+    "source_metadata": {},
+    "padding_seconds": 0.3
+  },
+  "schema_version": "0.1",
+  "generator": "MeloX-AutoSync"
+}

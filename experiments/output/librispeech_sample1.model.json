@@ -1,0 +1,369 @@
+{
+  "language": "en",
+  "engine": "model",
+  "lines": [
+    {
+      "index": 0,
+      "text": "Going along slushy country roads and speaking to damp audiences in draughty schoolrooms day after day for a fortnight he'll have to put in an appearance at some place of worship on Sunday morning and he can come to us immediately afterwards",
+      "start": 0.18,
+      "end": 13.46,
+      "units": [
+        {
+          "text": "GOING",
+          "start": 0.18,
+          "end": 0.42,
+          "source": "model",
+          "score": -0.0020174645835140835,
+          "raw": "GOING"
+        },
+        {
+          "text": "ALONG",
+          "start": 0.46,
+          "end": 0.68,
+          "source": "model",
+          "score": -0.027751038356291245,
+          "raw": "ALONG"
+        },
+        {
+          "text": "SLUSHY",
+          "start": 0.8200000000000001,
+          "end": 1.22,
+          "source": "model",
+          "score": -0.018643714859460186,
+          "raw": "SLUSHY"
+        },
+        {
+          "text": "COUNTRY",
+          "start": 1.36,
+          "end": 1.7,
+          "source": "model",
+          "score": -0.04210798570290665,
+          "raw": "COUNTRY"
+        },
+        {
+          "text": "ROADS",
+          "start": 1.76,
+          "end": 2.1,
+          "source": "model",
+          "score": -0.015559416278983917,
+          "raw": "ROADS"
+        },
+        {
+          "text": "AND",
+          "start": 2.16,
+          "end": 2.24,
+          "source": "model",
+          "score": -0.015353720169514418,
+          "raw": "AND"
+        },
+        {
+          "text": "SPEAKING",
+          "start": 2.3000000000000003,
+          "end": 2.62,
+          "source": "model",
+          "score": -0.009754036273534439,
+          "raw": "SPEAKING"
+        },
+        {
+          "text": "TO",
+          "start": 2.66,
+          "end": 2.74,
+          "source": "model",
+          "score": -0.057954667010562844,
+          "raw": "TO"
+        },
+        {
+          "text": "DAMP",
+          "start": 2.8000000000000003,
+          "end": 3.04,
+          "source": "model",
+          "score": -1.8670691702027398e-05,
+          "raw": "DAMP"
+        },
+        {
+          "text": "AUDIENCES",
+          "start": 3.2,
+          "end": 3.72,
+          "source": "model",
+          "score": -0.0264968457218452,
+          "raw": "AUDIENCES"
+        },
+        {
+          "text": "IN",
+          "start": 3.8200000000000003,
+          "end": 3.86,
+          "source": "model",
+          "score": -0.00012551948748296127,
+          "raw": "IN"
+        },
+        {
+          "text": "DRAUGHTY",
+          "start": 3.96,
+          "end": 4.36,
+          "source": "model",
+          "score": -0.03236584894466432,
+          "raw": "DRAUGHTY"
+        },
+        {
+          "text": "SCHOOLROOMS",
+          "start": 4.44,
+          "end": 5.0200000000000005,
+          "source": "model",
+          "score": -0.0028089656088716515,
+          "raw": "SCHOOLROOMS"
+        },
+        {
+          "text": "DAY",
+          "start": 5.12,
+          "end": 5.26,
+          "source": "model",
+          "score": -0.021076187465496332,
+          "raw": "DAY"
+        },
+        {
+          "text": "AFTER",
+          "start": 5.38,
+          "end": 5.54,
+          "source": "model",
+          "score": -2.272101501148427e-05,
+          "raw": "AFTER"
+        },
+        {
+          "text": "DAY",
+          "start": 5.58,
+          "end": 5.74,
+          "source": "model",
+          "score": -0.08152501030356991,
+          "raw": "DAY"
+        },
+        {
+          "text": "FOR",
+          "start": 5.8,
+          "end": 5.88,
+          "source": "model",
+          "score": -0.00016405813221354038,
+          "raw": "FOR"
+        },
+        {
+          "text": "A",
+          "start": 5.92,
+          "end": 5.94,
+          "source": "model",
+          "score": -0.001653733546845615,
+          "raw": "A"
+        },
+        {
+          "text": "FORTNIGHT",
+          "start": 5.98,
+          "end": 6.48,
+          "source": "model",
+          "score": -0.016607515291778126,
+          "raw": "FORTNIGHT"
+        },
+        {
+          "text": "HE'LL",
+          "start": 7.4,
+          "end": 7.58,
+          "source": "model",
+          "score": -0.004909310315269977,
+          "raw": "HE'LL"
+        },
+        {
+          "text": "HAVE",
+          "start": 7.62,
+          "end": 7.72,
+          "source": "model",
+          "score": -0.050158228657437576,
+          "raw": "HAVE"
+        },
+        {
+          "text": "TO",
+          "start": 7.76,
+          "end": 7.8,
+          "source": "model",
+          "score": -0.0001323133910773322,
+          "raw": "TO"
+        },
+        {
+          "text": "PUT",
+          "start": 7.86,
+          "end": 7.98,
+          "source": "model",
+          "score": -5.252943628875073e-05,
+          "raw": "PUT"
+        },
+        {
+          "text": "IN",
+          "start": 8.06,
+          "end": 8.1,
+          "source": "model",
+          "score": -0.0009689762082416564,
+          "raw": "IN"
+        },
+        {
+          "text": "AN",
+          "start": 8.18,
+          "end": 8.22,
+          "source": "model",
+          "score": -0.010919716442003846,
+          "raw": "AN"
+        },
+        {
+          "text": "APPEARANCE",
+          "start": 8.26,
+          "end": 8.72,
+          "source": "model",
+          "score": -8.571350863348926e-05,
+          "raw": "APPEARANCE"
+        },
+        {
+          "text": "AT",
+          "start": 8.82,
+          "end": 8.86,
+          "source": "model",
+          "score": -0.0005131810175953433,
+          "raw": "AT"
+        },
+        {
+          "text": "SOME",
+          "start": 8.92,
+          "end": 9.120000000000001,
+          "source": "model",
+          "score": -0.007182714027294423,
+          "raw": "SOME"
+        },
+        {
+          "text": "PLACE",
+          "start": 9.24,
+          "end": 9.46,
+          "source": "model",
+          "score": -0.008240044576268701,
+          "raw": "PLACE"
+        },
+        {
+          "text": "OF",
+          "start": 9.52,
+          "end": 9.56,
+          "source": "model",
+          "score": -0.00019554195023374632,
+          "raw": "OF"
+        },
+        {
+          "text": "WORSHIP",
+          "start": 9.66,
+          "end": 10.02,
+          "source": "model",
+          "score": -0.00017744949130766536,
+          "raw": "WORSHIP"
+        },
+        {
+          "text": "ON",
+          "start": 10.200000000000001,
+          "end": 10.24,
+          "source": "model",
+          "score": -0.0001599655079189688,
+          "raw": "ON"
+        },
+        {
+          "text": "SUNDAY",
+          "start": 10.38,
+          "end": 10.700000000000001,
+          "source": "model",
+          "score": -0.05904998301411979,
+          "raw": "SUNDAY"
+        },
+        {
+          "text": "MORNING",
+          "start": 10.76,
+          "end": 11.06,
+          "source": "model",
+          "score": -0.00014506933913643088,
+          "raw": "MORNING"
+        },
+        {
+          "text": "AND",
+          "start": 11.46,
+          "end": 11.540000000000001,
+          "source": "model",
+          "score": -0.01223421422279595,
+          "raw": "AND"
+        },
+        {
+          "text": "HE",
+          "start": 11.58,
+          "end": 11.64,
+          "source": "model",
+          "score": -4.1305145714432e-05,
+          "raw": "HE"
+        },
+        {
+          "text": "CAN",
+          "start": 11.700000000000001,
+          "end": 11.78,
+          "source": "model",
+          "score": -8.256774466038526e-05,
+          "raw": "CAN"
+        },
+        {
+          "text": "COME",
+          "start": 11.86,
+          "end": 12.0,
+          "source": "model",
+          "score": -7.521125229459358e-05,
+          "raw": "COME"
+        },
+        {
+          "text": "TO",
+          "start": 12.040000000000001,
+          "end": 12.1,
+          "source": "model",
+          "score": -3.874218418786768e-05,
+          "raw": "TO"
+        },
+        {
+          "text": "US",
+          "start": 12.200000000000001,
+          "end": 12.280000000000001,
+          "source": "model",
+          "score": -0.00039428594391210936,
+          "raw": "US"
+        },
+        {
+          "text": "IMMEDIATELY",
+          "start": 12.4,
+          "end": 12.9,
+          "source": "model",
+          "score": -0.018638404999544007,
+          "raw": "IMMEDIATELY"
+        },
+        {
+          "text": "AFTERWARDS",
+          "start": 13.040000000000001,
+          "end": 13.46,
+          "source": "model",
+          "score": -0.624511526315852,
+          "raw": "AFTERWARDS"
+        }
+      ],
+      "source": "model",
+      "error": null
+    }
+  ],
+  "model": {
+    "name": "facebook/wav2vec2-base-960h",
+    "version": "facebook/wav2vec2-base-960h",
+    "language": "en",
+    "license": "apache-2.0",
+    "device": "cpu",
+    "load_seconds": 4.211,
+    "infer_seconds": 0.0,
+    "frame_seconds": 0.02
+  },
+  "warnings": [],
+  "diagnostics": {
+    "source_metadata": {},
+    "padding_seconds": 0.3
+  },
+  "schema_version": "0.1",
+  "generator": "MeloX-AutoSync"
+}

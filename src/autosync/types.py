@@ -1,0 +1,92 @@
+"""Core data types shared across MeloX-AutoSync.
+
+These types are intentionally plain dataclasses so that they serialise cleanly
+and do not depend on any model framework.
+"""
+
+from __future__ import annotations
+
+from dataclasses import asdict, dataclass, field
+from typing import Any, Literal
+
+# Where a timestamp came from. We never disguise a heuristic estimate as a
+# model result.
+AlignmentSource = Literal["model", "heuristic", "failed"]
+
+
+@dataclass
+class LyricLine:
+    """One line of an LRC file (times in seconds, absolute song time)."""
+
+    index: int
+    start: float
+    text: str
+    # Explicit end time from *enhanced* LRC (e.g. ``[00:12.00]<00:15.2>end``).
+    # ``None`` means the source LRC only carries line-start times, which is the
+    # common case. We must NOT silently substitute the next line's start here;
+    # the real end is decided by acoustic alignment.
+    end: float | None = None
+    # Optional word/segment-level timings parsed from enhanced LRC.
+    segments: list[LyricSegment] | None = None
+
+
+@dataclass
+class LyricSegment:
+    """A ``<mm:ss.xx>`` segment inside an enhanced LRC line."""
+
+    start: float
+    text: str
+
+
+@dataclass
+class AlignUnit:
+    """A smallest aligned unit (a word for English, a character for zh/ja)."""
+
+    text: str
+    start: float
+    end: float
+    source: AlignmentSource = "model"
+    # Mean token log-probability over the frames assigned to this unit. A rough
+    # confidence proxy, not a calibrated probability.
+    score: float | None = None
+    # Surface form actually displayed to the user, when ``text`` is a reading /
+    # normalised form (e.g. Japanese kana reading of a kanji).
+    raw: str | None = None
+
+
+@dataclass
+class AlignedLine:
+    index: int
+    text: str
+    start: float
+    end: float
+    units: list[AlignUnit] = field(default_factory=list)
+    source: AlignmentSource = "model"
+    error: str | None = None
+
+
+@dataclass
+class ModelInfo:
+    name: str
+    version: str
+    language: str
+    license: str = "unknown"
+    device: str = "cpu"
+    load_seconds: float | None = None
+    infer_seconds: float | None = None
+    # Duration of one acoustic frame in seconds (the alignment time quantum).
+    frame_seconds: float | None = None
+
+
+@dataclass
+class AlignmentResult:
+    language: str
+    engine: str
+    lines: list[AlignedLine]
+    model: ModelInfo | None = None
+    warnings: list[str] = field(default_factory=list)
+    diagnostics: dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        data = asdict(self)
+        return data

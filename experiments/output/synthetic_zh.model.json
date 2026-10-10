@@ -1,0 +1,129 @@
+{
+  "language": "zh",
+  "engine": "model",
+  "lines": [
+    {
+      "index": 0,
+      "text": "巨龟是科隆群岛的食草动物",
+      "start": 1.57,
+      "end": 12.305,
+      "units": [
+        {
+          "text": "巨",
+          "start": 1.57,
+          "end": 1.81,
+          "source": "model",
+          "score": null,
+          "raw": "巨"
+        },
+        {
+          "text": "龟",
+          "start": 2.55,
+          "end": 2.79,
+          "source": "model",
+          "score": null,
+          "raw": "龟"
+        },
+        {
+          "text": "是",
+          "start": 3.59,
+          "end": 3.83,
+          "source": "model",
+          "score": null,
+          "raw": "是"
+        },
+        {
+          "text": "科",
+          "start": 4.63,
+          "end": 4.87,
+          "source": "model",
+          "score": null,
+          "raw": "科"
+        },
+        {
+          "text": "隆",
+          "start": 5.71,
+          "end": 5.89,
+          "source": "model",
+          "score": null,
+          "raw": "隆"
+        },
+        {
+          "text": "群",
+          "start": 5.89,
+          "end": 6.13,
+          "source": "model",
+          "score": null,
+          "raw": "群"
+        },
+        {
+          "text": "岛",
+          "start": 6.89,
+          "end": 7.13,
+          "source": "model",
+          "score": null,
+          "raw": "岛"
+        },
+        {
+          "text": "的",
+          "start": 7.89,
+          "end": 8.13,
+          "source": "model",
+          "score": null,
+          "raw": "的"
+        },
+        {
+          "text": "食",
+          "start": 8.81,
+          "end": 9.05,
+          "source": "model",
+          "score": null,
+          "raw": "食"
+        },
+        {
+          "text": "草",
+          "start": 9.95,
+          "end": 10.19,
+          "source": "model",
+          "score": null,
+          "raw": "草"
+        },
+        {
+          "text": "动",
+          "start": 10.97,
+          "end": 11.21,
+          "source": "model",
+          "score": null,
+          "raw": "动"
+        },
+        {
+          "text": "物",
+          "start": 11.97,
+          "end": 12.305,
+          "source": "model",
+          "score": null,
+          "raw": "物"
+        }
+      ],
+      "source": "model",
+      "error": null
+    }
+  ],
+  "model": {
+    "name": "funasr/fa-zh",
+    "version": "fa-zh (MonotonicAligner, speech_timestamp_prediction-v1-16k-offline)",
+    "language": "zh",
+    "license": "model-license (FunASR)",
+    "device": "cpu",
+    "load_seconds": 7.155,
+    "infer_seconds": 0.0,
+    "frame_seconds": 0.01
+  },
+  "warnings": [],
+  "diagnostics": {
+    "source_metadata": {},
+    "padding_seconds": 0.3
+  },
+  "schema_version": "0.1",
+  "generator": "MeloX-AutoSync"
+}

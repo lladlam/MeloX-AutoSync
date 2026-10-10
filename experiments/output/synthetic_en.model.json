@@ -1,0 +1,81 @@
+{
+  "language": "en",
+  "engine": "model",
+  "lines": [
+    {
+      "index": 0,
+      "text": "hello world this is a test",
+      "start": 0.54,
+      "end": 6.18,
+      "units": [
+        {
+          "text": "HELLO",
+          "start": 0.54,
+          "end": 0.8,
+          "source": "model",
+          "score": -0.4013942264020443,
+          "raw": "HELLO"
+        },
+        {
+          "text": "WORLD",
+          "start": 1.7,
+          "end": 2.0,
+          "source": "model",
+          "score": -0.8088179141283035,
+          "raw": "WORLD"
+        },
+        {
+          "text": "THIS",
+          "start": 2.9,
+          "end": 3.08,
+          "source": "model",
+          "score": -0.6799111068248749,
+          "raw": "THIS"
+        },
+        {
+          "text": "IS",
+          "start": 4.0,
+          "end": 4.1,
+          "source": "model",
+          "score": -0.12016105279326439,
+          "raw": "IS"
+        },
+        {
+          "text": "A",
+          "start": 5.04,
+          "end": 5.0600000000000005,
+          "source": "model",
+          "score": -2.695314645767212,
+          "raw": "A"
+        },
+        {
+          "text": "TEST",
+          "start": 5.98,
+          "end": 6.18,
+          "source": "model",
+          "score": -0.2452375004068017,
+          "raw": "TEST"
+        }
+      ],
+      "source": "model",
+      "error": null
+    }
+  ],
+  "model": {
+    "name": "facebook/wav2vec2-base-960h",
+    "version": "facebook/wav2vec2-base-960h",
+    "language": "en",
+    "license": "apache-2.0",
+    "device": "cpu",
+    "load_seconds": 6.284,
+    "infer_seconds": 0.0,
+    "frame_seconds": 0.02
+  },
+  "warnings": [],
+  "diagnostics": {
+    "source_metadata": {},
+    "padding_seconds": 0.3
+  },
+  "schema_version": "0.1",
+  "generator": "MeloX-AutoSync"
+}

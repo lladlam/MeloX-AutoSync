@@ -1,0 +1,38 @@
+{
+  "text": "hello world this is a test",
+  "sr": 16000,
+  "split": "word",
+  "voice": "en",
+  "words": [
+    {
+      "text": "hello",
+      "start": 0.5,
+      "end": 1.2165
+    },
+    {
+      "text": "world",
+      "start": 1.6665,
+      "end": 2.3783
+    },
+    {
+      "text": "this",
+      "start": 2.8283,
+      "end": 3.4621
+    },
+    {
+      "text": "is",
+      "start": 3.9121,
+      "end": 4.4814
+    },
+    {
+      "text": "a",
+      "start": 4.9314,
+      "end": 5.4685
+    },
+    {
+      "text": "test",
+      "start": 5.9185,
+      "end": 6.5748
+    }
+  ]
+}

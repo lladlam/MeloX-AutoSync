@@ -1,0 +1,74 @@
+{
+  "n_lines": 1,
+  "n_lines_failed": 0,
+  "line_failure_rate": 0.0,
+  "n_reference_words": 6,
+  "n_predicted_units": 6,
+  "n_matched": 6,
+  "start_mae": 0.06720000000000004,
+  "start_median": 0.06660000000000021,
+  "start_p90": 0.09824999999999995,
+  "start_max": 0.10860000000000003,
+  "end_mae": 0.3935999999999999,
+  "end_median": 0.38844999999999996,
+  "end_p90": 0.41249999999999953,
+  "end_max": 0.41649999999999987,
+  "engine": "model",
+  "model": "facebook/wav2vec2-base-960h",
+  "pairs": [
+    {
+      "text": "hello",
+      "ref_start": 0.5,
+      "pred_start": 0.54,
+      "start_err": 0.04,
+      "ref_end": 1.2165,
+      "pred_end": 0.8,
+      "end_err": 0.4165
+    },
+    {
+      "text": "world",
+      "ref_start": 1.6665,
+      "pred_start": 1.7,
+      "start_err": 0.0335,
+      "ref_end": 2.3783,
+      "pred_end": 2.0,
+      "end_err": 0.3783
+    },
+    {
+      "text": "this",
+      "ref_start": 2.8283,
+      "pred_start": 2.9,
+      "start_err": 0.0717,
+      "ref_end": 3.4621,
+      "pred_end": 3.08,
+      "end_err": 0.3821
+    },
+    {
+      "text": "is",
+      "ref_start": 3.9121,
+      "pred_start": 4.0,
+      "start_err": 0.0879,
+      "ref_end": 4.4814,
+      "pred_end": 4.1,
+      "end_err": 0.3814
+    },
+    {
+      "text": "a",
+      "ref_start": 4.9314,
+      "pred_start": 5.04,
+      "start_err": 0.1086,
+      "ref_end": 5.4685,
+      "pred_end": 5.0600000000000005,
+      "end_err": 0.4085
+    },
+    {
+      "text": "test",
+      "ref_start": 5.9185,
+      "pred_start": 5.98,
+      "start_err": 0.0615,
+      "ref_end": 6.5748,
+      "pred_end": 6.18,
+      "end_err": 0.3948
+    }
+  ]
+}
