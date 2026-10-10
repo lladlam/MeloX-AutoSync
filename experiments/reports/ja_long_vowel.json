@@ -1,0 +1,362 @@
+{
+  "summary": {
+    "pyshiro_v2": {
+      "n_segments": 30,
+      "n_reference_words": 572,
+      "n_matched_words": 572,
+      "n_extra_units": 0,
+      "uncertain_matched": 2,
+      "coverage": 1.0,
+      "miss_rate": 0.0,
+      "uncertain_ratio": 0.0034965034965034965,
+      "start_mae": 0.6106853146853146,
+      "start_median": 0.10549999999999993,
+      "start_p90": 2.1844,
+      "end_mae": 0.6078986013986013,
+      "end_median": 0.10299999999999987,
+      "end_p90": 2.0535999999999976,
+      "duration_mae": 0.4587027972027973,
+      "start_err_rate_gt_0p1": 0.5052447552447552,
+      "end_err_rate_gt_0p1": 0.5,
+      "start_err_rate_gt_0p3": 0.3758741258741259,
+      "end_err_rate_gt_0p3": 0.38461538461538464,
+      "start_err_rate_gt_0p5": 0.31643356643356646,
+      "end_err_rate_gt_0p5": 0.32342657342657344
+    },
+    "phoneme_ctc": {
+      "n_segments": 30,
+      "n_reference_words": 572,
+      "n_matched_words": 572,
+      "n_extra_units": 0,
+      "uncertain_matched": 2,
+      "coverage": 1.0,
+      "miss_rate": 0.0,
+      "uncertain_ratio": 0.0034965034965034965,
+      "start_mae": 0.3646136363636364,
+      "start_median": 0.06349999999999945,
+      "start_p90": 1.1208,
+      "end_mae": 0.6222045454545454,
+      "end_median": 0.30700000000000005,
+      "end_p90": 1.7107999999999999,
+      "duration_mae": 0.4887132867132867,
+      "start_err_rate_gt_0p1": 0.3723776223776224,
+      "end_err_rate_gt_0p1": 0.8846153846153846,
+      "start_err_rate_gt_0p3": 0.2395104895104895,
+      "end_err_rate_gt_0p3": 0.5087412587412588,
+      "start_err_rate_gt_0p5": 0.19755244755244755,
+      "end_err_rate_gt_0p5": 0.3479020979020979
+    },
+    "ensemble": {
+      "n_segments": 30,
+      "n_reference_words": 572,
+      "n_matched_words": 572,
+      "n_extra_units": 0,
+      "uncertain_matched": 2,
+      "coverage": 1.0,
+      "miss_rate": 0.0,
+      "uncertain_ratio": 0.0034965034965034965,
+      "start_mae": 0.45640122377622383,
+      "start_median": 0.09149999999999991,
+      "start_p90": 1.3674999999999995,
+      "end_mae": 0.5460970279720279,
+      "end_median": 0.25400000000000045,
+      "end_p90": 1.4234999999999987,
+      "duration_mae": 0.41807517482517487,
+      "start_err_rate_gt_0p1": 0.48426573426573427,
+      "end_err_rate_gt_0p1": 0.791958041958042,
+      "start_err_rate_gt_0p3": 0.35664335664335667,
+      "end_err_rate_gt_0p3": 0.4632867132867133,
+      "start_err_rate_gt_0p5": 0.28846153846153844,
+      "end_err_rate_gt_0p5": 0.32342657342657344
+    }
+  },
+  "long_vs_normal": {
+    "pyshiro_v2": {
+      "long": {
+        "n": 209,
+        "start_median": 0.10999999999999988,
+        "start_p90": 1.705400000000001,
+        "start_mae": 0.5910382775119617,
+        "end_mae": 0.6079808612440192
+      },
+      "normal": {
+        "n": 363,
+        "start_median": 0.10200000000000031,
+        "start_p90": 2.229,
+        "start_mae": 0.6219972451790633,
+        "end_mae": 0.6078512396694216
+      }
+    },
+    "phoneme_ctc": {
+      "long": {
+        "n": 209,
+        "start_median": 0.08500000000000085,
+        "start_p90": 1.1110000000000002,
+        "start_mae": 0.35242105263157913,
+        "end_mae": 0.9145550239234448
+      },
+      "normal": {
+        "n": 363,
+        "start_median": 0.057000000000000384,
+        "start_p90": 1.1377999999999997,
+        "start_mae": 0.37163360881542706,
+        "end_mae": 0.4538815426997244
+      }
+    },
+    "ensemble": {
+      "long": {
+        "n": 209,
+        "start_median": 0.10599999999999987,
+        "start_p90": 1.3251999999999997,
+        "start_mae": 0.4409066985645933,
+        "end_mae": 0.6922392344497608
+      },
+      "normal": {
+        "n": 363,
+        "start_median": 0.08050000000000024,
+        "start_p90": 1.4995,
+        "start_mae": 0.4653223140495868,
+        "end_mae": 0.4619545454545454
+      }
+    }
+  },
+  "dumps": [
+    {
+      "id": "Japanese/JA-Tenor-1/Vibrato/さんぽ/Control_Group/0000",
+      "text": "歩こう歩こう私は元気歩くの大好き",
+      "chars": [
+        {
+          "char": "歩",
+          "kana": "ある",
+          "phonemes": [
+            "a",
+            "r",
+            "u"
+          ],
+          "ref_start": 0.0,
+          "ref_end": 1.0,
+          "pyshiro_start": 0.05,
+          "pyshiro_end": 0.99,
+          "hubert_start": 0.06,
+          "hubert_end": 0.62
+        },
+        {
+          "char": "こ",
+          "kana": "こ",
+          "phonemes": [
+            "k",
+            "o"
+          ],
+          "ref_start": 3.181,
+          "ref_end": 4.211,
+          "pyshiro_start": 0.99,
+          "pyshiro_end": 1.84,
+          "hubert_start": 1.06,
+          "hubert_end": 1.12
+        },
+        {
+          "char": "う",
+          "kana": "ー",
+          "phonemes": [
+            "O"
+          ],
+          "ref_start": 4.211,
+          "ref_end": 4.391,
+          "pyshiro_start": 1.84,
+          "pyshiro_end": 3.2,
+          "hubert_start": 1.1400000000000001,
+          "hubert_end": 1.16
+        },
+        {
+          "char": "歩",
+          "kana": "ある",
+          "phonemes": [
+            "a",
+            "r",
+            "u"
+          ],
+          "ref_start": 4.391,
+          "ref_end": 4.961,
+          "pyshiro_start": 3.2,
+          "pyshiro_end": 4.09,
+          "hubert_start": 2.16,
+          "hubert_end": 2.72
+        },
+        {
+          "char": "こ",
+          "kana": "こ",
+          "phonemes": [
+            "k",
+            "o"
+          ],
+          "ref_start": 4.961,
+          "ref_end": 5.431,
+          "pyshiro_start": 4.09,
+          "pyshiro_end": 4.34,
+          "hubert_start": 3.18,
+          "hubert_end": 3.24
+        },
+        {
+          "char": "う",
+          "kana": "ー",
+          "phonemes": [
+            "O"
+          ],
+          "ref_start": 5.431,
+          "ref_end": 5.471,
+          "pyshiro_start": 4.34,
+          "pyshiro_end": 4.36,
+          "hubert_start": 4.2,
+          "hubert_end": 4.22
+        },
+        {
+          "char": "私",
+          "kana": "わたし",
+          "phonemes": [
+            "w",
+            "a",
+            "t",
+            "a",
+            "sh",
+            "i"
+          ],
+          "ref_start": 6.111,
+          "ref_end": 7.551,
+          "pyshiro_start": 4.36,
+          "pyshiro_end": 4.8950000000000005,
+          "hubert_start": 4.22,
+          "hubert_end": 4.84
+        },
+        {
+          "char": "は",
+          "kana": "わ",
+          "phonemes": [
+            "w",
+            "a"
+          ],
+          "ref_start": 7.551,
+          "ref_end": 7.611,
+          "pyshiro_start": 4.8950000000000005,
+          "pyshiro_end": 5.415,
+          "hubert_start": 5.0,
+          "hubert_end": 5.08
+        },
+        {
+          "char": "元",
+          "kana": "げ",
+          "phonemes": [
+            "g",
+            "e"
+          ],
+          "ref_start": 7.711,
+          "ref_end": 7.962,
+          "pyshiro_start": 5.415,
+          "pyshiro_end": 5.65,
+          "hubert_start": 5.5,
+          "hubert_end": 5.5600000000000005
+        },
+        {
+          "char": "気",
+          "kana": "んき",
+          "phonemes": [
+            "N",
+            "k",
+            "i"
+          ],
+          "ref_start": 7.962,
+          "ref_end": 8.002,
+          "pyshiro_start": 5.65,
+          "pyshiro_end": 7.595,
+          "hubert_start": 5.92,
+          "hubert_end": 6.12
+        },
+        {
+          "char": "歩",
+          "kana": "ある",
+          "phonemes": [
+            "a",
+            "r",
+            "u"
+          ],
+          "ref_start": 8.002,
+          "ref_end": 8.182,
+          "pyshiro_start": 7.595,
+          "pyshiro_end": 8.155,
+          "hubert_start": 7.76,
+          "hubert_end": 8.06
+        },
+        {
+          "char": "く",
+          "kana": "く",
+          "phonemes": [
+            "k",
+            "u"
+          ],
+          "ref_start": 8.182,
+          "ref_end": 8.242,
+          "pyshiro_start": 8.155,
+          "pyshiro_end": 8.31,
+          "hubert_start": 8.22,
+          "hubert_end": 8.28
+        },
+        {
+          "char": "の",
+          "kana": "の",
+          "phonemes": [
+            "n",
+            "o"
+          ],
+          "ref_start": 8.242,
+          "ref_end": 9.632,
+          "pyshiro_start": 8.31,
+          "pyshiro_end": 9.055,
+          "hubert_start": 8.58,
+          "hubert_end": 8.64
+        },
+        {
+          "char": "大",
+          "kana": "だ",
+          "phonemes": [
+            "d",
+            "a"
+          ],
+          "ref_start": 9.632,
+          "ref_end": 9.932,
+          "pyshiro_start": 9.055,
+          "pyshiro_end": 9.395,
+          "hubert_start": 9.120000000000001,
+          "hubert_end": 9.16
+        },
+        {
+          "char": "好",
+          "kana": "いす",
+          "phonemes": [
+            "i",
+            "s",
+            "u"
+          ],
+          "ref_start": 9.932,
+          "ref_end": 11.552,
+          "pyshiro_start": 9.395,
+          "pyshiro_end": 9.83,
+          "hubert_start": 9.4,
+          "hubert_end": 9.68
+        },
+        {
+          "char": "き",
+          "kana": "き",
+          "phonemes": [
+            "k",
+            "i"
+          ],
+          "ref_start": 11.552,
+          "ref_end": 11.602,
+          "pyshiro_start": 9.83,
+          "pyshiro_end": 11.53,
+          "hubert_start": 9.9,
+          "hubert_end": 9.96
+        }
+      ]
+    }
+  ]
+}

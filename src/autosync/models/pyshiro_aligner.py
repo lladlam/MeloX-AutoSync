@@ -32,7 +32,7 @@ from pathlib import Path
 import numpy as np
 
 from ..config import MODELS_DIR
-from ..lyrics.ja_pronunciation import JapanesePronunciationMapper
+from ..lyrics.ja_pronunciation import JapanesePronunciationMapper, locate_inner_offset
 from ..types import AlignUnit
 from .base import BaseAligner, ModelMeta
 
@@ -45,34 +45,32 @@ def _ensure_pyshiro_on_path() -> None:
         sys.path.insert(0, path)
 
 
-def _state_count(phonemap: dict, phoneme: str) -> int:
-    entry = phonemap.get(phoneme)
-    if not entry:
-        return 3
-    if float(entry.get("pskip", 0.0)) > 0.0:
-        return 0
-    states = entry.get("states")
-    return len(states) if states else 3
-
-
-def phoneme_intervals(phonemap: dict, phonemes: list[str], segments) -> list[tuple[int, int, str]]:
+def phoneme_intervals_from_starts(
+    phonemes: list[str], state_starts: list[int], segments
+) -> list[tuple[int, int, str]]:
     """Aggregate per-state segments into per-phoneme ``(start, end, phoneme)``.
 
-    Uses the phonemap state counts (not a fixed ``3``) so that skipped phonemes
-    and consecutive identical phonemes are handled correctly.
+    ``state_starts[i]`` is the index of the first state belonging to phoneme
+    ``i`` and ``state_starts[-1]`` the total state count. Deriving the blocks
+    from the **actual built state sequence** keeps us consistent with the
+    backtracked path: a ``pskip`` phoneme still owns its states (skip is an
+    optional edge, not a forced removal), and two consecutive identical
+    phonemes stay separate. A phoneme that the path skipped receives a
+    zero-width interval.
     """
     intervals: list[tuple[int, int, str]] = []
-    cursor = 0
-    for ph in phonemes:
-        count = _state_count(phonemap, ph)
-        if count <= 0:
-            pos = segments[cursor][0] if cursor < len(segments) else intervals[-1][1]
-            intervals.append((pos, pos, ph))
-            continue
-        start = segments[cursor][0]
-        end = segments[min(cursor + count - 1, len(segments) - 1)][1]
+    prev_end = 0
+    for i, ph in enumerate(phonemes):
+        a = state_starts[i]
+        b = state_starts[i + 1]
+        if b > a:
+            start = segments[a][0]
+            end = segments[b - 1][1]
+        else:
+            pos = segments[a][0] if a < len(segments) else prev_end
+            start = end = pos
         intervals.append((start, end, ph))
-        cursor += count
+        prev_end = end
     return intervals
 
 
@@ -133,10 +131,18 @@ class PySHIROAligner(BaseAligner):
         total_frames = streams[0].shape[0]
         state_seq = self._pyshiro.build_state_sequence(phonemes, self._phonemap, total_frames)
         refined, _loglik = self._pyshiro.forced_align_2pass(self._model, streams, state_seq)
-        intervals = phoneme_intervals(self._phonemap, phonemes, refined)
 
-        offset = 1 if phonemes and phonemes[0] == "pau" else 0
-        ph_index = offset
+        # Per-phoneme state blocks, derived from the *actual* built state
+        # sequence (robust to pskip and consecutive identical phonemes).
+        state_starts = [0]
+        for i in range(1, len(phonemes) + 1):
+            state_starts.append(
+                len(self._pyshiro.build_state_sequence(phonemes[:i], self._phonemap, total_frames))
+            )
+        intervals = phoneme_intervals_from_starts(phonemes, state_starts, refined)
+
+        inner = [p for r in readings for p in r.phonemes]
+        ph_index = locate_inner_offset(phonemes, inner)
         last_end = 0.0
         units: list[AlignUnit] = []
         for r in readings:

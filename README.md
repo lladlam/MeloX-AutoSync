@@ -94,3 +94,12 @@ V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射
   读音覆盖、不确定性、无损重建。
 - 许可结论：pyshiro 代码 GPLv3、权重许可不明（不可打包）；HuBERT/TIFA 许可清晰。
   详见 `docs/JAPANESE_MODEL_COMPARISON.md`、`docs/JAPANESE_G2P_DESIGN.md`、`docs/JAPANESE_ANDROID_FEASIBILITY.md`。
+
+### 新增（V0.5）— 日语正确性修复与长音分析
+
+- 修复 **HuBERT 音素→文字索引偏移**（前导 `pau` 污染首字）：起始 sMAE 0.643→**0.365**，P90 1.399→**1.121**。
+- 修复 **G2P 文字↔假名映射**：改用 MeCab 词级上下文读音（`は→わ`），修正 `私→わたし` 等。
+- pyshiro 按**实际回溯状态序列**聚合音素区间（`pskip` 健壮性；v1/v2 当前无 `pskip`）。
+- 根因分析：**句子内部非歌词区间**（`<AP>`/`<SP>`，29/30 段，非静音）是日语误差主因；
+  见 `docs/JAPANESE_LONG_VOWEL_ANALYSIS.md`。
+- 许可审计（含 MeloX-Android GPLv3 更正）：`docs/LICENSE_AUDIT.md`。

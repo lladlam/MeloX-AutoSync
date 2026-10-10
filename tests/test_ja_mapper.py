@@ -75,7 +75,9 @@ def test_g2p_failure_marks_uncertain_but_keeps_text() -> None:
     def boom(_t: str) -> str:
         raise RuntimeError("no g2p")
 
-    m = JapanesePronunciationMapper(table=_TABLE, g2p=boom, convert=_fake_convert)
+    m = JapanesePronunciationMapper(
+        table=_TABLE, g2p=boom, convert=_fake_convert, tokenizer=lambda _t: []
+    )
     readings, phonemes = m.map("あい")
     assert phonemes == []
     assert all(r.uncertain for r in readings)

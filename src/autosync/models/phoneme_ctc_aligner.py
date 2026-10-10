@@ -19,7 +19,7 @@ import numpy as np
 
 from ..alignment.ctc import InfeasibleAlignmentError, TokenSpan, forced_align
 from ..config import HF_CACHE_DIR
-from ..lyrics.ja_pronunciation import JapanesePronunciationMapper
+from ..lyrics.ja_pronunciation import JapanesePronunciationMapper, locate_inner_offset
 from ..types import AlignUnit
 from .base import BaseAligner, ModelMeta
 
@@ -37,6 +37,72 @@ def pyopenjtalk_phonemes(kana: str, _table: dict) -> list[str]:
 
     phonemes = pyopenjtalk.g2p(kana).split()
     return ["pau", *phonemes, "pau"]
+
+
+def map_spans_to_char_units(
+    readings,
+    phonemes: list[str],
+    spans_by_phoneme: dict,
+    frame_seconds: float,
+):
+    """Map per-phoneme CTC spans back to the original characters.
+
+    * Uses the verified :func:`locate_inner_offset` (no leading-``pau`` leak).
+    * Unknown / skipped phonemes simply have no span; a character with no known
+      phoneme gets a zero-width interval placed at its nearest known boundary
+      (never at time 0 by accident) and is marked ``uncertain``.
+    * Every original character is kept, so the text stays reconstructible.
+    """
+    from ..types import AlignUnit
+
+    inner = [p for r in readings for p in r.phonemes]
+    offset = locate_inner_offset(phonemes, inner)
+
+    resolved: list[tuple[float, float, bool] | None] = []
+    cursor = offset
+    for r in readings:
+        n = len(r.phonemes)
+        idxs = [cursor + k for k in range(n)]
+        known = [spans_by_phoneme[i] for i in idxs if i in spans_by_phoneme]
+        if known:
+            start = known[0].start_frame * frame_seconds
+            end = (known[-1].end_frame + 1) * frame_seconds
+            resolved.append((start, end, bool(r.uncertain)))
+        else:
+            resolved.append(None)
+        cursor += n
+
+    # Nearest known boundaries for characters without any known phoneme.
+    prev_end = [0.0] * len(resolved)
+    pe = 0.0
+    for i, val in enumerate(resolved):
+        prev_end[i] = pe
+        if val is not None:
+            pe = val[1]
+    next_start: list[float | None] = [None] * len(resolved)
+    ns: float | None = None
+    for i in range(len(resolved) - 1, -1, -1):
+        if resolved[i] is not None:
+            ns = resolved[i][0]
+        next_start[i] = ns
+
+    prev_known = [False] * len(resolved)
+    flag = False
+    for i, val in enumerate(resolved):
+        prev_known[i] = flag
+        if val is not None:
+            flag = True
+
+    units: list[AlignUnit] = []
+    for i, r in enumerate(readings):
+        val = resolved[i]
+        if val is not None:
+            s, e, unc = val
+            units.append(AlignUnit(text=r.char, start=s, end=e, source="model", raw=r.kana or None, uncertain=unc))
+            continue
+        pos = prev_end[i] if prev_known[i] else (next_start[i] if next_start[i] is not None else 0.0)
+        units.append(AlignUnit(text=r.char, start=pos, end=pos, source="model", raw=r.kana or None, uncertain=True))
+    return units
 
 
 class PhonemeCTCAligner(BaseAligner):
@@ -115,25 +181,4 @@ class PhonemeCTCAligner(BaseAligner):
         for pos, span in zip(keep, al.spans):
             if span is not None:
                 spans_by_phoneme[pos] = span
-
-        fs = self.frame_seconds
-        units: list[AlignUnit] = []
-        cursor = 0  # index into the full phoneme list
-        for r in readings:
-            n = len(r.phonemes)
-            if n == 0:
-                units.append(AlignUnit(text=r.char, start=0.0, end=0.0, source="model",
-                                       raw=r.kana or None, uncertain=True))
-                continue
-            idxs = [cursor + k for k in range(n)]
-            known = [spans_by_phoneme[i] for i in idxs if i in spans_by_phoneme]
-            if not known:
-                units.append(AlignUnit(text=r.char, start=0.0, end=0.0, source="model",
-                                       raw=r.kana or None, uncertain=True))
-            else:
-                start = known[0].start_frame * fs
-                end = (known[-1].end_frame + 1) * fs
-                units.append(AlignUnit(text=r.char, start=start, end=end, source="model",
-                                       raw=r.kana or None, uncertain=r.uncertain))
-            cursor += n
-        return units
+        return map_spans_to_char_units(readings, phonemes, spans_by_phoneme, self.frame_seconds)
