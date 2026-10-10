@@ -744,22 +744,33 @@ funasr = [
     { name = "kaldi-native-fbank" },
     { name = "modelscope" },
 ]
+shiro = [
+    { name = "msgpack" },
+    { name = "numba" },
+    { name = "pyopenjtalk" },
+    { name = "scipy", version = "1.17.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "scipy", version = "1.18.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+]
 
 [package.metadata]
 requires-dist = [
     { name = "funasr", marker = "extra == 'funasr'", specifier = ">=1.1" },
     { name = "kaldi-native-fbank", marker = "extra == 'funasr'", specifier = ">=1.20" },
     { name = "modelscope", marker = "extra == 'funasr'", specifier = ">=1.15" },
+    { name = "msgpack", marker = "extra == 'shiro'", specifier = ">=1.0" },
+    { name = "numba", marker = "extra == 'shiro'", specifier = ">=0.59" },
     { name = "numpy", specifier = ">=1.26,<3" },
+    { name = "pyopenjtalk", marker = "extra == 'shiro'", specifier = ">=0.3" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=5" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.6" },
+    { name = "scipy", marker = "extra == 'shiro'", specifier = ">=1.11" },
     { name = "socksio", specifier = ">=1.0" },
     { name = "soundfile", specifier = ">=0.12" },
     { name = "torch", specifier = ">=2.2", index = "https://download.pytorch.org/whl/cpu" },
     { name = "transformers", specifier = ">=4.40,<6" },
 ]
-provides-extras = ["funasr", "dev"]
+provides-extras = ["funasr", "shiro", "dev"]
 
 [[package]]
 name = "modelscope"
@@ -1093,6 +1104,17 @@ sdist = { url = "https://files.pythonhosted.org/packages/4a/fb/7f58c397fb3166675
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b2/e6/94145d714402fd5ade00b5661f2d0ab981219e07f7db9bfa16786cdb9c04/pynndescent-0.6.0-py3-none-any.whl", hash = "sha256:dc8c74844e4c7f5cbd1e0cd6909da86fdc789e6ff4997336e344779c3d5538ef", size = 73511, upload-time = "2026-01-08T21:29:57.306Z" },
 ]
+
+[[package]]
+name = "pyopenjtalk"
+version = "0.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/58/74/ccd31c696f047ba381f9b11a504bf1199756c3f30f3de64e3eeb83e10b4a/pyopenjtalk-0.4.1.tar.gz", hash = "sha256:d5ada46f7fc2b52c1c79c273eb9668ff6ad7ab276a8db9d8be119ef93440f0dc", size = 1397999, upload-time = "2025-04-08T06:27:46.528Z" }
 
 [[package]]
 name = "pytest"

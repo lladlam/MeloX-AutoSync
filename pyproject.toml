@@ -25,6 +25,13 @@ funasr = [
     "modelscope>=1.15",
     "kaldi-native-fbank>=1.20",
 ]
+# Japanese singing alignment via pyshiro (GPLv3 code, not vendored) + G2P.
+shiro = [
+    "numba>=0.59",
+    "msgpack>=1.0",
+    "pyopenjtalk>=0.3",
+    "scipy>=1.11",
+]
 dev = [
     "pytest>=8",
     "pytest-cov>=5",

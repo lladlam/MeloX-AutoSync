@@ -84,3 +84,13 @@ V0.2 加入了**歌声评测**、CTC 塌缩/不可行检测、日文原文映射
 - 逐段诊断工具 `benchmarks/diagnosis.py`（CTC CER、blank/塌缩分布、窗口对比、有符号起始偏差）。
 - 研究结论：**日语语音模型在歌声上不可用**（加大模型反而更差）；**英文 base 已够用、large 无益**；
   能量起始回吸与能量分段重对齐**均被否决**。详见 `docs/EXPERIMENT_RESULTS.md` 与 `docs/ACCEPTANCE.md`。
+
+### 新增（V0.4）— 日语歌声模型替换
+
+- 新增 **pyshiro（SHIRO/HSMM 歌声对齐）** 适配器：覆盖率 0.528→**1.000**、失败率 46.7%→**0%**、
+  起始中位 386ms→**118ms**（`--extra shiro`）。
+- 新增 **HuBERT 音素 CTC** 适配器（Apache-2.0，复用自研 CTC Viterbi）。
+- 新增 **`JapanesePronunciationMapper`**：汉字/假名 G2P、促音/长音/拨音/拗音、音素↔原文映射、
+  读音覆盖、不确定性、无损重建。
+- 许可结论：pyshiro 代码 GPLv3、权重许可不明（不可打包）；HuBERT/TIFA 许可清晰。
+  详见 `docs/JAPANESE_MODEL_COMPARISON.md`、`docs/JAPANESE_G2P_DESIGN.md`、`docs/JAPANESE_ANDROID_FEASIBILITY.md`。

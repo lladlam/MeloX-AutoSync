@@ -28,6 +28,12 @@ echo "== Japanese =="
 OMP_NUM_THREADS=4 uv run python benchmarks/singing_eval.py --languages ja \
   --engines "$ENG" --modes "$MODES" --out experiments/reports/singing_ja.json
 
+echo "== Japanese singing models (pyshiro + HuBERT phoneme CTC) =="
+uv sync --extra dev --extra shiro --extra funasr >/dev/null 2>&1 || true
+OMP_NUM_THREADS=4 uv run --extra shiro python benchmarks/singing_eval.py --languages ja \
+  --engines heuristic,model,pyshiro,pyshiro_v1,phoneme_ctc --modes "$MODES" \
+  --out experiments/reports/singing_ja.json
+
 echo "== Chinese =="
 OMP_NUM_THREADS=4 uv run --extra funasr python benchmarks/singing_eval.py --languages zh \
   --engines "$ENG" --modes "$MODES" --out experiments/reports/singing_zh.json

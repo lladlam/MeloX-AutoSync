@@ -175,7 +175,21 @@ def _as_units(pred: list[dict]):
     ]
 
 
-def evaluate_segment(seg: dict, engines: list[str], modes: list[str], aligner, pad: float, lrc_onset: str) -> dict:
+# engine name -> (kind, aligner_key, refine, start_mode)
+ENGINE_SPEC: dict[str, tuple[str, str | None, bool, str]] = {
+    "model": ("window", "ctc", False, "none"),
+    "model+energy": ("window", "ctc", True, "none"),
+    "model+onset": ("window", "ctc", True, "backward"),
+    "model+reseg": ("reseg", "ctc", False, "none"),
+    "pyshiro": ("window", "shiro_v2", False, "none"),
+    "pyshiro+energy": ("window", "shiro_v2", True, "none"),
+    "pyshiro_v1": ("window", "shiro_v1", False, "none"),
+    "pyshiro_v1+energy": ("window", "shiro_v1", True, "none"),
+    "phoneme_ctc": ("window", "phoneme_ctc", False, "none"),
+}
+
+
+def evaluate_segment(seg: dict, engines: list[str], modes: list[str], aligners: dict, pad: float, lrc_onset: str) -> dict:
     audio, sr = load_audio(seg["wav"], 16000)
     ref_words = load_reference(seg["json"])
     if not ref_words:
@@ -203,27 +217,15 @@ def evaluate_segment(seg: dict, engines: list[str], modes: list[str], aligner, p
             try:
                 if engine == "heuristic":
                     pred = run_heuristic(seg["language"], text, start, end)
-                elif engine == "model":
-                    if aligner is None:
-                        raise RuntimeError("model unavailable")
-                    pred = run_model(aligner, audio, sr, text, start, end, pad, refine=False)
-                    recon = check_reconstruction(seg["language"], text, _as_units(pred))
-                elif engine == "model+energy":
-                    if aligner is None:
-                        raise RuntimeError("model unavailable")
-                    pred = run_model(aligner, audio, sr, text, start, end, pad, refine=True)
-                    recon = check_reconstruction(seg["language"], text, _as_units(pred))
-                elif engine == "model+onset":
-                    if aligner is None:
-                        raise RuntimeError("model unavailable")
-                    pred = run_model(
-                        aligner, audio, sr, text, start, end, pad, refine=True, start_mode="backward"
-                    )
-                    recon = check_reconstruction(seg["language"], text, _as_units(pred))
-                elif engine == "model+reseg":
-                    if aligner is None:
-                        raise RuntimeError("model unavailable")
-                    pred = run_reseg(aligner, audio, sr, text, start, end, pad, seg["language"])
+                else:
+                    kind, akey, refine, smode = ENGINE_SPEC[engine]
+                    al = aligners.get(akey)
+                    if al is None:
+                        raise RuntimeError(f"aligner '{akey}' unavailable")
+                    if kind == "reseg":
+                        pred = run_reseg(al, audio, sr, text, start, end, pad, seg["language"])
+                    else:
+                        pred = run_model(al, audio, sr, text, start, end, pad, refine=refine, start_mode=smode)
                     recon = check_reconstruction(seg["language"], text, _as_units(pred))
             except Exception as exc:  # noqa: BLE001 - record failure, never hide it
                 error = f"{type(exc).__name__}: {exc}"
@@ -267,18 +269,45 @@ def build_payload(segments: list[dict], langs, engines, modes, lrc_onset, pad) -
 
     for language in langs:
         segs = [s for s in segments if s["language"] == language]
-        aligner = None
-        if any(e.startswith("model") for e in engines) and segs:
+        aligners: dict[str, object] = {}
+        needed = {ENGINE_SPEC[e][1] for e in engines if e in ENGINE_SPEC}
+        if "ctc" in needed and segs:
             try:
-                aligner = get_aligner(language)
-                aligner.load()
-                print(f"[{language}] model loaded: {aligner.meta.name}")
+                ctc = get_aligner(language)
+                ctc.load()
+                aligners["ctc"] = ctc
+                print(f"[{language}] ctc model loaded: {ctc.meta.name}")
             except Exception as exc:  # noqa: BLE001
-                print(f"[{language}] MODEL UNAVAILABLE: {type(exc).__name__}: {exc}")
-                aligner = None
+                print(f"[{language}] CTC MODEL UNAVAILABLE: {type(exc).__name__}: {exc}")
+                aligners["ctc"] = None
+        if language == "ja" and segs and ({"shiro_v1", "shiro_v2"} & needed):
+            from autosync.models.pyshiro_aligner import PySHIROAligner
+
+            for key, version in (("shiro_v2", "v2"), ("shiro_v1", "v1")):
+                if key not in needed:
+                    continue
+                try:
+                    shiro = PySHIROAligner(version)
+                    shiro.load()
+                    aligners[key] = shiro
+                    print(f"[{language}] {key} loaded: {shiro.meta.name}")
+                except Exception as exc:  # noqa: BLE001
+                    print(f"[{language}] {key} UNAVAILABLE: {type(exc).__name__}: {exc}")
+                    aligners[key] = None
+        if language == "ja" and segs and "phoneme_ctc" in needed:
+            from autosync.models.phoneme_ctc_aligner import PhonemeCTCAligner
+
+            try:
+                pc = PhonemeCTCAligner()
+                pc.load()
+                aligners["phoneme_ctc"] = pc
+                print(f"[{language}] phoneme_ctc loaded: {pc.meta.name}")
+            except Exception as exc:  # noqa: BLE001
+                print(f"[{language}] phoneme_ctc UNAVAILABLE: {type(exc).__name__}: {exc}")
+                aligners["phoneme_ctc"] = None
         lang_reports = []
         for seg in segs:
-            rep = evaluate_segment(seg, engines, modes, aligner, pad, lrc_onset)
+            rep = evaluate_segment(seg, engines, modes, aligners, pad, lrc_onset)
             lang_reports.append(rep)
         all_reports.extend(lang_reports)
 
