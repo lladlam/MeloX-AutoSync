@@ -291,23 +291,38 @@ def write_pack(result: dict) -> None:
 
 
 def upload(result: dict) -> None:
-    subprocess.run(
-        ["gh", "release", "create", TAG, "--repo", REPO_SLUG, "--prerelease",
-         "--title", f"Android model pack {PACK_VERSION} (BETA - word-level accuracy not accepted)",
-         "--notes-file", str(PACK_DIR / "README.md")],
-        check=True,
-    )
-    for src, name in [(REPO_ROOT / spec["model"][0], spec["model"][1]) for spec in LANGUAGES.values()]:
-        subprocess.run(["gh", "release", "upload", TAG, f"{src}#{name}", "--repo", REPO_SLUG],
-                       check=True)
-    for src_rel, name, _role in [e for s in LANGUAGES.values() for e in s["extra"]]:
-        subprocess.run(["gh", "release", "upload", TAG, f"{REPO_ROOT / src_rel}#{name}",
-                        "--repo", REPO_SLUG], check=True)
+    import shutil
+    import tempfile
+
+    exists = subprocess.run(["gh", "release", "view", TAG, "--repo", REPO_SLUG],
+                            capture_output=True, text=True, check=False).returncode == 0
+    if not exists:
+        subprocess.run(
+            ["gh", "release", "create", TAG, "--repo", REPO_SLUG, "--prerelease",
+             "--title", f"Android model pack {PACK_VERSION} (BETA - word-level accuracy not accepted)",
+             "--notes-file", str(PACK_DIR / "README.md")],
+            check=True,
+        )
+    else:
+        print(f"release {TAG} already exists; updating notes and assets")
+    # ``gh release upload <file>#<label>`` only sets a *label*; the asset name is
+    # the file name. Stage every binary under its pack name so the download URLs
+    # in android-models.json match the real asset names.
+    stage = Path(tempfile.mkdtemp(prefix="melox_pack_"))
+    try:
+        planned = [(REPO_ROOT / spec["model"][0], spec["model"][1]) for spec in LANGUAGES.values()]
+        planned += [(REPO_ROOT / src_rel, name)
+                    for s in LANGUAGES.values() for src_rel, name, _role in s["extra"]]
+        for src, name in planned:
+            staged = stage / name
+            shutil.copy2(src, staged)
+            subprocess.run(["gh", "release", "upload", TAG, str(staged),
+                            "--repo", REPO_SLUG, "--clobber"], check=True)
+    finally:
+        shutil.rmtree(stage, ignore_errors=True)
     for name in sorted(result["text_files"]):
-        if name in ("README.md",):
-            continue
-        subprocess.run(["gh", "release", "upload", TAG, f"{PACK_DIR / name}#{name}",
-                        "--repo", REPO_SLUG], check=True)
+        subprocess.run(["gh", "release", "upload", TAG, str(PACK_DIR / name),
+                        "--repo", REPO_SLUG, "--clobber"], check=True)
 
 
 def main() -> int:
