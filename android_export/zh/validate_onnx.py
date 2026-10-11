@@ -564,11 +564,15 @@ def write_manifest(insp: dict, perf: dict, frame_table: list) -> dict:
         "language": "zh",
         "source_model": "funasr/fa-zh",
         "source_model_alias": "iic/speech_timestamp_prediction-v1-16k-offline",
-        "license": "FunASR Model License (verify before redistribution)",
+        "license": "Apache-2.0",
         "license_note": (
-            "funasr/fa-zh is NOT Apache-2.0. The FunASR Model License must be re-checked "
-            "before the exported weights are redistributed or shipped inside the app. "
-            "Weights are not committed to git."
+            "Verified 2026-10-11: the upstream ModelScope card "
+            "(iic/speech_timestamp_prediction-v1-16k-offline) declares "
+            "'license: Apache License 2.0' in its README front matter and contains no "
+            "restrictive-use clauses; the FunASR toolkit is MIT. Redistribution of the "
+            "quantised weights is therefore permitted; the Apache-2.0 notice is included "
+            "in the release with a statement of modifications (INT8 dynamic quantisation, "
+            "per-channel weight scales, frontend baked into the graph)."
         ),
         "sample_rate": 16000,
         "frontend": {
@@ -733,7 +737,8 @@ def write_report(M: dict, manifest: dict, insp: dict, perf: dict, vec_info: list
     A(f"- 交付物：`fa-zh-fp32.onnx`（{insp['fp32']['bytes'] / 1e6:.1f} MB）、"
       f"`fa-zh-int8.onnx`（{insp['int8']['bytes'] / 1e6:.1f} MB），"
       "单文件、opset 17、无 `com.microsoft` 算子。")
-    A("- 许可：**FunASR Model License**（非 Apache-2.0）。导出物随 App 分发前必须复核，"
+    A("- 许可：**Apache-2.0**（已核实上游 ModelScope 模型卡 README front matter "
+      "声明 `license: Apache License 2.0`，全文无使用限制；FunASR 工具链为 MIT）。"
       "权重不得提交 Git。")
     A(f"- 契约偏差：见 §7（前端的真实 FFT 用 matmul-DFT 实现；`us_peaks` 用闭式 "
       f"`cumsum/floor` 等价式实现，逐值 max|Δ| = {fmt(M['peaks_closed_form']['max_abs'], 3)}，"
@@ -916,8 +921,8 @@ def write_report(M: dict, manifest: dict, insp: dict, perf: dict, vec_info: list
     A("")
     A("## 6. 已知限制与风险")
     A("")
-    A("- **许可**：`funasr/fa-zh` 为 FunASR Model License（非 Apache-2.0），"
-      "随 App 分发前必须复核；权重/ONNX 不提交 Git。")
+    A("- **许可**：`funasr/fa-zh` 权重为 **Apache-2.0**（上游 ModelScope 模型卡已核实，"
+      "见 `docs/LICENSE_AUDIT.md`）；权重/ONNX 不提交 Git，仅作为 Release 资产分发。")
     A("- **量化与歌声**：INT8 在真实歌声行上 `max|Δ|` 见 §4.3；"
       "歌声音高/混音与朗读差异大，量化误差高于朗读；KTV 场景建议端上保留 FP32 回退。")
     A("- **`token_num` 敏感**：CIF 上采样头用 `token_num / sum(alphas)` 归一化，"

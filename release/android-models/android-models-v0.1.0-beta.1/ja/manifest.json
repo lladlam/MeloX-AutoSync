@@ -1,0 +1,93 @@
+{
+  "schema": "melox.autosync.model-pack.1",
+  "pack_version": "0.1.0-beta.1",
+  "min_backend_protocol": 1,
+  "language": "ja",
+  "engine": "ctc-hubert-phoneme",
+  "engine_notes": "Phoneme-level CTC (blank=PAD=0) over a 48-token phoneme inventory. Android must implement (a) G2P to phonemes, (b) the char<->phoneme mapper (ja_pronunciation.py / map_spans_to_char_units), (c) CTC Viterbi. The model itself has NO baked normalisation.",
+  "source_model": "prj-beatrice/japanese-hubert-base-phoneme-ctc-v4",
+  "source_revision": "f5fe07043bcb0b77a86faf72ac6d8fc1ae558f99",
+  "license": "Apache-2.0",
+  "license_notice": "Apache-2.0. This pack contains MODIFIED weights (dynamic INT8 quantisation with per-channel weight scales; for zh the feature frontend and for en the input normalisation are baked into the graph). Upstream copyright remains with the original authors; see NOTICE.md. No endorsement by the upstream authors is implied.",
+  "sample_rate": 16000,
+  "frame_hop_samples": 320,
+  "frame_hop_seconds": 0.02,
+  "input": {
+    "name": "input_values",
+    "shape": [
+      1,
+      null
+    ],
+    "dtype": "float32",
+    "preprocessing": "raw 16k mono PCM in [-1,1]; NO external normalization (preprocessor do_normalize=false; HuBERT uses internal group norm)"
+  },
+  "aux_inputs": null,
+  "outputs": [
+    {
+      "name": "logits",
+      "shape": [
+        1,
+        null,
+        48
+      ],
+      "dtype": "float32"
+    },
+    {
+      "name": "log_probs",
+      "shape": [
+        1,
+        null,
+        48
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "blank_id": 0,
+  "text": {
+    "tokens_count": null,
+    "tokens_file": "ja-vocab.json",
+    "word_delimiter_id": null,
+    "normalization": "NFKC -> pyopenjtalk G2P to phonemes (Latin is read letter-by-letter); see g2p_dependency"
+  },
+  "files": [
+    {
+      "name": "ja-hubert-phoneme-ctc-int8.onnx",
+      "role": "model",
+      "download_url": "https://github.com/lladlam/MeloX-AutoSync/releases/download/android-models-v0.1.0-beta.1/ja-hubert-phoneme-ctc-int8.onnx",
+      "bytes": 95194973,
+      "sha256": "b351071efea34cede057fba2753e82b935cf3e9c10cf40e33e6d2e41e39a82ce",
+      "note": ""
+    },
+    {
+      "name": "ja-vocab.json",
+      "role": "tokenizer",
+      "download_url": "https://github.com/lladlam/MeloX-AutoSync/releases/download/android-models-v0.1.0-beta.1/ja-vocab.json",
+      "bytes": 550,
+      "sha256": "9c5c09049b351bf19479c84c646c69dd3f6fa12c2030b4318215ba4458211b05",
+      "note": ""
+    }
+  ],
+  "accuracy": {
+    "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
+    "gate_result": "3 of 15 gate rows failed; one further reference row is non-gate (see android_export/ja/REPORT.md)",
+    "int8_vs_fp32_char_start_mae_ms": 147.06,
+    "int8_vs_fp32_chars": 1224,
+    "int8_vs_fp32_lines": 120,
+    "reference_test_vector_mae_ms": 1.9,
+    "reference_real_singing_mae_ms": 173.99,
+    "fp32_vs_torch_baseline_mae_ms": 0.0,
+    "int8_cosine_mean": 0.997174,
+    "int8_cosine_min": 0.97278,
+    "notes": "Same-methodology PyTorch-vs-FP32 baseline is 0.00 ms, so the 147 ms is purely a quantisation effect. Japanese remains EXPERIMENTAL: the acoustic model is trained on read speech."
+  },
+  "g2p_dependency": {
+    "required_on_device": true,
+    "recommended": "bundle OpenJTalk + NAIST dictionary and call it via JNI",
+    "not_shipped_here": true,
+    "openjtalk_code_license": "MIT (pyopenjtalk); modified BSD (NAIST) for the dictionary",
+    "dictionary_name": "open_jtalk_dic_utf_8-1.11",
+    "dictionary_bytes": 107300000,
+    "dictionary_license_file": "COPYING (NAIST three-clause BSD)",
+    "note": "The dictionary is NOT part of this pack. If Android bundles it, it must reproduce the NAIST copyright notice and disclaimer. The HTS voice (mei_normal.htsvoice) is synthesis-only and must not be shipped for G2P."
+  }
+}

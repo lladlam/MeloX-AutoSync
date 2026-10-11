@@ -3,8 +3,8 @@
   "language": "zh",
   "source_model": "funasr/fa-zh",
   "source_model_alias": "iic/speech_timestamp_prediction-v1-16k-offline",
-  "license": "FunASR Model License (verify before redistribution)",
-  "license_note": "funasr/fa-zh is NOT Apache-2.0. The FunASR Model License must be re-checked before the exported weights are redistributed or shipped inside the app. Weights are not committed to git.",
+  "license": "Apache-2.0",
+  "license_note": "Verified 2026-10-11: the upstream ModelScope card (iic/speech_timestamp_prediction-v1-16k-offline) declares 'license: Apache License 2.0' in its README front matter and contains no restrictive-use clauses; the FunASR toolkit is MIT. Redistribution of the quantised weights is therefore permitted; the Apache-2.0 notice is included in the release with a statement of modifications (INT8 dynamic quantisation, per-channel weight scales, frontend baked into the graph).",
   "sample_rate": 16000,
   "frontend": {
     "baked_into_graph": true,
@@ -285,9 +285,9 @@
   },
   "int8_performance_desktop": {
     "window_s": 12.0,
-    "median_ms": 107.5,
-    "p90_ms": 108.4,
-    "peak_rss_mb": 746.2
+    "median_ms": 104.4,
+    "p90_ms": 106.0,
+    "peak_rss_mb": 744.1
   },
   "postprocess": {
     "reference": "postprocess_reference.py",

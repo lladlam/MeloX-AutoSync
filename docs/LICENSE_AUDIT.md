@@ -28,7 +28,7 @@
 | g2pflow（TIFA 的 G2P） | openvpi/g2pflow | **MIT** | 是 | |
 | UniDic（TIFA 日语后端） | unidic | 混合（BSD 系 / 部分 CC） | 需逐项核实 | 约 526 MB；本轮因磁盘配额未完成 TIFA |
 | TIFA 代码/模型 | openvpi/TIFA | **MIT** | 是 | 模型 151 MB |
-| funasr / fa-zh（中文） | FunASR | **FunASR Model License**（自定义） | 需复核 | 商业使用前确认 |
+| funasr / fa-zh（中文） | FunASR | 见 §5：权重 **Apache-2.0**（已核实） | **是**（附声明 + 修改说明） | 工具链为 MIT；权重来自 `iic/speech_timestamp_prediction-v1-16k-offline` |
 | GTSinger（评测数据） | GTSinger/GTSinger | **CC BY-NC-SA 4.0** | 仅非商业、ShareAlike | 仅本地评测，未提交原始音频 |
 
 ## 2. 结论
@@ -59,3 +59,27 @@
   **全部 gitignore**，仅本地保留。
 - 每次发布前应运行：`uv run python tools/redact_reports.py experiments/reports/*.json`，
   并用关键词抽查确认无歌词残留。
+
+## 5. Android 模型包（Release 资产）许可核实 — 2026-10-11
+
+发布 `android-models-v0.1.0-beta.1` 之前的逐项核实，**证据可复现**：
+
+| 资产 | 上游 | 声明的许可 | 证据 |
+|---|---|---|---|
+| en 权重 `wav2vec2-base-960h` | `facebook/wav2vec2-base-960h` | Apache-2.0 | HF API `cardData.license=apache-2.0`；tag `license:apache-2.0` |
+| ja 权重 `japanese-hubert-base-phoneme-ctc-v4` | `prj-beatrice/...` | Apache-2.0 | HF API `cardData.license=apache-2.0`；tag `license:apache-2.0` |
+| zh 权重 `speech_timestamp_prediction-v1-16k-offline`（别名 `funasr/fa-zh`） | ModelScope `iic/...` | **Apache License 2.0** | ModelScope API 字段 `License`；仓库 `README.md` front matter `license: Apache License 2.0`；README 全文无 `non-commercial` / `research only` / `不得用于` 等限制关键词 |
+| FunASR 工具链（**不随包分发**） | `modelscope/FunASR` | MIT | GitHub API `license.spdx_id=MIT` |
+| pyopenjtalk（**不随包分发**） | `r9y9/pyopenjtalk` | MIT（Expat） | 包元数据 `License` 字段 |
+| Open JTalk 词典 `open_jtalk_dic_utf_8-1.11`（**不随包分发**，日文 G2P 依赖） | NAIST | modified BSD（三条款） | 词典目录内 `COPYING`：版权归 NAIST，允许源码/二进制再分发，须保留版权声明与免责声明，且不得用 NAIST 名义背书。体积 107.3 MB |
+| HTS voice `mei_normal.htsvoice`（**不分发**） | 第三方 | 独立许可 | 仅用于语音合成，与 G2P 无关，因此**不包含**在模型包中 |
+
+**结论**：三个模型权重均可公开再分发（Apache-2.0）。发布时履行的义务：
+
+1. 随 Release 附 **Apache-2.0 全文**与 **NOTICE**；
+2. NOTICE 中声明**修改**（动态 INT8 量化、按通道权重量化、中文前端烘焙进图、
+   英文归一化烘焙进图）——Apache-2.0 §4(b) 要求对修改后的文件作显著说明；
+3. 不改变上游版权归属，不使用上游名称为本项目背书；
+4. `pyshiro`（权重无许可）与 GTSinger（CC BY-NC-SA）**继续排除**在任何公开语言包之外；
+5. 日文 G2P 词典若日后随 App 打包，须一并附上 NAIST 的 `COPYING` 声明
+   （MeloX-Android 为 GPLv3，与 modified BSD 兼容）。

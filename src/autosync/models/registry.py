@@ -58,7 +58,7 @@ BACKENDS: dict[tuple[str, str], BackendSpec] = {
         "singing HSMM; weights not distributable — local research only",
     ),
     ("zh", "funasr-fa-zh"): BackendSpec(
-        "funasr-fa-zh", "zh", "funasr/fa-zh", "model-license (FunASR)", "stable",
+        "funasr-fa-zh", "zh", "funasr/fa-zh", "apache-2.0", "stable",
         "Paraformer timestamp prediction, hanzi timestamps",
     ),
 }

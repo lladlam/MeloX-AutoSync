@@ -14,7 +14,7 @@
 | **ja** | **`hubert-phoneme-ctc-v4`（默认）** | prj-beatrice/japanese-hubert-base-phoneme-ctc-v4 | experimental | Apache-2.0 | 是 |
 | ja | `reazonspeech-wav2vec2-base` | reazon-research/… | experimental | Apache-2.0 | 是 |
 | ja | `pyshiro-v2` | pyshiro-jp-v2 | research | GPLv3 / 权重许可不明 | **否** |
-| zh | `funasr-fa-zh`（默认） | funasr/fa-zh | stable | FunASR Model License | 是 |
+| zh | `funasr-fa-zh`（默认） | funasr/fa-zh | stable | Apache-2.0（已核实，见 `LICENSE_AUDIT.md` §5） | 是 |
 
 - CLI 新增 `--backend <key>` 与 `--mode production|experimental`；`autosync info` 打印
   真实 repo / 状态 / 许可 / 是否可分发。

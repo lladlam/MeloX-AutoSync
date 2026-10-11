@@ -7,9 +7,13 @@ it takes the audio and the known text and returns a timestamp (ms) range for
 every character token via a monotonic attention / CIF predictor. There is no
 CTC Viterbi step here.
 
-Licence: FunASR Model License (see https://github.com/modelscope/FunASR).
-The weights (~151 MB, ~38M parameters) are loaded only when Chinese is
-requested; the ``funasr`` package is an optional dependency.
+Licence: Apache-2.0 for the weights. The upstream model card
+(``iic/speech_timestamp_prediction-v1-16k-offline`` on ModelScope) declares
+``license: Apache License 2.0`` in its README front matter and carries no
+restrictive-use clauses; the FunASR *toolkit* is MIT. Verified 2026-10-11 —
+see ``docs/LICENSE_AUDIT.md``. The weights (~151 MB, ~38M parameters) are loaded
+only when Chinese is requested; the ``funasr`` package is an optional
+dependency.
 
 Because this model computes timestamps directly we do not synthesise any
 numbers: if the model fails we raise and the caller records a failure.
@@ -37,7 +41,7 @@ class ChineseFunASRAligner(BaseAligner):
             name="funasr/fa-zh",
             version="fa-zh (MonotonicAligner, speech_timestamp_prediction-v1-16k-offline)",
             language="zh",
-            license="model-license (FunASR)",
+            license="apache-2.0",
             approx_size_mb=151,
         )
         # Not frame-based; keep a nominal value for the interface.
