@@ -132,7 +132,12 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dir", type=Path, help="directory holding the downloaded pack")
     ap.add_argument("--download", action="store_true", help="download the pack first")
+    ap.add_argument("--tag", default=None, help="release tag to verify")
     args = ap.parse_args()
+    global TAG, BASE
+    if args.tag and args.tag != TAG:
+        TAG = args.tag
+        BASE = f"https://github.com/{REPO_SLUG}/releases/download/{TAG}"
     root = args.dir or Path("/tmp/opencode/verify_pack")
     if args.download:
         download(root)

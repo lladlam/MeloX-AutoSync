@@ -1,15 +1,20 @@
-# Android 模型包 · v0.1.0-beta.1（测试版）
+# Android 模型包 · v0.1.0-beta.2（测试版）
 
 > ⚠️ **这是测试版（prerelease），尚未通过逐字精度验收。**
 > 三个模型的权重都能在 Android 上用 ONNX Runtime 直接加载、推理是确定性的，
-> 但**逐字/逐词时间轴尚未与人工参考打轴比对验收**。INT8 相对 FP32 在真实歌曲上仍有
-> 约 **0.12–0.17 秒（英/日）** 的时间边界漂移，中文约 **0.02 秒**。
-> **请勿据此宣称逐字高亮精度。** 需要真正精度时请先按仓库 `docs/AMLL_COMPARISON_REPORT.md`
-> 的流程做人工参考评测。
+> 但**逐字/逐词时间轴尚未与人工参考打轴比对验收**。在 GTSinger 清唱留出集上，
+> 相对**人工边界**的绝对起始 MAE 约为 en **100 ms**、ja **119 ms**、zh **181 ms**；
+> INT8 与 FP32 的差在清唱上 en **2.8 ms**、zh **0.8 ms**、ja **79 ms**。
+> **请勿据此宣称逐字高亮精度。** 详见 `docs/QUANTIZATION_CALIBRATION.md`。
 
 本包由 `tools/build_android_release.py` 从 `android_export/` 的已验证产物生成；
 机器可读清单见 **`android-models.json`**，校验和见 **`checksums.sha256`**。
 设备端**不需要 Python**。
+
+> **beta.2 变更**：日文 INT8 改为**选择性量化**（CTC 头 `lm_head` 不量化）。
+> 日文端到端逐字符起始 MAE 由 147.06 ms 降到 **118.81 ms**，GTSinger 留出集上
+> INT8-vs-FP32 由 105.9 ms 降到 **79.05 ms**，文件仅增大 0.5 MB（95.19 → 95.72 MB）。
+> 英文、中文产物未变。
 
 ## 1. 资产清单
 
@@ -79,11 +84,15 @@ sha256sum -c checksums.sha256
 
 ## 5. 已知限制（务必如实对待）
 
-- **量化漂移**：INT8 与 FP32 的逐词/逐字符起始时间在真实歌曲上差异：
-  en **121 ms**（168 词）、ja **147 ms**（1224 字符 / 120 行）、zh **20 ms**。
-  日文同口径下 PyTorch-vs-FP32 基线为 **0.00 ms**，说明这些差异**纯由量化造成**。
-  短测试向量上 ja 的差异仅 **1.90 ms**，即漂移集中在真实歌声长窗口。
-- **未达标的验收项**：en 17 项中 3 项、zh 20 项中 6 项、ja 16 项中 3 项未通过（详见各
+- **量化漂移**：INT8 与 FP32 的起始时间差，分两个域报（`docs/QUANTIZATION_CALIBRATION.md`）：
+  - **GTSinger 清唱**（n=12/语言）：en **2.78 ms**、ja **79.05 ms**、zh **0.82 ms**；
+  - **`Test/` 整混音**（en，45 行/230 词）：en **121.30 ms**。
+  说明英文的“121 ms”几乎全部来自**整混音域**，不是量化的普遍代价；**日文是唯一在清唱上
+  也明显受量化影响的链路**（已用“排除 CTC 头”改进，见上）。
+- **绝对精度**（相对 GTSinger 人工边界，清唱留出集）：en FP32 **100.1 ms** / INT8 **99.4 ms**；
+  ja FP32 **118.7 ms** / INT8 **154.2 ms**；zh FP32 **181.4 ms** / INT8 **181.0 ms**。
+  这是相对人工打轴的绝对数字，与上面的“INT8-vs-FP32 一致性”不同，勿混用。
+- **未达标的验收项**：en 17 项中 4 项、zh 20 项中 6 项、ja 15 行中 3 项未通过（详见各
   `REPORT.md`）。其中 fp32 的 logits 阈值（`5e-4`/`5e-6`）比 PyTorch 自身内核差异还严。
 - **zh 的 `us_peaks` 契约偏差**：用闭式 `cumsum/floor` 替代了 `cif_wo_hidden` 的迭代，
   `max|Δ| = 12`，2 个边界样本峰值数不一致；fp32 端到端时间戳仍与引擎 693/693 完全一致。
@@ -94,7 +103,7 @@ sha256sum -c checksums.sha256
 
 ## 6. 版本与协议
 
-- 包版本：`0.1.0-beta.1`，发布 Tag：`android-models-v0.1.0-beta.1`（prerelease）。
+- 包版本：`0.1.0-beta.2`，发布 Tag：`android-models-v0.1.0-beta.2`（prerelease）。
 - 最低后端协议：`min_backend_protocol = 1`（schema `melox.autosync.onnx.1`）。
 - 固定上游版本：en/ja 使用 HF 快照 revision（见 manifest `source_revision`）；
   zh 为 ModelScope `iic/speech_timestamp_prediction-v1-16k-offline`。

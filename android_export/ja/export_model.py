@@ -146,16 +146,24 @@ def export_fp32(snapshot: Path, out_path: Path) -> None:
 
 
 def quantize(int8_path: Path, fp32_path: Path) -> None:
+    import onnx
     from onnxruntime.quantization import QuantType, quantize_dynamic
 
     t0 = time.time()
     if int8_path.exists():
         int8_path.unlink()
+    # Exclude the CTC head from quantisation. Measured on GTSinger a-cappella
+    # held-out singers (see docs/QUANTIZATION_CALIBRATION.md): quantising the
+    # head is the dominant source of the Japanese INT8 timing drift
+    # (174.2 ms -> 119.3 ms start MAE, int8-vs-fp32) for only +0.5 MB. Keeping
+    # the last encoder layers fp32 too barely helps further but triples the file.
     quantize_dynamic(
         str(fp32_path),
         str(int8_path),
         weight_type=QuantType.QInt8,
         per_channel=True,
+        nodes_to_exclude=[n.name for n in onnx.load(str(fp32_path), load_external_data=False).graph.node
+                          if n.op_type in ("MatMul", "Gemm") and "lm_head" in n.name],
     )
     print(f"[int8] dynamic quantization in {time.time() - t0:.1f}s -> "
           f"{int8_path.name} ({int8_path.stat().st_size / 1e6:.1f} MB)")
@@ -228,7 +236,7 @@ def write_manifest(out_dir: Path, snapshot: Path, fp32: Path, int8: Path) -> Non
     with open(out_dir / "manifest.json", "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    print(f"[manifest] wrote manifest.json (48 tokens, hashes)")
+    print("[manifest] wrote manifest.json (48 tokens, hashes)")
 
 
 def main(argv: list[str] | None = None) -> int:

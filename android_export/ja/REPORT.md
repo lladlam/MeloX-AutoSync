@@ -1,7 +1,7 @@
 # AutoSync Android ONNX 导出报告（日文 / HuBERT 音素 CTC）
 
 - 生成方式（一键复跑）：`.venv/bin/python android_export/ja/validate_onnx.py`
-- 生成时间：2026-10-11 13:11:53；环境：Python 3.12.13 / torch 2.14.1+cpu / transformers 5.19.0 / onnx 1.23.2 / onnxruntime 1.31.0
+- 生成时间：2026-10-11 16:42:12；环境：Python 3.12.13 / torch 2.14.1+cpu / transformers 5.19.0 / onnx 1.23.2 / onnxruntime 1.31.0
 - 源模型：`prj-beatrice/japanese-hubert-base-phoneme-ctc-v4`（Apache-2.0，本地快照离线使用）
 
 ## 1. 结论
@@ -10,17 +10,17 @@
 
 | 验收项 | 阈值 | 实测 | 结果 |
 |---|---|---|---|
-| fp32 max\|Δlogits\|（vs PyTorch） | ≤ 5e-4 | 1.052e-03 | FAIL |
-| fp32 mean\|Δlogits\|（vs PyTorch） | ≤ 5e-6 | 3.374e-05 | FAIL |
+| fp32 max\|Δlogits\|（vs PyTorch） | ≤ 5e-4 | 8.220e-04 | FAIL |
+| fp32 mean\|Δlogits\|（vs PyTorch） | ≤ 5e-6 | 3.345e-05 | FAIL |
 | fp32 argmax 一致率（confident 帧） | 100% | 100.0000%（1790/1790 帧） | PASS |
 | 无额外归一化（processor 透传 max\|Δ\|） | = 0.0 | 0.0e+00 | PASS |
-| INT8 log_probs 余弦 mean | ≥ 0.995 | 0.997174 | PASS |
-| INT8 log_probs 余弦 min | ≥ 0.97 | 0.972780 | PASS |
-| 端到端逐字符起始 MAE（主口径：≥20 真实歌词行 × ≥3 段真实素材） | ≤ 30 ms | 147.06 ms（1224 字符 / 120 行） | FAIL |
+| INT8 log_probs 余弦 mean | ≥ 0.995 | 0.997169 | PASS |
+| INT8 log_probs 余弦 min | ≥ 0.97 | 0.972836 | PASS |
+| 端到端逐字符起始 MAE（主口径：≥20 真实歌词行 × ≥3 段真实素材） | ≤ 30 ms | 118.81 ms（1224 字符 / 120 行） | FAIL |
 | 覆盖率变化（同上，逐行最大） | ≤ 2 pp | 0.000 pp | PASS |
 | 可行性翻转（同上） | ≤ 1 行 | 0 行 | PASS |
 | （参考）测试向量自身文本 MAE | — | 1.90 ms | PASS |
-| （如实报告，非主口径）真实歌声片段 × 自身歌词 MAE | ≤ 30 ms | 173.99 ms；同口径 PyTorch-vs-fp32 基线 0.00 ms | FAIL |
+| （如实报告，非主口径）真实歌声片段 × 自身歌词 MAE | ≤ 30 ms | 157.52 ms；同口径 PyTorch-vs-fp32 基线 0.00 ms | FAIL |
 | G2P 对拍（字段级） | 全一致 | selftest OK；116 行 corpus 不一致 0 行 | PASS |
 | G2P 统计行数 | ≥ 50 | 116 行真实日文歌词行 | PASS |
 | 静音 / 3×逐位一致 / 400 采样 / ≥30 s | 不报错 | 全部通过 | PASS |
@@ -31,20 +31,20 @@
 未通过项（如实报告）：fp32_max_abs_logits<=5e-4, fp32_mean_abs_logits<=5e-6, align_start_mae<=30ms。
 
 `mean|Δlogits|` 未达 5e-6 的诊断：这是 fp32 内核累加顺序差异，不是图缺陷。证据：
-- 同一 PyTorch 权重、同一输入，仅 attention 内核不同（SDPA vs eager）时自身就有 `max|Δlogits|=5.24e-04`、`mean|Δlogits|=4.07e-05`（校验脚本 `--diag` 阶段实测，片段 fleurs_full）；
-- ONNX Runtime 关闭全部图优化后（片段 fleurs_full）：`max|Δlogits|=7.69e-04`、`mean|Δlogits|=6.49e-05`，与默认优化下同量级，说明差异不是导出图改写；
-- 相对误差：`mean|Δlogits| / mean|logits| = 6.18e-06`（fp32 舍入量级）；
-- 实际使用输出 `log_probs`：mean|Δ|=4.88e-05、max|Δ|=1.02e-03，argmax 在 confident 帧 100% 一致。
+- 同一 PyTorch 权重、同一输入，仅 attention 内核不同（SDPA vs eager）时自身就有 `max|Δlogits|=6.96e-04`、`mean|Δlogits|=4.95e-05`（校验脚本 `--diag` 阶段实测，片段 fleurs_full）；
+- ONNX Runtime 关闭全部图优化后（片段 fleurs_full）：`max|Δlogits|=7.61e-04`、`mean|Δlogits|=6.66e-05`，与默认优化下同量级，说明差异不是导出图改写；
+- 相对误差：`mean|Δlogits| / mean|logits| = 6.13e-06`（fp32 舍入量级）；
+- 实际使用输出 `log_probs`：mean|Δ|=4.82e-05、max|Δ|=9.67e-04，argmax 在 confident 帧 100% 一致。
 
 ## 2. 交付文件（路径 / 字节 / sha256）
 
 | 文件 | 字节 | sha256 |
 |---|---|---|
 | `android_export/ja/hubert-ja-phoneme-ctc-fp32.onnx` | 377845890 | `f9eaa556f82700ce9c8d21bc85ffbd5897ea9eb2a8e2768bc7b2e3a81ac0ffba` |
-| `android_export/ja/hubert-ja-phoneme-ctc-int8.onnx` | 95194973 | `b351071efea34cede057fba2753e82b935cf3e9c10cf40e33e6d2e41e39a82ce` |
-| `android_export/ja/manifest.json` | 2391 | `e0b7ea5e88783355ffac782b1b8f63c06760ce081d9d603dcbdca5761573382d` |
+| `android_export/ja/hubert-ja-phoneme-ctc-int8.onnx` | 95723275 | `e93184b07df102d20a469dad8d1a11243321d4e49c2ad4d6ede65cdbae764aa8` |
+| `android_export/ja/manifest.json` | 2552 | `cf7bffcbc160a4fa04bcf7bb71b1f6b7f588902a6a8f3e3442959ffed95561e2` |
 | `android_export/ja/REPORT.md` | （本文件，验证后生成） | |
-| `android_export/ja/export_model.py` | 8924 | `bb2bd8bd34108dfdbebc2a9afd44de2f76c1b15da7e60f3537e2a2b3fd54c9fa` |
+| `android_export/ja/export_model.py` | 9516 | `d78d7bdb5c64f2452cc254d6e6c9c5d4278819e981e612cd2f923d77f236cf0f` |
 | `android_export/ja/validate_onnx.py` | 72659 | `651b6e8e74af6bc6201ef721ceaf302a9430043f3939969e0fe6a1c937ae7107` |
 | `android_export/ja/g2p_reference.py` | 18943 | `c958ca4c9be12f6a83842e942bc83aafd496356a16779e95a35e1fa68766d4cb` |
 | `test_vectors/vector1.wav` + `vector1.expected.json` | 80044（wav） | |
@@ -74,33 +74,33 @@
 
 | 片段 | 时长 s | T | max\|Δlogits\| | mean\|Δlogits\| | max\|Δlog_probs\| | confident 帧 | argmax 一致 |
 |---|---|---|---|---|---|---|---|
-| fleurs_full | 7.98 | 398 | 7.946e-04 | 6.954e-05 | 8.259e-04 | 397 | 397/397 |
-| vector1 | 2.50 | 124 | 1.052e-03 | 3.637e-05 | 1.025e-03 | 122 | 122/122 |
-| vector2 | 2.20 | 109 | 5.263e-04 | 2.603e-05 | 6.189e-04 | 105 | 105/105 |
-| vector3 | 2.99 | 149 | 4.320e-04 | 3.078e-05 | 4.950e-04 | 148 | 148/148 |
-| song_ja-A | 12.00 | 599 | 5.581e-04 | 1.780e-05 | 5.307e-04 | 573 | 573/573 |
-| song_ja-B | 10.00 | 499 | 4.516e-04 | 2.625e-05 | 5.054e-04 | 445 | 445/445 |
+| fleurs_full | 7.98 | 398 | 7.181e-04 | 7.179e-05 | 9.670e-04 | 397 | 397/397 |
+| vector1 | 2.50 | 124 | 8.220e-04 | 3.615e-05 | 8.659e-04 | 122 | 122/122 |
+| vector2 | 2.20 | 109 | 4.139e-04 | 2.180e-05 | 4.787e-04 | 105 | 105/105 |
+| vector3 | 2.99 | 149 | 7.245e-04 | 2.997e-05 | 7.372e-04 | 148 | 148/148 |
+| song_ja-A | 12.00 | 599 | 4.869e-04 | 1.662e-05 | 4.835e-04 | 573 | 573/573 |
+| song_ja-B | 10.00 | 499 | 4.112e-04 | 2.599e-05 | 5.121e-04 | 445 | 445/445 |
 
-- 全局：max\|Δlogits\|=1.052e-03；mean\|Δlogits\|=3.374e-05；argmax 一致率=100.0000%（仅 PyTorch softmax>0.5 的 1790 帧）
-- 相对误差：mean\|Δlogits\| / mean\|logits\| = 6.184e-06（分母 mean\|logits\|=5.457）
+- 全局：max\|Δlogits\|=8.220e-04；mean\|Δlogits\|=3.345e-05；argmax 一致率=100.0000%（仅 PyTorch softmax>0.5 的 1790 帧）
+- 相对误差：mean\|Δlogits\| / mean\|logits\| = 6.130e-06（分母 mean\|logits\|=5.457）
 
 （未通过的阈值及诊断见 §1 末尾；无归一化证据见 §3。）
 
 ### 4.2 INT8 精度（INT8 vs FP32）
 
-- `log_probs` 逐帧余弦：mean=0.997174，min=0.972780，P1=0.984301（1878 帧）
+- `log_probs` 逐帧余弦：mean=0.997169，min=0.972836，P1=0.984325（1878 帧）
 
 端到端强制对齐（仓库 `forced_align(blank=0)`）分三组材料报告，全部用同一算法：
 
 | 材料 | 行数 | 素材 | 对比字符数 | 起始 MAE | 结束 MAE | 覆盖率变化 max | 翻转 |
 |---|---|---|---|---|---|---|---|
-| 主口径：真实歌词行 × 真实日语语音片段（回退素材，见下） | 120 | 120 | 1224 | 147.06 ms | 146.18 ms | 0.000 pp | 0 |
+| 主口径：真实歌词行 × 真实日语语音片段（回退素材，见下） | 120 | 120 | 1224 | 118.81 ms | 119.90 ms | 0.000 pp | 0 |
 | 匹配文本：测试向量自身文本 | 3 | 3 | 42 | 1.90 ms | 2.38 ms | 0.000 pp | 0 |
-| 真实歌声：歌词行 × 自身歌曲片段 | 30 | 30 | 306 | 173.99 ms | 167.91 ms | 0.000 pp | 0 |
+| 真实歌声：歌词行 × 自身歌曲片段 | 30 | 30 | 306 | 157.52 ms | 152.55 ms | 0.000 pp | 0 |
 
-- **主口径**（120 行 = 30 条真实歌词行 × 4 段真实日语语音素材，`120` 对）：起始 MAE 147.06 ms，P90 480.00 ms，max 1620.00 ms；FP32 可行 120/120；覆盖率变化 mean 0.000 pp / max 0.000 pp；翻转 0 行。
+- **主口径**（120 行 = 30 条真实歌词行 × 4 段真实日语语音素材，`120` 对）：起始 MAE 118.81 ms，P90 400.00 ms，max 1620.00 ms；FP32 可行 120/120；覆盖率变化 mean 0.000 pp / max 0.000 pp；翻转 0 行。
 - 匹配文本（测试向量自身文本，最干净的口径）：起始 MAE 1.90 ms（vector1=3.08ms、vector2=1.54ms、vector3=1.25ms）。
-- 真实歌声口径（非主口径，如实报告）：30 行 × 自身歌曲片段，起始 MAE 173.99 ms，同口径 **PyTorch-vs-fp32（无量化）基线 0.00 ms**，fp32 blank_ratio 均值 87.8%；即该口径下对齐本身对任意微小数值差异都高度敏感（语音域外歌唱素材），不能用来衡量量化损伤。
+- 真实歌声口径（非主口径，如实报告）：30 行 × 自身歌曲片段，起始 MAE 157.52 ms，同口径 **PyTorch-vs-fp32（无量化）基线 0.00 ms**，fp32 blank_ratio 均值 87.8%；即该口径下对齐本身对任意微小数值差异都高度敏感（语音域外歌唱素材），不能用来衡量量化损伤。
 
 **MAE 未达 30 ms 的诊断（如实报告）**：主口径 MAE 远超 30 ms。原因不是量化把对齐“搞坏”了，而是**文本与音频不匹配时 CTC 强制对齐本身病态**：
 - 用**同一份 PyTorch 输出**与 fp32 ONNX 输出对比（完全不涉及量化），主口径起始 MAE 已达到 0.00 ms（见 validation_results.json 各行的 `ref_start_mae_ms`）；
@@ -149,10 +149,10 @@
 
 | 模型 | 12 s 窗口中位 | P90 | min/max | 加载 | 峰值 RSS | 文件字节 |
 |---|---|---|---|---|---|---|
-| fp32 | 1602.0 ms | 1624.0 ms | 1598.3/1669.8 ms | 0.43 s | 2485 MB | 377845890 |
-| int8 | 2215.3 ms | 2223.7 ms | 2210.0/2238.5 ms | 0.17 s | 2485 MB | 95194973 |
+| fp32 | 1687.8 ms | 1705.0 ms | 1676.5/1720.3 ms | 0.52 s | 2501 MB | 377845890 |
+| int8 | 2339.2 ms | 2360.1 ms | 2326.8/2390.5 ms | 1.44 s | 2501 MB | 95723275 |
 
-- INT8 体积目标 ≤120 MB：达标（95.19 MB）
+- INT8 体积目标 ≤120 MB：达标（95.72 MB）
 - INT8 量化配置：`onnxruntime.quantization.quantize_dynamic(weight_type=QInt8, per_channel=True)`，仅 MatMul/Gemm；卷积前端与 LayerNorm 保持 fp32。per-channel（而非默认 per-tensor）权重 scale 在本模型上各项指标一致更优（见 §4.2）。
 
 ## 5. 一键复跑命令
@@ -166,7 +166,7 @@ cd /home/lladlam/项目/MeloX-AutoSync
 ## 6. 已知限制与风险
 
 - **G2P 是日文链路最大的设备端成本**：必须打包 OpenJTalk + 词典（~103 MB 原始 / ~21.7 MB gzip 资产 + 原生库），JNI 封装与 NDK 构建未在本任务内完成（本机只有桌面 x86_64 参照实现）。
-- 量化在歌声上的表现：真实歌声片段 × 自身歌词的起始 MAE 173.99 ms，其中同口径 PyTorch-vs-fp32 基线 0.00 ms（fp32 blank_ratio 87.8%）——语音域外素材上对齐本身不稳定，量化进一步放大差异；文本与音频匹配时（测试向量）MAE 1.90 ms。
+- 量化在歌声上的表现：真实歌声片段 × 自身歌词的起始 MAE 157.52 ms，其中同口径 PyTorch-vs-fp32 基线 0.00 ms（fp32 blank_ratio 87.8%）——语音域外素材上对齐本身不稳定，量化进一步放大差异；文本与音频匹配时（测试向量）MAE 1.90 ms。
 - 内存：桌面单线程 fp32 会话峰值 RSS 见 §4.6；Android 端实际占用需真机测量（INT8 更小）。
 - 桌面 ≠ 设备：本报告全部为 x86_64 桌面 CPU 单线程数字；arm64 大小核/NEON 性能与数值可能略有差异（INT8 需真机复测）。
 - JA 仍属 experimental：按 `docs/V1_RELEASE_READINESS.md`，本轮只交付模型契约与规格，不代表可上线。

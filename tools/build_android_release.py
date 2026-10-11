@@ -52,6 +52,9 @@ LANGUAGES: dict[str, dict] = {
             "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
             "gate_result": "4 of 17 checks failed (see android_export/en/REPORT.md)",
             "int8_vs_fp32_word_start_mae_ms": 121.19,
+            "gtsinger_abs_fp32_start_mae_ms": 100.11,
+            "gtsinger_abs_int8_start_mae_ms": 99.36,
+            "gtsinger_int8_vs_fp32_start_mae_ms": 2.78,
             "int8_vs_fp32_words": 168,
             "int8_vs_fp32_lines": 29,
             "fp32_vs_torch_argmax_agreement": 1.0,
@@ -86,6 +89,9 @@ LANGUAGES: dict[str, dict] = {
             "gate_result": "6 of 20 checks failed (see android_export/zh/REPORT.md)",
             "fp32_timestamps_exact_vs_engine": "693/693 tokens, 0 ms",
             "int8_vs_fp32_timestamp_mae_ms": 19.96,
+            "gtsinger_abs_fp32_start_mae_ms": 181.38,
+            "gtsinger_abs_int8_start_mae_ms": 181.04,
+            "gtsinger_int8_vs_fp32_start_mae_ms": 0.82,
             "int8_vs_fp32_timestamp_max_ms": 1340.0,
             "int8_cosine_mean_alphas": 0.9888,
             "int8_cosine_min_alphas": 0.9127,
@@ -134,11 +140,14 @@ LANGUAGES: dict[str, dict] = {
         "accuracy": {
             "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
             "gate_result": "3 of 15 gate rows failed; one further reference row is non-gate (see android_export/ja/REPORT.md)",
-            "int8_vs_fp32_char_start_mae_ms": 147.06,
+            "int8_vs_fp32_char_start_mae_ms": 118.81,
             "int8_vs_fp32_chars": 1224,
             "int8_vs_fp32_lines": 120,
             "reference_test_vector_mae_ms": 1.90,
-            "reference_real_singing_mae_ms": 173.99,
+            "gtsinger_abs_fp32_start_mae_ms": 118.73,
+            "gtsinger_abs_int8_start_mae_ms": 154.16,
+            "gtsinger_int8_vs_fp32_start_mae_ms": 79.05,
+            "reference_real_singing_mae_ms": 157.52,
             "fp32_vs_torch_baseline_mae_ms": 0.0,
             "int8_cosine_mean": 0.997174,
             "int8_cosine_min": 0.972780,
@@ -331,10 +340,19 @@ def upload(result: dict) -> None:
 
 
 def main() -> int:
+    global TAG, PACK_VERSION, RELEASE_DOWNLOAD, PACK_DIR
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dry-run", action="store_true", help="verify and print only")
     ap.add_argument("--upload", action="store_true", help="create the GitHub release and upload")
+    ap.add_argument("--tag", default=None, help="override the release tag (new model revision)")
+    ap.add_argument("--pack-version", default=None, help="override the pack version string")
     args = ap.parse_args()
+    if args.tag and args.tag != TAG:
+        TAG = args.tag
+        RELEASE_DOWNLOAD = f"https://github.com/{REPO_SLUG}/releases/download/{TAG}"
+        PACK_DIR = REPO_ROOT / "release" / "android-models" / TAG
+    if args.pack_version:
+        PACK_VERSION = args.pack_version
 
     result = build()
     print(f"pack {PACK_VERSION}  tag={TAG}  languages={list(result['index']['languages'])}")

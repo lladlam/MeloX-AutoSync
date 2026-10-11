@@ -100,8 +100,11 @@
     },
     "int8": {
       "name": "hubert-ja-phoneme-ctc-int8.onnx",
-      "sha256": "b351071efea34cede057fba2753e82b935cf3e9c10cf40e33e6d2e41e39a82ce",
-      "bytes": 95194973
+      "sha256": "e93184b07df102d20a469dad8d1a11243321d4e49c2ad4d6ede65cdbae764aa8",
+      "bytes": 95723275
     }
+  },
+  "quantization": {
+    "int8": "dynamic QInt8, per-channel, MatMul/Gemm only; CTC head (lm_head MatMul) excluded — see docs/QUANTIZATION_CALIBRATION.md"
   }
 }
