@@ -1,0 +1,113 @@
+{
+  "schema": "melox.autosync.model-pack.1",
+  "pack_version": "0.1.0-beta.3",
+  "min_backend_protocol": 1,
+  "language": "zh",
+  "engine": "monotonic-aligner-cif",
+  "engine_notes": "Non-CTC: the model takes audio + text and emits per-token us_alphas / us_peaks. Android implements ts_prediction_lfr6_standard (TIME_RATE 0.02 s, force_time_shift -1.5, START_END_THRESHOLD 5, MAX_TOKEN_DURATION 12); reference: android_export/zh/postprocess_reference.py.",
+  "source_model": "iic/speech_timestamp_prediction-v1-16k-offline",
+  "source_revision": "master (ModelScope; license verified 2026-10-11)",
+  "license": "Apache-2.0",
+  "license_notice": "Apache-2.0. This pack contains MODIFIED weights (dynamic INT8 quantisation with per-channel weight scales; for zh the feature frontend and for en the input normalisation are baked into the graph). Upstream copyright remains with the original authors; see NOTICE.md. No endorsement by the upstream authors is implied.",
+  "sample_rate": 16000,
+  "frame_hop_samples": 160,
+  "frame_hop_seconds": null,
+  "input": {
+    "name": "input_values",
+    "shape": [
+      1,
+      null
+    ],
+    "dtype": "float32",
+    "preprocessing": "raw 16k mono PCM in [-1,1]; fbank+LFR+CMVN baked into the graph"
+  },
+  "aux_inputs": [
+    {
+      "name": "token_num",
+      "shape": [
+        1
+      ],
+      "dtype": "int64",
+      "note": "text token count + 1 (predictor_bias=1)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "us_alphas",
+      "shape": [
+        1,
+        null
+      ],
+      "dtype": "float32",
+      "note": "T3 = 3 * encoder frames"
+    },
+    {
+      "name": "us_peaks",
+      "shape": [
+        1,
+        null
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "blank_id": 0,
+  "text": {
+    "tokens_count": 8404,
+    "tokens_file": "zh-tokens.json",
+    "word_delimiter_id": null,
+    "normalization": "NFKC -> keep only CJK/kana/digits; Latin is dropped by design (src/autosync/lyrics/normalize.py::normalize_cjk)"
+  },
+  "files": [
+    {
+      "_src": "/home/lladlam/项目/MeloX-AutoSync/android_export/zh/fa-zh-int8.onnx",
+      "name": "zh-fa-zh-int8.onnx",
+      "role": "model",
+      "download_url": "https://github.com/lladlam/MeloX-AutoSync/releases/download/android-models-v0.1.0-beta.3/zh-fa-zh-int8.onnx",
+      "bytes": 48081658,
+      "sha256": "c95f3615503a23776e18da9b303598eb11972cc4acf1f55791b630979775ddce",
+      "note": ""
+    },
+    {
+      "_src": "/home/lladlam/项目/MeloX-AutoSync/models/funasr/fa-zh/tokens.json",
+      "name": "zh-tokens.json",
+      "role": "tokenizer",
+      "download_url": "https://github.com/lladlam/MeloX-AutoSync/releases/download/android-models-v0.1.0-beta.3/zh-tokens.json",
+      "bytes": 93676,
+      "sha256": "2b20c2b12572d682afff84ce1c8d560f67b8b32a4c1f21567411d141ed352127",
+      "note": ""
+    },
+    {
+      "_src": "/home/lladlam/项目/MeloX-AutoSync/models/funasr/fa-zh/seg_dict",
+      "name": "zh-seg_dict",
+      "role": "tokenizer",
+      "download_url": "https://github.com/lladlam/MeloX-AutoSync/releases/download/android-models-v0.1.0-beta.3/zh-seg_dict",
+      "bytes": 8287834,
+      "sha256": "59a2ef803a3f1648ad03a2e1480db1c1ee0c0d7dc4ef4dbd16cea33944329022",
+      "note": ""
+    },
+    {
+      "_src": "/home/lladlam/项目/MeloX-AutoSync/models/funasr/fa-zh/am.mvn",
+      "name": "zh-am.mvn",
+      "role": "audit-only",
+      "download_url": "https://github.com/lladlam/MeloX-AutoSync/releases/download/android-models-v0.1.0-beta.3/zh-am.mvn",
+      "bytes": 11203,
+      "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+      "note": ""
+    }
+  ],
+  "accuracy": {
+    "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
+    "gate_result": "6 of 20 checks failed (see android_export/zh/REPORT.md)",
+    "fp32_timestamps_exact_vs_engine": "693/693 tokens, 0 ms",
+    "int8_vs_fp32_timestamp_mae_ms": 19.96,
+    "gtsinger_abs_fp32_start_mae_ms": 181.38,
+    "gtsinger_abs_int8_start_mae_ms": 181.04,
+    "gtsinger_int8_vs_fp32_start_mae_ms": 0.82,
+    "int8_vs_fp32_timestamp_max_ms": 1340.0,
+    "int8_cosine_mean_alphas": 0.9888,
+    "int8_cosine_min_alphas": 0.9127,
+    "int8_cosine_mean_peaks": 0.9597,
+    "int8_cosine_min_peaks": 0.5492,
+    "notes": "fp32 timestamps are exact against the FunASR engine; INT8 is inside the 20 ms MAE gate but the worst single token is 1340 ms. us_peaks uses a closed-form cumsum/floor substitute for cif_wo_hidden (max|delta| 12) - an open contract deviation."
+  }
+}

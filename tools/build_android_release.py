@@ -140,7 +140,18 @@ LANGUAGES: dict[str, dict] = {
         "accuracy": {
             "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
             "gate_result": "3 of 15 gate rows failed; one further reference row is non-gate (see android_export/ja/REPORT.md)",
-            "int8_vs_fp32_char_start_mae_ms": 118.81,
+            "real_music_int8_vs_fp32_start_mae_ms": 13.0,
+            "real_music_int8_vs_fp32_end_mae_ms": 13.6,
+            "real_music_int8_vs_fp32_start_gt500_ratio": 0.007,
+            "blind_real_music_start_mae_ms": 60.6,
+            "blind_real_music_start_gt500_ratio": 0.037,
+            "note": (
+                "This is the selective-quantisation variant (attention layers 0-5 kept "
+                "FP32). The official android_export/ja/REPORT.md documents the beta.2 "
+                "recipe (CTC head only); it was not regenerated for this variant. The "
+                "real-music figures come from benchmarks/quant_selective_eval.py on "
+                "Test/ tune+val (122 lines) and the frozen blind song (36 lines)."
+            ),
             "int8_vs_fp32_chars": 1224,
             "int8_vs_fp32_lines": 120,
             "reference_test_vector_mae_ms": 1.90,
@@ -184,6 +195,7 @@ def sha256_text(text: str) -> str:
 
 def asset(src: Path, pack_name: str, role: str, note: str = "") -> dict:
     return {
+        "_src": str(src),
         "name": pack_name,
         "role": role,
         "download_url": f"{RELEASE_DOWNLOAD}/{pack_name}",
@@ -193,7 +205,10 @@ def asset(src: Path, pack_name: str, role: str, note: str = "") -> dict:
     }
 
 
-def build() -> dict:
+def build(model_override=None, extra_assets=None) -> dict:
+    model_override = model_override or {}
+    extra_assets = extra_assets or []
+    model_sources: dict[str, str] = {}
     index: dict = {
         "schema": "melox.autosync.model-index.1",
         "pack_version": PACK_VERSION,
@@ -215,12 +230,17 @@ def build() -> dict:
         build_manifest = json.loads(
             (REPO_ROOT / "android_export" / lang / "manifest.json").read_text(encoding="utf-8")
         )
-        model_src = REPO_ROOT / spec["model"][0]
-        expected = build_manifest["files"]["int8"]
-        if (expected["bytes"], expected["sha256"]) != (model_src.stat().st_size, sha256_file(model_src)):
-            raise SystemExit(f"{lang}: model does not match its build manifest; rebuild it first")
+        model_src = Path(model_override[lang]) if lang in model_override else REPO_ROOT / spec["model"][0]
+        if lang in model_override:
+            # variant override: the file is not the manifest's int8 model, so hash it directly
+            print(f"[{lang}] using override model {model_src}")
+        else:
+            expected = build_manifest["files"]["int8"]
+            if (expected["bytes"], expected["sha256"]) != (model_src.stat().st_size, sha256_file(model_src)):
+                raise SystemExit(f"{lang}: model does not match its build manifest; rebuild it first")
 
         files = [asset(model_src, spec["model"][1], "model")]
+        model_sources[lang] = str(model_src)
         for src_rel, pack_name, role in spec["extra"]:
             files.append(asset(REPO_ROOT / src_rel, pack_name, role))
         binary_assets.extend(files)
@@ -262,7 +282,17 @@ def build() -> dict:
             manifest["g2p_dependency"] = spec["g2p_dependency"]
         index["languages"][lang] = manifest
 
-    index_text = json.dumps(index, indent=2, ensure_ascii=False) + "\n"
+    for name, path in extra_assets:
+        index.setdefault("extra_assets", []).append(asset(Path(path), name, "optional-model"))
+
+    def _public(obj):
+        if isinstance(obj, dict):
+            return {k: _public(v) for k, v in obj.items() if not k.startswith("_")}
+        if isinstance(obj, list):
+            return [_public(v) for v in obj]
+        return obj
+
+    index_text = json.dumps(_public(index), indent=2, ensure_ascii=False) + "\n"
     rows: list[str] = []
     for lang, spec in LANGUAGES.items():
         for f in index["languages"][lang]["files"]:
@@ -284,9 +314,11 @@ def build() -> dict:
         text_files[name] = (REPO_ROOT / doc).read_text(encoding="utf-8")
 
     lines = [f'{f["sha256"]}  {f["name"]}' for f in sorted(binary_assets, key=lambda f: f["name"])]
+    lines += [f'{f["sha256"]}  {f["name"]}' for f in sorted(index.get("extra_assets", []), key=lambda f: f["name"])]
     lines += [f"{sha256_text(body)}  {name}" for name, body in sorted(text_files.items())]
     text_files["checksums.sha256"] = "\n".join(lines) + "\n"
-    return {"index": index, "binary_assets": binary_assets, "text_files": text_files}
+    return {"index": index, "binary_assets": binary_assets, "text_files": text_files,
+            "extra_assets": index.get("extra_assets", []), "model_sources": model_sources}
 
 
 def write_pack(result: dict) -> None:
@@ -324,7 +356,8 @@ def upload(result: dict) -> None:
     # in android-models.json match the real asset names.
     stage = Path(tempfile.mkdtemp(prefix="melox_pack_"))
     try:
-        planned = [(REPO_ROOT / spec["model"][0], spec["model"][1]) for spec in LANGUAGES.values()]
+        planned = [(Path(result["model_sources"][lang]), spec["model"][1])
+                   for lang, spec in LANGUAGES.items()]
         planned += [(REPO_ROOT / src_rel, name)
                     for s in LANGUAGES.values() for src_rel, name, _role in s["extra"]]
         for src, name in planned:
@@ -334,6 +367,12 @@ def upload(result: dict) -> None:
                             "--repo", REPO_SLUG, "--clobber"], check=True)
     finally:
         shutil.rmtree(stage, ignore_errors=True)
+    import shutil
+    for a in result.get("extra_assets", []):
+        staged = PACK_DIR / a["name"]
+        shutil.copy2(a["_src"], staged)
+        subprocess.run(["gh", "release", "upload", TAG, str(staged),
+                        "--repo", REPO_SLUG, "--clobber"], check=True)
     for name in sorted(result["text_files"]):
         subprocess.run(["gh", "release", "upload", TAG, str(PACK_DIR / name),
                         "--repo", REPO_SLUG, "--clobber"], check=True)
@@ -346,6 +385,10 @@ def main() -> int:
     ap.add_argument("--upload", action="store_true", help="create the GitHub release and upload")
     ap.add_argument("--tag", default=None, help="override the release tag (new model revision)")
     ap.add_argument("--pack-version", default=None, help="override the pack version string")
+    ap.add_argument("--model-override", action="append", default=[],
+                    help="lang=path candidate model (repeatable)")
+    ap.add_argument("--extra-asset", action="append", default=[],
+                    help="name=path optional asset (repeatable)")
     args = ap.parse_args()
     if args.tag and args.tag != TAG:
         TAG = args.tag
@@ -354,7 +397,9 @@ def main() -> int:
     if args.pack_version:
         PACK_VERSION = args.pack_version
 
-    result = build()
+    mo = dict(x.split("=", 1) for x in args.model_override)
+    ea = [tuple(x.split("=", 1)) for x in args.extra_asset]
+    result = build(mo, ea)
     print(f"pack {PACK_VERSION}  tag={TAG}  languages={list(result['index']['languages'])}")
     for f in result["binary_assets"]:
         print(f"  {f['bytes']:>12,}  {f['sha256']}  {f['name']}")

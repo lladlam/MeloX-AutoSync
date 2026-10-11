@@ -1,0 +1,86 @@
+{
+  "schema": "melox.autosync.model-pack.1",
+  "pack_version": "0.1.0-beta.3",
+  "min_backend_protocol": 1,
+  "language": "en",
+  "engine": "ctc-wav2vec2",
+  "engine_notes": "Android implements CTC Viterbi itself (blank=0), matching src/autosync/alignment/ctc.py::forced_align. No CTC code is shipped.",
+  "source_model": "facebook/wav2vec2-base-960h",
+  "source_revision": "22aad52d435eb6dbaf354bdad9b0da84ce7d6156",
+  "license": "Apache-2.0",
+  "license_notice": "Apache-2.0. This pack contains MODIFIED weights (dynamic INT8 quantisation with per-channel weight scales; for zh the feature frontend and for en the input normalisation are baked into the graph). Upstream copyright remains with the original authors; see NOTICE.md. No endorsement by the upstream authors is implied.",
+  "sample_rate": 16000,
+  "frame_hop_samples": 320,
+  "frame_hop_seconds": 0.02,
+  "input": {
+    "name": "input_values",
+    "shape": [
+      1,
+      null
+    ],
+    "dtype": "float32",
+    "preprocessing": "raw 16k mono PCM in [-1,1]; zero-mean unit-var normalization is baked into the graph"
+  },
+  "aux_inputs": null,
+  "outputs": [
+    {
+      "name": "logits",
+      "shape": [
+        1,
+        null,
+        32
+      ],
+      "dtype": "float32"
+    },
+    {
+      "name": "log_probs",
+      "shape": [
+        1,
+        null,
+        32
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "blank_id": 0,
+  "text": {
+    "tokens_count": null,
+    "tokens_file": "en-vocab.json",
+    "word_delimiter_id": 4,
+    "normalization": "NFKC -> curly quotes to ' -> drop [^A-Za-z0-9' ] -> collapse spaces -> upper (src/autosync/lyrics/normalize.py::normalize_en)"
+  },
+  "files": [
+    {
+      "_src": "/home/lladlam/项目/MeloX-AutoSync/android_export/en/wav2vec2-base-960h-int8.onnx",
+      "name": "en-wav2vec2-base-960h-int8.onnx",
+      "role": "model",
+      "download_url": "https://github.com/lladlam/MeloX-AutoSync/releases/download/android-models-v0.1.0-beta.3/en-wav2vec2-base-960h-int8.onnx",
+      "bytes": 122373796,
+      "sha256": "1c8213118da7f555e4b68c0e08e85a4c471ea2a3e0fdf5620d27412800babd3f",
+      "note": ""
+    },
+    {
+      "_src": "/home/lladlam/项目/MeloX-AutoSync/models/hf/models--facebook--wav2vec2-base-960h/snapshots/22aad52d435eb6dbaf354bdad9b0da84ce7d6156/vocab.json",
+      "name": "en-vocab.json",
+      "role": "tokenizer",
+      "download_url": "https://github.com/lladlam/MeloX-AutoSync/releases/download/android-models-v0.1.0-beta.3/en-vocab.json",
+      "bytes": 291,
+      "sha256": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64",
+      "note": ""
+    }
+  ],
+  "accuracy": {
+    "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
+    "gate_result": "4 of 17 checks failed (see android_export/en/REPORT.md)",
+    "int8_vs_fp32_word_start_mae_ms": 121.19,
+    "gtsinger_abs_fp32_start_mae_ms": 100.11,
+    "gtsinger_abs_int8_start_mae_ms": 99.36,
+    "gtsinger_int8_vs_fp32_start_mae_ms": 2.78,
+    "int8_vs_fp32_words": 168,
+    "int8_vs_fp32_lines": 29,
+    "fp32_vs_torch_argmax_agreement": 1.0,
+    "int8_cosine_mean": 0.999108,
+    "int8_cosine_min": 0.963666,
+    "notes": "MAE is INT8-vs-FP32 consistency, NOT accuracy against a human reference. INT8 shifts CTC boundaries by about 0.12 s on real songs; see android_export/en/QUANTIZATION_NOTES.md."
+  }
+}

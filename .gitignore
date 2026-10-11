@@ -67,3 +67,6 @@ htmlcov/
 /android_export/**/test_vectors/
 /android_export/**/_work/
 /android_export/**/__pycache__/
+
+# V1.1 playlist dataset (per-file paths; only the aggregate report is committed)
+/experiments/playlist/

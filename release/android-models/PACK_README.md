@@ -1,4 +1,4 @@
-# Android 模型包 · v0.1.0-beta.2（测试版）
+# Android 模型包 · v0.1.0-beta.3（测试版）
 
 > ⚠️ **这是测试版（prerelease），尚未通过逐字精度验收。**
 > 三个模型的权重都能在 Android 上用 ONNX Runtime 直接加载、推理是确定性的，
@@ -11,10 +11,13 @@
 机器可读清单见 **`android-models.json`**，校验和见 **`checksums.sha256`**。
 设备端**不需要 Python**。
 
-> **beta.2 变更**：日文 INT8 改为**选择性量化**（CTC 头 `lm_head` 不量化）。
-> 日文端到端逐字符起始 MAE 由 147.06 ms 降到 **118.81 ms**，GTSinger 留出集上
-> INT8-vs-FP32 由 105.9 ms 降到 **79.05 ms**，文件仅增大 0.5 MB（95.19 → 95.72 MB）。
-> 英文、中文产物未变。
+> **beta.3 变更（真实流行音乐整混音验证）**：日文 INT8 进一步改为**保留前 6 层 attention 为 FP32**
+> （`attn_L0_5`）。在 `Test/` 整混音上，逐字符起始 MAE 80.7 → **13.0 ms**、>500 ms 比例 4.9% → **0.7%**；
+> **冻结后盲测**（SAN値直葬）272.8 → **60.6 ms**、>500 ms 20.2% → **3.7%**；体积 95.7 → **164.7 MB**。
+> **英文/中文默认产物未变**（beta.2 配方经真实流行音乐扫描/敏感度分析确认已是最优）。
+> 额外提供**可选英文精度变体** `en-wav2vec2-base-960h-int8-acc.onnx`（保留 CTC 头+FFN 为 FP32，292 MB）：
+> 盲测起始 MAE 40.7 → 19.9 ms、P90 140 → 6 ms；体积 2.4×，且个别歌曲可能变差，**默认不启用**。
+> 详见 `docs/QUANTIZATION_V1_1.md`。
 
 ## 1. 资产清单
 
@@ -96,14 +99,17 @@ sha256sum -c checksums.sha256
   `REPORT.md`）。其中 fp32 的 logits 阈值（`5e-4`/`5e-6`）比 PyTorch 自身内核差异还严。
 - **zh 的 `us_peaks` 契约偏差**：用闭式 `cumsum/floor` 替代了 `cif_wo_hidden` 的迭代，
   `max|Δ| = 12`，2 个边界样本峰值数不一致；fp32 端到端时间戳仍与引擎 693/693 完全一致。
-- **ja 仍是实验功能**：声学模型训练于朗读语音（ReazonSpeech），歌声域不匹配。
+- **ja 仍是实验功能**，且对整混音量化和合成声（Vocaloid）尤为敏感：beta.3 已用选择性量化
+  大幅降低该漂移（见上），但在 beta.2 上盲测 >500 ms 曾达 20.2%——**日文仍应视为实验功能**。
+- **en 整混音量化漂移**：beta.2 配方在 `Test/` 整混音上 sMAE 82.8 ms、P90 220 ms；
+  可用可选精度变体降到 19.9/6 ms 但体积 2.4×，默认不启用。
 - **许可**：三个权重均为 **Apache-2.0**，但本包是**修改版**（INT8 量化/前端烘焙），
   署名与修改说明见 `NOTICE.md`。
 - 上述均为**桌面 x86 CPU 单线程**参考值；ARM 需在真机复测。
 
 ## 6. 版本与协议
 
-- 包版本：`0.1.0-beta.2`，发布 Tag：`android-models-v0.1.0-beta.2`（prerelease）。
+- 包版本：`0.1.0-beta.3`，发布 Tag：`android-models-v0.1.0-beta.3`（prerelease）。beta.2 保留。
 - 最低后端协议：`min_backend_protocol = 1`（schema `melox.autosync.onnx.1`）。
 - 固定上游版本：en/ja 使用 HF 快照 revision（见 manifest `source_revision`）；
   zh 为 ModelScope `iic/speech_timestamp_prediction-v1-16k-offline`。
