@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11 13:08:06",
+  "generated_at": "2026-10-11 13:11:53",
   "env": {
     "python": "3.12.13",
     "torch": "2.14.1+cpu",
@@ -17,7 +17,7 @@
       "duration_s": 7.98,
       "T": 398,
       "passthrough_max_abs": 0.0,
-      "infer_s": 1.9921338558197021,
+      "infer_s": 1.0221290588378906,
       "source": "experiments/audio/fleurs_ja_sample.wav (7.98 s, FLEURS ja)",
       "has_text": true
     },
@@ -26,7 +26,7 @@
       "duration_s": 2.5,
       "T": 124,
       "passthrough_max_abs": 0.0,
-      "infer_s": 0.17545461654663086,
+      "infer_s": 0.1796424388885498,
       "source": "FLEURS ja sample (local, gitignored), phrase 1",
       "has_text": true
     },
@@ -35,7 +35,7 @@
       "duration_s": 2.2,
       "T": 109,
       "passthrough_max_abs": 0.0,
-      "infer_s": 0.15656590461730957,
+      "infer_s": 0.15900540351867676,
       "source": "FLEURS ja sample (local, gitignored), phrase 2",
       "has_text": true
     },
@@ -44,7 +44,7 @@
       "duration_s": 2.994875,
       "T": 149,
       "passthrough_max_abs": 0.0,
-      "infer_s": 0.20926928520202637,
+      "infer_s": 0.21687722206115723,
       "source": "synthetic_ja.wav (local, gitignored) played twice with a 0.10 s gap",
       "has_text": true
     },
@@ -53,7 +53,7 @@
       "duration_s": 12.0,
       "T": 599,
       "passthrough_max_abs": 0.0,
-      "infer_s": 0.9070346355438232,
+      "infer_s": 0.8822994232177734,
       "source": "local Test/ ja-A mp3 [30.0-42.0 s]",
       "has_text": false
     },
@@ -62,7 +62,7 @@
       "duration_s": 10.0,
       "T": 499,
       "passthrough_max_abs": 0.0,
-      "infer_s": 0.7212228775024414,
+      "infer_s": 0.724689245223999,
       "source": "local Test/ ja-B mp3 [30.0-40.0 s]",
       "has_text": false
     }
@@ -342,13 +342,21 @@
   },
   "robustness": {
     "silence_3s_int8_finite": true,
-    "int8_bit_identical_x3": false,
-    "int8_repeat_diag": {
-      "extra_repeats": 3,
-      "max_abs_diff_across_outputs": 0.0,
-      "n_differing_runs_of_6": 0,
-      "nan_present": false
-    },
+    "int8_bit_identical_x3": true,
+    "int8_output_shas": [
+      [
+        "078661cb88abc44f",
+        "6e8021fd2f59b163"
+      ],
+      [
+        "078661cb88abc44f",
+        "6e8021fd2f59b163"
+      ],
+      [
+        "078661cb88abc44f",
+        "6e8021fd2f59b163"
+      ]
+    ],
     "input_400_samples": {
       "int8_shape": [
         1,
@@ -3401,13 +3409,13 @@
       "n_samples": 192000,
       "T": 599,
       "threads": 1,
-      "load_s": 0.4485175609588623,
-      "median_ms": 1601.5383005142212,
-      "p90_ms": 1681.0996770858765,
-      "min_ms": 1597.0215797424316,
-      "max_ms": 1857.2914600372314,
+      "load_s": 0.42632484436035156,
+      "median_ms": 1602.04017162323,
+      "p90_ms": 1623.9583492279053,
+      "min_ms": 1598.332166671753,
+      "max_ms": 1669.767141342163,
       "n_measured": 8,
-      "peak_rss_mb": 2483.90625,
+      "peak_rss_mb": 2485.2265625,
       "bytes": 377845890,
       "sha256": "f9eaa556f82700ce9c8d21bc85ffbd5897ea9eb2a8e2768bc7b2e3a81ac0ffba"
     },
@@ -3417,13 +3425,13 @@
       "n_samples": 192000,
       "T": 599,
       "threads": 1,
-      "load_s": 1.3372013568878174,
-      "median_ms": 2190.4470920562744,
-      "p90_ms": 2200.760769844055,
-      "min_ms": 2188.1155967712402,
-      "max_ms": 2219.0003395080566,
+      "load_s": 0.16829442977905273,
+      "median_ms": 2215.2751684188843,
+      "p90_ms": 2223.7249851226807,
+      "min_ms": 2210.0212574005127,
+      "max_ms": 2238.4936809539795,
       "n_measured": 8,
-      "peak_rss_mb": 2483.90625,
+      "peak_rss_mb": 2485.2265625,
       "bytes": 95194973,
       "sha256": "b351071efea34cede057fba2753e82b935cf3e9c10cf40e33e6d2e41e39a82ce"
     },
@@ -3507,7 +3515,7 @@
     "g2p_field_mismatch==0": true,
     "g2p_lines>=50": true,
     "robustness_silence_finite": true,
-    "robustness_int8_bit_identical": false,
+    "robustness_int8_bit_identical": true,
     "robustness_400_samples": true,
     "robustness_32s": true,
     "loadability_checker+session": true,

@@ -1,12 +1,12 @@
 # AutoSync Android ONNX 导出报告（日文 / HuBERT 音素 CTC）
 
 - 生成方式（一键复跑）：`.venv/bin/python android_export/ja/validate_onnx.py`
-- 生成时间：2026-10-11 13:08:06；环境：Python 3.12.13 / torch 2.14.1+cpu / transformers 5.19.0 / onnx 1.23.2 / onnxruntime 1.31.0
+- 生成时间：2026-10-11 13:11:53；环境：Python 3.12.13 / torch 2.14.1+cpu / transformers 5.19.0 / onnx 1.23.2 / onnxruntime 1.31.0
 - 源模型：`prj-beatrice/japanese-hubert-base-phoneme-ctc-v4`（Apache-2.0，本地快照离线使用）
 
 ## 1. 结论
 
-**验收项：存在未通过项**；未通过：fp32_max_abs_logits<=5e-4, fp32_mean_abs_logits<=5e-6, align_start_mae<=30ms, robustness_int8_bit_identical
+**验收项：存在未通过项**；未通过：fp32_max_abs_logits<=5e-4, fp32_mean_abs_logits<=5e-6, align_start_mae<=30ms
 
 | 验收项 | 阈值 | 实测 | 结果 |
 |---|---|---|---|
@@ -23,12 +23,12 @@
 | （如实报告，非主口径）真实歌声片段 × 自身歌词 MAE | ≤ 30 ms | 173.99 ms；同口径 PyTorch-vs-fp32 基线 0.00 ms | FAIL |
 | G2P 对拍（字段级） | 全一致 | selftest OK；116 行 corpus 不一致 0 行 | PASS |
 | G2P 统计行数 | ≥ 50 | 116 行真实日文歌词行 | PASS |
-| 静音 / 3×逐位一致 / 400 采样 / ≥30 s | 不报错 | 有失败项 | FAIL |
+| 静音 / 3×逐位一致 / 400 采样 / ≥30 s | 不报错 | 全部通过 | PASS |
 | 可加载性（checker/EP/manifest/单文件/opset/算子） | 全部 | OK | PASS |
 
 **设备端 G2P 选项结论：A（随 App 打包 OpenJTalk + 词典，经 JNI 调用）**，证据见 §4.3。
 
-未通过项（如实报告）：fp32_max_abs_logits<=5e-4, fp32_mean_abs_logits<=5e-6, align_start_mae<=30ms, robustness_int8_bit_identical。
+未通过项（如实报告）：fp32_max_abs_logits<=5e-4, fp32_mean_abs_logits<=5e-6, align_start_mae<=30ms。
 
 `mean|Δlogits|` 未达 5e-6 的诊断：这是 fp32 内核累加顺序差异，不是图缺陷。证据：
 - 同一 PyTorch 权重、同一输入，仅 attention 内核不同（SDPA vs eager）时自身就有 `max|Δlogits|=5.24e-04`、`mean|Δlogits|=4.07e-05`（校验脚本 `--diag` 阶段实测，片段 fleurs_full）；
@@ -45,7 +45,7 @@
 | `android_export/ja/manifest.json` | 2391 | `e0b7ea5e88783355ffac782b1b8f63c06760ce081d9d603dcbdca5761573382d` |
 | `android_export/ja/REPORT.md` | （本文件，验证后生成） | |
 | `android_export/ja/export_model.py` | 8924 | `bb2bd8bd34108dfdbebc2a9afd44de2f76c1b15da7e60f3537e2a2b3fd54c9fa` |
-| `android_export/ja/validate_onnx.py` | 72328 | `28a76ba906d6b28c638efc514233ec82def5006828c481ee9c6f615c91135511` |
+| `android_export/ja/validate_onnx.py` | 72659 | `651b6e8e74af6bc6201ef721ceaf302a9430043f3939969e0fe6a1c937ae7107` |
 | `android_export/ja/g2p_reference.py` | 18943 | `c958ca4c9be12f6a83842e942bc83aafd496356a16779e95a35e1fa68766d4cb` |
 | `test_vectors/vector1.wav` + `vector1.expected.json` | 80044（wav） | |
 | `test_vectors/vector2.wav` + `vector2.expected.json` | 70444（wav） | |
@@ -135,7 +135,7 @@
 ### 4.4 健壮性
 
 - 静音 3 s：logits/log_probs 有限（无 NaN/Inf）={'logits_finite': True, 'log_probs_finite': True, 'T': 149}
-- 同一输入连跑 3 次 INT8 逐位一致：False
+- 同一输入连跑 3 次 INT8 逐位一致：True
 - 400 采样输入：int8 输出 [1, 1, 48]，有限=True
 - ≥30 s 输入：512000 采样（32 s 真实歌曲片段），T=1599，有限=True
 
@@ -149,8 +149,8 @@
 
 | 模型 | 12 s 窗口中位 | P90 | min/max | 加载 | 峰值 RSS | 文件字节 |
 |---|---|---|---|---|---|---|
-| fp32 | 1601.5 ms | 1681.1 ms | 1597.0/1857.3 ms | 0.45 s | 2484 MB | 377845890 |
-| int8 | 2190.4 ms | 2200.8 ms | 2188.1/2219.0 ms | 1.34 s | 2484 MB | 95194973 |
+| fp32 | 1602.0 ms | 1624.0 ms | 1598.3/1669.8 ms | 0.43 s | 2485 MB | 377845890 |
+| int8 | 2215.3 ms | 2223.7 ms | 2210.0/2238.5 ms | 0.17 s | 2485 MB | 95194973 |
 
 - INT8 体积目标 ≤120 MB：达标（95.19 MB）
 - INT8 量化配置：`onnxruntime.quantization.quantize_dynamic(weight_type=QInt8, per_channel=True)`，仅 MatMul/Gemm；卷积前端与 LayerNorm 保持 fp32。per-channel（而非默认 per-tensor）权重 scale 在本模型上各项指标一致更优（见 §4.2）。
