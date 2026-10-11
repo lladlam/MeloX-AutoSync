@@ -45,9 +45,9 @@ htmlcov/
 *.npz
 *.npy
 
-# Android ONNX export deliverables (large weights + test audio; transfer to
-# MeloX-Android by hand, never commit them here)
-/android_export/
+# Android ONNX export deliverables: the .onnx weights and test audio are kept on
+# disk and transferred to MeloX-Android by hand; the concrete rules are at the end
+# of this file (scripts / manifests / reports are committed).
 
 # Local real-song test material (third-party audio/lyrics; NEVER commit)
 /Test/
@@ -60,7 +60,10 @@ htmlcov/
 /experiments/amll_reference/
 /experiments/amll_results/
 
-# Android ONNX delivery (android_export/): weights and test audio must never be
-# committed; the exporter scripts, manifests and REPORT.md are ours and may be.
+# Android ONNX delivery (android_export/): weights, test audio and scratch caches
+# must never be committed (the scratch dir can contain third-party lyric text);
+# the exporter scripts, manifests and REPORT.md are our own work and may be.
 /android_export/**/*.onnx
 /android_export/**/test_vectors/
+/android_export/**/_work/
+/android_export/**/__pycache__/

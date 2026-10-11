@@ -1,0 +1,107 @@
+{
+  "schema": "melox.autosync.onnx.1",
+  "language": "ja",
+  "source_model": "prj-beatrice/japanese-hubert-base-phoneme-ctc-v4",
+  "license": "Apache-2.0",
+  "sample_rate": 16000,
+  "frame_hop_samples": 320,
+  "frame_hop_seconds": 0.02,
+  "input": {
+    "name": "input_values",
+    "shape": [
+      1,
+      null
+    ],
+    "dtype": "float32",
+    "preprocessing": "raw 16k mono PCM in [-1,1]; NO external normalization (preprocessor do_normalize=false; HuBERT uses internal group norm)"
+  },
+  "outputs": [
+    {
+      "name": "logits",
+      "shape": [
+        1,
+        null,
+        48
+      ],
+      "dtype": "float32"
+    },
+    {
+      "name": "log_probs",
+      "shape": [
+        1,
+        null,
+        48
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "blank_id": 0,
+  "phoneme_tokens": [
+    "PAD",
+    "UNK",
+    "SOS",
+    "EOS",
+    "a",
+    "i",
+    "u",
+    "e",
+    "o",
+    "I",
+    "U",
+    "k",
+    "g",
+    "s",
+    "z",
+    "t",
+    "d",
+    "n",
+    "h",
+    "b",
+    "p",
+    "m",
+    "y",
+    "r",
+    "w",
+    "f",
+    "j",
+    "v",
+    "N",
+    "cl",
+    "sh",
+    "ch",
+    "ts",
+    "ky",
+    "gy",
+    "hy",
+    "by",
+    "py",
+    "my",
+    "ny",
+    "ry",
+    "fy",
+    "ty",
+    "dy",
+    "kw",
+    "gw",
+    "pau",
+    "sil"
+  ],
+  "g2p": {
+    "reference": "pyopenjtalk (OpenJTalk) via ja_pronunciation.py",
+    "wrap_pau": true,
+    "device_option": "A",
+    "device_option_evidence": "Option A (bundle OpenJTalk+dict via JNI). The reference chain (ja_pronunciation.py) needs MeCab morphological analysis plus the Open JTalk dictionary to read kanji; the same-source Open JTalk 1.11 frontend is what pyopenjtalk calls. Local evidence: open_jtalk_dic_utf_8-1.11 is 103.07 MB raw (sys.dic) / 21.67 MB gzip, Open JTalk+HTS Engine are BSD-family (see REPORT.md section 4.3). Option B (pure Kotlin port) was NOT delivered and cannot be accepted without a full dictionary+morphology re-implementation validated against the golden vectors; option C would make JA undeliverable."
+  },
+  "files": {
+    "fp32": {
+      "name": "hubert-ja-phoneme-ctc-fp32.onnx",
+      "sha256": "f9eaa556f82700ce9c8d21bc85ffbd5897ea9eb2a8e2768bc7b2e3a81ac0ffba",
+      "bytes": 377845890
+    },
+    "int8": {
+      "name": "hubert-ja-phoneme-ctc-int8.onnx",
+      "sha256": "b351071efea34cede057fba2753e82b935cf3e9c10cf40e33e6d2e41e39a82ce",
+      "bytes": 95194973
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "melox.autosync.onnx.1",
+  "language": "en",
+  "source_model": "facebook/wav2vec2-base-960h",
+  "license": "Apache-2.0",
+  "sample_rate": 16000,
+  "frame_hop_samples": 320,
+  "frame_hop_seconds": 0.02,
+  "input": {
+    "name": "input_values",
+    "shape": [
+      1,
+      null
+    ],
+    "dtype": "float32",
+    "preprocessing": "raw 16k mono PCM in [-1,1]; zero-mean unit-var normalization is baked into the graph"
+  },
+  "outputs": [
+    {
+      "name": "logits",
+      "shape": [
+        1,
+        null,
+        32
+      ],
+      "dtype": "float32"
+    },
+    {
+      "name": "log_probs",
+      "shape": [
+        1,
+        null,
+        32
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "blank_id": 0,
+  "word_delimiter_id": 4,
+  "tokens": [
+    "<pad>",
+    "<s>",
+    "</s>",
+    "<unk>",
+    "|",
+    "E",
+    "T",
+    "A",
+    "O",
+    "N",
+    "I",
+    "H",
+    "S",
+    "R",
+    "D",
+    "L",
+    "U",
+    "M",
+    "W",
+    "C",
+    "F",
+    "G",
+    "Y",
+    "P",
+    "B",
+    "V",
+    "K",
+    "'",
+    "X",
+    "J",
+    "Q",
+    "Z"
+  ],
+  "files": {
+    "fp32": {
+      "name": "wav2vec2-base-960h-fp32.onnx",
+      "sha256": "d4ac91ec0093a3f2f63fa27dd39ea5db2847634b1c3d893e0b34930d41d4d34d",
+      "bytes": 377815805
+    },
+    "int8": {
+      "name": "wav2vec2-base-960h-int8.onnx",
+      "sha256": "1c8213118da7f555e4b68c0e08e85a4c471ea2a3e0fdf5620d27412800babd3f",
+      "bytes": 122373796
+    }
+  }
+}

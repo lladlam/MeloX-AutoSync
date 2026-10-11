@@ -1,0 +1,300 @@
+{
+  "schema": "melox.autosync.onnx.1",
+  "language": "zh",
+  "source_model": "funasr/fa-zh",
+  "source_model_alias": "iic/speech_timestamp_prediction-v1-16k-offline",
+  "license": "FunASR Model License (verify before redistribution)",
+  "license_note": "funasr/fa-zh is NOT Apache-2.0. The FunASR Model License must be re-checked before the exported weights are redistributed or shipped inside the app. Weights are not committed to git.",
+  "sample_rate": 16000,
+  "frontend": {
+    "baked_into_graph": true,
+    "implementation": "kaldi-fbank(hamming,80mel,25ms/10ms,snip_edges,remove_dc_offset,preemph 0.97,power,log) + LFR(7,6) + CMVN(am.mvn) in the graph; real FFT realised as a folded DFT matmul (aten::fft_rfft is not exportable at opset 17)",
+    "dither": 0.0,
+    "feature_dim": 560
+  },
+  "frame_hop_samples": 160,
+  "encoder_frame_seconds": 0.06,
+  "upsample_rate": 3,
+  "timestamp_frame_seconds": 0.02,
+  "input": {
+    "name": "input_values",
+    "shape": [
+      1,
+      null
+    ],
+    "dtype": "float32",
+    "preprocessing": "raw 16k mono PCM in [-1,1]; fbank+LFR+CMVN baked into the graph"
+  },
+  "aux_inputs": [
+    {
+      "name": "token_num",
+      "shape": [
+        1
+      ],
+      "dtype": "int64",
+      "note": "text token count + 1 (predictor_bias=1)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "us_alphas",
+      "shape": [
+        1,
+        null
+      ],
+      "dtype": "float32",
+      "note": "T3 = 3 * encoder frames"
+    },
+    {
+      "name": "us_peaks",
+      "shape": [
+        1,
+        null
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "blank_id": 0,
+  "tokens_file": "tokens.json",
+  "tokens_count": 8404,
+  "files": {
+    "fp32": {
+      "name": "fa-zh-fp32.onnx",
+      "sha256": "83e458c755b1155020642971aee87aea0cc14602680a2655b8f999cef8fcb8ac",
+      "bytes": 158768854
+    },
+    "int8": {
+      "name": "fa-zh-int8.onnx",
+      "sha256": "c95f3615503a23776e18da9b303598eb11972cc4acf1f55791b630979775ddce",
+      "bytes": 48081658
+    }
+  },
+  "frames": {
+    "fbank_frames_formula": "T_fbank = 1 + floor((N - 400) / 160), N >= 400, snip_edges=True",
+    "lfr_frames_formula": "T_enc = ceil(T_fbank / 6)",
+    "t3_formula": "T3 = 3 * T_enc",
+    "measured": [
+      {
+        "n_samples": 400,
+        "seconds": 0.025,
+        "t_fbank": 1,
+        "t_enc": 1,
+        "t3": 3
+      },
+      {
+        "n_samples": 4000,
+        "seconds": 0.25,
+        "t_fbank": 4,
+        "t_enc": 4,
+        "t3": 12
+      },
+      {
+        "n_samples": 32832,
+        "seconds": 2.052,
+        "t_fbank": 34,
+        "t_enc": 34,
+        "t3": 102
+      },
+      {
+        "n_samples": 36016,
+        "seconds": 2.251,
+        "t_fbank": 38,
+        "t_enc": 38,
+        "t3": 114
+      },
+      {
+        "n_samples": 40560,
+        "seconds": 2.535,
+        "t_fbank": 42,
+        "t_enc": 42,
+        "t3": 126
+      },
+      {
+        "n_samples": 41488,
+        "seconds": 2.593,
+        "t_fbank": 43,
+        "t_enc": 43,
+        "t3": 129
+      },
+      {
+        "n_samples": 46400,
+        "seconds": 2.9,
+        "t_fbank": 48,
+        "t_enc": 48,
+        "t3": 144
+      },
+      {
+        "n_samples": 47648,
+        "seconds": 2.978,
+        "t_fbank": 50,
+        "t_enc": 50,
+        "t3": 150
+      },
+      {
+        "n_samples": 48000,
+        "seconds": 3.0,
+        "t_fbank": 50,
+        "t_enc": 50,
+        "t3": 150
+      },
+      {
+        "n_samples": 50416,
+        "seconds": 3.151,
+        "t_fbank": 53,
+        "t_enc": 53,
+        "t3": 159
+      },
+      {
+        "n_samples": 51680,
+        "seconds": 3.23,
+        "t_fbank": 54,
+        "t_enc": 54,
+        "t3": 162
+      },
+      {
+        "n_samples": 53024,
+        "seconds": 3.314,
+        "t_fbank": 55,
+        "t_enc": 55,
+        "t3": 165
+      },
+      {
+        "n_samples": 53936,
+        "seconds": 3.371,
+        "t_fbank": 56,
+        "t_enc": 56,
+        "t3": 168
+      },
+      {
+        "n_samples": 54384,
+        "seconds": 3.399,
+        "t_fbank": 57,
+        "t_enc": 57,
+        "t3": 171
+      },
+      {
+        "n_samples": 54656,
+        "seconds": 3.416,
+        "t_fbank": 57,
+        "t_enc": 57,
+        "t3": 171
+      },
+      {
+        "n_samples": 55856,
+        "seconds": 3.491,
+        "t_fbank": 58,
+        "t_enc": 58,
+        "t3": 174
+      },
+      {
+        "n_samples": 57648,
+        "seconds": 3.603,
+        "t_fbank": 60,
+        "t_enc": 60,
+        "t3": 180
+      },
+      {
+        "n_samples": 59872,
+        "seconds": 3.742,
+        "t_fbank": 62,
+        "t_enc": 62,
+        "t3": 186
+      },
+      {
+        "n_samples": 63616,
+        "seconds": 3.976,
+        "t_fbank": 66,
+        "t_enc": 66,
+        "t3": 198
+      },
+      {
+        "n_samples": 65600,
+        "seconds": 4.1,
+        "t_fbank": 68,
+        "t_enc": 68,
+        "t3": 204
+      },
+      {
+        "n_samples": 69567,
+        "seconds": 4.348,
+        "t_fbank": 73,
+        "t_enc": 73,
+        "t3": 219
+      },
+      {
+        "n_samples": 69568,
+        "seconds": 4.348,
+        "t_fbank": 73,
+        "t_enc": 73,
+        "t3": 219
+      },
+      {
+        "n_samples": 69728,
+        "seconds": 4.358,
+        "t_fbank": 73,
+        "t_enc": 73,
+        "t3": 219
+      },
+      {
+        "n_samples": 70400,
+        "seconds": 4.4,
+        "t_fbank": 73,
+        "t_enc": 73,
+        "t3": 219
+      },
+      {
+        "n_samples": 76880,
+        "seconds": 4.805,
+        "t_fbank": 80,
+        "t_enc": 80,
+        "t3": 240
+      },
+      {
+        "n_samples": 119040,
+        "seconds": 7.44,
+        "t_fbank": 124,
+        "t_enc": 124,
+        "t3": 372
+      },
+      {
+        "n_samples": 161856,
+        "seconds": 10.116,
+        "t_fbank": 169,
+        "t_enc": 169,
+        "t3": 507
+      },
+      {
+        "n_samples": 199403,
+        "seconds": 12.463,
+        "t_fbank": 208,
+        "t_enc": 208,
+        "t3": 624
+      },
+      {
+        "n_samples": 606443,
+        "seconds": 37.903,
+        "t_fbank": 632,
+        "t_enc": 632,
+        "t3": 1896
+      }
+    ]
+  },
+  "quantization": {
+    "method": "onnxruntime.quantization.quantize_dynamic, weight_type=QInt8, op_types_to_quantize=['MatMul','Gemm'], per_channel=False",
+    "excluded": "frontend DFT matmuls (constant weights) and every non-MatMul/Gemm op (conv, LSTM, LayerNorm) stay fp32"
+  },
+  "int8_performance_desktop": {
+    "window_s": 12.0,
+    "median_ms": 107.5,
+    "p90_ms": 108.4,
+    "peak_rss_mb": 746.2
+  },
+  "postprocess": {
+    "reference": "postprocess_reference.py",
+    "TIME_RATE": 0.02,
+    "force_time_shift": -1.5,
+    "START_END_THRESHOLD": 5,
+    "MAX_TOKEN_DURATION": 12,
+    "peak_threshold": 0.9999
+  }
+}
