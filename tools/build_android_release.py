@@ -50,6 +50,7 @@ LANGUAGES: dict[str, dict] = {
         ],
         "accuracy": {
             "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
+            "provenance": "check-counts from android_export/en/REPORT.md (beta.2 recipe, unchanged in beta.4)",
             "gate_result": "4 of 17 checks failed (see android_export/en/REPORT.md)",
             "int8_vs_fp32_word_start_mae_ms": 121.19,
             "gtsinger_abs_fp32_start_mae_ms": 100.11,
@@ -86,6 +87,7 @@ LANGUAGES: dict[str, dict] = {
         ],
         "accuracy": {
             "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
+            "provenance": "check-counts from android_export/zh/REPORT.md (beta.2 recipe, unchanged in beta.4)",
             "gate_result": "6 of 20 checks failed (see android_export/zh/REPORT.md)",
             "fp32_timestamps_exact_vs_engine": "693/693 tokens, 0 ms",
             "int8_vs_fp32_timestamp_mae_ms": 19.96,
@@ -139,33 +141,31 @@ LANGUAGES: dict[str, dict] = {
         },
         "accuracy": {
             "status": "NOT_ACCEPTED_FOR_WORD_LEVEL_ACCURACY",
-            "gate_result": "3 of 15 gate rows failed; one further reference row is non-gate (see android_export/ja/REPORT.md)",
-            "real_music_int8_vs_fp32_start_mae_ms": 13.0,
-            "real_music_int8_vs_fp32_end_mae_ms": 13.6,
-            "real_music_int8_vs_fp32_start_gt500_ratio": 0.007,
-            "blind_real_music_start_mae_ms": 60.6,
-            "blind_real_music_start_gt500_ratio": 0.037,
-            "note": (
-                "This is the selective-quantisation variant (attention layers 0-5 kept "
-                "FP32). The official android_export/ja/REPORT.md documents the beta.2 "
-                "recipe (CTC head only); it was not regenerated for this variant. The "
-                "real-music figures come from benchmarks/quant_selective_eval.py on "
-                "Test/ tune+val (122 lines) and the frozen blind song (36 lines)."
+            "provenance": (
+                "All figures name their model revision and evaluation corpus. "
+                "'real_music' = Test/ full-mix songs via "
+                "benchmarks/quant_selective_eval.py (INT8 vs FP32 consistency, NOT "
+                "human accuracy). 'gtsinger' = a-cappella held-out corpus via "
+                "benchmarks/onnx_quant_eval.py (absolute vs human boundaries). "
+                "'blind' = a song already used for selection in an earlier version; "
+                "reported for continuity only, not as a fresh test."
             ),
-            "int8_vs_fp32_chars": 1224,
-            "int8_vs_fp32_lines": 120,
-            "reference_test_vector_mae_ms": 1.90,
+            "model_recipe": "dynamic QInt8, per-channel, MatMul/Gemm; attention of encoder layer 8 kept FP32",
+            "real_music_int8_vs_fp32_start_mae_ms": 9.5,
+            "real_music_int8_vs_fp32_end_mae_ms": 9.4,
+            "real_music_int8_vs_fp32_start_p90_ms": 0.0,
+            "real_music_int8_vs_fp32_start_gt500_ratio": 0.006,
+            "continuity_blind_start_mae_ms": 38.7,
+            "continuity_blind_gt500_ratio": 0.014,
+            "gtsinger_int8_vs_fp32_start_mae_ms": 8.45,
+            "gtsinger_int8_vs_fp32_start_max_ms": 57.3,
             "gtsinger_abs_fp32_start_mae_ms": 118.73,
-            "gtsinger_abs_int8_start_mae_ms": 154.16,
-            "gtsinger_int8_vs_fp32_start_mae_ms": 79.05,
-            "reference_real_singing_mae_ms": 157.52,
-            "fp32_vs_torch_baseline_mae_ms": 0.0,
-            "int8_cosine_mean": 0.997174,
-            "int8_cosine_min": 0.972780,
-            "notes": (
-                "Same-methodology PyTorch-vs-FP32 baseline is 0.00 ms, so the "
-                "147 ms is purely a quantisation effect. Japanese remains "
-                "EXPERIMENTAL: the acoustic model is trained on read speech."
+            "gtsinger_abs_int8_start_mae_ms": 123.8,
+            "note": (
+                "beta.4 JA: keeping encoder layer 8's attention in FP32 makes the "
+                "model both smaller (129.4 vs 164.7 MB) and more consistent than "
+                "beta.3. android_export/ja/REPORT.md still documents the beta.2 "
+                "recipe and was not regenerated for this variant."
             ),
         },
     },

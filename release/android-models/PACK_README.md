@@ -1,4 +1,4 @@
-# Android 模型包 · v0.1.0-beta.3（测试版）
+# Android 模型包 · v0.1.0-beta.4（测试版）
 
 > ⚠️ **这是测试版（prerelease），尚未通过逐字精度验收。**
 > 三个模型的权重都能在 Android 上用 ONNX Runtime 直接加载、推理是确定性的，
@@ -11,13 +11,14 @@
 机器可读清单见 **`android-models.json`**，校验和见 **`checksums.sha256`**。
 设备端**不需要 Python**。
 
-> **beta.3 变更（真实流行音乐整混音验证）**：日文 INT8 进一步改为**保留前 6 层 attention 为 FP32**
-> （`attn_L0_5`）。在 `Test/` 整混音上，逐字符起始 MAE 80.7 → **13.0 ms**、>500 ms 比例 4.9% → **0.7%**；
-> **冻结后盲测**（SAN値直葬）272.8 → **60.6 ms**、>500 ms 20.2% → **3.7%**；体积 95.7 → **164.7 MB**。
-> **英文/中文默认产物未变**（beta.2 配方经真实流行音乐扫描/敏感度分析确认已是最优）。
-> 额外提供**可选英文精度变体** `en-wav2vec2-base-960h-int8-acc.onnx`（保留 CTC 头+FFN 为 FP32，292 MB）：
-> 盲测起始 MAE 40.7 → 19.9 ms、P90 140 → 6 ms；体积 2.4×，且个别歌曲可能变差，**默认不启用**。
-> 详见 `docs/QUANTIZATION_V1_1.md`。
+> **beta.4 变更（V1.2：体积与一致性联合优化）**：日文 INT8 只把**编码器第 8 层 attention** 保留为 FP32
+> （`aL8`）。相对 beta.3（164.7 MB 全 attention）**更小且更一致**：体积 **129.4 MB**，`Test/` 整混音逐字符起始 MAE 13.1 → **9.5 ms**，
+> 连续性盲测 60.6 → **38.7 ms**，GTSinger 清唱留出集 INT8-vs-FP32 12.27 → **8.45 ms**。
+> **英文、中文产物未变**（V1.2 的真实流行音乐逐层敏感度分析未找到既不牺牲单曲、又明显更优的英文中间档）。
+> **英文精度变体** `en-wav2vec2-base-960h-int8-acc.onnx`（292 MB，保留 CTC 头+FFN）仍作为可选资产，
+> 默认不启用（会牺牲个别歌曲）。详见 `docs/QUANTIZATION_V1_2.md`。
+>
+> 精度数字的**模型版本与评测集**标注见各 `manifest.json` 的 `accuracy.provenance`。
 
 ## 1. 资产清单
 
@@ -109,7 +110,7 @@ sha256sum -c checksums.sha256
 
 ## 6. 版本与协议
 
-- 包版本：`0.1.0-beta.3`，发布 Tag：`android-models-v0.1.0-beta.3`（prerelease）。beta.2 保留。
+- 包版本：`0.1.0-beta.4`，发布 Tag：`android-models-v0.1.0-beta.4`（prerelease）。beta.2/beta.3 保留。
 - 最低后端协议：`min_backend_protocol = 1`（schema `melox.autosync.onnx.1`）。
 - 固定上游版本：en/ja 使用 HF 快照 revision（见 manifest `source_revision`）；
   zh 为 ModelScope `iic/speech_timestamp_prediction-v1-16k-offline`。
