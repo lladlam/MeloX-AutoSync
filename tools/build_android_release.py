@@ -297,8 +297,13 @@ def upload(result: dict) -> None:
     exists = subprocess.run(["gh", "release", "view", TAG, "--repo", REPO_SLUG],
                             capture_output=True, text=True, check=False).returncode == 0
     if not exists:
+        head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=REPO_ROOT,
+                              capture_output=True, text=True, check=True).stdout.strip()
+        # Pin the tag to the commit that defines this pack instead of letting gh
+        # pick whatever the default branch happens to be at upload time.
         subprocess.run(
             ["gh", "release", "create", TAG, "--repo", REPO_SLUG, "--prerelease",
+             "--target", head,
              "--title", f"Android model pack {PACK_VERSION} (BETA - word-level accuracy not accepted)",
              "--notes-file", str(PACK_DIR / "README.md")],
             check=True,
