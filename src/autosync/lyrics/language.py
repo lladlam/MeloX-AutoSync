@@ -102,8 +102,12 @@ def detect_line_language(text: str, primary: str) -> LanguageDecision:
         return LanguageDecision("en", True, "Latin text in an English-primary song", han, kana, latin)
     if _english_evidence(text):
         return LanguageDecision("en", True, "Latin text with English function words", han, kana, latin)
+    # V1.3: a pure-Latin, non-English-evidence line is *tried* with the English
+    # model rather than silently dropped. It is flagged low-confidence so the
+    # caller records it explicitly and the quality gate can still fall back.
     return LanguageDecision(
-        "latin_ambiguous", False,
-        "Latin text without English evidence (may be romanised or stylised); conservative fallback",
+        "en", True,
+        "Latin-only line without English function words; attempting the English "
+        "model (low lexical confidence; must be recorded, not silently dropped)",
         han, kana, latin,
     )

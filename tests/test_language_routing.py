@@ -31,10 +31,12 @@ def test_clear_english_line_routes_en() -> None:
     assert d.language == "en" and d.routable
 
 
-def test_latin_without_english_evidence_is_not_routed() -> None:
-    # "Bora sana" is Latin script but not English -> conservative fallback
+def test_pure_latin_line_is_offered_to_the_english_model() -> None:
+    # V1.3: pure-Latin, non-English-evidence lines are *attempted* with the
+    # English model (low confidence) instead of being silently dropped.
     d = detect_line_language("(Bora sana, Bora sana)", "zh")
-    assert d.language == "latin_ambiguous" and not d.routable
+    assert d.language == "en" and d.routable
+    assert "low lexical confidence" in d.reason
 
 
 def test_latin_in_english_song_routes_en() -> None:
@@ -102,11 +104,21 @@ def test_router_records_audit_trail() -> None:
 
 
 def test_router_raises_on_unroutable_line() -> None:
+    # a Latin-dominant mixed line (real CJK + real English) is not reliably
+    # separable, so it must fail loudly rather than silently pick a model.
     router, created = _router("zh")
     with pytest.raises(LanguageRoutingError):
-        router.align_text(np.zeros(1600, dtype=np.float32), 16000, "(Bora sana, Bora sana)")
+        router.align_text(np.zeros(1600, dtype=np.float32), 16000, "别害怕 we clap clap")
     assert router.last_route["routable"] is False
     assert set(created) == set()  # nothing loaded for an unroutable line
+
+
+def test_router_sends_pure_latin_to_english() -> None:
+    router, created = _router("zh")
+    router.align_text(np.zeros(1600, dtype=np.float32), 16000, "(Bora sana, Bora sana)")
+    assert router.last_route["line_language"] == "en"
+    assert router.last_route["routable"] is True
+    assert "en" in created and created["en"].calls == 1
 
 
 def test_japanese_primary_absorbs_latin_lines() -> None:

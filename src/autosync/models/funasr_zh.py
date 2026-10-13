@@ -75,7 +75,14 @@ class ChineseFunASRAligner(BaseAligner):
             self.load()
         normalized = normalize_cjk(text)
         if not normalized:
-            return []
+            # V1.3: never silently produce an empty timeline. A line whose text
+            # has no CJK/kana after normalization (e.g. pure Latin backing
+            # vocals) must fail loudly so the caller records an explicit
+            # fallback instead of dropping the line from the coverage count.
+            raise ValueError(
+                "no CJK/kana characters after normalize_cjk; this Latin line must be "
+                "routed to the English model or explicitly marked unsupported"
+            )
 
         audio = np.ascontiguousarray(audio, dtype=np.float32)
         res = self._model.generate(

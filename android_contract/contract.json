@@ -1,0 +1,169 @@
+{
+  "schema": "melox.autosync.contract.1",
+  "vectors": [
+    {
+      "language": "en",
+      "model": "wav2vec2-base-960h-int8.onnx",
+      "model_sha256": "1c8213118da7f555e4b68c0e08e85a4c471ea2a3e0fdf5620d27412800babd3f",
+      "model_bytes": 122373796,
+      "sample_rate": 16000,
+      "waveform": "en_vector.wav",
+      "waveform_sha256": "aefb710704aa6df5e66f343fc506e7b04585a5cf932f1cdc078a10325ed37dbb",
+      "inputs": [
+        {
+          "name": "input_values",
+          "dtype": "tensor(float)",
+          "shape": [
+            "1",
+            "n"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "probe": {
+            "shape": [
+              1,
+              149,
+              32
+            ],
+            "dtype": "float32",
+            "min": -20.575273513793945,
+            "max": 7.341362476348877,
+            "mean": -3.1452760696411133,
+            "sum": -14996.67578125,
+            "argmax": 3904
+          }
+        },
+        {
+          "name": "log_probs",
+          "probe": {
+            "shape": [
+              1,
+              149,
+              32
+            ],
+            "dtype": "float32",
+            "min": -27.681779861450195,
+            "max": -0.007838797755539417,
+            "mean": -8.861284255981445,
+            "sum": -42250.6015625,
+            "argmax": 2624
+          }
+        }
+      ]
+    },
+    {
+      "language": "ja",
+      "model": "hubert-ja-phoneme-ctc-int8.onnx",
+      "model_sha256": "e93184b07df102d20a469dad8d1a11243321d4e49c2ad4d6ede65cdbae764aa8",
+      "model_bytes": 95723275,
+      "sample_rate": 16000,
+      "waveform": "ja_vector.wav",
+      "waveform_sha256": "b029d9656cdccf5db9e304defef005f91c3ebacbaf1e50c5f2d6441e598573b0",
+      "inputs": [
+        {
+          "name": "input_values",
+          "dtype": "tensor(float)",
+          "shape": [
+            "1",
+            "n"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "probe": {
+            "shape": [
+              1,
+              149,
+              48
+            ],
+            "dtype": "float32",
+            "min": -15.668292045593262,
+            "max": 10.300718307495117,
+            "mean": -5.493682861328125,
+            "sum": -39290.8203125,
+            "argmax": 912
+          }
+        },
+        {
+          "name": "log_probs",
+          "probe": {
+            "shape": [
+              1,
+              149,
+              48
+            ],
+            "dtype": "float32",
+            "min": -25.402090072631836,
+            "max": -0.00012289722508285195,
+            "mean": -13.449048042297363,
+            "sum": -96187.59375,
+            "argmax": 768
+          }
+        }
+      ]
+    },
+    {
+      "language": "zh",
+      "model": "fa-zh-int8.onnx",
+      "model_sha256": "c95f3615503a23776e18da9b303598eb11972cc4acf1f55791b630979775ddce",
+      "model_bytes": 48081658,
+      "sample_rate": 16000,
+      "waveform": "zh_vector.wav",
+      "waveform_sha256": "ee25fe598a920c896b6bb86b57f0c79409b4186c24745fd1d1d9de8db64f2c2e",
+      "inputs": [
+        {
+          "name": "input_values",
+          "dtype": "tensor(float)",
+          "shape": [
+            "1",
+            "n"
+          ]
+        },
+        {
+          "name": "token_num",
+          "dtype": "tensor(int64)",
+          "shape": [
+            "1"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "us_alphas",
+          "probe": {
+            "shape": [
+              1,
+              150
+            ],
+            "dtype": "float32",
+            "min": 0.0,
+            "max": 0.1800597757101059,
+            "mean": 0.03999999910593033,
+            "sum": 6.0,
+            "argmax": 5
+          }
+        },
+        {
+          "name": "us_peaks",
+          "probe": {
+            "shape": [
+              1,
+              150
+            ],
+            "dtype": "float32",
+            "min": 0.0,
+            "max": 1.1421265602111816,
+            "mean": 0.4543786644935608,
+            "sum": 68.15679931640625,
+            "argmax": 103
+          }
+        }
+      ]
+    }
+  ]
+}
